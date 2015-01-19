@@ -3,6 +3,42 @@
 
 h1 
 {
-	color:#00f;
+	color:#0ff;
 }
+
+body
+{
+	font-family:arial, 'sans-serf';
+}
+
+.clear-list-style 
+{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+
+}
+
+
+.main-navi
+{
+	padding-left:10px
+}
+
+.l-page-container
+{
+	@include outer-container(100%);
+
+}
+
+.l-sidebar
+{
+	@include span-columns(2);
+}
+
+.l-content
+{
+	@include span-columns(10)
+}
+
 
