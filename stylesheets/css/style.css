@@ -13,10 +13,10 @@ html {
   box-sizing: inherit; }
 
 h1 {
-  color: #0ff; }
+  color: #323b47; }
 
 body {
-  font-family: arial, 'sans-serf'; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 .clear-list-style {
   list-style-type: none;

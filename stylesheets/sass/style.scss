@@ -1,14 +1,15 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "variables";
 
 h1 
 {
-	color:#0ff;
+	color:$primary-grey;
 }
 
 body
 {
-	font-family:arial, 'sans-serf';
+	font-family:$primary-font;
 }
 
 .clear-list-style 
