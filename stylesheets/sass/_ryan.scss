@@ -1,0 +1,69 @@
+h1
+{
+	color:red;
+}
+
+/** Layout **/
+
+.l-simple-list
+{
+	@include outer-container(100%);
+	list-style-type:none;
+	padding:0;
+	margin:0;
+
+}
+
+.l-simple-list li:first-child
+{
+	border-top:1px solid #d9dde1;
+}
+
+
+.l-simple-list-row
+{
+	
+	@include row(block);
+
+	border-bottom:1px solid #d9dde1;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.l-simple-list-column1
+{
+	@include span-columns(1);
+	@include omega;
+	@include pad(0px 20px)
+	
+}
+
+.l-simple-list-column2
+{
+	@include span-columns(9);
+}
+
+.l-simple-list-column3
+{
+	@include span-columns(2);
+}
+
+.block
+{
+	display:block;
+}
+
+/** item Module **/
+
+.item-title
+{
+	font-size:14px;
+	font-weight:600;
+	color:$primary-grey;
+}
+.item-status
+{
+	font-size:12px;
+	color:$light-grey;
+	font-weight:400;
+}
