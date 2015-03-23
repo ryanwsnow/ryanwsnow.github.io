@@ -13,7 +13,23 @@
 	<link href="stylesheets/css/style.css" rel="stylesheet">
 	<link href="stylesheets/css/app.css" rel="stylesheet">
 	
-	
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/mustache.min.js"></script>
+	<script id="content-template" type="text/template">
+	{{#content}}
+		<li>{{title}}</li>
+	{{/content}}
+	</script>
+	<script>
+		$(function() {
+			$.getJSON('content.json', function(data) {
+			    var template = $('#content-template').html();
+			    var info = Mustache.to_html(template, data);
+			    $('#m-simple-list').html(info);
+			});
+		});
+	</script>
+
 
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,6 +42,7 @@
 <body>
 	<header>
 
+
 	</header>
 	<div class="l-page-container">
 		<div class="l-sidebar">
@@ -37,36 +54,44 @@
 		<div class="l-content">
 			<h1>Modules</h1>
 			<div >
-				<ul class="l-simple-list">
-					<li class="l-simple-list-row">
-						<div class="l-simple-list-column1">
-							<input type="checkbox" name="Question 1" value="selected">
+				<ol class="list">
+					<li class="list__row">
+						<div class="list__column span-columns-10">
+							<div class="list__checkbox ">
+								<input type="checkbox" name="Question 1" value="selected">
+							</div>
+							<div class="inline-block l-stacked ">
+							  	<div class="content__title">Question 1</div>
+							  	<div class="content__status">Multiple Choice</div>
+						  	</div>
 						</div>
-						<div class="l-simple-list-column2">
-						  	<div class="item-title block">Question 1</div>
-						  	<div class="item-status block">Multiple Choice</div>
-						</div>
-						<div class="l-simple-list-column3">
-						  	<div>Actions</div>
+						<div class="list__column span-columns-2">
+						  	<div class="content__activity-date">Mar 8</div>
 						</div>
 			  		</li> <!-- end row -->
-					<li class="l-simple-list-row">
-						<div class="l-simple-list-column1">
-							<input type="checkbox" name="Question 1" value="selected">
+			  		<li class="list__row">			
+						<div class="list__column span-columns-10">
+							<div class="list__checkbox ">
+								<input type="checkbox" name="Question 2" value="selected">
+							</div>
+							<div class="inline-block l-stacked ">
+							  	<div class="content__title">Question 2</div>
+							  	<div class="content__status">Multiple Choice</div>
+						  	</div>
 						</div>
-						<div class="l-simple-list-column2">
-						  	<div class="item-title block">Question 1</div>
-						  	<div class="item-status block">Multiple Choice</div>
+						<div class="list__column span-columns-2">
+						  	<div class="content__activity-date">Mar 8</div>
 						</div>
-						<div class="l-simple-list-column3">
-						  	<div>Actions</div>
-						</div>
-			  		</li> <!-- end row -->			  		
-			  	</ul>
+			  		</li> <!-- end row -->
+							  		
+			  	</ol>
 			</div>
 
 		</div>
 	</div>
-	
+
+
+
+
 </body>
 </html>

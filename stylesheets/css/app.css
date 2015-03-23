@@ -12,73 +12,170 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-h1 {
-  color: red; }
+/** Minor layout styles/Utility Classes **/
+.inline-block {
+  display: inline-block; }
 
-/** Layout **/
-.l-simple-list {
+.l-inline {
+  display: inline; }
+
+.l-stacked > div {
+  display: block; }
+
+.span-columns-1 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%; }
+  .span-columns-1:last-child {
+    margin-right: 0; }
+
+.span-columns-2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .span-columns-2:last-child {
+    margin-right: 0; }
+
+.span-columns-3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .span-columns-3:last-child {
+    margin-right: 0; }
+
+.span-columns-4 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .span-columns-4:last-child {
+    margin-right: 0; }
+
+.span-columns-5 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%; }
+  .span-columns-5:last-child {
+    margin-right: 0; }
+
+.span-columns-6 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .span-columns-6:last-child {
+    margin-right: 0; }
+
+.span-columns-7 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%; }
+  .span-columns-7:last-child {
+    margin-right: 0; }
+
+.span-columns-8 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .span-columns-8:last-child {
+    margin-right: 0; }
+
+.span-columns-9 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .span-columns-9:last-child {
+    margin-right: 0; }
+
+.span-columns-10 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .span-columns-10:last-child {
+    margin-right: 0; }
+
+.span-columns-11 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 91.4702%; }
+  .span-columns-11:last-child {
+    margin-right: 0; }
+
+.span-columns-12 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .span-columns-12:last-child {
+    margin-right: 0; }
+
+/** End minor layout styles **/
+/** Layout list**/
+.list {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   list-style-type: none;
   padding: 0;
   margin: 0; }
-  .l-simple-list:after {
+  .list:after {
     content: "";
     display: table;
     clear: both; }
 
-.l-simple-list li:first-child {
+.list li:first-child {
   border-top: 1px solid #d9dde1; }
 
-.l-simple-list-row {
+.list__row {
   display: block;
+  height: 64px;
   border-bottom: 1px solid #d9dde1;
   padding-top: 10px;
   padding-bottom: 10px; }
-  .l-simple-list-row:after {
+  .list__row:after {
     content: "";
     display: table;
     clear: both; }
 
-.l-simple-list-column1 {
-  float: left;
+.list__row.is-hovered {
+  background: #fff; }
+
+.list__checkbox {
+  display: inline-block;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.list__checkbox input {
   display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%;
-  margin-right: 0;
-  padding: 0px 20px; }
-  .l-simple-list-column1:last-child {
-    margin-right: 0; }
+  line-height: 64px;
+  vertical-align: middle; }
 
-.l-simple-list-column2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .l-simple-list-column2:last-child {
-    margin-right: 0; }
-
-.l-simple-list-column3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .l-simple-list-column3:last-child {
-    margin-right: 0; }
-
-.block {
-  display: block; }
-
-/** item Module **/
-.item-title {
+/** Content Module **/
+.content__title {
   font-size: 14px;
   font-weight: 600;
   color: #323b47; }
 
-.item-status {
+.content__status {
   font-size: 12px;
   color: #a5b1bb;
   font-weight: 400; }
+
+.content__activity-date {
+  font-size: 12px;
+  color: #a5b1bb;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: right; }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,69 +1,177 @@
-h1
+
+/** Minor layout styles/Utility Classes **/
+
+.inline-block
 {
-	color:red;
+	display:inline-block;
 }
 
-/** Layout **/
+.l-inline
+{
+	display:inline;
+}
 
-.l-simple-list
+.l-stacked > div
+{
+	display:block;
+}
+
+.span-columns-1
+{
+	@include span-columns(1);
+}
+.span-columns-2
+{
+	@include span-columns(2);
+}
+
+.span-columns-3
+{
+	@include span-columns(3);
+}
+.span-columns-4
+{
+	@include span-columns(4);
+}
+.span-columns-5
+{
+	@include span-columns(5);
+}
+.span-columns-6
+{
+	@include span-columns(6);
+}
+.span-columns-7
+{
+	@include span-columns(7);
+}
+.span-columns-8
+{
+	@include span-columns(8);
+}
+.span-columns-9
+{
+	@include span-columns(9);
+}
+.span-columns-10
+{
+	@include span-columns(10);
+}
+.span-columns-11
+{
+	@include span-columns(11);
+}
+.span-columns-12
+{
+	@include span-columns(12);
+}
+
+/** End minor layout styles **/
+
+
+
+
+/** Layout list**/
+
+.list
 {
 	@include outer-container(100%);
 	list-style-type:none;
 	padding:0;
 	margin:0;
-
 }
 
-.l-simple-list li:first-child
+.list li:first-child
 {
 	border-top:1px solid #d9dde1;
 }
 
 
-.l-simple-list-row
-{
-	
+.list__row {
 	@include row(block);
-
+	height:64px;
 	border-bottom:1px solid #d9dde1;
 	padding-top:10px;
 	padding-bottom:10px;
+
 }
 
-.l-simple-list-column1
+.list__row.is-hovered
 {
-	@include span-columns(1);
-	@include omega;
-	@include pad(0px 20px)
+	background:#fff;
+}
+
+
+
+.list__checkbox
+{
+	display:inline-block;
+	width:40px;
 	
+	
+	margin-left:auto;
+	margin-right:auto;
 }
 
-.l-simple-list-column2
-{
-	@include span-columns(9);
-}
-
-.l-simple-list-column3
-{
-	@include span-columns(2);
-}
-
-.block
+.list__checkbox input
 {
 	display:block;
+	line-height:64px;
+	vertical-align:middle;
 }
 
-/** item Module **/
 
-.item-title
+.list__column
+{
+
+}
+
+
+
+// .list__content-item-details
+// {
+// 	@include span-columns(10);
+// 	min-width:200px;
+// }
+
+// .list__content-item-date
+// {
+// 	@include span-columns(2);
+
+// }
+
+
+
+
+/** Content Module **/
+.content
+{
+
+}
+.content__title
 {
 	font-size:14px;
 	font-weight:600;
 	color:$primary-grey;
 }
-.item-status
+.content__status
 {
 	font-size:12px;
 	color:$light-grey;
 	font-weight:400;
+}
+
+.content__activity-date
+{
+	font-size:12px;
+	color:$light-grey;
+	font-weight:400;
+	white-space: nowrap;
+	text-align:right;
+
+}
+
+.content__subview
+{
+
 }
