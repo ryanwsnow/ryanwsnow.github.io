@@ -5,33 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Styleguide - Tophat</title>
-
 	<!-- Bootstrap -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-  
-	
 	<link href="stylesheets/css/style.css" rel="stylesheet">
 	<link href="stylesheets/css/app.css" rel="stylesheet">
-	
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="js/mustache.min.js"></script>
-	<script id="content-template" type="text/template">
-	{{#content}}
-		<li>{{title}}</li>
-	{{/content}}
-	</script>
-	<script>
-		$(function() {
-			$.getJSON('content.json', function(data) {
-			    var template = $('#content-template').html();
-			    var info = Mustache.to_html(template, data);
-			    $('#m-simple-list').html(info);
-			});
-		});
-	</script>
-
-
-
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -40,10 +18,7 @@
 	<![endif]-->
 </head>
 <body>
-	<header>
-
-
-	</header>
+	<header></header>
 	<div class="l-page-container">
 		<div class="l-sidebar">
 			<ul class="sg-main-navi clear-list-style">
@@ -54,6 +29,13 @@
 		<div class="l-content">
 			<h1>Modules</h1>
 			<div >
+				<div class="toolbar">
+					<ul class="nav nav--horizontal toolbar--content__nav">
+						<li><a href="#" class="btn__primary">Create</a></li>
+						<li><a href="#" class="btn">Option</a></li>
+					</ul>
+
+				</div>
 				<ol class="list">
 					<li class="list__row">
 						<div class="list__column span-columns-10">
@@ -86,12 +68,7 @@
 							  		
 			  	</ol>
 			</div>
-
 		</div>
 	</div>
-
-
-
-
 </body>
 </html>

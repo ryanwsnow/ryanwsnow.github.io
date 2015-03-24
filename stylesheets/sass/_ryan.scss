@@ -15,6 +15,35 @@
 {
 	display:block;
 }
+.l-clear-list-style
+{
+	list-style-type:none;	
+}
+
+a 
+{
+	text-decoration:none;
+}
+
+
+.btn
+{
+	display:inline-block;
+	height:40px;
+	font-size:14px;
+	line-height:40px;
+	padding-left:10px;
+	padding-right:10px;
+
+}
+.btn__primary
+{
+	@extend .btn;
+	border-radius:2px;
+	background:$primary-blue;
+	color:#fff;
+
+}
 
 .span-columns-1
 {
@@ -91,8 +120,8 @@
 	@include row(block);
 	height:64px;
 	border-bottom:1px solid #d9dde1;
-	padding-top:10px;
-	padding-bottom:10px;
+	padding:10px;
+
 
 }
 
@@ -100,9 +129,6 @@
 {
 	background:#fff;
 }
-
-
-
 .list__checkbox
 {
 	display:inline-block;
@@ -126,20 +152,43 @@
 
 }
 
+/** toolbar module **/
+.toolbar
+{
+	height:64px;
+	background:#f9f9f9;
+	padding:10px;
+
+}
+
+.toolbar--content
+{
+
+}
+
+.toolbar--content__nav
+{
+ width:80%;
+}
+
+.toolbar--content__utility
+{
+
+}
 
 
-// .list__content-item-details
-// {
-// 	@include span-columns(10);
-// 	min-width:200px;
-// }
+/** Navigation **/
+.nav
+{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
 
-// .list__content-item-date
-// {
-// 	@include span-columns(2);
-
-// }
-
+.nav--horizontal li
+{
+	display:inline-block;
+}
 
 
 
