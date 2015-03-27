@@ -15,9 +15,6 @@ html {
 h1 {
   color: #323b47; }
 
-body {
-  font-family: "Source Sans Pro", sans-serif; }
-
 .clear-list-style {
   list-style-type: none;
   padding: 0;
@@ -26,11 +23,11 @@ body {
 .sg-main-navi {
   padding-left: 10px; }
 
-.l-page-container {
+.l-app-container {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  .l-page-container:after {
+  .l-app-container:after {
     content: "";
     display: table;
     clear: both; }

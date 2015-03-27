@@ -12,6 +12,19 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
+/** Base **/
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  text-decoration: none; }
+
+header {
+  position: relative; }
+
+/** End Base **/
 /** Minor layout styles/Utility Classes **/
 .inline-block {
   display: inline-block; }
@@ -24,22 +37,6 @@ html {
 
 .l-clear-list-style {
   list-style-type: none; }
-
-a {
-  text-decoration: none; }
-
-.btn, .btn__primary {
-  display: inline-block;
-  height: 40px;
-  font-size: 14px;
-  line-height: 40px;
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.btn__primary {
-  border-radius: 2px;
-  background: #199bfd;
-  color: #fff; }
 
 .span-columns-1 {
   float: left;
@@ -138,7 +135,40 @@ a {
     margin-right: 0; }
 
 /** End minor layout styles **/
+/** Buttons **/
+.btn, .btn--primary {
+  display: inline-block;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: #a4b0ba; }
+
+.btn--size-default {
+  min-width: 100px;
+  height: 32px;
+  line-height: 32px; }
+
+.btn--icon {
+  min-width: 32px;
+  height: 32px;
+  line-height: 32px; }
+
+.btn--primary {
+  border-radius: 2px;
+  background: #199bfd;
+  color: #fff; }
+
+/** End Buttons **/
 /** Layout list**/
+.l-header--course {
+  height: 150px;
+  width: 100%;
+  background: #435561; }
+
+.l-content-container {
+  background: #f2f2f2; }
+
 .list {
   max-width: 100%;
   margin-left: auto;
@@ -178,14 +208,20 @@ a {
   line-height: 64px;
   vertical-align: middle; }
 
+/** Course **/
 /** toolbar module **/
-.toolbar {
-  height: 64px;
-  background: #f9f9f9;
+.toolbar, .toolbar--section {
+  height: 52px;
   padding: 10px; }
 
-.toolbar--content__nav {
-  width: 80%; }
+.toolbar--section {
+  background: #f9f9f9; }
+
+.toolbar__management-options {
+  float: left; }
+
+.toolbar__utility-options {
+  float: right; }
 
 /** Navigation **/
 .nav {
@@ -195,6 +231,14 @@ a {
 
 .nav--horizontal li {
   display: inline-block; }
+
+.nav--main {
+  height: 48px;
+  position: absolute;
+  bottom: 0px; }
+
+.nav--main a {
+  text-transform: uppercase; }
 
 /** Content Module **/
 .content__title {

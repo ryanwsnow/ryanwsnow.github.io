@@ -1,3 +1,21 @@
+/** Base **/
+
+body
+{
+	font-family:$primary-font;
+	margin:0px;
+	padding:0px;
+}
+a 
+{
+	text-decoration:none;
+}
+
+header 
+{
+	position:relative;
+}
+/** End Base **/
 
 /** Minor layout styles/Utility Classes **/
 
@@ -20,30 +38,11 @@
 	list-style-type:none;	
 }
 
-a 
-{
-	text-decoration:none;
-}
 
 
-.btn
-{
-	display:inline-block;
-	height:40px;
-	font-size:14px;
-	line-height:40px;
-	padding-left:10px;
-	padding-right:10px;
 
-}
-.btn__primary
-{
-	@extend .btn;
-	border-radius:2px;
-	background:$primary-blue;
-	color:#fff;
 
-}
+
 
 .span-columns-1
 {
@@ -97,10 +96,70 @@ a
 
 /** End minor layout styles **/
 
+/** Buttons **/
 
+
+.btn
+{
+	display:inline-block;
+	font-size:14px;
+	padding-left:10px;
+	padding-right:10px;
+	text-align:center;
+	color:$text-color--vh-2;
+
+}
+
+.btn--size-default
+{
+	min-width:100px;
+	height:32px;
+	line-height:32px;
+}
+
+.btn--icon
+{
+	min-width:32px;
+	height:32px;
+	line-height:32px;
+}
+
+
+
+.btn--primary
+{
+	@extend .btn;
+	border-radius:2px;
+	background:$primary-blue;
+	color:#fff;
+
+}
+.btn--dark
+{
+	
+	
+}
+
+/** End Buttons **/
 
 
 /** Layout list**/
+.l-header
+{
+
+}
+.l-header--course
+{
+	height:150px;
+	width:100%;
+	background:$bg-header;
+}
+
+
+.l-content-container
+{
+	background:$bg-med-grey;
+}
 
 .list
 {
@@ -152,28 +211,40 @@ a
 
 }
 
+
+/** Course **/
+
+.course__name
+{
+
+}
+
+
+
 /** toolbar module **/
 .toolbar
 {
-	height:64px;
-	background:#f9f9f9;
+	height:52px;
+	
 	padding:10px;
 
 }
 
-.toolbar--content
+.toolbar--section
 {
-
+	@extend .toolbar;
+	background:#f9f9f9;
 }
 
-.toolbar--content__nav
+.toolbar__management-options
 {
- width:80%;
+	float:left;	
+	
 }
 
-.toolbar--content__utility
+.toolbar__utility-options
 {
-
+	float:right;
 }
 
 
@@ -190,6 +261,18 @@ a
 	display:inline-block;
 }
 
+.nav--main
+{
+	height:48px;
+	position:absolute;
+	bottom:0px;
+	
+}
+
+.nav--main a
+{
+	text-transform:uppercase;
+}
 
 
 /** Content Module **/
