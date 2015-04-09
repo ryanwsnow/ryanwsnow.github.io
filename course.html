@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Styleguide - Tophat</title>
+	<!-- Bootstrap -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/css/app.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/app.js"></script>
+	
+</head>
+<body>
+<div class="container">
+	<header class="l-header">
+		<div class="l-header__top-bar">
+			<a class="btn btn--icon  l-inline float-left" href="lobby.html">
+				<i class="icon-arrow-back"></i>
+			</a>
+			<div class="course--infobox float-left l-stacked">
+
+				<div class="course--infobox__name">BIO101 Fall 2015</div>
+				<div class="course--infobox__join-code"><span>Join Code:</span> 123456</div>
+			</div>
+			
+			<div class="toolbar">
+				<ul class="nav nav--horizontal float-right">
+					<li><a href="#" class="btn btn--icon"><i class="icon-help"></i></a></li>
+					<li>
+						<div class="dropdown">
+						 	<div class="dropdown-container">
+						    		<div class="btn btn--icon dropdown-button">
+									<i class="icon-settings"></i>
+								</div>
+							    	<ul class="dropdown-menu dropdown-select l-clear-list-style right-edge">
+								      <li><a href="#">Video</a></li>
+								      <li>Another Item</li>
+								      <li>Item Three</li>
+								      <li>The Last One</li>
+							    	</ul>
+						  	</div>
+						</div>
+
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="l-header__navigation">
+			<ul class="nav nav--horizontal nav--main">
+				<li><a href="#" class="btn is-active">Content</a></li>
+				<li><a href="#" class="btn ">Gradebook</a></li>
+				<li><a href="#" class="btn ">Students</a></li>
+			</ul>
+		</div>
+		
+	</header>
+	<div class="l-course-container">
+		<div class="l-section-main-container">
+			<div class="toolbar--section">
+				<ul class="nav nav--horizontal float-left">
+					<li><a href="#" class="btn--primary btn--size-default">Create</a></li>
+					<li><a href="#" class="btn btn--size-default dark">Option</a></li>
+				</ul>
+				<ul class="nav nav--horizontal float-right">
+					<li><a href="#" class="btn btn--icon dark"><i class="icon-search"></i></a></li>
+					
+				</ul>
+
+			</div>
+			<ol class="list">
+				<li class="list__row is-active">
+					<div class="list__column span-columns-10">
+						<div class="list__checkbox ">
+							<input type="checkbox" name="Question 1" value="selected">
+						</div>
+						<div class="inline-block l-stacked ">
+						  	<div class="list__item-title ">Question 1</div>
+						  	<div class="list__item-sub-title">Multiple Choice</div>
+					  	</div>
+					</div>
+					<div class="list__column span-columns-2">
+					  	<div class="list__item-activity-info">Mar 8</div>
+					</div>
+		  		</li> <!-- end row -->
+		  		<li class="list__row">
+					<div class="list__column span-columns-10">
+						<div class="list__checkbox ">
+							<input type="checkbox" name="Question 1" value="selected">
+						</div>
+						<div class="inline-block l-stacked ">
+						  	<div class="list__item-title ">Question 2</div>
+						  	<div class="list__item-sub-title">Multiple Choice</div>
+					  	</div>
+					</div>
+					<div class="list__column span-columns-2">
+					  	<div class="list__item-activity-info">Mar 8</div>
+					</div>
+		  		</li> <!-- end row -->
+		  		
+						  		
+		  	</ol>
+			
+		</div>
+		<div class="l-section-preview-container">
+			<div class="preview">
+				<div class="preview__header">
+					<div class="preview__header__top-bar">
+						<a class="btn btn--icon dark  float-left" href="#">
+							<i class="icon-close"></i>
+						</a>
+						<ul class="nav nav--horizontal float-right">
+							<li><a class="btn dark" href="#">Edit</a></li>
+							<li><a class="btn dark" href="#">Copy</a></li>
+							<li><a class="btn dark" href="#">Move</a></li>
+							<li><a class="btn dark" href="#">Delete</a></li>
+						</ul>
+					</div>
+					<div class="preview__header__info">
+						<div class="preview__header__title">
+							Question 1
+						</div>
+						<div class="preview__header__activity-info">
+							March 8th
+						</div>
+					</div>
+					<div class="preview__header__navigation">
+						<ul class="nav nav--horizontal nav--main dark float-left">
+							<li><a href="#" class="btn is-active">Details</a></li>
+							<li><a href="#" class="btn ">Report</a></li>
+						
+						</ul>
+						<ul class="nav nav--horizontal nav--primary float-right">
+							
+							<li><a href="#" class="btn--secondary btn--size-default">Assign</a></li>
+							<li><a href="#" class="btn--primary btn--size-default">Present</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="preview__body">
+					<div class="c--q">
+						<p class="c--q__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
+						<div class="c--q__answer-container">
+							<div class="c--q__answer">
+								<div class="c--q__answer__label c--q--mc__answer__label">A</div><div class="c--q__answer__description c--q--mc__description">this is my choice yay</div>
+							</div>
+							
+						</div>
+						<div class="c--question__answer-container">
+							<div class="c--q__answer">
+								<div class="c--q__answer__label c--q--mc__answer__label">B</div><div class="c--q__answer__description c--q--mc__description">this is my choice yay</div>
+							</div>
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
