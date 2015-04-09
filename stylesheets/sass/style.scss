@@ -2,15 +2,13 @@
 @import "neat/neat";
 @import "variables";
 
+
 h1 
 {
 	color:$primary-grey;
 }
 
-body
-{
-	font-family:$primary-font;
-}
+
 
 .clear-list-style 
 {
@@ -26,7 +24,7 @@ body
 	padding-left:10px
 }
 
-.l-page-container
+.l-app-container
 {
 	@include outer-container(100%);
 
@@ -41,5 +39,8 @@ body
 {
 	@include span-columns(10)
 }
+
+
+
 
 
