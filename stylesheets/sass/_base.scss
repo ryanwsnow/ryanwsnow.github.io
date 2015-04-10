@@ -1,0 +1,50 @@
+/** Base **/
+
+html, body {overflow:auto}
+
+
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  height:100%;
+}
+
+html
+{
+	background:$bg-med-grey;
+}
+
+
+body
+{
+	font-family:$primary-font;
+	margin:0px;
+	padding:0px;
+}
+a, a:link, a:visited, a:hover, a:active
+{
+	text-decoration:none;
+	color:$text-light-grey;
+}
+
+a, a:link, a:visited, a:hover, a:active
+{
+	
+}
+
+button 
+{
+	background:none;
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+header 
+{
+	position:relative;
+}
+/** End Base **/
+

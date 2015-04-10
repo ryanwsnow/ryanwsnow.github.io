@@ -1,38 +1,4 @@
-/** Base **/
 
-html, body {overflow:auto}
-
-
-html{
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  height:100%;
-}
-
-html
-{
-	background:$bg-med-grey;
-}
-
-
-body
-{
-	font-family:$primary-font;
-	margin:0px;
-	padding:0px;
-}
-a, a:hover 
-{
-	text-decoration:none;
-}
-
-header 
-{
-	position:relative;
-}
-/** End Base **/
 
 /** Minor layout styles/Utility Classes **/
 
@@ -70,81 +36,15 @@ header
 
 /** End minor layout styles **/
 
-/** Buttons **/
+
+/* -----------------------------------*/
+/* ---->>> Layouts ---------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Layout: General ----------*/
 
 
-.btn
-{
-	display:inline-block;
-	font-size:14px;
-	padding-left:10px;
-	padding-right:10px;
-	text-align:center;
-	color:$text-color--vh-2;
-
-}
-
-.btn--size-default
-{
-	min-width:100px;
-	height:32px;
-	line-height:32px;
-	margin-left:10px;
-	margin-right:10px;
-}
-
-.btn--icon
-{
-	min-width:32px;
-	height:32px;
-	line-height:32px;
-	font-size:24px;
-	color:$light-grey;
-}
-
-
-.btn:hover 
-{
-	color:#ffffff;
-	@include transition(all 0.5s ease-in-out);
-}
-
-.btn.dark:hover
-{
-	color:$bg-header;
-}
-.btn--secondary
-{
-	@extend .btn;
-	border-radius:2px;
-	background:$bg-light-grey;
-	color:$text-med-grey;
-	-webkit-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
--moz-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
-}
-.btn--primary
-{
-	@extend .btn;
-	border-radius:2px;
-	background:$primary-blue;
-	color:#fff;
-	-webkit-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
--moz-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
-
-}
-.btn--dark
-{
-	
-	
-}
-
-/** End Buttons **/
-
-
-/** Layout list**/
-.containers 
+.app--container 
 {
 	position:fixed;
 	width:100%;
@@ -176,7 +76,7 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 	top:150px;
 	bottom:0;
 	overflow-y: hidden;
-	background:$bg-med-grey;
+	background:$bg-light-grey;
 
 }
 .l-header__navigation
@@ -189,7 +89,7 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 
 .l-section-main-container
 {
-	background:$bg-med-grey;
+	background:$bg-light-grey;
 	float:left;
 	width:40%;
 	
@@ -199,18 +99,16 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 .l-section-preview-container
 {
 	width:60%;
-
+	min-width:450px;
 	float:left;
-	position: absolute;
-	  right: 0;
-	  top: 0;
-	  
-
-	  bottom: 0;
+	position: fixed;
+	right: 0;
+	top: 150px;
+	bottom: 0;
 	
 }
 
-/*** Gride Module **/
+/* --------->>> Layout: Grid -----------*/
 
 .grid 
 {
@@ -239,20 +137,20 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-.grid__item__body
+.grid__item-body
 {
 	
 	
 }
 
-.grid__item__title
+.grid__item-title
 {
 	padding:20px;
 	font-size:18px;
 	font-weight:600;
 }
 
-.grid__item__navigation
+.grid__item-navigation
 {
 	position:absolute;
 	width:100%;
@@ -261,11 +159,11 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	height:42px;
 }
 
-/*** List Module ***/
+/* --------->>> Layout: List -----------*/
 
 .list
 {
-	@include outer-container(100%);
+	
 	list-style-type:none;
 	padding:0;
 	margin:0;
@@ -279,7 +177,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 .list__row
  {
-	@include row(block);
+	
 	height:64px;
 	border-bottom:1px solid #d9dde1;
 	padding:10px;
@@ -302,8 +200,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	cursor: pointer;
 	
 }
-
-
 
 
 .list__checkbox
@@ -355,12 +251,21 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
-/** Preview **/
+
+
+
+
+
+/* -----------------------------------*/
+/* ---->>> Modules ---------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Module: Preview ----------*/
 
 .preview 
 {
-	overflow:hidden;
-	background:$bg-light-grey;
+	
+	background:$bg-slight-grey;
 	-webkit-box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
        -moz-box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
 	box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
@@ -416,7 +321,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
-.preview__header__navigation .nav--main //** janky**/
+.preview__header__navigation .nav--tab //** janky**/
 {
 	position:absolute;
 	bottom:0;
@@ -427,13 +332,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	padding:20px;
 }
 
-
-
-/** Preview End **/
-
-
-
-/** Course **/
+/* --------->>> Module: Course -----------*/
 
 .course__name
 {
@@ -458,106 +357,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	color:#ffffff;
 }
 
-/** toolbar module **/
-.toolbar
-{
-	height:52px;
-	
-	
-
-}
-
-.toolbar--section
-{
-	@extend .toolbar;
-	padding:10px;
-	background:#f9f9f9;
-}
-
-.toolbar__management-options
-{
-		
-	
-}
-
-
-
-
-/** Navigation **/
-.nav
-{
-	list-style-type:none;
-	margin:0px;
-	padding:0px;
-}
-
-.nav--horizontal > li
-{
-	display:inline-block;
-}
-
-.nav--horizontal > li:first-child
-{
-	padding-left:none;
-}
-
-.nav--main
-{
-	
-	
-}
-
-.nav--main > li
-{
-	padding-left:10px;
-	padding-right:10px;
-}
-
-.nav--main > li:first-child
-{
-	padding-left:0px;
-	
-}
-
-.nav--card > li
-{
-	padding-left:10px;
-	padding-right:10px;
-}
-.nav--card a
-{
-	line-height:32px;
-	height:32px;
-	text-transform:uppercase;
-}
-
-.nav--main a
-{
-	height:32px;
-	text-transform:uppercase;
-}
-
-.nav--main a.is-active
-{
-	color:#ffffff;
-	border-bottom:2px solid $highlight;
-}
-
-.nav--main.dark a.is-active
-{
-	color:$highlight;
-	border-bottom:2px solid $highlight;
-}
-
-.nav--primary
-{
-	padding-bottom:20px;
-}
-
-
-/** Content Module **/
-
-/** Question Module **/
+/* --------->>> Module: Question -----------*/
 .c--q
 {
 
@@ -572,7 +372,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 {
 
 	background:#ffffff;
-	border:5px solid $bg-med-grey;
+	border:5px solid $bg-light-grey;
 	border-radius:3px;
 	padding:20px;
 	margin-bottom:10px;
@@ -583,6 +383,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	
 	color:$highlight;
 	text-align:center;
+	font-size:18px;
 }
 
 .c--q__answer-description
@@ -593,15 +394,170 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
+/* --------->>> Module: Tool-bar -----------*/
+.toolbar
+{
+
+	padding-top:10px;
+	padding-bottom:10px;
+	height:52px;
+	background:#f9f9f9;
+
+}
+
+.toolbar__utility
+{
+		
+	
+}
+
+/* --------->>> Module: utility-bar -----------*/
 
 
 
 
 
+/* -----------------------------------*/
+/* ---->>> Navigation -------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Navigation: Basic ---------*/
+
+.nav
+{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
 
 
 
-.content--subview
+.nav__item
+{
+	padding-left:10px;
+	padding-right:10px;
+	
+}
+
+
+
+.nav__item.first 
+{
+	padding-left:0px;
+}
+
+.nav__item.last 
+{
+	padding-right:0px;
+}
+
+.nav--horizontal > li
+{
+	display:inline-block;
+}
+
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+
+
+
+
+/* --------->>> Navigation: tab ---------*/
+
+.nav--icons
 {
 
 }
+
+
+/* --------->>> Navigation: tab ---------*/
+
+.nav--tab
+{
+
+	@extend .nav--horizontal;
+	padding-top:20px;
+	height:52px;
+	
+}
+
+
+
+.nav--tab__item
+{
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:10px;
+	margin-right:10px;
+	padding-bottom:10px;
+	height:32px;
+	text-transform:uppercase;
+}
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+
+
+.nav--tab__item.first
+{
+	margin-left:0px;
+	
+}
+
+
+
+.nav--tab__item.last 
+{
+	margin-right:0px;
+}
+
+.nav--tab__item.is-active
+{
+	color:#ffffff;
+	border-bottom:2px solid $highlight;	
+}
+
+
+/* --->>> Navigation: tab  theme ---------*/
+
+.nav--tab.on-light
+{
+	.nav--tab__item.is-active
+	{
+		color:$highlight;
+		
+	}
+}
+
+
+/* --------->>> Navigation:  Card ---------*/
+
+.nav--card > li
+{
+	padding-left:10px;
+	padding-right:10px;
+}
+.nav--card a
+{
+	line-height:32px;
+	height:32px;
+	text-transform:uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
