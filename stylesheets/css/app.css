@@ -2376,7 +2376,7 @@ header {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
 
-.btn.dark:hover, .dark.btn--secondary:hover, .dark.btn--primary:hover {
+.btn.on-light:hover, .on-light.btn--secondary:hover, .on-light.btn--primary:hover {
   color: #435561; }
 
 .btn--secondary {
@@ -2473,29 +2473,17 @@ header {
 
 /*** List Module ***/
 .list {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   list-style-type: none;
   padding: 0;
   margin: 0; }
-  .list:after {
-    content: "";
-    display: table;
-    clear: both; }
 
 .list > li:first-child {
   border-top: 1px solid #d9dde1; }
 
 .list__row {
-  display: block;
   height: 64px;
   border-bottom: 1px solid #d9dde1;
   padding: 10px; }
-  .list__row:after {
-    content: "";
-    display: table;
-    clear: both; }
 
 .list__row.is-active {
   -webkit-transition: all 0.2s ease-in-out;
@@ -2542,7 +2530,6 @@ header {
 
 /** Preview **/
 .preview {
-  overflow: hidden;
   background: #f9f9f9;
   -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
@@ -2647,7 +2634,7 @@ header {
   color: #ffffff;
   border-bottom: 2px solid #0ac8f4; }
 
-.nav--main.dark a.is-active {
+.nav--main.on-light a.is-active {
   color: #0ac8f4;
   border-bottom: 2px solid #0ac8f4; }
 
