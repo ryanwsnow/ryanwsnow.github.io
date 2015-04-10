@@ -7,6 +7,7 @@
 	<title>Styleguide - Tophat</title>
 	<!-- Bootstrap -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="stylesheets/css/app.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -14,7 +15,7 @@
 	
 </head>
 <body>
-<div class="container">
+<div class="app--container">
 	<header class="l-header">
 		<div class="l-header__top-bar">
 			
@@ -29,17 +30,17 @@
 					<li><a href="#" class="btn btn--icon"><i class="icon-help"></i></a></li>
 					<li>
 						<div class="dropdown">
-						 	<div class="dropdown-container">
-						    		<div class="btn btn--icon dropdown-button">
+						 	
+						    	<a id="dLabel" class="btn btn--icon" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
 									<i class="icon-settings"></i>
-								</div>
-							    	<ul class="dropdown-menu dropdown-select l-clear-list-style right-edge">
+								</a>
+							    	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 								      <li><a href="#">Video</a></li>
 								      <li>Another Item</li>
 								      <li>Item Three</li>
 								      <li>The Last One</li>
 							    	</ul>
-						  	</div>
+						  	
 						</div>
 
 						
@@ -48,7 +49,7 @@
 			</div>
 		</div>
 		<div class="l-header__navigation">
-			<ul class="nav nav--horizontal nav--main">
+			<ul class="nav nav--horizontal nav--tab">
 				<li><a href="#" class="btn is-active">Courses</a></li>
 				<li><a href="#" class="btn ">Tools and Apps</a></li>
 				
@@ -71,13 +72,13 @@
 		</div>
 		<div class="grid">
 			<div class="grid__item">
-				<div class="grid__item__body">
-					<div class="grid__item__title">BIO101 Fall 2015</div>
+				<div class="grid__item-body">
+					<div class="grid__item-title">BIO101 Fall 2015</div>
 				</div>
-				<div class="grid__item__navigation">
+				<div class="grid__item-navigation">
 					<ul class="nav nav--horizontal nav--card float-right">
-						<li><a class="btn dark" href="#">Edit</a></li>
-						<li><a class="btn dark" href="course.html">Enter</a></li>
+						<li><a class="btn on-light" href="#">Edit</a></li>
+						<li><a class="btn on-light" href="course.html">Enter</a></li>
 
 					</ul>
 				</div>

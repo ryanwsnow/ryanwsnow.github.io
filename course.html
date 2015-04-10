@@ -15,61 +15,55 @@
 	
 </head>
 <body>
-<div class="containers">
+<div class="app--container">
 	<header class="l-header">
 		<div class="l-header__top-bar">
-			<a class="btn btn--icon  l-inline float-left" href="lobby.html">
+			<button class="btn btn--icon float-left" href="lobby.html">
 				<i class="icon-arrow-back"></i>
-			</a>
+			</button>
 			<div class="course--infobox float-left l-stacked">
 
 				<div class="course--infobox__name">BIO101 Fall 2015</div>
 				<div class="course--infobox__join-code"><span>Join Code:</span> 123456</div>
 			</div>
 			
-			<div class="toolbar">
-				<ul class="nav nav--horizontal float-right">
-					<li><a href="#" class="btn btn--icon"><i class="icon-help"></i></a></li>
-					<li>
-						<div class="dropdown">
-						 	
-						    	<a id="dLabel" class="btn btn--icon" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-									<i class="icon-settings"></i>
-								</a>
-							    	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								      <li><a href="#">Video</a></li>
-								      <li>Another Item</li>
-								      <li>Item Three</li>
-								      <li>The Last One</li>
-							    	</ul>
-						  	
-						</div>
-
-						
-					</li>
-				</ul>
+			<div class="btn-grp float-right">
+				
+				<button class="btn btn--icon"><i class="icon-help"></i></button>
+				
+					<div class="dropdown inline-block">
+					 	
+					    	<button id="dLabel" class="btn btn--icon" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+								<i class="icon-settings"></i>
+							</button>
+						    	<ul class="menu dropdown-menu" role="menu" aria-labelledby="dLabel">
+							      <li><a href="#">Video</a></li>
+							      <li>Another Item</li>
+							      <li>Item Three</li>
+							      <li>The Last One</li>
+						    	</ul>
+					  	
+					</div>
 			</div>
 		</div>
 		<div class="l-header__navigation">
-			<ul class="nav nav--horizontal nav--main">
-				<li><a href="#" class="btn is-active">Content</a></li>
-				<li><a href="#" class="btn ">Gradebook</a></li>
-				<li><a href="#" class="btn ">Students</a></li>
+			<ul class="nav nav--tab">
+				<li><a href="#" class="nav--tab__item is-active first">Content</a></li>
+				<li><a href="#" class="nav--tab__item ">Gradebook</a></li>
+				<li><a href="#" class="nav--tab__item last">Students</a></li>
 			</ul>
 		</div>
 		
 	</header>
 	<div class="l-course-container">
 		<div class="l-section-main-container">
-			<div class="toolbar--section">
-				<ul class="nav nav--horizontal float-left">
-					<li><a href="#" class="btn--primary btn--size-default">Create</a></li>
-					<li><a href="#" class="btn btn--size-default on-light">Option</a></li>
-				</ul>
-				<ul class="nav nav--horizontal float-right">
-					<li><a href="#" class="btn btn--icon on-light"><i class="icon-search"></i></a></li>
-					
-				</ul>
+			<div class="toolbar">
+				
+					<button class="btn btn--primary">Create</button>
+					<button class="btn ">Option</button>
+				
+				
+					<button class="btn btn--icon on-light float-right"><i class="icon-search"></i></button>
 
 			</div>
 			<ol class="list">
@@ -113,12 +107,12 @@
 						<a class="btn btn--icon on-light  float-left" href="#">
 							<i class="icon-close"></i>
 						</a>
-						<ul class="nav nav--horizontal float-right">
-							<li><a class="btn on-light" href="#">Edit</a></li>
-							<li><a class="btn on-light" href="#">Copy</a></li>
-							<li><a class="btn on-light" href="#">Move</a></li>
-							<li><a class="btn on-light" href="#">Delete</a></li>
-						</ul>
+						<div class="btn-grp float-right">
+							<button class="btn on-light" href="#">Edit</button>
+							<button  class="btn on-light" href="#">Copy</button>
+							<button  class="btn on-light" href="#">Move</button>
+							<button  class="btn on-light" href="#">Delete</button>
+						</div>
 					</div>
 					<div class="preview__header__info">
 						<div class="preview__header__title">
@@ -129,16 +123,16 @@
 						</div>
 					</div>
 					<div class="preview__header__navigation">
-						<ul class="nav nav--horizontal nav--main on-light float-left">
-							<li><a href="#" class="btn on-light is-active">Details</a></li>
-							<li><a href="#" class="btn on-light">Report</a></li>
+						<ul class="nav  nav--tab on-light float-left">
+							<li><a href="#" class="nav--tab__item is-active first">Details</a></li>
+							<li><a href="#" class="nav--tab__item last">Report</a></li>
 						
 						</ul>
-						<ul class="nav nav--horizontal nav--primary float-right">
+						<div class="btn-grp float-right">
 							
-							<li><a href="#" class="btn--secondary btn--size-default">Assign</a></li>
-							<li><a href="#" class="btn--primary btn--size-default">Present</a></li>
-						</ul>
+							<button class="btn btn--secondary ">Assign</button>
+							<button class="btn btn--primary ">Present</button>
+						</div>
 					</div>
 				</div>
 				<!-- Multiple Choice -->

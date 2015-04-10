@@ -44,7 +44,7 @@
 /* --------->>> Layout: General ----------*/
 
 
-.containers 
+.app--container 
 {
 	position:fixed;
 	width:100%;
@@ -102,11 +102,9 @@
 	min-width:450px;
 	float:left;
 	position: fixed;
-	  right: 0;
-	  top: 150px;
-	  
-
-	  bottom: 0;
+	right: 0;
+	top: 150px;
+	bottom: 0;
 	
 }
 
@@ -139,20 +137,20 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-.grid__item__body
+.grid__item-body
 {
 	
 	
 }
 
-.grid__item__title
+.grid__item-title
 {
 	padding:20px;
 	font-size:18px;
 	font-weight:600;
 }
 
-.grid__item__navigation
+.grid__item-navigation
 {
 	position:absolute;
 	width:100%;
@@ -323,7 +321,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
-.preview__header__navigation .nav--main //** janky**/
+.preview__header__navigation .nav--tab //** janky**/
 {
 	position:absolute;
 	bottom:0;
@@ -396,27 +394,25 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-/* --------->>> Module: Toolbar -----------*/
+/* --------->>> Module: Tool-bar -----------*/
 .toolbar
 {
+
+	padding-top:10px;
+	padding-bottom:10px;
 	height:52px;
-	
-	
-
-}
-
-.toolbar--section
-{
-	@extend .toolbar;
-	padding:10px;
 	background:#f9f9f9;
+
 }
 
-.toolbar__management-options
+.toolbar__utility
 {
 		
 	
 }
+
+/* --------->>> Module: utility-bar -----------*/
+
 
 
 
@@ -434,33 +430,106 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	padding:0px;
 }
 
+
+
+.nav__item
+{
+	padding-left:10px;
+	padding-right:10px;
+	
+}
+
+
+
+.nav__item.first 
+{
+	padding-left:0px;
+}
+
+.nav__item.last 
+{
+	padding-right:0px;
+}
+
 .nav--horizontal > li
 {
 	display:inline-block;
 }
 
-.nav--horizontal > li:first-child
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+
+
+
+
+/* --------->>> Navigation: tab ---------*/
+
+.nav--icons
 {
-	padding-left:none;
+
 }
 
-.nav--main
+
+/* --------->>> Navigation: tab ---------*/
+
+.nav--tab
 {
-	
+
+	@extend .nav--horizontal;
+	padding-top:20px;
+	height:52px;
 	
 }
 
-.nav--main > li
+
+
+.nav--tab__item
 {
 	padding-left:10px;
 	padding-right:10px;
+	margin-left:10px;
+	margin-right:10px;
+	padding-bottom:10px;
+	height:32px;
+	text-transform:uppercase;
 }
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
 
-.nav--main > li:first-child
+
+.nav--tab__item.first
 {
-	padding-left:0px;
+	margin-left:0px;
 	
 }
+
+
+
+.nav--tab__item.last 
+{
+	margin-right:0px;
+}
+
+.nav--tab__item.is-active
+{
+	color:#ffffff;
+	border-bottom:2px solid $highlight;	
+}
+
+
+/* --->>> Navigation: tab  theme ---------*/
+
+.nav--tab.on-light
+{
+	.nav--tab__item.is-active
+	{
+		color:$highlight;
+		
+	}
+}
+
+
+/* --------->>> Navigation:  Card ---------*/
 
 .nav--card > li
 {
@@ -474,28 +543,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	text-transform:uppercase;
 }
 
-.nav--main a
-{
-	height:32px;
-	text-transform:uppercase;
-}
 
-.nav--main a.is-active
-{
-	color:#ffffff;
-	border-bottom:2px solid $highlight;
-}
-
-.nav--main.on-light a.is-active
-{
-	color:$highlight;
-	border-bottom:2px solid $highlight;
-}
-
-.nav--primary
-{
-	padding-bottom:20px;
-}
 
 
 

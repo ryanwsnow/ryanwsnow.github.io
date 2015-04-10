@@ -1,49 +1,55 @@
-/** Buttons **/
+/* -----------------------------------*/
+/* ---->>> Buttons  -------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Button: Basic ---------*/
+
+
+
+.btn-grp
+{
+	height:52px;
+	padding:10px;
+
+}
+
+.btn:last-child
+{
+	margin-right:0px;
+}
 
 
 .btn
 {
 	display:inline-block;
-	font-size:14px;
+	height:32px;
 	padding-left:10px;
 	padding-right:10px;
+	margin-left:10px;
+	margin-right:10px;
+
 	text-align:center;
+	line-height:32px;
+	font-size:14px;
 	color:$text-light-grey;
 
 }
 
-.btn--size-default
-{
-	min-width:100px;
-	height:32px;
-	line-height:32px;
-	margin-left:10px;
-	margin-right:10px;
-}
-
 .btn--icon
 {
-	min-width:32px;
-	height:32px;
-	line-height:32px;
+	margin:0px;
+	
 	font-size:24px;
-	color:$light-grey;
 }
 
 
-.btn:hover 
-{
-	color:#ffffff;
-	@include transition(all 0.5s ease-in-out);
-}
 
-.btn.on-light:hover
-{
-	color:$bg-header;
-}
+
 .btn--secondary
 {
-	@extend .btn;
+	
+	min-width:120px;
+	
 	border-radius:2px;
 	background:$bg-light-grey;
 	color:$text-med-grey;
@@ -53,7 +59,9 @@ box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
 }
 .btn--primary
 {
-	@extend .btn;
+	
+	width:120px;
+	
 	border-radius:2px;
 	background:$primary-blue;
 	color:#fff;
@@ -67,6 +75,22 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 {
 	color:#fff; 
 }
+
+
+
+
+
+.btn:hover
+{
+	color:#ffffff;
+	@include transition(all 0.5s ease-in-out);
+}
+
+.btn.on-light:hover
+{
+	color:$bg-header;
+}
+
 
 .btn--on-light
 {
