@@ -23,7 +23,7 @@ body
 	margin:0px;
 	padding:0px;
 }
-a 
+a, a:hover 
 {
 	text-decoration:none;
 }
@@ -66,122 +66,7 @@ header
 }
 
 
-/** refill **/
 
-.dropdown {
-  $large-screen: em(640) !default;
-  $dropdown-distance-from-menu: 50px;
-
-  .dropdown-container {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-
-  }
-
-  .dropdown-description {
-    float: left;
-    padding-right: 1em;
-  }
-
-  .dropdown-button {
-    cursor: pointer;
-    
-    position: relative;
-  }
-
-  .dropdown-button:after {
-    display: block;
-    position: absolute;
-  }
-
-  .dropdown-menu {
-    @include transition (all 0.2s ease-in-out);
-    cursor: pointer;
-    display: none;
-    overflow: show;
-    position: absolute;
-    text-align: left;
-    top: $dropdown-distance-from-menu;
-    width: 228px;
-    
-    z-index: 99999;
-   
-
-    background:#ffffff;
-    border-radius:3px;
-    padding:10px;
-    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.26);
-    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.26);
-	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.26);
-  }
-  .dropdown-menu.right-edge{
-  	  right:10px;
-    left:auto;
-  }
-  .dropdown-menu li
-  {
-  	padding-top:5px;
-  	padding-bottom:5px;
-  }
-  .show-menu {
-    display: block;
-    
-  }
-}
-
-/** Refill End **/
-
-
-.span-columns-1
-{
-	@include span-columns(1);
-}
-.span-columns-2
-{
-	@include span-columns(2);
-}
-
-.span-columns-3
-{
-	@include span-columns(3);
-}
-.span-columns-4
-{
-	@include span-columns(4);
-}
-.span-columns-5
-{
-	@include span-columns(5);
-}
-.span-columns-6
-{
-	@include span-columns(6);
-}
-.span-columns-7
-{
-	@include span-columns(7);
-}
-.span-columns-8
-{
-	@include span-columns(8);
-}
-.span-columns-9
-{
-	@include span-columns(9);
-}
-.span-columns-10
-{
-	@include span-columns(10);
-}
-.span-columns-11
-{
-	@include span-columns(11);
-}
-.span-columns-12
-{
-	@include span-columns(12);
-}
 
 /** End minor layout styles **/
 
@@ -259,7 +144,7 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 
 
 /** Layout list**/
-.container 
+.containers 
 {
 	position:fixed;
 	width:100%;
@@ -291,6 +176,8 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 	top:150px;
 	bottom:0;
 	overflow-y: hidden;
+	background:$bg-med-grey;
+
 }
 .l-header__navigation
 {
@@ -642,8 +529,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	line-height:32px;
 	height:32px;
 	text-transform:uppercase;
-
-
 }
 
 .nav--main a
@@ -681,14 +566,11 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 {
 	font-size:18px;
 }
-.c--q__answer-container
-{
-	@include outer-container(100%);
-}
+
 
 .c--q__answer
 {
-	@include row(block);
+
 	background:#ffffff;
 	border:5px solid $bg-med-grey;
 	border-radius:3px;
@@ -696,66 +578,19 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	margin-bottom:10px;
 }
 
-.c--q__answer__label
+.c--q__answer-label
 {
 	
 	color:$highlight;
 	text-align:center;
 }
 
-.c--q__answer__description
+.c--q__answer-description
 {
-	font-size:14px;
+	font-size:18px;
 }
 
-/** Sub module Multiple Choice **/
 
-.c--q--mc__answer__label
-{
-	@include span-columns(1);
-}
-
-.c--q--mc__description
-{
-	@include span-columns(10);
-}
-
-/** Sub Module Matching **/
-
-.c--q--match__answer
-{
-
-}
-
-/** Sub Module Sorting End **/
-
-
-/*** Sub Module Sorting **/
-
-
-
-
-/*** Sub module Multiple Choice ***/
-// .c--question__answer__mc--choice
-// {
-// 	@include row(block);
-// 	background:#ffffff;
-// 	border:5px solid $bg-med-grey;
-// 	border-radius:3px;
-// 	padding:20px;
-// 	margin-bottom:10px;
-
-// 	.label 
-// 	{
-// 		@include span-columns(1);
-// 		color:$highlight;
-// 		text-align:center;
-// 	}
-// 	.discription 
-// 	{
-// 		@include span-columns(10);
-// 	}
-// }
 
 
 

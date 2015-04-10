@@ -7,13 +7,15 @@
 	<title>Styleguide - Tophat</title>
 	<!-- Bootstrap -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="stylesheets/css/app.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/app.js"></script>
 	
 </head>
 <body>
-<div class="container">
+<div class="containers">
 	<header class="l-header">
 		<div class="l-header__top-bar">
 			<a class="btn btn--icon  l-inline float-left" href="lobby.html">
@@ -30,17 +32,17 @@
 					<li><a href="#" class="btn btn--icon"><i class="icon-help"></i></a></li>
 					<li>
 						<div class="dropdown">
-						 	<div class="dropdown-container">
-						    		<div class="btn btn--icon dropdown-button">
+						 	
+						    	<a id="dLabel" class="btn btn--icon" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
 									<i class="icon-settings"></i>
-								</div>
-							    	<ul class="dropdown-menu dropdown-select l-clear-list-style right-edge">
+								</a>
+							    	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 								      <li><a href="#">Video</a></li>
 								      <li>Another Item</li>
 								      <li>Item Three</li>
 								      <li>The Last One</li>
 							    	</ul>
-						  	</div>
+						  	
 						</div>
 
 						
@@ -72,7 +74,7 @@
 			</div>
 			<ol class="list">
 				<li class="list__row is-active">
-					<div class="list__column span-columns-10">
+					<div class="list__column col-md-10 col-sm-10 col-xs-10">
 						<div class="list__checkbox ">
 							<input type="checkbox" name="Question 1" value="selected">
 						</div>
@@ -81,12 +83,12 @@
 						  	<div class="list__item-sub-title">Multiple Choice</div>
 					  	</div>
 					</div>
-					<div class="list__column span-columns-2">
+					<div class="list__column col-md-2 col-sm-2 col-xs-2">
 					  	<div class="list__item-activity-info">Mar 8</div>
 					</div>
 		  		</li> <!-- end row -->
 		  		<li class="list__row">
-					<div class="list__column span-columns-10">
+					<div class="list__column col-md-10 col-sm-10 col-xs-10">
 						<div class="list__checkbox ">
 							<input type="checkbox" name="Question 1" value="selected">
 						</div>
@@ -95,7 +97,7 @@
 						  	<div class="list__item-sub-title">Multiple Choice</div>
 					  	</div>
 					</div>
-					<div class="list__column span-columns-2">
+					<div class="list__column col-md-2 col-sm-2 col-xs-2">
 					  	<div class="list__item-activity-info">Mar 8</div>
 					</div>
 		  		</li> <!-- end row -->
@@ -139,24 +141,24 @@
 						</ul>
 					</div>
 				</div>
+				<!-- Multiple Choice -->
 				<div class="preview__body">
 					<div class="c--q">
 						<p class="c--q__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
-						<div class="c--q__answer-container">
-							<div class="c--q__answer">
-								<div class="c--q__answer__label c--q--mc__answer__label">A</div><div class="c--q__answer__description c--q--mc__description">this is my choice yay</div>
+						<div class=" container-fluid">
+							<div class="row c--q__answer">
+								<div class="c--q__answer-label col-md-2 col-sm-2 col-xs-2">A</div>
+								<div class="c--q__answer-description col-md-10 col-sm-10 col-xs-10">this is my choice yay</div>
 							</div>
-							
-						</div>
-						<div class="c--question__answer-container">
-							<div class="c--q__answer">
-								<div class="c--q__answer__label c--q--mc__answer__label">B</div><div class="c--q__answer__description c--q--mc__description">this is my choice yay</div>
-							</div>
-							
 						</div>
 					</div>
 
 				</div>
+				<!-- Multiple Choice End -->
+				
+
+				</div>
+				<!-- Multiple Choice End -->
 			</div>
 
 
