@@ -1,38 +1,4 @@
-/** Base **/
 
-html, body {overflow:auto}
-
-
-html{
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  height:100%;
-}
-
-html
-{
-	background:$bg-med-grey;
-}
-
-
-body
-{
-	font-family:$primary-font;
-	margin:0px;
-	padding:0px;
-}
-a, a:hover 
-{
-	text-decoration:none;
-}
-
-header 
-{
-	position:relative;
-}
-/** End Base **/
 
 /** Minor layout styles/Utility Classes **/
 
@@ -70,80 +36,14 @@ header
 
 /** End minor layout styles **/
 
-/** Buttons **/
+
+/* -----------------------------------*/
+/* ---->>> Layouts ---------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Layout: General ----------*/
 
 
-.btn
-{
-	display:inline-block;
-	font-size:14px;
-	padding-left:10px;
-	padding-right:10px;
-	text-align:center;
-	color:$text-color--vh-2;
-
-}
-
-.btn--size-default
-{
-	min-width:100px;
-	height:32px;
-	line-height:32px;
-	margin-left:10px;
-	margin-right:10px;
-}
-
-.btn--icon
-{
-	min-width:32px;
-	height:32px;
-	line-height:32px;
-	font-size:24px;
-	color:$light-grey;
-}
-
-
-.btn:hover 
-{
-	color:#ffffff;
-	@include transition(all 0.5s ease-in-out);
-}
-
-.btn.on-light:hover
-{
-	color:$bg-header;
-}
-.btn--secondary
-{
-	@extend .btn;
-	border-radius:2px;
-	background:$bg-light-grey;
-	color:$text-med-grey;
-	-webkit-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
--moz-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
-}
-.btn--primary
-{
-	@extend .btn;
-	border-radius:2px;
-	background:$primary-blue;
-	color:#fff;
-	-webkit-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
--moz-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
-
-}
-.btn--on-light
-{
-	
-	
-}
-
-/** End Buttons **/
-
-
-/** Layout list**/
 .containers 
 {
 	position:fixed;
@@ -176,7 +76,7 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 	top:150px;
 	bottom:0;
 	overflow-y: hidden;
-	background:$bg-med-grey;
+	background:$bg-light-grey;
 
 }
 .l-header__navigation
@@ -189,7 +89,7 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 
 .l-section-main-container
 {
-	background:$bg-med-grey;
+	background:$bg-light-grey;
 	float:left;
 	width:40%;
 	
@@ -199,18 +99,18 @@ box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
 .l-section-preview-container
 {
 	width:60%;
-
+	min-width:450px;
 	float:left;
-	position: absolute;
+	position: fixed;
 	  right: 0;
-	  top: 0;
+	  top: 150px;
 	  
 
 	  bottom: 0;
 	
 }
 
-/*** Gride Module **/
+/* --------->>> Layout: Grid -----------*/
 
 .grid 
 {
@@ -261,7 +161,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	height:42px;
 }
 
-/*** List Module ***/
+/* --------->>> Layout: List -----------*/
 
 .list
 {
@@ -302,8 +202,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	cursor: pointer;
 	
 }
-
-
 
 
 .list__checkbox
@@ -355,12 +253,21 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
-/** Preview **/
+
+
+
+
+
+/* -----------------------------------*/
+/* ---->>> Modules ---------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Module: Preview ----------*/
 
 .preview 
 {
 	
-	background:$bg-light-grey;
+	background:$bg-slight-grey;
 	-webkit-box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
        -moz-box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
 	box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
@@ -427,13 +334,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	padding:20px;
 }
 
-
-
-/** Preview End **/
-
-
-
-/** Course **/
+/* --------->>> Module: Course -----------*/
 
 .course__name
 {
@@ -458,7 +359,44 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	color:#ffffff;
 }
 
-/** toolbar module **/
+/* --------->>> Module: Question -----------*/
+.c--q
+{
+
+}
+.c--q__description
+{
+	font-size:18px;
+}
+
+
+.c--q__answer
+{
+
+	background:#ffffff;
+	border:5px solid $bg-light-grey;
+	border-radius:3px;
+	padding:20px;
+	margin-bottom:10px;
+}
+
+.c--q__answer-label
+{
+	
+	color:$highlight;
+	text-align:center;
+	font-size:18px;
+}
+
+.c--q__answer-description
+{
+	font-size:18px;
+}
+
+
+
+
+/* --------->>> Module: Toolbar -----------*/
 .toolbar
 {
 	height:52px;
@@ -483,7 +421,12 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-/** Navigation **/
+/* -----------------------------------*/
+/* ---->>> Navigation -------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Navigation: Basic ---------*/
+
 .nav
 {
 	list-style-type:none;
@@ -555,40 +498,9 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 }
 
 
-/** Content Module **/
-
-/** Question Module **/
-.c--q
-{
-
-}
-.c--q__description
-{
-	font-size:18px;
-}
 
 
-.c--q__answer
-{
 
-	background:#ffffff;
-	border:5px solid $bg-med-grey;
-	border-radius:3px;
-	padding:20px;
-	margin-bottom:10px;
-}
-
-.c--q__answer-label
-{
-	
-	color:$highlight;
-	text-align:center;
-}
-
-.c--q__answer-description
-{
-	font-size:18px;
-}
 
 
 
