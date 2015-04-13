@@ -3,7 +3,7 @@
 @import "variables";
 
 
-h1 
+h1,h2,h3,h4 
 {
 
 	color:$primary-grey;
@@ -16,11 +16,12 @@ h1
 	height:150px;
 }
 
-.sg--header__title
+.sg--header h2
 {
-	color:#fff;
+	color:#ffffff;
+	font-size:24px;
+	font-weight:600;
 }
-
 
 .sg--content
 {

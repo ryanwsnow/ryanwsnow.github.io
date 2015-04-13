@@ -2318,15 +2318,8 @@ header {
 /* ---->>> Buttons  -------------------*/
 /* -----------------------------------*/
 /* --------->>> Button: Basic ---------*/
-.btn-grp {
-  height: 52px;
-  padding: 10px; }
-
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
-.btn-grp .btn:last-child, .btn-grp .btn--default:last-child {
-  margin-right: 0px; }
-
 .btn, .btn--default {
   display: inline-block;
   height: 32px;
@@ -2338,6 +2331,10 @@ header {
   line-height: 32px;
   font-size: 14px;
   color: #a4b0ba; }
+  .btn.is-first, .is-first.btn--default {
+    margin-left: 0; }
+  .btn.is-last, .is-last.btn--default {
+    margin-right: 0; }
   .btn:hover, .btn--default:hover {
     color: #435561;
     -webkit-transition: all 0.5s ease-in-out;
@@ -2353,6 +2350,10 @@ header {
 .btn--icon {
   margin: 0px;
   font-size: 24px; }
+  .btn--icon.is-first {
+    padding-left: 0; }
+  .btn--icon.is-last {
+    padding-right: 0; }
 
 .btn--raised {
   background: #f2f2f2;
@@ -2376,9 +2377,6 @@ header {
 a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primary:active {
   color: #fff; }
 
-.btn.on-light:hover, .on-light.btn--default:hover {
-  color: #435561; }
-
 /** End Buttons **/
 /** Minor layout styles/Utility Classes **/
 .inline-block {
@@ -2387,10 +2385,10 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 .l-inline {
   display: inline; }
 
-.float-left {
+.left {
   float: left; }
 
-.float-right {
+.right {
   float: right; }
 
 .l-stacked > div {
@@ -2398,6 +2396,16 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 
 .l-clear-list-style {
   list-style-type: none; }
+
+.l-inset {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .l-inset:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /** End minor layout styles **/
 /* -----------------------------------*/
@@ -2479,48 +2487,46 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 .list > li:first-child {
   border-top: 1px solid #d9dde1; }
 
-.list__row {
+.list_row {
   height: 64px;
   border-bottom: 1px solid #d9dde1;
   padding: 10px; }
+  .list_row.is-hovered {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: #f2f2f2;
+    cursor: pointer; }
+  .list_row.is-active {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    cursor: pointer;
+    border-left: 3px solid #0ac8f4; }
 
-.list__row.is-active {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background: #fff;
-  cursor: pointer;
-  border-left: 3px solid #0ac8f4; }
-
-.list__row.is-hovered {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background: #f2f2f2;
-  cursor: pointer; }
-
-.list__checkbox {
+.list_checkbox {
   display: inline-block;
   width: 40px;
   margin-left: auto;
   margin-right: auto; }
 
-.list__checkbox > input {
+.list_checkbox > input {
   display: block;
   line-height: 64px;
   vertical-align: middle; }
 
-.list__item-title {
+.list_item-title {
   font-size: 14px;
   font-weight: 600;
   color: #323b47; }
 
-.list__item-sub-title {
+.list_item-sub-title {
   font-size: 12px;
   color: #a5b1bb;
   font-weight: 400; }
 
-.list__item-activity-info {
+.list_item-activity-info {
   font-size: 12px;
   color: #a5b1bb;
   font-weight: 400;
@@ -2534,15 +2540,19 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 .header {
   width: 100%;
   position: relative;
+  padding-top: 10px;
   padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px; }
+  padding-right: 10px; }
+  .header:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .header--primary {
   background: #435561;
   height: 150px; }
 
-.header--primary__navigation {
+.header--primary_navigation {
   position: absolute;
   bottom: 0px;
   left: 52px; }
@@ -2561,7 +2571,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
-.header--primary .nav--tab__item.is-active {
+.header--primary .nav--tab_item.is-active {
   color: #ffffff; }
 
 .breadcrumb__location-name {
@@ -2573,62 +2583,56 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   font-size: 14px;
   color: #ffffff; }
 
-.header__top-bar:after {
-  content: "";
-  display: table;
-  clear: both; }
-
 /* --------->>> Module: Preview ----------*/
-.preview {
+.objectView {
   background: #f9f9f9;
   -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
   box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
   height: 100%; }
 
-.preview__header {
+.objectView_header {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
   background: #ffffff;
   border-bottom: 1px solid #d9dde1; }
-  .preview__header:after {
+  .objectView_header:after {
     content: "";
     display: table;
     clear: both; }
 
-.preview__header__top-bar:after {
-  content: "";
-  display: table;
-  clear: both; }
+.objectView_cta {
+  padding-bottom: 10px; }
 
-.preview__header__info {
-  padding: 10px;
-  padding-left: 20px;
-  width: 100%; }
+.objectView_header-topbar {
+  padding-bottom: 10px; }
+  .objectView_header-topbar:after {
+    content: "";
+    display: table;
+    clear: both; }
 
-.preview__header__title {
+.objectView_header-info {
+  padding-bottom: 20px; }
+  .objectView_header-info:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.objectView_header-title {
   font-size: 24px;
   font-weight: 600; }
 
-.preview__header__activity-info {
-  font-size: 12px;
+.objectView_header-activityInfo {
+  font-size: 14px;
   color: #a5b1bb;
   font-weight: 400; }
 
-.preview__header__navigation {
-  position: relative;
-  padding-top: 20px;
-  padding-left: 20px; }
-  .preview__header__navigation:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.preview__header__navigation .nav--tab {
-  position: absolute;
-  bottom: 0; }
-
-.preview__body {
-  padding: 20px; }
+.objectView_body {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 /* --------->>> Module: Course -----------*/
 /* --------->>> Module: Question -----------*/
@@ -2652,8 +2656,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 
 /* --------->>> Module: Tool-bar -----------*/
 .toolbar {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   height: 52px;
   background: #f9f9f9;
   border-bottom: 1px solid #d9dde1; }
@@ -2667,28 +2670,15 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   margin: 0px;
   padding: 0px; }
 
-.nav__item {
-  padding-left: 10px;
-  padding-right: 10px; }
-
 .nav-horizontal > li, .nav--tab > li {
   display: inline-block; }
 
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-.nav__item.first {
-  padding-left: 0px; }
-
-.nav__item.last {
-  padding-right: 0px; }
-
-/* --------->>> Navigation: tab ---------*/
 /* --------->>> Navigation: tab ---------*/
 .nav--tab {
   padding-top: 20px;
   height: 52px; }
 
-.nav--tab__item {
+.nav--tab_item {
   padding-left: 10px;
   padding-right: 10px;
   margin-left: 10px;
@@ -2697,15 +2687,13 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   height: 32px;
   text-transform: uppercase; }
 
-/* --->>> Modifiers ---*/
+/* --->>> State Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
-.nav--tab__item.first {
+.nav--tab_item.is-first {
   margin-left: 0px; }
-
-.nav--tab__item.last {
+.nav--tab_item.is-last {
   margin-right: 0px; }
-
-.nav--tab__item.is-active {
+.nav--tab_item.is-active {
   color: #0ac8f4;
   border-bottom: 2px solid #0ac8f4; }
 

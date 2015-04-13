@@ -6,20 +6,11 @@
 
 
 
-.btn-grp
-{
-	height:52px;
-	padding:10px;
 
-}
 
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
 
-.btn-grp .btn:last-child
-{
-	margin-right:0px;
-}
 
 
 .btn
@@ -35,6 +26,15 @@
 	line-height:32px;
 	font-size:14px;
 	color:$text-light-grey;
+	&.is-first
+	{
+		margin-left:0;
+	}
+
+	&.is-last
+	{
+		margin-right:0;
+	}
 
 	&:hover
 	{
@@ -64,6 +64,15 @@
 {
 	margin:0px;
 	font-size:24px;
+
+	&.is-first
+	{
+		padding-left:0;
+	}
+	&.is-last
+	{
+		padding-right:0;
+	}
 }
 .btn--raised
 {
@@ -94,13 +103,6 @@ box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
 
 }
 
-.btn--secondary
-{
-	
-
-	
-	
-}
 
 
 a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primary:active
@@ -114,10 +116,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 
 
 
-.btn.on-light:hover
-{
-	color:$bg-header;
-}
+
 
 
 /** End Buttons **/

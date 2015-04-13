@@ -12,7 +12,7 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-h1 {
+h1, h2, h3, h4 {
   color: #323b47; }
 
 .sg--header {
@@ -23,8 +23,10 @@ h1 {
     display: table;
     clear: both; }
 
-.sg--header__title {
-  color: #fff; }
+.sg--header h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600; }
 
 .sg--content {
   background: #fff; }

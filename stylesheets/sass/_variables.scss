@@ -10,11 +10,12 @@ $text-dark-grey:#313b47;
 $text-med-grey:#435561;
 $text-light-grey:#a4b0ba;
 
+$bg-dark-grey:#313b47;
 $bg-med-grey:#435561;
 $bg-light-grey:#f2f2f2;
 $bg-slight-grey:#f9f9f9;
-$bg-header:#435561;
-$bg-dark-grey:#313b47;
+
+
 
 $text-color-dark--vh-1:#435561;
 $text-color--vh-1:#ffffff;
@@ -22,3 +23,12 @@ $text-color--vh-2:#a4b0ba;
 $highlight:#0ac8f4;
 
 // add some default padding stuff
+
+$padding-default:10px;
+
+
+@mixin padding-crown($size){
+	padding-top:$size;
+	padding-left:$size;
+	padding-right:$size;
+}

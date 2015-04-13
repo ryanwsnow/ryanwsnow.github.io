@@ -12,12 +12,12 @@
 	display:inline;
 }
 
-.float-left
+.left
 {
 	float:left;
 }
 
-.float-right
+.right
 {
 	float:right;
 }
@@ -31,7 +31,14 @@
 	list-style-type:none;	
 }
 
-
+.l-inset
+{
+	@include clearfix;
+	width:100%;
+	padding-top:20px;
+	padding-left:20px;
+	padding-right:20px;
+}
 
 
 /** End minor layout styles **/
@@ -167,34 +174,38 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 }
 
 
-.list__row
+.list_row
  {
 	
 	height:64px;
 	border-bottom:1px solid #d9dde1;
 	padding:10px;
 
+	&.is-hovered
+	{
+		@include transition (all 0.2s ease-in-out);
+		background:$bg-light-grey;
+		cursor: pointer;
+		
+	}
+
+	&.is-active
+	{
+		@include transition (all 0.2s ease-in-out);
+		background:#fff;
+		cursor: pointer;
+		border-left:3px solid $highlight;
+	}
+
+
 }
 
 
-.list__row.is-active
-{
-	@include transition (all 0.2s ease-in-out);
-	background:#fff;
-	cursor: pointer;
-	border-left:3px solid $highlight;
-}
-
-.list__row.is-hovered
-{
-	@include transition (all 0.2s ease-in-out);
-	background:$bg-light-grey;
-	cursor: pointer;
-	
-}
 
 
-.list__checkbox
+
+
+.list_checkbox
 {
 	display:inline-block;
 	width:40px;
@@ -204,20 +215,20 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	margin-right:auto;
 }
 
-.list__checkbox > input
+.list_checkbox > input
 {
 	display:block;
 	line-height:64px;
 	vertical-align:middle;
 }
 
-.list__item-title
+.list_item-title
 {
 	font-size:14px;
 	font-weight:600;
 	color:$primary-grey;
 }
-.list__item-sub-title
+.list_item-sub-title
 {
 	font-size:12px;
 	color:$light-grey;
@@ -226,7 +237,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 }
 
 
-.list__item-activity-info
+.list_item-activity-info
 {
 	font-size:12px;
 	color:$light-grey;
@@ -238,7 +249,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-.list__column
+.list_column
 {
 
 }
@@ -265,24 +276,29 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	width:100%;
 	
 	position:relative;
-	padding-left:10px;
-	padding-right:10px;
-	padding-top:10px;
+	@include clearfix;
+	@include padding-crown($padding-default);
 	
 }
 
 .header--primary
 {
-	background:$bg-header;
+	background:$bg-med-grey;
 	height:150px;
 }
 
-.header--primary__navigation
+.header--primary_navigation
 {
 	
 	position:absolute; 
 	bottom:0px;
 	left:52px;
+}
+
+.header--secondary
+{
+
+
 }
 
 
@@ -300,6 +316,8 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 /* --->>> Builder overrides ---*/
 /* -- two deep selector starting with parent to override builders --*/
+// this is bad because if builders like nav--tab_item get renamed or removed we will
+// have to look for them all through our modules
 .header--primary
 {
 	.btn:hover
@@ -307,10 +325,15 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 		color:#ffffff;
 		@include transition(all 0.5s ease-in-out);
 	}
-	.nav--tab__item.is-active
+	.nav--tab_item
 	{
-		color:#ffffff;
+		&.is-active
+		{
+			color:#ffffff;
+		}
+
 	}
+
 }
 
 
@@ -353,15 +376,10 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-.header__top-bar
-{
-	@include clearfix;
-	
-}
 
 /* --------->>> Module: Preview ----------*/
 
-.preview 
+.objectView 
 {
 	
 	background:$bg-slight-grey;
@@ -371,29 +389,35 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	height:100%;
 }
 
-.preview__header
+.objectView_header
 {
 	@include clearfix;
+	@include padding-crown($padding-default);
 	position:relative;
 	background:#ffffff;
 	border-bottom:1px solid #d9dde1;
-	
+		
 
 }
 
-.preview__header__top-bar
+.objectView_cta
+{
+	padding-bottom:10px;
+}
+
+.objectView_header-topbar
 {
 	@include clearfix;
+	padding-bottom:10px;
 }
 
-.preview__header__info 
+.objectView_header-info 
 {
-	padding:10px;
-	padding-left:20px;
-	width:100%;
+	@include clearfix;
+	padding-bottom:20px;
 }
 
-.preview__header__title
+.objectView_header-title
 {
 	font-size:24px;
 	font-weight:600;
@@ -401,33 +425,28 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-.preview__header__activity-info
+.objectView_header-activityInfo
 {
-	font-size:12px;
+	font-size:14px;
 	color:$light-grey;
 	font-weight:400;
 	
 	
 }
-.preview__header__navigation
+.objectView_header-navigation
 {
 
-	@include clearfix;
-	position:relative;
-	padding-top:20px;
-	padding-left:20px;
-
+	
+	
+	
+	
 }
 
-.preview__header__navigation .nav--tab //** janky**/
-{
-	position:absolute;
-	bottom:0;
-}
 
-.preview__body
+.objectView_body
 {
-	padding:20px;
+	@include padding-crown($padding-default);
+
 }
 
 /* --------->>> Module: Course -----------*/
@@ -482,8 +501,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 .toolbar
 {
 
-	padding-top:10px;
-	padding-bottom:10px;
+	padding:$padding-default;
 	height:52px;
 	background:#f9f9f9;
 	border-bottom:1px solid #d9dde1;
@@ -510,41 +528,11 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	padding:0px;
 }
 
-
-
-.nav__item
-{
-	padding-left:10px;
-	padding-right:10px;
-	
-}
-
-
 .nav-horizontal > li
 {
 	display:inline-block;
 }
 
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-
-.nav__item.first 
-{
-	padding-left:0px;
-}
-
-.nav__item.last 
-{
-	padding-right:0px;
-}
-
-
-/* --------->>> Navigation: tab ---------*/
-
-.nav--icons
-{
-
-}
 
 
 /* --------->>> Navigation: tab ---------*/
@@ -560,7 +548,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-.nav--tab__item
+.nav--tab_item
 {
 	padding-left:10px;
 	padding-right:10px;
@@ -570,26 +558,29 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	height:32px;
 	text-transform:uppercase;
 }
-/* --->>> Modifiers ---*/
+/* --->>> State Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
 
 
-.nav--tab__item.first
+.nav--tab_item
 {
-	margin-left:0px;
-	
+	&.is-first
+	{
+		margin-left:0px;
+		
+	}
+	&.is-last
+	{
+		margin-right:0px;
+	}
+	&.is-active
+	{
+		color:$highlight;
+		border-bottom:2px solid $highlight;	
+	}
+
 }
 
-.nav--tab__item.last
-{
-	margin-right:0px;
-}
-
-.nav--tab__item.is-active
-{
-	color:$highlight;
-	border-bottom:2px solid $highlight;	
-}
 
 
 
