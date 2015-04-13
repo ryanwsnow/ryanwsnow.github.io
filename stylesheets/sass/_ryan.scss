@@ -41,7 +41,7 @@
 /* ---->>> Layouts ---------------------*/
 /* -----------------------------------*/
 
-/* --------->>> Layout: General ----------*/
+/* --------->>> Layout: Containers ----------*/
 
 
 .app--container 
@@ -51,41 +51,33 @@
 	height:100%;
 	top:0;
 	left:0;
+	background:$bg-light-grey;
 }
 
-.l-header
-{
-	height:150px;
-	width:100%;
-	background:$bg-header;
-	position:relative;
-	
-}
 
-.l-header__top-bar
-{
-	padding:10px;
-}
-
-.l-course-container
+.l-container-full-width
 {
 	
-	position:absolute;
 	width:100%;
 	min-width:960px;
+	
+
+}
+
+.l-container-full-height
+{
+	position:absolute;
 	top:150px;
 	bottom:0;
 	overflow-y: hidden;
-	background:$bg-light-grey;
+}
 
-}
-.l-header__navigation
+.l-container-offset-header-lg
 {
-	
-	position:absolute; 
-	bottom:0px;
-	left:10px;
+	top:150px;
 }
+
+
 
 .l-section-main-container
 {
@@ -259,6 +251,113 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 /* -----------------------------------*/
 /* ---->>> Modules ---------------------*/
 /* -----------------------------------*/
+// modules will use specifity to alter building components to style to their layout
+// eg .nav--tab has a style independent of location
+// place it in a module and said module will alter its appearance if necessary
+// .header .nav--tab
+
+/* --------->>> Module: Header Large ----------*/
+
+
+.header
+{
+	
+	width:100%;
+	
+	position:relative;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	
+}
+
+.header--primary
+{
+	background:$bg-header;
+	height:150px;
+}
+
+.header--primary__navigation
+{
+	
+	position:absolute; 
+	bottom:0px;
+	left:52px;
+}
+
+
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+
+.header--primary.is-collapsed
+{
+	height:60px;
+	.breadcrumb__location
+	{
+		display:none; //change to placeholder 
+	}
+}
+
+/* --->>> Builder overrides ---*/
+/* -- two deep selector starting with parent to override builders --*/
+.header--primary
+{
+	.btn:hover
+	{
+		color:#ffffff;
+		@include transition(all 0.5s ease-in-out);
+	}
+	.nav--tab__item.is-active
+	{
+		color:#ffffff;
+	}
+}
+
+
+.breadcrumb
+{
+
+}
+
+.breadcrumb__location
+{
+
+}
+
+.breadcrumb__location-name
+{
+	font-size:18px;
+	font-weight:600;
+	color:$light-grey;
+
+}
+
+.breadcrumb__info
+{
+	font-size:14px;
+	color:#ffffff;
+}
+
+.breadcrumb-action
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.header__top-bar
+{
+	@include clearfix;
+	
+}
 
 /* --------->>> Module: Preview ----------*/
 
@@ -284,8 +383,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 .preview__header__top-bar
 {
-	height:52px;
-	padding:10px;
+	@include clearfix;
 }
 
 .preview__header__info 
@@ -339,23 +437,9 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
-.course--infobox
-{
 
-}
 
-.course--infobox__name
-{
-	font-size:18px;
-	font-weight:600;
-	color:$light-grey;
-}
 
-.course--infobox__join-code
-{
-	font-size:14px;
-	color:#ffffff;
-}
 
 /* --------->>> Module: Question -----------*/
 .c--q
@@ -402,16 +486,12 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	padding-bottom:10px;
 	height:52px;
 	background:#f9f9f9;
+	border-bottom:1px solid #d9dde1;
 
 }
 
-.toolbar__utility
-{
-		
-	
-}
 
-/* --------->>> Module: utility-bar -----------*/
+
 
 
 
@@ -440,6 +520,13 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 }
 
 
+.nav-horizontal > li
+{
+	display:inline-block;
+}
+
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
 
 .nav__item.first 
 {
@@ -450,16 +537,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 {
 	padding-right:0px;
 }
-
-.nav--horizontal > li
-{
-	display:inline-block;
-}
-
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-
-
 
 
 /* --------->>> Navigation: tab ---------*/
@@ -475,7 +552,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 .nav--tab
 {
 
-	@extend .nav--horizontal;
+	@extend .nav-horizontal;
 	padding-top:20px;
 	height:52px;
 	
@@ -503,30 +580,19 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	
 }
 
-
-
-.nav--tab__item.last 
+.nav--tab__item.last
 {
 	margin-right:0px;
 }
 
 .nav--tab__item.is-active
 {
-	color:#ffffff;
+	color:$highlight;
 	border-bottom:2px solid $highlight;	
 }
 
 
-/* --->>> Navigation: tab  theme ---------*/
 
-.nav--tab.on-light
-{
-	.nav--tab__item.is-active
-	{
-		color:$highlight;
-		
-	}
-}
 
 
 /* --------->>> Navigation:  Card ---------*/

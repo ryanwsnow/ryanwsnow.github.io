@@ -15,13 +15,37 @@ html {
 h1 {
   color: #323b47; }
 
+.sg--header {
+  background: #199bfd;
+  height: 150px; }
+  .sg--header:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.sg--header__title {
+  color: #fff; }
+
+.sg--content {
+  background: #fff; }
+
 .clear-list-style {
   list-style-type: none;
   padding: 0;
   margin: 0; }
 
-.sg-main-navi {
-  padding-left: 10px; }
+.sg--section {
+  border-top: 1px solid #ccc; }
+
+.sg--example-container {
+  width: 80%; }
+
+.sg--navi-tree {
+  padding-left: 10px;
+  list-style-type: none; }
+  .sg--navi-tree li > ul {
+    padding-left: 20px;
+    list-style-type: none; }
 
 .l-app-container {
   max-width: 100%;

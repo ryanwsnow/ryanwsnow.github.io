@@ -5,11 +5,27 @@
 
 h1 
 {
+
 	color:$primary-grey;
 }
 
+.sg--header
+{
+	@include clearfix;
+	background:$primary-blue;
+	height:150px;
+}
+
+.sg--header__title
+{
+	color:#fff;
+}
 
 
+.sg--content
+{
+	background:#fff;
+}
 .clear-list-style 
 {
 	list-style-type:none;
@@ -18,11 +34,30 @@ h1
 
 }
 
-
-.sg-main-navi
+.sg--section
 {
-	padding-left:10px
+	border-top:1px solid #ccc;
 }
+
+.sg--example-container
+{
+	width:80%;
+}
+
+.sg--navi-tree
+{
+	padding-left:10px;
+	list-style-type:none;
+
+	li > ul
+	{
+		padding-left:20px;
+		list-style-type:none;
+
+	}
+}
+
+
 
 .l-app-container
 {

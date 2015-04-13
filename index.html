@@ -8,8 +8,8 @@
 
     <!-- Bootstrap -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-  
-    
+  <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
     <link href="stylesheets/css/style.css" rel="stylesheet">
     <link href="stylesheets/css/app.css" rel="stylesheet">
     
@@ -24,21 +24,66 @@
     <![endif]-->
   </head>
   <body>
-    <header>
-
+    <header class="header sg--header">
+      <h1 class="sg--header__title">Styleguide</h1>
     </header>
-    <div class="l-page-container">
-      <div class="l-sidebar">
-          <ul class="sg-main-navi clear-list-style">
-              <li class="main-navi-item"><a href="index.html">Overview</a></li>
-              <li class="main-navi-tiem"><a href="modules.html">Modules<a></li>
+   
+      <div class="">
+        <div class="col-md-3 col-sm-3">
+            <ul class="sg--navi-tree clear-list-style">
+                <li class="main-navi-item"><a href="index.html">Overview</a>
+                  <ul>
+                    <li>Categorization</li>
+                    <li>Namespacing</li>
+                  </ul>
+                </li>
+                <li class="main-navi-tiem"><a href="modules.html">Buttons</a></li>
 
-          </ul>
-      </div>
-      <div class="l-content">
-          <h1>Styleguide</h1>
-      </div>
+            </ul>
+        </div>
+        <div class="col-md-9 col-sm-9">
+            <section class="sg--section">
+              <h2>Overview</h2>
+              <h3>Categorization</h3>
+              <p>Categorizing our CSS will allow us to provide guidence on naming, structure and specifity. Categories will the basis of writing modular and maintable CSS.</p>
+              <p>Categories<p>
+              <ul class="clear-list-style">
+                <li><strong>layouts</strong></li>
+                <li><strong>builders/helpers</strong>
+                <p>Allow you to build semanticly position things</p>
+                </li>
+                <li><strong>States/modifiers</strong>
+                  <p>These are style rules that adjust appearance based on what state it is in. for example: <code>.is-active</code>, <code>.is-first</code></p>
+                </li>
+                <li><strong>Modules</strong></li>
+                <li><strong>Components</strong>
+                <p>These are offical patterns that our app uses.</p>
+                </li>
+              </ul>
+              <h3>Namespacing</h3>
+            </section>
+            <section class="sg--section">
+              <h2>Buttons</h2>
+              <h3>Default button</h3>
+              <span>class:</span><code>.btn--defualt</code>
+              <div class="sg--example-container">
+                <button class="btn--default">Normal</button>
+                <button class="btn--default primary">Primary</button>
+
+              </div>
+
+              <h3>Raised button</h3>
+              <span>class:</span><code>.btn--raised</code>
+              <div class="sg--example-container">
+                <button class="btn btn--raised">Normal</button>
+                <button class="btn btn--raised primary">Primary</button>
+              </div>
+
+            
+            </section>
+        </div>
+    
     </div>
   	
   </body>
-  </html>
+</html>

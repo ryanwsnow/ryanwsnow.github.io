@@ -2288,18 +2288,12 @@ i {
   content: "\e8f4"; }
 
 /** Base **/
-html, body {
-  overflow: auto; }
-
 html {
   height: 100%; }
 
 body {
   min-height: 100%;
   height: 100%; }
-
-html {
-  background: #435561; }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -2328,10 +2322,12 @@ header {
   height: 52px;
   padding: 10px; }
 
-.btn:last-child {
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+.btn-grp .btn:last-child, .btn-grp .btn--default:last-child {
   margin-right: 0px; }
 
-.btn {
+.btn, .btn--default {
   display: inline-block;
   height: 32px;
   padding-left: 10px;
@@ -2342,39 +2338,45 @@ header {
   line-height: 32px;
   font-size: 14px;
   color: #a4b0ba; }
+  .btn:hover, .btn--default:hover {
+    color: #435561;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+.btn--default {
+  text-transform: uppercase;
+  min-width: 100px; }
+  .btn--default.primary {
+    color: #199bfd; }
 
 .btn--icon {
   margin: 0px;
   font-size: 24px; }
 
-.btn--secondary {
-  min-width: 120px;
-  border-radius: 2px;
+.btn--raised {
   background: #f2f2f2;
   color: #435561;
+  min-width: 120px;
+  border-radius: 2px;
   -webkit-box-shadow: 0px 1px 0px 0px #a4b0ba;
   -moz-box-shadow: 0px 1px 0px 0px #a4b0ba;
   box-shadow: 0px 1px 0px 0px #a4b0ba; }
-
-.btn--primary {
-  width: 120px;
-  border-radius: 2px;
-  background: #199bfd;
-  color: #fff;
-  -webkit-box-shadow: 0px 1px 0px 0px #1f80c9;
-  -moz-box-shadow: 0px 1px 0px 0px #1f80c9;
-  box-shadow: 0px 1px 0px 0px #1f80c9; }
+  .btn--raised.primary {
+    width: 120px;
+    border-radius: 2px;
+    background: #199bfd;
+    color: #fff;
+    -webkit-box-shadow: 0px 1px 0px 0px #1f80c9;
+    -moz-box-shadow: 0px 1px 0px 0px #1f80c9;
+    box-shadow: 0px 1px 0px 0px #1f80c9; }
+    .btn--raised.primary:hover {
+      color: #fff; }
 
 a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primary:active {
   color: #fff; }
 
-.btn:hover {
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-
-.btn.on-light:hover {
+.btn.on-light:hover, .on-light.btn--default:hover {
   color: #435561; }
 
 /** End Buttons **/
@@ -2401,36 +2403,27 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 /* -----------------------------------*/
 /* ---->>> Layouts ---------------------*/
 /* -----------------------------------*/
-/* --------->>> Layout: General ----------*/
+/* --------->>> Layout: Containers ----------*/
 .app--container {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0; }
-
-.l-header {
-  height: 150px;
-  width: 100%;
-  background: #435561;
-  position: relative; }
-
-.l-header__top-bar {
-  padding: 10px; }
-
-.l-course-container {
-  position: absolute;
-  width: 100%;
-  min-width: 960px;
-  top: 150px;
-  bottom: 0;
-  overflow-y: hidden;
+  left: 0;
   background: #f2f2f2; }
 
-.l-header__navigation {
+.l-container-full-width {
+  width: 100%;
+  min-width: 960px; }
+
+.l-container-full-height {
   position: absolute;
-  bottom: 0px;
-  left: 10px; }
+  top: 150px;
+  bottom: 0;
+  overflow-y: hidden; }
+
+.l-container-offset-header-lg {
+  top: 150px; }
 
 .l-section-main-container {
   background: #f2f2f2;
@@ -2537,6 +2530,54 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 /* -----------------------------------*/
 /* ---->>> Modules ---------------------*/
 /* -----------------------------------*/
+/* --------->>> Module: Header Large ----------*/
+.header {
+  width: 100%;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px; }
+
+.header--primary {
+  background: #435561;
+  height: 150px; }
+
+.header--primary__navigation {
+  position: absolute;
+  bottom: 0px;
+  left: 52px; }
+
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+.header--primary.is-collapsed {
+  height: 60px; }
+  .header--primary.is-collapsed .breadcrumb__location {
+    display: none; }
+
+/* --->>> Builder overrides ---*/
+/* -- two deep selector starting with parent to override builders --*/
+.header--primary .btn:hover, .header--primary .btn--default:hover {
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+.header--primary .nav--tab__item.is-active {
+  color: #ffffff; }
+
+.breadcrumb__location-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #a5b1bb; }
+
+.breadcrumb__info {
+  font-size: 14px;
+  color: #ffffff; }
+
+.header__top-bar:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* --------->>> Module: Preview ----------*/
 .preview {
   background: #f9f9f9;
@@ -2554,9 +2595,10 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
     display: table;
     clear: both; }
 
-.preview__header__top-bar {
-  height: 52px;
-  padding: 10px; }
+.preview__header__top-bar:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .preview__header__info {
   padding: 10px;
@@ -2589,15 +2631,6 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   padding: 20px; }
 
 /* --------->>> Module: Course -----------*/
-.course--infobox__name {
-  font-size: 18px;
-  font-weight: 600;
-  color: #a5b1bb; }
-
-.course--infobox__join-code {
-  font-size: 14px;
-  color: #ffffff; }
-
 /* --------->>> Module: Question -----------*/
 .c--q__description {
   font-size: 18px; }
@@ -2622,9 +2655,9 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   padding-top: 10px;
   padding-bottom: 10px;
   height: 52px;
-  background: #f9f9f9; }
+  background: #f9f9f9;
+  border-bottom: 1px solid #d9dde1; }
 
-/* --------->>> Module: utility-bar -----------*/
 /* -----------------------------------*/
 /* ---->>> Navigation -------------------*/
 /* -----------------------------------*/
@@ -2638,17 +2671,17 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   padding-left: 10px;
   padding-right: 10px; }
 
+.nav-horizontal > li, .nav--tab > li {
+  display: inline-block; }
+
+/* --->>> Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
 .nav__item.first {
   padding-left: 0px; }
 
 .nav__item.last {
   padding-right: 0px; }
 
-.nav--horizontal > li, .nav--tab > li {
-  display: inline-block; }
-
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
 /* --------->>> Navigation: tab ---------*/
 /* --------->>> Navigation: tab ---------*/
 .nav--tab {
@@ -2673,12 +2706,8 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   margin-right: 0px; }
 
 .nav--tab__item.is-active {
-  color: #ffffff;
+  color: #0ac8f4;
   border-bottom: 2px solid #0ac8f4; }
-
-/* --->>> Navigation: tab  theme ---------*/
-.nav--tab.on-light .nav--tab__item.is-active {
-  color: #0ac8f4; }
 
 /* --------->>> Navigation:  Card ---------*/
 .nav--card > li {

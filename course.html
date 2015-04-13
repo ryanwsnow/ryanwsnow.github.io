@@ -16,18 +16,19 @@
 </head>
 <body>
 <div class="app--container">
-	<header class="l-header">
-		<div class="l-header__top-bar">
-			<button class="btn btn--icon float-left" href="lobby.html">
-				<i class="icon-arrow-back"></i>
-			</button>
-			<div class="course--infobox float-left l-stacked">
+	<header class="header header--primary">
+			<div class="breadcrumb">
+				<button class="btn btn--icon breadcrumb-action float-left">
+					<i class="icon-arrow-back"></i>
+				</button>
+				<div class="breadcrumb__location float-left l-stacked">
 
-				<div class="course--infobox__name">BIO101 Fall 2015</div>
-				<div class="course--infobox__join-code"><span>Join Code:</span> 123456</div>
+					<div class="breadcrumb__location-name">BIO101 Fall 2015</div>
+					<div class="breadcrumb__info"><span>Join Code:</span> 123456</div>
+				</div>
 			</div>
 			
-			<div class="btn-grp float-right">
+			<div class="float-right">
 				
 				<button class="btn btn--icon"><i class="icon-help"></i></button>
 				
@@ -45,25 +46,28 @@
 					  	
 					</div>
 			</div>
-		</div>
-		<div class="l-header__navigation">
-			<ul class="nav nav--tab">
-				<li><a href="#" class="nav--tab__item is-active first">Content</a></li>
-				<li><a href="#" class="nav--tab__item ">Gradebook</a></li>
-				<li><a href="#" class="nav--tab__item last">Students</a></li>
-			</ul>
+		
+		<div class="header--primary__navigation">
+			<nav role="navigation">
+				<ul class="nav nav--tab">
+					<li><a href="#" class="nav--tab__item is-active first">Content</a></li>
+					<li><a href="#" class="nav--tab__item ">Gradebook</a></li>
+					<li><a href="#" class="nav--tab__item last ">Students</a></li>
+				</ul>
+			</nav>
 		</div>
 		
 	</header>
-	<div class="l-course-container">
+
+	<div class="l-container-full-width l-container-full-height">
 		<div class="l-section-main-container">
 			<div class="toolbar">
 				
-					<button class="btn btn--primary">Create</button>
+					<button class="btn btn--raised primary">Create</button>
 					<button class="btn ">Option</button>
 				
 				
-					<button class="btn btn--icon on-light float-right"><i class="icon-search"></i></button>
+					<button class="btn btn--icon float-right"><i class="icon-search"></i></button>
 
 			</div>
 			<ol class="list">
@@ -104,9 +108,9 @@
 			<div class="preview">
 				<div class="preview__header">
 					<div class="preview__header__top-bar">
-						<a class="btn btn--icon on-light  float-left" href="#">
+						<button class="btn btn--icon on-light  float-left">
 							<i class="icon-close"></i>
-						</a>
+						</button>
 						<div class="btn-grp float-right">
 							<button class="btn on-light" href="#">Edit</button>
 							<button  class="btn on-light" href="#">Copy</button>
@@ -130,8 +134,8 @@
 						</ul>
 						<div class="btn-grp float-right">
 							
-							<button class="btn btn--secondary ">Assign</button>
-							<button class="btn btn--primary ">Present</button>
+							<button class="btn btn--raised ">Assign</button>
+							<button class="btn btn--raised primary ">Present</button>
 						</div>
 					</div>
 				</div>
