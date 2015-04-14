@@ -377,7 +377,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-/* --------->>> Module: Preview ----------*/
+/* --------->>> Module: object ----------*/
 
 .objectView 
 {
@@ -449,6 +449,12 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
+
+.objectView_body p 
+{
+	font-size:14px;
+
+}
 /* --------->>> Module: Course -----------*/
 
 .course__name
@@ -465,33 +471,45 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 {
 
 }
-.c--q__description
+.q_description
 {
 	font-size:18px;
 }
 
 
-.c--q__answer
+.q_answerItem
 {
 
 	background:#ffffff;
 	border:5px solid $bg-light-grey;
 	border-radius:3px;
-	padding:20px;
+	
 	margin-bottom:10px;
 }
 
-.c--q__answer-label
+.q_answerItem-label
 {
-	
+	padding:10px;
 	color:$highlight;
 	text-align:center;
-	font-size:18px;
+	font-size:14px;
+	border-right:1px solid $bg-light-grey;
 }
 
-.c--q__answer-description
+.q_answerItem-description
 {
-	font-size:18px;
+	padding:10px;
+	font-size:14px;
+}
+
+.q--match_pair
+{
+
+}
+
+.q--match_pairOption
+{
+	
 }
 
 

@@ -2583,7 +2583,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   font-size: 14px;
   color: #ffffff; }
 
-/* --------->>> Module: Preview ----------*/
+/* --------->>> Module: object ----------*/
 .objectView {
   background: #f9f9f9;
   -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
@@ -2634,25 +2634,30 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   padding-left: 10px;
   padding-right: 10px; }
 
+.objectView_body p {
+  font-size: 14px; }
+
 /* --------->>> Module: Course -----------*/
 /* --------->>> Module: Question -----------*/
-.c--q__description {
+.q_description {
   font-size: 18px; }
 
-.c--q__answer {
+.q_answerItem {
   background: #ffffff;
   border: 5px solid #f2f2f2;
   border-radius: 3px;
-  padding: 20px;
   margin-bottom: 10px; }
 
-.c--q__answer-label {
+.q_answerItem-label {
+  padding: 10px;
   color: #0ac8f4;
   text-align: center;
-  font-size: 18px; }
+  font-size: 14px;
+  border-right: 1px solid #f2f2f2; }
 
-.c--q__answer-description {
-  font-size: 18px; }
+.q_answerItem-description {
+  padding: 10px;
+  font-size: 14px; }
 
 /* --------->>> Module: Tool-bar -----------*/
 .toolbar {
