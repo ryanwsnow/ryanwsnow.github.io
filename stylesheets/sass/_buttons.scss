@@ -36,7 +36,7 @@
 		margin-right:0;
 	}
 
-	&:hover
+	&:hover, .is-hovered
 	{
 		color:$text-med-grey;
 		@include transition(all 0.5s ease-in-out);
