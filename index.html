@@ -1,85 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Styleguide - Tophat</title>
+       <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Styleguide - Tophat</title>
 
     <!-- Bootstrap -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-  <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
-    <link href="stylesheets/css/style.css" rel="stylesheet">
-    <link href="stylesheets/css/app.css" rel="stylesheet">
+            <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+            <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+            <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <link href="stylesheets/css/style.css" rel="stylesheet">
+            <link href="stylesheets/css/app.css" rel="stylesheet">
     
     
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <header class="header sg--header">
-      <h2>Styleguide</h2>
-    </header>
-   
-      <div class="">
-        <div class="col-md-3 col-sm-3">
-            <ul class="sg--navi-tree clear-list-style">
-                <li class="main-navi-item"><a href="index.html">Overview</a>
-                  <ul>
-                    <li>Categorization</li>
-                    <li>Namespacing</li>
-                  </ul>
-                </li>
-                <li class="main-navi-tiem"><a href="modules.html">Buttons</a></li>
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+              <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+       </head>
+       <body>
+            <header class="header sg--header">
+                    <h2>Styleguide</h2>
+            </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sg--sideBar col-md-2 ">
+                    <ul class="sg--navi-tree clear-list-style hidden-sm hidden-xs affix">
+                    <li class="main-navi-item"><a href="index.html">Overview</a>
+                        <ul>
+                            <li>Categorization</li>
+                            <li>Namespacing</li>
+                        </ul>
+                    </li>
+                    <li class="main-navi-tiem"><a href="modules.html">Buttons</a></li>
 
-            </ul>
+                    </ul>
+                </div>
+                <div class="sg--content col-md-10 col-sm-12 col-xs-12">
+                    <div class="sg--l-constrained">
+                        <section class="sg--section">
+                            <h2>Overview</h2>
+                            <h3>Categorization</h3>
+                            <p>Categorizing our CSS will allow us to provide guidence on naming, structure and specifity. Categories will be the basis of writing modular and maintable CSS.</p>
+                            <p>Categories<p>
+                            <ul>
+                                <li>layouts</li>
+                                <li>builders/helpers</li>
+                                <li>States</li>
+                                <li>Modules</li>
+                                <li>Components</li>
+                            </ul>
+                            <h4>Layouts</h4>
+                            <p>divide the page into sections. Layouts hold one or more modules together.</p>
+                            <h3>Namespacing</h3>
+                        </section>
+                        <section class="sg--section">
+                            <h2>Buttons</h2>
+                            <p>Button classes should be use on the <code >&lt;button&gt;</code> tag
+                            <h3>Base Class</h3>
+                            <p><code>.btn</code> The base class should always be present and defined first</p>
+                             
+                            <h3>Modifiers</h3>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                    <h4>Grouping buttons and the Primary class</h4>
+                                    <p>If a button module has a primary class it should always be used and only used on one button.</p>
+                                </div>
+                            </div>
+                            <h3>Default button</h3>
+                            <p>Default buttons are used on cards, dialog boxs, and modals</p>
+                            <code>.btn--defualt</code>
+                            <div class="sg--example note">
+                                <button class="btn--default">Normal</button>
+                                <button class="btn--default primary">Primary</button>
+                            </div>
+
+                            <h3>Raised button</h3>
+                            <code>.btn--raised</code>
+                            
+                            <div class="sg--example">
+                                <button class="btn btn--raised">Normal</button>
+                                <button class="btn btn--raised primary">Primary</button>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+
+
+
+           
+
         </div>
-        <div class="col-md-9 col-sm-9">
-            <section class="sg--section">
-              <h2>Overview</h2>
-              <h3>Categorization</h3>
-              <p>Categorizing our CSS will allow us to provide guidence on naming, structure and specifity. Categories will the basis of writing modular and maintable CSS.</p>
-              <p>Categories<p>
-              <ul>
-                <li>layouts</li>
-                <li>builders/helpers</li>
-                <li>States</li>
-                <li>Modules</li>
-                <li>Components</li>
-              </ul>
-              <h4>Layouts</h4>
-              <p>divide the page into sections. Layouts hold one or more modules together.</p>
-              <h3>Namespacing</h3>
-            </section>
-            <section class="sg--section">
-              <h2>Buttons</h2>
-              <h3>Default button</h3>
-              <span>class:</span><code>.btn--defualt</code>
-              <div class="sg--example-container">
-                <button class="btn--default">Normal</button>
-                <button class="btn--default primary">Primary</button>
-
-              </div>
-
-              <h3>Raised button</h3>
-              <span>class:</span><code>.btn--raised</code>
-              <div class="sg--example-container">
-                <button class="btn btn--raised">Normal</button>
-                <button class="btn btn--raised primary">Primary</button>
-              </div>
-
-            
-            </section>
-        </div>
-    
     </div>
-  	
-  </body>
+
+        </body>
 </html>

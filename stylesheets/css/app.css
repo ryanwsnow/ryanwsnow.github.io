@@ -2335,7 +2335,7 @@ header {
     margin-left: 0; }
   .btn.is-last, .is-last.btn--default {
     margin-right: 0; }
-  .btn:hover, .btn--default:hover {
+  .btn:hover, .btn--default:hover, .btn .is-hovered, .btn--default .is-hovered {
     color: #435561;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
