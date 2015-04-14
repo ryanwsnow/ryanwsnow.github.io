@@ -66,22 +66,31 @@
                                         <p>I only position major sections of a page. Do not&nbsp;<code> .sideBar &gt; nav { styles... }</code></p>
                                 </div>
                             </div>
-                            <h4>Builders and Helpers</h4>
-                            <p>These are minor layout rules used to help position elements.  Builders are generally cross-functional (work across Layouts/Modules/Views/Etc) and are designed to keep your code DRY. They are semanticaly relevant and peform a single task. For Example: <code> .left { float:left }</code></p>
+                            <h4>Layout Helpers</h4>
+                            <p>These are minor layout rules used to help position elements Major Layouts, Modules and Views. They are designed to keep your code DRY. They are semanticaly relevant and peform a single task. For Example: <code> .left { float:left }</code></p>
+                            <p>If the inherient structure of your module requires positioning (ie: without the positioning it doesn't function as intended) do not use a layout helper. 
+                                         <div class="sg--example">
+                                            <p>The tab navigation is inheriently horizontal so keep positioning as part of its CSS rules</p>
+                                            <pre>
+.nav--tab
+{
+
+    display:inline-block;  
+    padding-top:20px;
+    height:52px;
+    
+}
+                                            </pre>
+                                        </div>
+
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                        <h4>Avoid overuse of builders/helpers</h4>
-                                        <p>Do not create entire modules or views out of builders. We are not trying to write our own preprocessor</p>
+                                        <h4>Avoid overuse of layout helpers</h4>
+                                        <p>Do not create entire modules or views out of layout helpers. We are not trying to write our own preprocessor</p>
                                 </div>
                             </div>
-                            <div class="sg--callout">
-                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
-                                <div class="sg--callout_body">
-                                        <h4>Structural dependence</h4>
-                                        <p>If the inherient structure of your module requires positioning (ie: without the positioning it doesn't function as intended) do not use a builder. For example, <code>.nav--tab</code> is inheriently horiztonal. Do not use or create a builder to make it inline, such as: <code>&lt;nav class="nav--tab inline"&gt;</code></p>
-                                </div>
-                            </div>
+
                             <h4>Modules</h4>
                             <p>A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too.</p>
                             <div class="sg--callout">
@@ -92,7 +101,34 @@
                                 </div>
                             </div>
                             <h4>Views</h4>
-                            <p>A View is a cross between layout rules and modules rules. For our app they are designed to be generic enough to list/view any data object (student,graded item,question, discussion).</p>
+                            <p>A View is a combination layouts and modules. The intent is to rendering our data objects, such as student ,graded item, question, and discussions into lists, grids, and previews in a DRY manner that will maintain style consistancy throughout the app.</p>
+                            <div class="sg--example">
+                            <p></p>
+                                 <pre>
+//layout
+.grid 
+{
+    width:100%;
+    padding:10px;
+    
+}
+.grid_item
+{
+    display:inline-block;
+    width:250px;
+    height:250px;
+}
+.grid_item-title
+{
+    padding:20px;
+    font-size:18px;
+    font-weight:600;
+}
+
+
+
+                                </pre>
+                            </div>
                             
                             <h3>Namespacing</h3>
                             

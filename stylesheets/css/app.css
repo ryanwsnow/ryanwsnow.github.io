@@ -2453,7 +2453,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   padding: 10px; }
 
 .grid__item {
-  float: left;
+  display: inline-block;
   width: 250px;
   height: 250px;
   margin-right: 20px;

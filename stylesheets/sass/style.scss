@@ -93,6 +93,16 @@ p
 		font-size:18px;
 		font-weight:600;
 	}
+	pre
+	{
+		background:$bg-dark-grey;
+		color:#a6de27;
+		padding:5px;
+		border-radius:3px;
+		font-size:12px;
+		
+	} 
+
 	code 
 	{
 		background:$bg-dark-grey;
