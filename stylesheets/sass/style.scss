@@ -12,6 +12,12 @@ h1,h2,h3,h4
 	font-weight:400;
 }
 
+p 
+{
+	margin:0px;
+	padding:5px 0;
+}
+
 
 
 .sg--header
@@ -81,6 +87,12 @@ h1,h2,h3,h4
 		font-weight:600;
 		
 	}
+	h4{
+		padding-bottom:10px;
+		padding-top:10px;
+		font-size:18px;
+		font-weight:600;
+	}
 	code 
 	{
 		background:$bg-dark-grey;
@@ -88,6 +100,7 @@ h1,h2,h3,h4
 		padding:5px;
 		border-radius:3px;
 		font-size:12px;
+		white-space: nowrap;
 	}
 }
 

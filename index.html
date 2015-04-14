@@ -47,18 +47,56 @@
                         <section class="sg--section">
                             <h2>Overview</h2>
                             <h3>Categorization</h3>
-                            <p>Categorizing our CSS will allow us to provide guidence on naming, structure and specifity. Categories will be the basis of writing modular and maintable CSS.</p>
-                            <p>Categories<p>
+                            <p>Categorizing our CSS will allow us to provide guidence on naming, structure and specifity. The following categories will be the basis of writing modular and maintable CSS:</p>
+                            
                             <ul>
-                                <li>layouts</li>
-                                <li>builders/helpers</li>
-                                <li>States</li>
+                                <li>Layouts</li>
+                                <li>Builders/helpers</li>
                                 <li>Modules</li>
+                                <li>Views</li>
+                                <li>States</li>
                                 <li>Components</li>
                             </ul>
                             <h4>Layouts</h4>
-                            <p>divide the page into sections. Layouts hold one or more modules together.</p>
+                            <p>Layouts divide the page into major sections (header, footer, etc) and hold one or more modules together. Layouts will only affect modules indirectly with macro positioning.</p>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                        <h4>A layout should never specify Modules or Views contained with in it</h4>
+                                        <p>I only position major sections of a page. Do not&nbsp;<code> .sideBar &gt; nav { styles... }</code></p>
+                                </div>
+                            </div>
+                            <h4>Builders and Helpers</h4>
+                            <p>These are minor layout rules used to help position elements.  Builders are generally cross-functional (work across Layouts/Modules/Views/Etc) and are designed to keep your code DRY. They are semanticaly relevant and peform a single task. For Example: <code> .left { float:left }</code></p>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                        <h4>Avoid overuse of builders/helpers</h4>
+                                        <p>Do not create entire modules or views out of builders. We are not trying to write our own preprocessor</p>
+                                </div>
+                            </div>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                        <h4>Structural dependence</h4>
+                                        <p>If the inherient structure of your module requires positioning (ie: without the positioning it doesn't function as intended) do not use a builder. For example, <code>.nav--tab</code> is inheriently horiztonal. Do not use or create a builder to make it inline, such as: <code>&lt;nav class="nav--tab inline"&gt;</code></p>
+                                </div>
+                            </div>
+                            <h4>Modules</h4>
+                            <p>A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too.</p>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                        <h4>Each Module should be designed to exist standalone</h4>
+                                        <p>Modules should be styled/designed independent of their context in a Layout or View. I'm a module I dont't give a fuck if I 'm in the header or a side bar I will still look sexy.</p>
+                                </div>
+                            </div>
+                            <h4>Views</h4>
+                            <p>A View is a cross between layout rules and modules rules. For our app they are designed to be generic enough to list/view any data object (student,graded item,question, discussion).</p>
+                            
                             <h3>Namespacing</h3>
+                            
+
                         </section>
                         <section class="sg--section">
                             <h2>Buttons</h2>
