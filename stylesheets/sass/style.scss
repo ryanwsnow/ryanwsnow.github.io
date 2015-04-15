@@ -112,7 +112,45 @@ p
 		font-size:12px;
 		white-space: nowrap;
 	}
+	.dh-header
+	{
+		display:block;
+		border-radius:3px;
+		padding:5px;
+		background:#2bb727;
+		color:#fff;
+		text-align:center;
+		&:after
+		{
+			content: "Do";
+		}
+	}
+	.dth-header
+	{
+		display:block;
+		border-radius:3px;
+		padding:5px;
+		background:#ed1e79;
+		color:#fff;
+		text-align:center;
+		&:after
+		{
+			content: "Don't";
+		}
+	}
+
+	.dh
+	{
+		color:#2bb727;
+		font-weight:600;
+	}
+	.dth
+	{
+		color:#ed1e79;
+		font-weight:600;
+	}
 }
+
 
 
 .sg--callout

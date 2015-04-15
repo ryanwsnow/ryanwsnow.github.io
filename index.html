@@ -47,41 +47,108 @@
                         <section class="sg--section">
                             <h2>Overview</h2>
                             <h3>Categorization</h3>
-                            <p>Categorizing our CSS will allow us to provide guidence on naming, structure and specifity. The following categories will be the basis of writing modular and maintable CSS:</p>
+                            <p>Organizing CSS rules into categories provides guidence on naming, structure and specifity. The following categories will be the basis of writing modular and maintable CSS:</p>
                             
                             <ul>
                                 <li>Layouts</li>
-                                <li>Builders/helpers</li>
+                                <li>Layout helpers</li>
                                 <li>Modules</li>
                                 <li>Views</li>
                                 <li>States</li>
                                 <li>Components</li>
                             </ul>
                             <h4>Layouts</h4>
-                            <p>Layouts divide the page into major sections (header, footer, etc) and hold one or more modules together. Layouts will only affect modules indirectly with macro positioning.</p>
+                            <p>Layouts divide the page into major sections (header, footer, etc) and hold one or more modules together. Layouts will only affect modules indirectly with positioning.</p>
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                        <h4>A layout should never specify Modules or Views contained with in it</h4>
-                                        <p>I only position major sections of a page. Do not&nbsp;<code> .sideBar &gt; nav { styles... }</code></p>
+                                        <h4>A layout should never directly specify Modules or Views contained within it</h4>
+                                        <p>It is important for maintianability that layouts do not have to afford for the modules that may be contained within it. Otherwise, every time you create a new module you will have to write new rules for your layouts. Do not&nbsp;<code> .sideBar &gt; nav { styles... }</code></p>
                                 </div>
                             </div>
                             <h4>Layout Helpers</h4>
-                            <p>These are minor layout rules used to help position elements Major Layouts, Modules and Views. They are designed to keep your code DRY. They are semanticaly relevant and peform a single task. For Example: <code> .left { float:left }</code></p>
-                            <p>If the inherient structure of your module requires positioning (ie: without the positioning it doesn't function as intended) do not use a layout helper. 
-                                         <div class="sg--example">
-                                            <p>The tab navigation is inheriently horizontal so keep positioning as part of its CSS rules</p>
-                                            <pre>
-.nav--tab
-{
+                            <p>These are minor layout rules used to help position elements and modules in Major Layouts, Modules and Views. They are designed to keep your code DRY. They are semanticaly relevant and peform a single task. For Example: <code> .left { float:left }</code></p>
+                            <p>If the inherient structure of your module requires positioning (ie: without the positioning it doesn't function as intended) do not use a layout helper.</p>
+                            
+                            
+                            <div class="sg--example">
+                                <p>A tab navigation is inheriently horizontal.</p>
 
-    display:inline-block;  
+                                <div class=" row sg--do-dont">
+                                    <div class="col-lg-6 col-lg6">
+                                                 
+                                                    <span class="dh-header"></span>
+                                                    <pre>
+.nav--tab_item
+{
+    <span class="dh">display:inline-block;</span>  
+    padding-top:20px;
+    height:52px; 
+}
+
+
+&lt;nav class="nav--tab "&gt;...
+                                            </pre>
+                                    </div>
+                               
+                            
+                            
+                            
+                                    <div class="col-lg-6 col-lg6">
+                                     
+                                        <span class="dth-header"></span>
+                                        <pre>
+.nav--tab_item 
+{
     padding-top:20px;
     height:52px;
     
 }
+
+
+&lt;nav class="nav--tab <span class="dth">inline-block</span>"&gt;...
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <p>Maintain layout module seperation.</p>
+                                <div class=" row sg--do-dont">
+                                    <div class="col-lg-6 col-lg6">
+                                                 
+                                                    <span class="dh-header"></span>
+                                                    <pre>
+.nav--tab_item
+{
+    <span class="dh">display:inline-block;</span>  
+    padding-top:20px;
+    height:52px; 
+}
+
+
+&lt;nav class="nav--tab "&gt;...
                                             </pre>
-                                        </div>
+                                    </div>
+                               
+                            
+                            
+                            
+                                    <div class="col-lg-6 col-lg6">
+                                     
+                                        <span class="dth-header"></span>
+                                        <pre>
+.nav--tab_item 
+{
+    padding-top:20px;
+    height:52px;
+    
+}
+
+
+&lt;nav class="nav--tab <span class="dth">inline-block</span>"&gt;...
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
@@ -97,11 +164,11 @@
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
                                         <h4>Each Module should be designed to exist standalone</h4>
-                                        <p>Modules should be styled/designed independent of their context in a Layout or View. I'm a module I dont't give a fuck if I 'm in the header or a side bar I will still look sexy.</p>
+                                        <p>Modules should be designed independent of their context in a Layout or View. I'm a module. I dont't give a fuck if I 'm in the header or a side bar I will still look sexy.</p>
                                 </div>
                             </div>
                             <h4>Views</h4>
-                            <p>A View is a combination layouts and modules. The intent is to rendering our data objects, such as student ,graded item, question, and discussions into lists, grids, and previews in a DRY manner that will maintain style consistancy throughout the app.</p>
+                            <p>A View is a combination of layouts and modules. The intent is to render our data objects, such as student ,graded item, question, and discussions into lists, grids, and previews in a DRY manner that will maintain style consistancy throughout the app.</p>
                             <div class="sg--example">
                             <p></p>
                                  <pre>

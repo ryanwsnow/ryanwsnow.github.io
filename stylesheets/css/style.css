@@ -80,6 +80,30 @@ p {
   border-radius: 3px;
   font-size: 12px;
   white-space: nowrap; }
+.sg--section .dh-header {
+  display: block;
+  border-radius: 3px;
+  padding: 5px;
+  background: #2bb727;
+  color: #fff;
+  text-align: center; }
+  .sg--section .dh-header:after {
+    content: "Do"; }
+.sg--section .dth-header {
+  display: block;
+  border-radius: 3px;
+  padding: 5px;
+  background: #ed1e79;
+  color: #fff;
+  text-align: center; }
+  .sg--section .dth-header:after {
+    content: "Don't"; }
+.sg--section .dh {
+  color: #2bb727;
+  font-weight: 600; }
+.sg--section .dth {
+  color: #ed1e79;
+  font-weight: 600; }
 
 .sg--callout {
   margin-top: 20px;
