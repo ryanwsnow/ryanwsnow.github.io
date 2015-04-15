@@ -2704,7 +2704,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
     clear: both; }
 
 .objectView_cta {
-  padding-bottom: 10px; }
+  float: right; }
 
 .objectView_header-topbar {
   padding-bottom: 10px; }
