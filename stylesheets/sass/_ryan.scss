@@ -22,7 +22,7 @@
 	float:right;
 }
 
-.l-stacked > div
+.l-stacked > span
 {
 	display:block;
 }
@@ -98,7 +98,7 @@
 .l-section-preview-container
 {
 	width:60%;
-	min-width:450px;
+	min-width:500px;
 	float:left;
 	position: fixed;
 	right: 0;
@@ -158,101 +158,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	height:42px;
 }
 
-/* --------->>> Layout: List -----------*/
-
-.list
-{
-	
-	list-style-type:none;
-	padding:0;
-	margin:0;
-}
-
-.list > li:first-child
-{
-	border-top:1px solid #d9dde1;
-}
-
-
-.list_row
- {
-	
-	height:64px;
-	border-bottom:1px solid #d9dde1;
-	padding:10px;
-
-	&.is-hovered
-	{
-		@include transition (all 0.2s ease-in-out);
-		background:$bg-light-grey;
-		cursor: pointer;
-		
-	}
-
-	&.is-active
-	{
-		@include transition (all 0.2s ease-in-out);
-		background:#fff;
-		cursor: pointer;
-		border-left:3px solid $highlight;
-	}
-
-
-}
-
-
-
-
-
-
-.list_checkbox
-{
-	display:inline-block;
-	width:40px;
-	
-	
-	margin-left:auto;
-	margin-right:auto;
-}
-
-.list_checkbox > input
-{
-	display:block;
-	line-height:64px;
-	vertical-align:middle;
-}
-
-.list_item-title
-{
-	font-size:14px;
-	font-weight:600;
-	color:$primary-grey;
-}
-.list_item-sub-title
-{
-	font-size:12px;
-	color:$light-grey;
-	font-weight:400;
-
-}
-
-
-.list_item-activity-info
-{
-	font-size:12px;
-	color:$light-grey;
-	font-weight:400;
-	white-space: nowrap;
-	text-align:right;
-
-}
-
-
-
-.list_column
-{
-
-}
 
 
 
@@ -267,7 +172,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 // place it in a module and said module will alter its appearance if necessary
 // .header .nav--tab
 
-/* --------->>> Module: Header Large ----------*/
+/* --------->>> Module: Header ----------*/
 
 
 .header
@@ -307,7 +212,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 .header--primary.is-collapsed
 {
-	height:60px;
+	height:52px;
 	.breadcrumb__location
 	{
 		display:none; //change to placeholder 
@@ -466,51 +371,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-/* --------->>> Module: Question -----------*/
-.c--q
-{
-
-}
-.q_description
-{
-	font-size:18px;
-}
-
-
-.q_answerItem
-{
-
-	background:#ffffff;
-	border:5px solid $bg-light-grey;
-	border-radius:3px;
-	
-	margin-bottom:10px;
-}
-
-.q_answerItem-label
-{
-	padding:10px;
-	color:$highlight;
-	text-align:center;
-	font-size:14px;
-	border-right:1px solid $bg-light-grey;
-}
-
-.q_answerItem-description
-{
-	padding:10px;
-	font-size:14px;
-}
-
-.q--match_pair
-{
-
-}
-
-.q--match_pairOption
-{
-	
-}
 
 
 

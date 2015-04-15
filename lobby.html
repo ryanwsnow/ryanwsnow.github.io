@@ -17,70 +17,94 @@
 <body>
 <div class="app--container">
 	<header class="l-header">
-		<div class="l-header__top-bar">
-			
-			<div class="course--infobox float-left l-stacked">
+	<header class="header header--primary">
+			<div class="breadcrumb">
+				<button class="btn btn--icon-utility breadcrumb-action left">
+					<i class="icon-arrow-back"></i>
+				</button>
+				<div class="breadcrumb__location left l-stacked">
 
-				<div class="course--infobox__name">Lobby</div>
-				
+					<div class="breadcrumb__location-name">BIO101 Fall 2015</div>
+					<div class="breadcrumb__info"><span>Join Code:</span> 123456</div>
+				</div>
 			</div>
 			
-			<div class="toolbar">
-				<ul class="nav nav--horizontal float-right">
-					<li><a href="#" class="btn btn--icon"><i class="icon-help"></i></a></li>
-					<li>
-						<div class="dropdown">
-						 	
-						    	<a id="dLabel" class="btn btn--icon" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-									<i class="icon-settings"></i>
-								</a>
-							    	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								      <li><a href="#">Video</a></li>
-								      <li>Another Item</li>
-								      <li>Item Three</li>
-								      <li>The Last One</li>
-							    	</ul>
-						  	
-						</div>
-
-						
-					</li>
+			<div class="right">
+				
+				<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
+				
+					<div class="dropdown inline-block">
+					 	
+					    	<button id="dLabel" class="btn btn--icon-utility is-last" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+								<i class="icon-settings"></i>
+							</button>
+						    	<ul class="menu dropdown-menu" role="menu" aria-labelledby="dLabel">
+							      <li><a href="#">Video</a></li>
+							      <li>Another Item</li>
+							      <li>Item Three</li>
+							      <li>The Last One</li>
+						    	</ul>
+					  	
+					</div>
+			</div>
+		
+		<div class="header--primary_navigation">
+			<nav role="navigation">
+				<ul class="nav nav--tab">
+					<li><a href="#" class="nav--tab_item is-active is-first">Courses</a></li>
+					<li><a href="#" class="nav--tab_item ">Tools and apps</a></li>
+					
 				</ul>
-			</div>
-		</div>
-		<div class="l-header__navigation">
-			<ul class="nav nav--horizontal nav--tab">
-				<li><a href="#" class="btn is-active">Courses</a></li>
-				<li><a href="#" class="btn ">Tools and Apps</a></li>
-				
-			</ul>
+			</nav>
 		</div>
 		
 	</header>
 	<div class="l-course-container">
 		
-		<div class="toolbar--section">
-			<ul class="nav nav--horizontal float-left">
-				<li><a href="#" class="btn--primary btn--size-default">Create</a></li>
-				<li><a href="#" class="btn btn--size-default dark">Option</a></li>
-			</ul>
-			<ul class="nav nav--horizontal float-right">
-				<li><a href="#" class="btn btn--icon dark"><i class="icon-search"></i></a></li>
+			<div class="toolbar">
 				
-			</ul>
+					<button class="btn btn--raised primary is-first">Create</button>
+					<button class="btn ">Option</button>
+				
+				
+					<button class="btn btn--icon-utility right is-last"><i class="icon-search"></i></button>
 
-		</div>
+			</div>
 		<div class="grid">
 			<div class="grid__item">
 				<div class="grid__item-body">
 					<div class="grid__item-title">BIO101 Fall 2015</div>
 				</div>
 				<div class="grid__item-navigation">
-					<ul class="nav nav--horizontal nav--card float-right">
-						<li><a class="btn on-light" href="#">Edit</a></li>
-						<li><a class="btn on-light" href="course.html">Enter</a></li>
-
-					</ul>
+					<div class="right">
+						<button class="btn btn--default" href="#">Edit</button>
+						<button onclick="location.href = 'course.html';" class="btn btn--default primary" href="course.html">Enter</button>
+					</div>
+					
+				</div>
+			</div> <!-- grid item end -->
+			<div class="grid__item">
+				<div class="grid__item-body">
+					<div class="grid__item-title">BIO101 Fall 2015</div>
+				</div>
+				<div class="grid__item-navigation">
+					<div class="right">
+						<button class="btn btn--default" href="#">Edit</button>
+						<button class="btn btn--default primary" href="course.html">Enter</button>
+					</div>
+					
+				</div>
+			</div> <!-- grid item end -->
+			<div class="grid__item">
+				<div class="grid__item-body">
+					<div class="grid__item-title">BIO101 Fall 2015</div>
+				</div>
+				<div class="grid__item-navigation">
+					<div class="right">
+						<button class="btn btn--default" href="#">Edit</button>
+						<button class="btn btn--default primary" href="course.html">Enter</button>
+					</div>
+					
 				</div>
 			</div> <!-- grid item end -->
 			

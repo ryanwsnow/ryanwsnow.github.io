@@ -11,8 +11,9 @@
             <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
             <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
-            <link href="stylesheets/css/style.css" rel="stylesheet">
+            
             <link href="stylesheets/css/app.css" rel="stylesheet">
+            <link href="stylesheets/css/style.css" rel="stylesheet">
     
     
 
@@ -31,7 +32,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="sg--sideBar col-md-2 ">
-                    <ul class="sg--navi-tree clear-list-style hidden-sm hidden-xs affix">
+                    <ul class="sg--navi-tree clear-list-style hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="150">
                     <li class="main-navi-item"><a href="index.html">Overview</a>
                         <ul>
                             <li>Categorization</li>
@@ -111,21 +112,20 @@
                                     </div>
                                 </div>
 
-                                <p>Maintain layout module seperation.</p>
+                                <p>Use helpers to maintain layout and module seperation.</p>
                                 <div class=" row sg--do-dont">
                                     <div class="col-lg-6 col-lg6">
                                                  
                                                     <span class="dh-header"></span>
                                                     <pre>
-.nav--tab_item
+.nav--tab
 {
-    <span class="dh">display:inline-block;</span>  
     padding-top:20px;
     height:52px; 
 }
 
 
-&lt;nav class="nav--tab "&gt;...
+&lt;nav class="nav--tab <span class="dh">right</span>"&gt;...
                                             </pre>
                                     </div>
                                
@@ -136,16 +136,15 @@
                                      
                                         <span class="dth-header"></span>
                                         <pre>
-.nav--tab_item 
+.nav--tab 
 {
+    <span class="dth">float:right;</span>
     padding-top:20px;
     height:52px;
-    
 }
 
-
-&lt;nav class="nav--tab <span class="dth">inline-block</span>"&gt;...
-                                        </pre>
+&lt;nav class="nav--tab"&gt;...
+                                    </pre>
                                     </div>
                                 </div>
                             </div>
@@ -167,11 +166,48 @@
                                         <p>Modules should be designed independent of their context in a Layout or View. I'm a module. I dont't give a fuck if I 'm in the header or a side bar I will still look sexy.</p>
                                 </div>
                             </div>
+                            <h5>Subclassing Modules</h5>
+                            <p>Subclassing helps you avoid conditional styling based on location. If you are changing the look of a module for usage elsewhere on the page or app, sub-class the module instead.</p>
+
                             <h4>Views</h4>
-                            <p>A View is a combination of layouts and modules. The intent is to render our data objects, such as student ,graded item, question, and discussions into lists, grids, and previews in a DRY manner that will maintain style consistancy throughout the app.</p>
+                            <p>A View is a combination of layouts and modules that form reusable patterns. Even though this concept breaks some of the aforementioned rules it is important to maintaining a consitant design style across our app. Also, by moving some of the module rules into a View, the View can be reused in more instances across all data objects (students, grades, and content items).</p>
                             <div class="sg--example">
-                            <p></p>
-                                 <pre>
+                                <p>As you can see by keeping context formatting in the grid view we enable it to accept a lot more different types of content. Also, we prevent ourselves from having to sub class the question module for every view we create.</p>
+
+                                <div class=" row sg--do-dont">
+                                    <div class="col-lg-6 col-lg6">
+                                                 
+                                                    <span class="dh-header"></span>
+                                                    <pre>
+//layout 
+.grid 
+{
+    width:100%;
+    padding:10px;
+    
+}
+.grid_item
+{
+    display:inline-block;
+    width:250px;
+    height:250px;
+}
+<span class="dh">.grid_item-title
+{
+    padding:20px;
+    font-size:18px;
+    font-weight:600;
+}</span>
+                                            </pre>
+                                    </div>
+                               
+                            
+                            
+                            
+                                    <div class="col-lg-6 col-lg6">
+                                     
+                                        <span class="dth-header"></span>
+                                        <pre>
 //layout
 .grid 
 {
@@ -185,19 +221,20 @@
     width:250px;
     height:250px;
 }
-.grid_item-title
+<span class="dth">.question--grid_item-title
 {
     padding:20px;
     font-size:18px;
     font-weight:600;
-}
-
-
-
-                                </pre>
+}</span> 
+                                        </pre>
+                                    </div>
+                                </div>
                             </div>
+
                             
                             <h3>Namespacing</h3>
+                            <p class="tbd">TBD</p>
                             
 
                         </section>
@@ -208,27 +245,65 @@
                             <p><code>.btn</code> The base class should always be present and defined first</p>
                              
                             <h3>Modifiers</h3>
+                            <p>Use modifier classes to alter the style of a button based on state or action</p>
+                            <p>Common state modifiers are: <code>.is-first</code> <code>.is-last</code> <code>.is-disabled</code> <code>.is-active</code> <code>.is-hovered</code> </p>
+                            <p>Common actiion based modifiers: <code>.primary</code> <code>.danger</code></p>
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                    <h4>Grouping buttons and the Primary class</h4>
-                                    <p>If a button module has a primary class it should always be used and only used on one button.</p>
+                                    <h4>Primary modifier</h4>
+                                    <p>The primary modifier should alwasy be used when you have more than one button grouped together. It should only be used on one button. </p>
                                 </div>
                             </div>
-                            <h3>Default button</h3>
+                            <h3>Default buttons</h3>
                             <p>Default buttons are used on cards, dialog boxs, and modals</p>
                             <code>.btn--defualt</code>
                             <div class="sg--example note">
                                 <button class="btn--default">Normal</button>
                                 <button class="btn--default primary">Primary</button>
+                                <button class="btn--default danger">Danger</button>
+                                <button class="btn--default is-disabled">Disabled</button>
                             </div>
 
-                            <h3>Raised button</h3>
+                            <h3>Raised buttons</h3>
+                            <p>Raised buttons are used in toolbars or for important call to actions</p>
                             <code>.btn--raised</code>
                             
                             <div class="sg--example">
                                 <button class="btn btn--raised">Normal</button>
                                 <button class="btn btn--raised primary">Primary</button>
+                                <button class="btn btn--raised danger">Danger</button>
+                                <button class="btn btn--raised is-disabled">Disabled</button>
+                                <button class="btn btn--raised is-active">Active</button>
+                            </div>
+                            <h3>Utility buttons</h3>
+                            <p>Utility buttons can be used anywhere. By definition they have lower visual importance.</p>
+                            <code>.btn--utility</code>
+                            
+                            <div class="sg--example">
+                                <button class="btn btn--utility">Normal</button>
+                                
+                                <button class="btn btn--utility danger">Danger</button>
+                                <button class="btn btn--utility is-disabled">Disabled</button>
+                                
+                            </div>
+                            <h3>Utility Icon buttons</h3>
+                            <p>Utility icon buttons can be used anywhere. By definition they have lower visual importance.</p>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                    <h4>Do not mix with non icon buttons</h4>
+                                    <p>Utility icon buttons shouldn't be mixed with text buttons as it skews their visual importance</p>
+                                </div>
+                            </div>
+                            <code>.btn--icon-utility</code>
+                            
+                            <div class="sg--example">
+                                <button class="btn btn--icon-utility"><i class="icon-close"></i></button>
+                                
+                                <button class="btn btn--icon-utility"><i class="icon-help"></i></button>
+                                <button class="btn btn--icon-utility"><i class="icon-settings"></i></button>
+                                
                             </div>
                         </section>
                     </div>
