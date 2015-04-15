@@ -1,0 +1,85 @@
+/* --------->>> Module: Question  Answer-----------*/
+
+%column
+{
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+
+}
+
+%table
+{
+	width:100%;
+	position:relative;
+	display:table;	
+}
+
+.q_description
+{
+	font-size:18px;
+}
+
+
+.q-answer_item
+{
+	@extend %table;
+	height:60px;
+	background:#ffffff;
+	border:5px solid $bg-light-grey;
+	border-radius:5px;
+	margin-bottom:10px;
+}
+
+.q-answer_item-control
+{
+	@extend %column;
+	width:40px;
+	> i 
+	{
+		color:$text-light-grey;
+
+		font-size:24px;
+	}
+}
+
+.q-answer_item-label
+{
+	@extend %column;
+	
+	width:40px;
+	color:$highlight;
+	text-align:center;
+	font-size:14px;
+	border-right:1px solid $bg-light-grey;
+
+	&.size-large
+	{
+		width:120px;
+	}
+}
+
+.q-answer_item-matching-option
+{
+	@extend %column;
+	position:relative;
+	border-left:1px solid $text-light-grey;
+	padding:0;
+	min-width:50%;
+}
+
+.q-answer_item-description
+{
+	@extend %column;
+	font-size:14px;
+	
+}
+
+
+.q-answer_item-input
+{
+	@extend %column;
+
+
+}
+

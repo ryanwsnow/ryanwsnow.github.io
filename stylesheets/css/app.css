@@ -2295,6 +2295,23 @@ body {
   min-height: 100%;
   height: 100%; }
 
+input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background: transparent; }
+
+.input-wrapper {
+  border-radius: 5px;
+  border: 1px solid #f2f2f2;
+  display: inline-block;
+  padding: 10px;
+  width: 100%; }
+  .input-wrapper.is-readonly {
+    background: #f9f9f9;
+    border: 1px dashed #f2f2f2; }
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0px;
@@ -2308,7 +2325,8 @@ button {
   background: none;
   margin: 0;
   padding: 0;
-  border: none; }
+  border: none;
+  outline: none; }
 
 header {
   position: relative; }
@@ -2320,7 +2338,7 @@ header {
 /* --------->>> Button: Basic ---------*/
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
-.btn, .btn--default {
+.btn {
   display: inline-block;
   height: 32px;
   padding-left: 10px;
@@ -2330,42 +2348,51 @@ header {
   text-align: center;
   line-height: 32px;
   font-size: 14px;
-  color: #a4b0ba; }
-  .btn.is-first, .is-first.btn--default {
+  color: #708493; }
+  .btn.is-first {
     margin-left: 0; }
-  .btn.is-last, .is-last.btn--default {
+  .btn.is-last {
     margin-right: 0; }
-  .btn:hover, .btn--default:hover, .btn .is-hovered, .btn--default .is-hovered {
+  .btn:hover, .btn .is-hovered {
     color: #435561;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
 
+.btn--utility {
+  color: #a4b0ba; }
+  .btn--utility.danger {
+    color: #fd194f; }
+  .btn--utility.is-disabled {
+    color: #d9dde1; }
+
 .btn--default {
-  text-transform: uppercase;
-  min-width: 100px; }
+  text-transform: uppercase; }
   .btn--default.primary {
     color: #199bfd; }
+  .btn--default.danger {
+    color: #fd194f; }
+  .btn--default.is-disabled {
+    color: #d9dde1; }
 
-.btn--icon {
+.btn--icon-utility {
   margin: 0px;
-  font-size: 24px; }
-  .btn--icon.is-first {
+  font-size: 24px;
+  color: #a4b0ba; }
+  .btn--icon-utility.is-first {
     padding-left: 0; }
-  .btn--icon.is-last {
+  .btn--icon-utility.is-last {
     padding-right: 0; }
 
 .btn--raised {
   background: #f2f2f2;
-  color: #435561;
+  color: #708493;
   min-width: 120px;
   border-radius: 2px;
   -webkit-box-shadow: 0px 1px 0px 0px #a4b0ba;
   -moz-box-shadow: 0px 1px 0px 0px #a4b0ba;
   box-shadow: 0px 1px 0px 0px #a4b0ba; }
   .btn--raised.primary {
-    width: 120px;
-    border-radius: 2px;
     background: #199bfd;
     color: #fff;
     -webkit-box-shadow: 0px 1px 0px 0px #1f80c9;
@@ -2373,11 +2400,139 @@ header {
     box-shadow: 0px 1px 0px 0px #1f80c9; }
     .btn--raised.primary:hover {
       color: #fff; }
+  .btn--raised.danger {
+    background: #fd194f;
+    color: #fff; }
+  .btn--raised.is-disabled {
+    color: #d9dde1; }
+  .btn--raised.is-active {
+    background: #0ac8f4;
+    color: #fff;
+    box-shadow: none; }
 
 a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primary:active {
   color: #fff; }
 
 /** End Buttons **/
+/* --------->>> Layout: List -----------*/
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+/* --->>> List Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+.list.is-cozy > .list_item {
+  height: 80px; }
+
+/* --->>> List item ---*/
+.list_item {
+  position: relative;
+  display: table;
+  height: 64px;
+  border-bottom: 1px solid #d9dde1;
+  padding: 10px;
+  width: 100%; }
+  .list_item.is-hovered {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: #f2f2f2;
+    cursor: pointer; }
+  .list_item.is-active {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    cursor: pointer;
+    border-left: 3px solid #0ac8f4; }
+
+/* --->>> List item column---*/
+.list_item_column {
+  display: table-cell;
+  vertical-align: middle; }
+  .list_item_column > div {
+    vertical-align: middle; }
+
+.list_item_column-checkbox {
+  width: 40px; }
+  .list_item_column-checkbox > input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px; }
+
+.list_item_column-icon {
+  width: 40px; }
+  .list_item_column-icon > i {
+    color: #a4b0ba;
+    font-size: 24px; }
+
+.list_item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #435561; }
+
+.list_item-sub-title {
+  font-size: 12px;
+  color: #708493;
+  font-weight: 400; }
+
+.list_item-activity-info {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 12px;
+  color: #a5b1bb;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: right; }
+
+/* --------->>> Module: Question  Answer-----------*/
+.q-answer_item-control, .q-answer_item-label, .q-answer_item-matching-option, .q-answer_item-description, .q-answer_item-input {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px; }
+
+.q-answer_item {
+  width: 100%;
+  position: relative;
+  display: table; }
+
+.q_description {
+  font-size: 18px; }
+
+.q-answer_item {
+  height: 60px;
+  background: #ffffff;
+  border: 5px solid #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+
+.q-answer_item-control {
+  width: 40px; }
+  .q-answer_item-control > i {
+    color: #a4b0ba;
+    font-size: 24px; }
+
+.q-answer_item-label {
+  width: 40px;
+  color: #0ac8f4;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #f2f2f2; }
+  .q-answer_item-label.size-large {
+    width: 120px; }
+
+.q-answer_item-matching-option {
+  position: relative;
+  border-left: 1px solid #a4b0ba;
+  padding: 0;
+  min-width: 50%; }
+
+.q-answer_item-description {
+  font-size: 14px; }
+
 /** Minor layout styles/Utility Classes **/
 .inline-block {
   display: inline-block; }
@@ -2391,7 +2546,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 .right {
   float: right; }
 
-.l-stacked > div {
+.l-stacked > span {
   display: block; }
 
 .l-clear-list-style {
@@ -2440,7 +2595,7 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 
 .l-section-preview-container {
   width: 60%;
-  min-width: 450px;
+  min-width: 500px;
   float: left;
   position: fixed;
   right: 0;
@@ -2478,65 +2633,10 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   border-top: 1px solid #d9dde1;
   height: 42px; }
 
-/* --------->>> Layout: List -----------*/
-.list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0; }
-
-.list > li:first-child {
-  border-top: 1px solid #d9dde1; }
-
-.list_row {
-  height: 64px;
-  border-bottom: 1px solid #d9dde1;
-  padding: 10px; }
-  .list_row.is-hovered {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    background: #f2f2f2;
-    cursor: pointer; }
-  .list_row.is-active {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    cursor: pointer;
-    border-left: 3px solid #0ac8f4; }
-
-.list_checkbox {
-  display: inline-block;
-  width: 40px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.list_checkbox > input {
-  display: block;
-  line-height: 64px;
-  vertical-align: middle; }
-
-.list_item-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #323b47; }
-
-.list_item-sub-title {
-  font-size: 12px;
-  color: #a5b1bb;
-  font-weight: 400; }
-
-.list_item-activity-info {
-  font-size: 12px;
-  color: #a5b1bb;
-  font-weight: 400;
-  white-space: nowrap;
-  text-align: right; }
-
 /* -----------------------------------*/
 /* ---->>> Modules ---------------------*/
 /* -----------------------------------*/
-/* --------->>> Module: Header Large ----------*/
+/* --------->>> Module: Header ----------*/
 .header {
   width: 100%;
   position: relative;
@@ -2560,13 +2660,13 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
 .header--primary.is-collapsed {
-  height: 60px; }
+  height: 52px; }
   .header--primary.is-collapsed .breadcrumb__location {
     display: none; }
 
 /* --->>> Builder overrides ---*/
 /* -- two deep selector starting with parent to override builders --*/
-.header--primary .btn:hover, .header--primary .btn--default:hover {
+.header--primary .btn:hover {
   color: #ffffff;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -2638,27 +2738,6 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   font-size: 14px; }
 
 /* --------->>> Module: Course -----------*/
-/* --------->>> Module: Question -----------*/
-.q_description {
-  font-size: 18px; }
-
-.q_answerItem {
-  background: #ffffff;
-  border: 5px solid #f2f2f2;
-  border-radius: 3px;
-  margin-bottom: 10px; }
-
-.q_answerItem-label {
-  padding: 10px;
-  color: #0ac8f4;
-  text-align: center;
-  font-size: 14px;
-  border-right: 1px solid #f2f2f2; }
-
-.q_answerItem-description {
-  padding: 10px;
-  font-size: 14px; }
-
 /* --------->>> Module: Tool-bar -----------*/
 .toolbar {
   padding: 10px;
