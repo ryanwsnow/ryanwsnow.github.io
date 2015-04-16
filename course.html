@@ -63,7 +63,7 @@
 		<div class="l-section-main-container">
 			<div class="toolbar">
 				
-					<button class="btn btn--raised primary is-first">Create</button>
+					<button class="btn btn--raised primary is-first" data-toggle="modal" data-target="#modalCreate">Create</button>
 					<button class="btn ">Option</button>
 				
 				
@@ -73,72 +73,61 @@
 
 
 			<ol class="list">
-				<li class="list_item">
+				<li class="list-row">
+					<div class="list_item list_item--folder">
+						<div class="list_item_column list_item_column-checkbox ">
+							<input type="checkbox" name="Question 1" value="selected">
+						</div>
+						<div class="list_item_column list_item_column-icon">
+							<i class="icon-folder"></i>
+						</div>
+						<div class="list_item_column l-stacked ">
+						  	<span class="list_item-title ">Question 1</span>
+						  	<span class="list_item-sub-title">Multiple Choice</span>
+					  	</div>
+					  	<span class="list_item_column list-item_column-expandable">
+					  		<button class="btn btn--icon-utility is-last"><i class="icon-keyboard-arrow-down"></i></button>
+					  	</span>
+					 </div>
+						<ol class="list list-sub is-hidden">
+							<li class="list-row">
+								<div class="list_item">
+									<div class="list_item_column list_item_column-checkbox ">
+										<input type="checkbox" name="Question 1" value="selected">
+									</div>
+									<div class="list_item_column list_item_column-icon">
+										<i class="icon-textsms"></i>
+									</div>
+									<div class="list_item_column l-stacked ">
+									  	<span class="list_item-title ">Question 1</span>
+									  	<span class="list_item-sub-title">Multiple Choice</span>
+								  	</div>
+									
+									
+									<span class="list_item-activity-info">Mar 8</span>
+								</div>
+								
+					  		</li> <!-- end list item -->
+						</ol>
 					
-					<div class="list_item_column list_item_column-checkbox ">
-						<input type="checkbox" name="Question 1" value="selected">
-					</div>
-					<div class="list_item_column list_item_column-icon">
-						<i class="icon-textsms"></i>
-					</div>
-					<div class="list_item_column l-stacked ">
-					  	<span class="list_item-title ">Question 1</span>
-					  	<span class="list_item-sub-title">Multiple Choice</span>
-				  	</div>
-					
-					
-					<span class="list_item-activity-info">Mar 8</span>
 					
 		  		</li> <!-- end list item -->
-		  		<li class="list_item">
-					
-					<div class="list_item_column list_item_column-checkbox ">
-						<input type="checkbox" name="Question 1" value="selected">
+		  		<li class="list-row">
+					<div class="list_item">
+						<div class="list_item_column list_item_column-checkbox ">
+							<input type="checkbox" name="Question 1" value="selected">
+						</div>
+						<div class="list_item_column list_item_column-icon">
+							<i class="icon-textsms"></i>
+						</div>
+						<div class="list_item_column l-stacked ">
+						  	<span class="list_item-title ">Question 1</span>
+						  	<span class="list_item-sub-title">Multiple Choice</span>
+					  	</div>
+						
+						
+						<span class="list_item-activity-info">Mar 8</span>
 					</div>
-					<div class="list_item_column list_item_column-icon">
-						<i class="icon-textsms"></i>
-					</div>
-					<div class="list_item_column l-stacked ">
-					  	<span class="list_item-title ">Question 1</span>
-					  	<span class="list_item-sub-title">Multiple Choice</span>
-				  	</div>
-					
-					
-					<span class="list_item-activity-info">Mar 8</span>
-					
-		  		</li> <!-- end list item -->
-		  		<li class="list_item is-active">
-					
-					<div class="list_item_column list_item_column-checkbox ">
-						<input type="checkbox" name="Question 1" value="selected">
-					</div>
-					<div class="list_item_column list_item_column-icon">
-						<i class="icon-textsms"></i>
-					</div>
-					<div class="list_item_column l-stacked ">
-					  	<span class="list_item-title ">Question 1</span>
-					  	<span class="list_item-sub-title">Multiple Choice</span>
-				  	</div>
-					
-					
-					<span class="list_item-activity-info">Mar 8</span>
-					
-		  		</li> <!-- end list item -->
-		  		<li class="list_item">
-					
-					<div class="list_item_column list_item_column-checkbox ">
-						<input type="checkbox" name="Question 1" value="selected">
-					</div>
-					<div class="list_item_column list_item_column-icon">
-						<i class="icon-textsms"></i>
-					</div>
-					<div class="list_item_column l-stacked ">
-					  	<span class="list_item-title ">Question 1</span>
-					  	<span class="list_item-sub-title">Multiple Choice</span>
-				  	</div>
-					
-					
-					<span class="list_item-activity-info">Mar 8</span>
 					
 		  		</li> <!-- end list item -->
 		  		
@@ -179,7 +168,7 @@
 							</ul>
 							
 						</div>
-						<div class="objectView_cta right">
+						<div class="objectView_cta">
 								
 								<button class="btn btn--raised is-first">Assign</button>
 								<button class="btn btn--raised primary is-last">Present</button>
@@ -236,7 +225,7 @@
 						<div class="q-answer">
 							<div class="q-answer_item">
 								<span class="q-answer_item-label size-large"><label for="waid">Word Answer:</label></span>
-								<div class="q-answer_item-input"><span class="input-wrapper is-readonly"><input id="waid" type="text" placeholder="Enter your answer..."></span></div>
+								<div class="q-answer_item-input"><span class="form-field is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></div>
 							</div>
 						</div>
 		
@@ -253,6 +242,53 @@
 
 		</div>
 	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="th-modal-content">
+      <div class="th-modal-header">
+        <button class="btn btn--icon-utility is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+        <h4 class="th-modal-title" id="myModalLabel">Create Question</h4>
+      </div>
+      <div class="th-modal-body">
+        <span class="form-field">
+        	<label for="questionTitle">Title:</label><input id="questionTitle" type="text" placeholder="Question 1">
+    	</span>
+    	 <span class="form-field">
+        	<label for="questionDescription">Question:</label><textarea rows="3" id="questionDescription" type="text" placeholder="Enter your question"></textarea>
+    	</span>
+    	<div class="th-modal-section">
+    		<h5 class="th-modal-section-header">Multiple Choice Options</h5>
+    		<div class="q-answer">
+			<div class="q-answer_item">
+				<span class="q-answer_item-label">A</span>
+				<div class="q-answer_item-description">
+					<span class="form-field"><input id="answerA" type="text" placeholder="Description"></span>
+				</div>
+				<div class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></div>
+				<span class="q-answer_item-control"><button class="btn btn--icon-utility"><i class="icon-close"></i></button></span>
+			</div>
+		</div>
+		<div class="q-answer">
+			<div class="q-answer_item">
+				<span class="q-answer_item-label">B</span>
+				<div class="q-answer_item-description"><span class="form-field"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
+				<div class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></div>
+				<span class="q-answer_item-control"><button class="btn btn--icon-utility"><i class="icon-close"></i></button></span>
+			</div>
+	
+		</div>
+		<button class="btn btn--icon-text primary is-first"><i class="icon-add-circle"></i>Add Another</button>
+      </div>
+      
+    </div>
+    <div class="th-modal-footer">
+        <button type="button" class="btn btn--default" data-dismiss="modal">back</button>
+        <button type="button" class="btn btn--default primary is-last">Next</button>
+      </div>
+  </div>
 </div>
 </body>
 </html>

@@ -18,7 +18,7 @@
 {
 	&.is-cozy
 	{
-		>.list_item
+		> li > .list_item
 		{
 			height:80px;
 		}
@@ -27,6 +27,21 @@
 
 }
 
+
+.list-sub
+{ 
+
+	> li > .list_item 
+	{
+		
+		padding-left:40px;
+	}
+}
+
+.list-row
+{
+	
+}
 
 .list > li:first-child
 {
@@ -66,6 +81,15 @@
 
 }
 
+.list_item--folder
+{
+	cursor:pointer;
+	> .list_item_column-icon > i
+	{
+		color:$text-med-grey;
+	}
+}
+
 /* --->>> List item column---*/
 
 .list_item_column
@@ -79,6 +103,10 @@
 	vertical-align:middle;
 }
 
+.list-item_column-expandable
+{
+	width:40px;
+}
 
 .list_item_column-checkbox 
 {

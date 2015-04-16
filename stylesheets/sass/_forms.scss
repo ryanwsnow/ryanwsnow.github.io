@@ -1,0 +1,90 @@
+// place into its proper section
+input, textarea
+{
+	border:none;
+	outline:none;
+	padding:0;
+	margin:0;
+	
+	background:transparent;
+	.is-readyonly
+	{
+			
+	}
+
+
+}
+
+input[type='checkbox'] 
+{
+	margin-right:10px;
+}
+
+textarea
+{
+	overflow: auto;
+	resize:vertical;
+}
+
+.form-field
+{	
+	position:relative;
+	@include clearfix;
+	border-bottom-color:$text-light-grey;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	
+	display:table;
+	padding:10px;
+	width:100%;
+	vertical-align:middle;
+	
+	
+	> input, > textarea
+	{
+		display:table-cell;
+		vertical-align:middle;
+		width:100%;
+		color:$text-smed-grey;
+		
+	}
+
+	> textarea
+	{
+		vertical-align:top;
+
+	}
+
+	> label
+	{
+		display:table-cell;
+		width:100px;
+		
+		font-size:14px;
+		font-weight:400;
+		color:$text-med-grey;
+		padding-right:10px;
+		&.labelfocus
+		{
+			
+			// @include transition(all 0.5s ease-in-out);
+			color:$highlight;
+			@include transition(all 0.5s ease-in-out);
+		}
+	}
+	&.is-focused
+	{
+		border-bottom-color:$highlight;
+		> input, > textarea
+		{
+			color:$text-med-grey;
+		}
+		
+	}
+	&.is-readonly
+	{
+	
+	 border-bottom:none;		
+	}
+
+}
