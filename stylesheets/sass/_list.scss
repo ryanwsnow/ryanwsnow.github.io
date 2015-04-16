@@ -83,6 +83,7 @@
 
 .list_item--folder
 {
+	cursor:pointer;
 	> .list_item_column-icon > i
 	{
 		color:$text-med-grey;

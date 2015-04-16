@@ -15,6 +15,11 @@ input, textarea
 
 }
 
+input[type='checkbox'] 
+{
+	margin-right:10px;
+}
+
 textarea
 {
 	overflow: auto;

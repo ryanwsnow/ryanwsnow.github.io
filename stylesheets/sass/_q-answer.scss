@@ -75,6 +75,13 @@
 	
 }
 
+.q-answer_item-correct
+{
+	@extend %column;
+	width:160px;
+	
+}
+
 
 .q-answer_item-input
 {

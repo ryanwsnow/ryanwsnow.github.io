@@ -2362,6 +2362,16 @@ header {
   .btn--default.is-disabled {
     color: #d9dde1; }
 
+.btn--icon-text {
+  color: #a4b0ba; }
+  .btn--icon-text > i {
+    line-height: 32px;
+    font-size: 24px;
+    float: left;
+    padding-right: 10px; }
+  .btn--icon-text.primary {
+    color: #199bfd; }
+
 .btn--icon-utility {
   margin: 0px;
   font-size: 24px;
@@ -2437,8 +2447,10 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
     cursor: pointer;
     border-left: 3px solid #0ac8f4; }
 
-.list_item--folder > .list_item_column-icon > i {
-  color: #435561; }
+.list_item--folder {
+  cursor: pointer; }
+  .list_item--folder > .list_item_column-icon > i {
+    color: #435561; }
 
 /* --->>> List item column---*/
 .list_item_column {
@@ -2491,6 +2503,9 @@ input, textarea {
   margin: 0;
   background: transparent; }
 
+input[type='checkbox'] {
+  margin-right: 10px; }
+
 textarea {
   overflow: auto;
   resize: vertical; }
@@ -2535,7 +2550,7 @@ textarea {
     border-bottom: none; }
 
 /* --------->>> Module: Question  Answer-----------*/
-.q-answer_item-control, .q-answer_item-label, .q-answer_item-matching-option, .q-answer_item-description, .q-answer_item-input {
+.q-answer_item-control, .q-answer_item-label, .q-answer_item-matching-option, .q-answer_item-description, .q-answer_item-correct, .q-answer_item-input {
   display: table-cell;
   vertical-align: middle;
   padding: 10px; }
@@ -2578,6 +2593,9 @@ textarea {
 
 .q-answer_item-description {
   font-size: 14px; }
+
+.q-answer_item-correct {
+  width: 160px; }
 
 /** Minor layout styles/Utility Classes **/
 .inline-block {
@@ -2870,5 +2888,15 @@ textarea {
   padding: 10px;
   height: 52px;
   text-align: right; }
+
+.th-modal-section {
+  padding-top: 20px; }
+
+.th-modal-section-header {
+  font-size: 16px;
+  color: #435561;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 /*# sourceMappingURL=app.css.map */

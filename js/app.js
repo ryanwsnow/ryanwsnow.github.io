@@ -18,6 +18,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(".list_item--folder").click(function(){
 		console.log("clicked");
+		$(this).toggleClass("is-open");
 		$(this).parent(".list-row").children(".list-sub").toggleClass("is-hidden");
 	});
 
