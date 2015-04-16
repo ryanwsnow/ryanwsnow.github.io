@@ -40,6 +40,11 @@
 	padding-right:20px;
 }
 
+.is-hidden
+{
+	display:none;
+}
+
 
 /** End minor layout styles **/
 
@@ -271,17 +276,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* --------->>> Module: object ----------*/
 
 .objectView 
@@ -361,18 +355,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 /* --------->>> Module: Course -----------*/
-
-.course__name
-{
-
-}
-
-
-
-
-
-
-
 
 
 /* --------->>> Module: Tool-bar -----------*/
@@ -479,9 +461,49 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 }
 
 
+/* -----------------------------------*/
+/* ---->>> Dialog/Modal -------------------*/
+/* -----------------------------------*/
+
+/* --------->>> Navigation: Basic ---------*/
 
 
+.th-modal-header
+{
+	@include border-top-radius(5px);
+	padding:$padding-default;
+	height:52px;
+	background:#fff;
+	border-bottom:1px solid #d9dde1;
 
+	
+}
+
+.th-modal-title
+{
+	text-align:center;
+	line-height:32px;
+	font-size:18px;
+	font-weight:600;
+}
+
+.th-modal-body
+{
+	padding:$padding-default;
+}
+.th-modal-content
+{
+	border-radius:5px;
+	background:#f9f9f9;
+	
+}
+.th-modal-footer
+{
+	border-top:1px solid #d9dde1;
+	padding:$padding-default;
+	height:52px;
+	text-align:right;	
+}
 
 
 

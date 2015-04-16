@@ -2,17 +2,44 @@
 
 
 $(document).ready(function(){
-	$(".list__row").click(function(){
+	$(".list-row").click(function(){
 		$(this).toggleClass("is-active");
 	});
 
-	$( ".list__row" ).hover(
+	$( ".list-row" ).hover(
   		function() {
     			$( this ).addClass( "is-hovered" );
   		}, function() {
     			$( this ).removeClass( "is-hovered" );
   	});
 });
+
+
+$(document).ready(function(){
+	$(".list_item--folder").click(function(){
+		console.log("clicked");
+		$(this).parent(".list-row").children(".list-sub").toggleClass("is-hidden");
+	});
+
+	$("input").focus(function() {
+		$(this).parent(".form-field").addClass("is-focused");
+		  $("label[for='" + this.id + "']").addClass("labelfocus");
+		}).blur(function() {
+		  $("label").removeClass("labelfocus");
+		  $(this).parent(".form-field").removeClass("is-focused");
+		});
+	$("textarea").focus(function() {
+		$(this).parent(".form-field").addClass("is-focused");
+		  $("label[for='" + this.id + "']").addClass("labelfocus");
+		}).blur(function() {
+		  $("label").removeClass("labelfocus");
+		  $(this).parent(".form-field").removeClass("is-focused");
+		});
+
+	
+});
+
+
 
 // $(document).ready(function() {
 // 	$( ".preview .icon-close" ).click(function() {
