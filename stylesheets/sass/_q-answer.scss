@@ -20,6 +20,12 @@
 	font-size:18px;
 }
 
+.q-answer_instruction
+{
+	width:100%;
+	
+}
+
 
 .q-answer_item
 {
@@ -63,7 +69,7 @@
 {
 	@extend %column;
 	position:relative;
-	border-left:1px solid $text-light-grey;
+	border-left:5px solid $bg-light-grey;
 	padding:0;
 	min-width:50%;
 }

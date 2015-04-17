@@ -1,0 +1,41 @@
+.dropdown-content {
+  @extend .z-depth-1 !optional;
+  margin:0;
+  padding:10px;
+ 
+  list-style-type:none;
+  background-color: #FFFFFF;
+  margin: 0;
+  display: none;
+  min-width: 140px;
+  max-height: 650px;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  border-radius:2px;
+
+  white-space: nowrap; // Force one line
+  z-index: 1;
+  will-change: width, height;
+
+  li {
+    clear: both;
+    
+    cursor: pointer;
+   
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+
+    &:hover, &.active {
+      
+    }
+
+    & > a, & > span {
+      font-size: 14px;
+      color:$text-smed-grey;
+      display: block;
+      padding: 10px;
+    }
+  }
+}

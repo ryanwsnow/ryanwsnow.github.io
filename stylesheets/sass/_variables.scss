@@ -4,8 +4,10 @@ $primary-grey: #323b47;
 $primary-font: 'Source Sans Pro', sans-serif;
 $light-grey:#a5b1bb;
 $primary-blue:#199bfd;
+$primary-blue-lighten1:#42b5fc;
 
 //background
+// change colours to lighten-1, lighten-2
 $text-dark-grey:#313b47;
 $text-med-grey:#435561;
 $text-smed-grey:#708493;
@@ -34,8 +36,38 @@ $highlight:#0ac8f4;
 $padding-default:10px;
 
 
+//move these to another file
+
+
 @mixin padding-crown($size){
 	padding-top:$size;
 	padding-left:$size;
 	padding-right:$size;
+}
+
+
+@mixin box-shadow-2($args1, $args2) {
+      -webkit-box-shadow: $args1, $args2;
+         -moz-box-shadow: $args1, $args2;
+         box-shadow: $args1, $args2;
+      }
+
+
+.z-depth-1{
+    @include box-shadow-2(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+}
+.z-depth-1-half{
+    @include box-shadow-2(0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15));
+}
+.z-depth-2{
+    @include box-shadow-2(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+}
+.z-depth-3{
+    @include box-shadow-2(0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19));
+}
+.z-depth-4{
+    @include box-shadow-2(0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21));
+}
+.z-depth-5{
+    @include box-shadow-2(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
 }
