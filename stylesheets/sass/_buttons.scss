@@ -111,6 +111,11 @@
 	font-size:24px;
 	color:$text-light-grey;
 
+	&:hover.danger 
+	{
+		color:$text-danger;
+	}
+
 	&.is-first
 	{
 		padding-left:0;
