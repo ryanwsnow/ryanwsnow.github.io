@@ -11,6 +11,7 @@
 	<link href="stylesheets/css/app.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/materialize.min.js"></script>
 	<script src="js/app.js"></script>
 	
 </head>
@@ -254,7 +255,7 @@
       </div>
       <div class="th-modal-body">
         <span class="form-field">
-        	<label for="questionTitle">Title:</label><input id="questionTitle" type="text" placeholder="Question 1">
+        	<label for="questionTitle">Title:</label><input tabindex="0" id="questionTitle" type="text" placeholder="Question 1"  data-toggle="tooltip" data-placement="right" title="here is a tip">
     	</span>
     	 <span class="form-field">
         	<label for="questionDescription">Question:</label><textarea rows="2" id="questionDescription" type="text" placeholder="Enter your question"></textarea>

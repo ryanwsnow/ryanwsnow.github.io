@@ -110,6 +110,7 @@
 	top: 150px;
 	bottom: 0;
 	
+	
 }
 
 /* --------->>> Layout: Grid -----------*/
@@ -144,23 +145,33 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 .grid__item-body
 {
 	
-	
+	padding:$padding-default;
 }
 
 .grid__item-title
 {
-	padding:20px;
+	
 	font-size:18px;
 	font-weight:600;
+	color:$text-med-grey;
 }
 
-.grid__item-navigation
+.grid__item-sub-title
+{
+	
+	font-size:14px;
+	font-weight:400;
+	color:$text-smed-grey;
+}
+
+.grid__item-footer
 {
 	position:absolute;
 	width:100%;
 	bottom:0;
 	border-top:1px solid #d9dde1;
-	height:42px;
+	height:52px;
+	padding:10px;
 }
 
 
@@ -295,6 +306,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 	position:relative;
 	background:#ffffff;
 	border-bottom:1px solid #d9dde1;
+
 		
 
 }
@@ -336,15 +348,13 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 {
 
 	
-	
-	
-	
 }
 
 
 .objectView_body
 {
 	@include padding-crown($padding-default);
+	overflow-y:auto;
 
 }
 

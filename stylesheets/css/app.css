@@ -2688,17 +2688,26 @@ textarea {
   -moz-box-shadow: 0px 2px 0px 0px #d9dde1;
   box-shadow: 0px 2px 0px 0px #d9dde1; }
 
-.grid__item-title {
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 600; }
+.grid__item-body {
+  padding: 10px; }
 
-.grid__item-navigation {
+.grid__item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #435561; }
+
+.grid__item-sub-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #708493; }
+
+.grid__item-footer {
   position: absolute;
   width: 100%;
   bottom: 0;
   border-top: 1px solid #d9dde1;
-  height: 42px; }
+  height: 52px;
+  padding: 10px; }
 
 /* -----------------------------------*/
 /* ---->>> Modules ---------------------*/
@@ -2799,7 +2808,8 @@ textarea {
 .objectView_body {
   padding-top: 10px;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  overflow-y: auto; }
 
 .objectView_body p {
   font-size: 14px; }
