@@ -50,7 +50,7 @@
 	color:$text-light-grey;
 
 
-	&.danger 
+	&:hover.danger 
 	{
 		color:$text-danger;
 	}
@@ -126,9 +126,9 @@
 	color:$text-smed-grey;
 	min-width:120px;
 	border-radius:2px;
-	-webkit-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
--moz-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
-box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(164,176,186,1);
+-moz-box-shadow: 0px 3px 0px 0px rgba(164,176,186,1);
+box-shadow: 0px 3px 0px 0px rgba(164,176,186,1);
 	&.primary
 	{
 		
@@ -137,12 +137,13 @@ box-shadow: 0px 1px 0px 0px rgba(164,176,186,1);
 		
 		background:$primary-blue;
 		color:#fff;
-		-webkit-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
-	-moz-box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
-	box-shadow: 0px 1px 0px 0px rgba(31,128,201,1);
+		-webkit-box-shadow: 0px 3px 0px 0px rgba(31,128,201,1);
+	-moz-box-shadow: 0px 3px 0px 0px rgba(31,128,201,1);
+	box-shadow: 0px 3px 0px 0px rgba(31,128,201,1);
 		&:hover
 		{
 			color:#fff;
+			background:$primary-blue-lighten1;
 		}
 
 	}

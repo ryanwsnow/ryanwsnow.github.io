@@ -1,35 +1,64 @@
-// place into its proper section
+// Remove input styling 
 input, textarea
 {
 	border:none;
 	outline:none;
 	padding:0;
 	margin:0;
-	
 	background:transparent;
-	.is-readyonly
-	{
-			
-	}
-
-
 }
 
-input[type='checkbox'] 
+input[type='checkbox'], input[type='radio'] 
 {
 	margin-right:10px;
+
 }
 
 textarea
 {
-	overflow: auto;
-	resize:vertical;
+	// overflow: auto;
+	resize:none;
+}
+textarea.materialize-textarea {
+
+  // General Styles
+  
+  overflow-y: hidden; //remvoe flashing bar
+  
+  height: 3rem;
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding: 0;
+  box-shadow: none;
+  @include box-sizing(content-box);
+  transition: all .3s;
+  }
+
+ .hiddendiv {
+  display: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+  padding-top: 30px; /* prevents text jump on Enter keypress */
+}
+
+.form-checkbox
+{
+	display:block;
+	padding-bottom:10px;
+	> label
+	{
+		font-size:14px;
+		font-weight:400;
+		color:$text-med-grey;
+	}
+
 }
 
 .form-field
 {	
 	position:relative;
-	@include clearfix;
+	
 	border-bottom-color:$text-light-grey;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
