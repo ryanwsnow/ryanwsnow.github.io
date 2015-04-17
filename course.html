@@ -38,12 +38,12 @@
 				
 					
 			 	
-			    	<button class="dropdown-button btn btn--icon-utility is-last" data-activates="dropdown1" >
+			    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
 						<i class="icon-settings"></i>
 					</button>
 				    	<ul   id="dropdown1" class="dropdown-content">
 					     <li><a href="#!">Something here</a></li>
-					    <li><a href="#!">Something there</a></li>
+					    <li><a href="#!">Something there that is super long</a></li>
 					    
 					    <li><a href="#!">blah blah</a></li>
 				    	</ul>
@@ -67,8 +67,13 @@
 		<div class="l-section-main-container">
 			<div class="toolbar">
 				<span class="toolbar_actions-primary">
-					<button class="btn btn--raised primary is-first" data-toggle="modal" data-target="#modalCreate">Create</button>
-					<button class="btn ">Option</button>
+					<button class="dropdown-button btn btn--raised primary is-first" data-constrainwidth="false" data-activates="dropdown3">Create</button>
+					<ul   id="dropdown3" class="dropdown-content">
+					     <li><button class="btn btn--icon-text"data-toggle="modal" data-target="#modalCreate" href="#!"><i class="icon-textsms"></i>Question (i Work)</button></li>
+					    <li><a href="#!">Slide</a></li>
+					     <li><a href="#!">Discussion</a></li>
+				    	</ul>
+					<button class="btn ">Folder</button>
 				</span>
 			
 				<span class="toolbar_actions-utility">
@@ -176,7 +181,13 @@
 						</div>
 						<div class="objectView_cta">
 								
-								<button class="btn btn--raised is-first">Assign</button>
+								<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
+								<ul   id="dropdown2" class="dropdown-content">
+								     <li><a href="#!">Homework</a></li>
+								    <li><a href="#!">Review</a></li>
+								    
+								    
+							    	</ul>
 								<button class="btn btn--raised primary is-last">Present</button>
 						</div>
 					</div>
@@ -275,7 +286,7 @@
 					<span class="form-field"><input id="answerA" type="text" placeholder="Description"></span>
 				</div>
 				<span class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
-				<span class="q-answer_item-control"><button class="btn btn--icon-utility"><i class="icon-close"></i></button></span>
+				<span class="q-answer_item-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
 			</div>
 		
 		
@@ -283,7 +294,7 @@
 				<span class="q-answer_item-label">B</span>
 				<div class="q-answer_item-description"><span class="form-field"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
 				<span class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
-				<span class="q-answer_item-control"><button class="btn btn--icon-utility"><i class="icon-close"></i></button></span>
+				<span class="q-answer_item-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
 			</div>
 	
 		</div>
