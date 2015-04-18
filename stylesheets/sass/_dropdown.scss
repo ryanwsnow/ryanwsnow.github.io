@@ -2,11 +2,14 @@
 {
   list-style-type:none;
 }
-
+.menu > li
+{
+  padding:10px;
+}
 .menu  > li > a
 {
   display:block;
-  height:52px;
+  height:32px;
   line-height:32px;
   padding:10px;
   text-align:left;

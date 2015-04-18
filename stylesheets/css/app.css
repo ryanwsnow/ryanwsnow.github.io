@@ -28,6 +28,18 @@
   -moz-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22); }
 
+.btn {
+  display: inline-block;
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 32px;
+  font-size: 14px;
+  color: #708493; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../../fonts/icomoon.eot?-yqjj30");
@@ -2355,26 +2367,15 @@ header {
 /* --------->>> Button: Basic ---------*/
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
-.btn {
-  display: inline-block;
-  height: 32px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  line-height: 32px;
-  font-size: 14px;
-  color: #708493; }
-  .btn.is-first {
-    margin-left: 0; }
-  .btn.is-last {
-    margin-right: 0; }
-  .btn:hover, .btn .is-hovered {
-    color: #435561;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out; }
+.btn.is-first {
+  margin-left: 0; }
+.btn.is-last {
+  margin-right: 0; }
+.btn:hover, .btn .is-hovered {
+  color: #435561;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 .btn--utility {
   color: #a4b0ba; }
@@ -2661,9 +2662,12 @@ textarea.materialize-textarea {
 .menu {
   list-style-type: none; }
 
+.menu > li {
+  padding: 10px; }
+
 .menu > li > a {
   display: block;
-  height: 52px;
+  height: 32px;
   line-height: 32px;
   padding: 10px;
   text-align: left;
