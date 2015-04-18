@@ -1,9 +1,47 @@
+.menu
+{
+  list-style-type:none;
+}
+
+.menu  > li > a
+{
+  display:block;
+  height:52px;
+  line-height:32px;
+  padding:10px;
+  text-align:left;
+  color:$text-smed-grey;
+}
+
+
+
+.menu--with-icons > li > a
+{
+    > i
+    {
+    line-height:32px;
+    font-size:24px;
+    float:left;
+    padding-right:10px;
+    }
+    
+    &.primary
+    {
+      color:$primary-blue;
+
+    }
+}
+
+
+
+
+
 .dropdown-content {
   @extend .z-depth-1 !optional;
   margin:0;
   padding:10px;
  
-  list-style-type:none;
+  
   background-color: #FFFFFF;
   margin: 0;
   display: none;
@@ -24,7 +62,7 @@
     cursor: pointer;
    
     width: 100%;
-    text-align: left;
+    
     text-transform: none;
 
     &:hover, &.active {
@@ -32,10 +70,13 @@
     }
 
     & > a, & > span {
-      font-size: 14px;
-      color:$text-smed-grey;
-      display: block;
-      padding: 10px;
+      // font-size: 14px;
+      // color:$text-smed-grey;
+      // display: block;
+      // height:52px;
+      // text-align:left;
+      // padding: 10px;
     }
   }
 }
+

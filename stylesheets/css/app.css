@@ -2655,12 +2655,31 @@ textarea.materialize-textarea {
   font-size: 14px; }
 
 .q-answer_item-correct {
-  width: 160px; }
+  width: 160px;
+  white-space: nowrap; }
+
+.menu {
+  list-style-type: none; }
+
+.menu > li > a {
+  display: block;
+  height: 52px;
+  line-height: 32px;
+  padding: 10px;
+  text-align: left;
+  color: #708493; }
+
+.menu--with-icons > li > a > i {
+  line-height: 32px;
+  font-size: 24px;
+  float: left;
+  padding-right: 10px; }
+.menu--with-icons > li > a.primary {
+  color: #199bfd; }
 
 .dropdown-content {
   margin: 0;
   padding: 10px;
-  list-style-type: none;
   background-color: #FFFFFF;
   margin: 0;
   display: none;
@@ -2677,13 +2696,7 @@ textarea.materialize-textarea {
     clear: both;
     cursor: pointer;
     width: 100%;
-    text-align: left;
     text-transform: none; }
-    .dropdown-content li > a, .dropdown-content li > span {
-      font-size: 14px;
-      color: #708493;
-      display: block;
-      padding: 10px; }
 
 /** Minor layout styles/Utility Classes **/
 .inline-block {
