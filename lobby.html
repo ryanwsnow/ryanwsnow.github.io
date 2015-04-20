@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lobby">
   <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,52 +14,43 @@
 	<script src="js/app.js"></script>
 	
 </head>
-<body>
-<div class="app--container">
-	<header class="l-header">
-	<header class="header header--primary">
-			<div class="breadcrumb">
-				<button class="btn btn--icon-utility breadcrumb-action left">
-					<i class="icon-arrow-back"></i>
-				</button>
-				<div class="breadcrumb__location left l-stacked">
+<body class="lobby">
+<div class="lobby-container">
+	<header class="header--primary">
+		<div class="header--primary_action">
+			<button onclick="location.href = 'lobby.html';" class="btn btn--icon-utility">
+				<i class="icon-arrow-back"></i>
+			</button>
+		</div>
+		<div class="header--primary_body">
 
-					<div class="breadcrumb__location-name">BIO101 Fall 2015</div>
-					<div class="breadcrumb__info"><span>Join Code:</span> 123456</div>
-				</div>
-			</div>
+			<div class="header--primary_title">Lobby</div>
 			
-			<div class="right">
-				
-				<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
-				
-					<div class="dropdown inline-block">
-					 	
-					    	<button id="dLabel" class="btn btn--icon-utility is-last" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-								<i class="icon-settings"></i>
-							</button>
-						    	<ul class="menu dropdown-menu" role="menu" aria-labelledby="dLabel">
-							      <li><a href="#">Video</a></li>
-							      <li>Another Item</li>
-							      <li>Item Three</li>
-							      <li>The Last One</li>
-						    	</ul>
-					  	
-					</div>
-			</div>
-		
-		<div class="header--primary_navigation">
+		</div>
+		<div class="header--primary_utilitybar">	
+			<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
+		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
+					<i class="icon-settings"></i>
+				</button>
+			    	<ul   id="dropdown1" class="dropdown-content menu">
+				     <li><a href="#!">Something here</a></li>
+				    <li><a href="#!">Something there that is super long</a></li>
+				    
+				    <li><a href="#!">blah blah</a></li>
+			    	</ul>		
+		</div>
+		<div class="header--primary_footer">
 			<nav role="navigation">
 				<ul class="nav nav--tab">
-					<li><a href="#" class="nav--tab_item is-active is-first">Courses</a></li>
-					<li><a href="#" class="nav--tab_item ">Tools and apps</a></li>
+					<li><a href="#" class="nav--tab_item is-active">Courses</a></li>
+					<li><a href="#" class="nav--tab_item ">Tools and Apps</a></li>
 					
 				</ul>
 			</nav>
 		</div>
-		
 	</header>
-	<div class="l-course-container">
+	
+	<div class="lobby_body">
 		
 			<div class="toolbar">
 				

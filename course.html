@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="course">
   <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,54 +17,44 @@
 	<script src="js/app.js"></script>
 	
 </head>
-<body>
-<div class="app--container">
-	<header class="header header--primary">
+<body class="course">
+<div class="course-container">
+	<header class="header--primary">
+		<div class="header--primary_action">
+			<button onclick="location.href = 'lobby.html';" class="btn btn--icon-utility">
+				<i class="icon-arrow-back"></i>
+			</button>
+		</div>
+		<div class="header--primary_body">
 
-			
-				<button onclick="location.href = 'lobby.html';" class="btn btn--icon-utility breadcrumb-action left">
-					<i class="icon-arrow-back"></i>
+			<div class="header--primary_title">BIO101 Fall 2015</div>
+			<div class="header--primary_subtitle"><span>Join Code:</span> 123456</div>
+		</div>
+		<div class="header--primary_utilitybar">	
+			<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
+		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
+					<i class="icon-settings"></i>
 				</button>
-				<div class="left l-stacked">
-
-					<div class="header--primary_title">BIO101 Fall 2015</div>
-					<div class="header--primary_subtitle"><span>Join Code:</span> 123456</div>
-				</div>
-			
-			
-			<div class="right">
-				
-				<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
-				
-					
-			 	
-			    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
-						<i class="icon-settings"></i>
-					</button>
-				    	<ul   id="dropdown1" class="dropdown-content menu">
-					     <li><a href="#!">Something here</a></li>
-					    <li><a href="#!">Something there that is super long</a></li>
-					    
-					    <li><a href="#!">blah blah</a></li>
-				    	</ul>
-					  	
-					
-			</div>
-		
+			    	<ul   id="dropdown1" class="dropdown-content menu">
+				     <li><a href="#!">Something here</a></li>
+				    <li><a href="#!">Something there that is super long</a></li>
+				    
+				    <li><a href="#!">blah blah</a></li>
+			    	</ul>		
+		</div>
 		<div class="header--primary_footer">
 			<nav role="navigation">
 				<ul class="nav nav--tab">
-					<li><a href="#" class="nav--tab_item is-active is-first">Content</a></li>
+					<li><a href="#" class="nav--tab_item is-active">Content</a></li>
 					<li><a href="#" class="nav--tab_item ">Gradebook</a></li>
 					<li><a href="#" class="nav--tab_item is-last ">Students</a></li>
 				</ul>
 			</nav>
 		</div>
-		
 	</header>
 
-	<div class="l-container-full-width l-container-full-height">
-		<div class="l-section-main-container">
+	<div class="course_body">
+		<div class="course_body-content">
 			<div class="toolbar">
 				<span class="toolbar_actions-primary">
 					<button class="dropdown-button btn btn--raised primary is-first" data-constrainwidth="false" data-activates="dropdown3">Create</button>
@@ -146,7 +136,7 @@
 						  		
 		  	</ol>
 			
-		</div>
+		</div> <!-- course_body-content end -->
 		<div class="l-section-preview-container">
 			<div class="objectView">
 				<div class="objectView_header">
@@ -188,7 +178,10 @@
 								    
 								    
 							    	</ul>
-								<button class="btn btn--raised primary is-last">Present</button>
+								<button class="dropdown-button btn btn--raised primary is-last" data-constrainwidth="false" data-activates="dropdownPresent">Present</button>
+								<ul   id="dropdownPresent" class="dropdown-content menu">
+								     <li><a href="present.html">Practice Mode</a></li>
+								    <li><a href="#!">Present Live</a></li>
 						</div>
 					</div>
 				</div>
@@ -254,12 +247,12 @@
 				
 
 				
-			</div>
+			</div><!-- object view end -->
 
 
-		</div>
-	</div>
-</div>
+		</div><!-- preview end -->
+	</div> <!-- course body end -->
+</div> <!-- course container -->
 
 <!-- Modal -->
 <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
