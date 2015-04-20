@@ -11,7 +11,7 @@
   display:block;
   height:32px;
   line-height:32px;
-  padding:10px;
+ 
   text-align:left;
   color:$text-smed-grey;
 }
@@ -42,7 +42,7 @@
 .dropdown-content {
   @extend .z-depth-1 !optional;
   margin:0;
-  padding:10px;
+  padding:0 10px;
  
   
   background-color: #FFFFFF;

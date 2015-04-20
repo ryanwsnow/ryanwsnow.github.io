@@ -1,5 +1,5 @@
 
-
+// http://thecodingdesigner.com/journal/balancing-ideal-sass-and-ideal-css
 /** Minor layout styles/Utility Classes **/
 
 .inline-block
@@ -258,17 +258,9 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 }
 
 
-.breadcrumb
-{
 
-}
 
-.breadcrumb__location
-{
-
-}
-
-.breadcrumb__location-name
+.header--primary_title
 {
 	font-size:18px;
 	font-weight:600;
@@ -276,7 +268,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
-.breadcrumb__info
+.header--primary_subtitle
 {
 	font-size:14px;
 	color:#ffffff;

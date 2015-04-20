@@ -2669,7 +2669,6 @@ textarea.materialize-textarea {
   display: block;
   height: 32px;
   line-height: 32px;
-  padding: 10px;
   text-align: left;
   color: #708493; }
 
@@ -2683,7 +2682,7 @@ textarea.materialize-textarea {
 
 .dropdown-content {
   margin: 0;
-  padding: 10px;
+  padding: 0 10px;
   background-color: #FFFFFF;
   margin: 0;
   display: none;
@@ -2855,12 +2854,12 @@ textarea.materialize-textarea {
 .header--primary .nav--tab_item.is-active {
   color: #ffffff; }
 
-.breadcrumb__location-name {
+.header--primary_title {
   font-size: 18px;
   font-weight: 600;
   color: #a5b1bb; }
 
-.breadcrumb__info {
+.header--primary_subtitle {
   font-size: 14px;
   color: #ffffff; }
 
