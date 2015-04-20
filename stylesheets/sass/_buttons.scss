@@ -12,30 +12,52 @@
 /* -- modifiers use sibling specifity --*/
 
 
-.btn
+@mixin buttonModifiers($button-color:$text-smed-grey)
 {
-	@extend %button-base;
-	&.is-first
-	{
-		margin-left:0;
-	}
+	color:$button-color;
 
-	&.is-last
+	
+	&:hover, &.is-hovered
 	{
-		margin-right:0;
-	}
-
-	&:hover, .is-hovered
-	{
-		color:$text-med-grey;
+		color: adjust-color($button-color, $lightness: 35%);
 		@include transition(all 0.5s ease-in-out);
 	}
 
-
 }
+
+
+
+%button-base
+{
+    
+   
+    display:inline-block;
+    height:$btn-height;
+    padding:
+    {
+    	left:10px;
+    	right:10px;
+    }
+    
+    
+    margin-right:10px;
+
+    text-align:center;
+    line-height:$btn-height;
+    font-size:14px;
+    color:$text-smed-grey;
+
+    &.last 
+	{
+		margin-right:0;
+	}
+}
+
+
 
 .btn--utility
 {
+	@extend %button-base;
 	color:$text-light-grey;
 
 
@@ -52,7 +74,7 @@
 
 .btn--default
 {
-	
+	@extend %button-base;
 	text-transform:uppercase;
 	
 
@@ -96,6 +118,7 @@
 
 .btn--icon-utility
 {
+	@extend %button-base;
 	margin:0px;
 	font-size:24px;
 	color:$text-light-grey;
@@ -114,15 +137,32 @@
 		padding-right:0;
 	}
 }
+
+.btn--round
+{
+	@extend %button-base;
+	border-radius:50%;
+	height:52px;
+	width:52px;
+
+	font-size:24px;
+	line-height:52px;
+	color:$text-light-grey;
+	z-index:5;
+
+
+}
+
+
 .btn--raised
 {
+	@extend %button-base;
 	background:$bg-light-grey;
 	color:$text-smed-grey;
 	min-width:120px;
 	border-radius:2px;
-	-webkit-box-shadow: 0px 3px 0px 0px rgba(164,176,186,1);
--moz-box-shadow: 0px 3px 0px 0px rgba(164,176,186,1);
-box-shadow: 0px 3px 0px 0px rgba(164,176,186,1);
+	@include box-shadow(0px 3px 0px 0px rgba(164,176,186,1));
+	
 	&.primary
 	{
 		

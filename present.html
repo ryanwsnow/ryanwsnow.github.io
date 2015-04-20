@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="present-mode">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Styleguide - Tophat</title>
+	<!-- Bootstrap -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="stylesheets/css/app.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+
+	<script src="js/app.js"></script>
+	
+</head>
+<body class="present-mode">
+	<div class="present">
+		<div class="present_header">
+			<div class="present_header-action">
+				<button onclick="location.href = 'course.html';" class="btn btn--icon-utility">
+				<i class="icon-close"></i>
+			</button>
+			</div>
+			<div class="present_header-title">
+				Presenting
+			</div>
+			<div class="present_header-utilitybar">
+				<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
+					<i class="icon-settings"></i>
+				</button>
+			    	<ul   id="dropdown1" class="dropdown-content menu">
+				     <li><a href="#!">Something here</a></li>
+				    <li><a href="#!">Something there that is super long</a></li>
+				    
+				    <li><a href="#!">blah blah</a></li>
+			    	</ul>
+			</div>
+
+
+
+		</div>
+		<div class="present_body">
+			<div class="card--present">
+				<div class="card--present_header">
+				</div>
+				<div class="card--present_body">
+					<div class="l-inset">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
+						<!-- Multiple Choice/Sorting -->
+						<div class="q-answer">
+							<div class="q-answer_item">
+								<span class="q-answer_item-label">A</span>
+								<div class="q-answer_item-description">this is my choice yay</div>
+							</div>
+						</div>
+						<!-- Matching -->
+						<div class="q-answer">
+							<div class="q-answer_item">
+
+								<span class="q-answer_item-label">1</span>
+								<div class="q-answer_item-description">Matching Pair with some really long text to mess things up</div>
+								<div class="q-answer_item-matching-option">
+								
+									<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item-label">A</span>
+									<div class="q-answer_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
+								</div>
+							</div>
+							<div class="q-answer_item">
+
+								<span class="q-answer_item-label">2</span>
+								<div class="q-answer_item-description">Matching Pair with some really long text to mess things up</div>
+								<div class="q-answer_item-matching-option">
+								
+									<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item-label">A</span>
+									<div class="q-answer_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
+								</div>
+							</div>
+						</div>
+						<!-- Sorting -->
+						<div class="q-answer">
+							<div class="q-answer_item">
+
+								<span class="q-answer_item-label">1</span>
+								<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
+								<div class="q-answer_item-description">this is my choice yay</div>
+							</div>
+						</div>
+						<!-- Word Answer/numeric Answer -->
+						<div class="q-answer">
+							<div class="q-answer_item">
+								<span class="q-answer_item-label size-large"><label for="waid">Word Answer:</label></span>
+								<div class="q-answer_item-input"><span class="form-field is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></div>
+							</div>
+						</div>
+		
+						
+					</div>
+				</div>
+				<div class="card--present_footer">
+					<span class="controlbar"><button class="btn--round z-depth-2"><i class="icon-play-arrow"></i></button></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -35,22 +35,24 @@
     @include box-shadow-2(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
 }
 
-@mixin buttonBase {
-    display:inline-block;
-    height:32px;
-    padding-left:10px;
-    padding-right:10px;
-    margin-left:10px;
-    margin-right:10px;
-
-    text-align:center;
-    line-height:32px;
-    font-size:14px;
-    color:$text-smed-grey;
+@function set-notification-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000000; // Lighter backgorund, return dark color
+  } @else {
+    @return #ffffff; // Darker background, return light color
+  }
 }
 
-%button-base
+
+
+%header-base
 {
-    @include buttonBase;
+    
+    
+    position:absolute;
+    top:0;
+    right:0;
+   width:100%;
+    @include padding-crown($padding-default);
 }
 
