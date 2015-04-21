@@ -1,3 +1,5 @@
+//layout
+
 .content-preview
 {
 	@extend %baseLayout;
@@ -23,29 +25,30 @@
 	{
 		@extend %baseLayout_body;
 		@include padding-crown($padding-default);
+	
+
 		padding-top:$preview-header-height;
 		
 		overflow-y:auto;
 	}
 
-	&_cta
-	{
-		position:absolute;
-		bottom:10px;
-		right:10px;
-	}
+	
 	
 }
 
+//Header module
 .content-preview_header
 {
 	@extend %header--primary;
+
 	&_body 
 	{
 		@extend %header--primary_body;
+		display:block;
+		width:100%;
 		padding-left:52px;
 		padding-top:20px;
-		display:block;
+		
 	}
 	
 	&_action {
@@ -73,19 +76,17 @@
 	{
 		@extend %header--primary_footer;
 	}
+	&_cta
+	{
+		position:absolute;
+		bottom:10px;
+		right:10px;
+	}
 	
 	
 
 }
 
-
-
-
-
-.content-preview_body
-{
-	
-}
 
 
 .content-preview_body p 

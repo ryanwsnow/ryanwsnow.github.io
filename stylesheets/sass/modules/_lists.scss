@@ -9,26 +9,7 @@
 	
 }
 
-
-/* --->>> List Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-
-// List modifiers
-.list
-{
-	&.is-cozy
-	{
-		> li > .list_item
-		{
-			height:80px;
-		}
-	}
-	
-
-}
-
-
-.list-sub
+.list--sub
 { 
 
 	> li > .list_item 
@@ -43,9 +24,14 @@
 	
 }
 
-.list > li:first-child
+%list_item_column-base
 {
-	// border-top:1px solid #d9dde1;
+	> div
+		{
+			vertical-align:middle;
+		}
+		display:table-cell;
+		vertical-align:middle;	
 }
 
 /* --->>> List item ---*/
@@ -59,8 +45,70 @@
 	padding:10px;
 	width:100%;
 
-	
-	
+	&_title
+	{
+		font-size:14px;
+		font-weight:600;
+		color:$text-med-grey;
+	}
+	&_sub-title
+	{
+		font-size:12px;
+		color:$text-smed-grey;
+		font-weight:400;
+
+	}
+	&_activity-info
+	{
+		position:absolute;
+		top:5px;
+		right:10px;
+		font-size:12px;
+		color:$light-grey;
+		font-weight:400;
+		white-space: nowrap;
+		text-align:right;
+
+	}
+
+	&_column
+	{
+		@extend %list_item_column-base;
+	}
+	&_column-checkbox
+	{
+		@extend %list_item_column-base;
+		width:40px;
+		> input
+		{
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			width:20px;
+		}
+
+	}
+
+	&_column-icon
+	{
+		@extend %list_item_column-base;
+		width:40px;
+		> i 
+		{
+			color:$text-light-grey;
+
+			font-size:24px;
+		}
+
+	}
+	&_column-info
+	{
+		
+		@extend %list_item_column-base;
+		
+	}
+
+
 
 	&.is-hovered
 	{
@@ -81,84 +129,35 @@
 
 }
 
+// Sub Module List-item Folder
+
 .list_item--folder
 {
 	cursor:pointer;
+
 	> .list_item_column-icon > i
 	{
 		color:$text-med-grey;
 	}
+
+	&_column-expandable
+	{
+		@extend %list_item_column-base;
+		width:40px;
+	}
 }
 
-/* --->>> List item column---*/
-
-.list_item_column
+// Modifier Cozy Layout
+.list
 {
-	> div
+	&.is-cozy
 	{
-		vertical-align:middle;
+		> li > .list_item
+		{
+			height:80px;
+		}
 	}
-	display:table-cell;
 	
-	vertical-align:middle;
-}
-
-.list-item_column-expandable
-{
-	width:40px;
-}
-
-.list_item_column-checkbox 
-{
-	width:40px;
-	> input
-	{
-		display:block;
-		margin-left:auto;
-		margin-right:auto;
-		
-		width:20px;
-	}
-}
-
-.list_item_column-icon
-{
-	width:40px;
-	> i 
-	{
-		color:$text-light-grey;
-
-		font-size:24px;
-	}
-}
-
-
-
-.list_item-title
-{
-	font-size:14px;
-	font-weight:600;
-	color:$text-med-grey;
-}
-.list_item-sub-title
-{
-	font-size:12px;
-	color:$text-smed-grey;
-	font-weight:400;
-
-}
-
-
-.list_item-activity-info
-{
-	position:absolute;
-	top:5px;
-	right:10px;
-	font-size:12px;
-	color:$light-grey;
-	font-weight:400;
-	white-space: nowrap;
-	text-align:right;
 
 }
 
@@ -166,7 +165,4 @@
 
 
 
-.list_column
-{
 
-}

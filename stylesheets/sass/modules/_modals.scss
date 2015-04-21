@@ -1,0 +1,50 @@
+.th-modal 
+{
+
+	&_container
+	{
+		border-radius:5px;
+		background:#f9f9f9;
+		
+	}
+	
+	&_header
+	{
+		@include border-top-radius(5px);
+		padding:$padding-default;
+		height:52px;
+		background:#fff;
+		border-bottom:1px solid #d9dde1;
+	}
+	&_title
+	{
+		text-align:center;
+		line-height:32px;
+		font-size:18px;
+		font-weight:600;
+	}
+	&_body
+	{
+		padding:$padding-default;
+	}
+	
+	&_section
+	{
+		padding-top:20px;
+	}
+	&_section-header
+	{
+		font-size:16px;
+		color:$text-smed-grey;
+		font-weight:600;
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+	&_footer
+	{
+		border-top:1px solid #d9dde1;
+		padding:$padding-default;
+		height:52px;
+		text-align:right;	
+	}
+}

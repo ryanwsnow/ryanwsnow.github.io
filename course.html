@@ -54,7 +54,7 @@
 	</header>
 
 	<div class="course_body">
-		<div class="course_body-content">
+		<div class="content-main">
 			<div class="toolbar">
 				<span class="toolbar_actions-primary">
 					<button class="dropdown-button btn btn--raised primary is-first" data-constrainwidth="false" data-activates="dropdown3">Create</button>
@@ -76,36 +76,36 @@
 			<ol class="list">
 				<li class="list-row">
 					<div class="list_item list_item--folder">
-						<div class="list_item_column list_item_column-checkbox ">
+						<div class="list_item_column-checkbox ">
 							<input type="checkbox" name="Question 1" value="selected">
 						</div>
-						<div class="list_item_column list_item_column-icon">
+						<div class="list_item_column-icon">
 							<i class="icon-folder"></i>
 						</div>
-						<div class="list_item_column l-stacked ">
-						  	<span class="list_item-title ">My Folder</span>
-						  	<span class="list_item-sub-title">1 item</span>
+						<div class="list_item_column ">
+						  	<div class="list_item_title ">My Folder</div>
+						  	<div class="list_item_sub-title">1 item</div>
 					  	</div>
-					  	<span class="list_item_column list-item_column-expandable">
+					  	<span class="list_item_column list_item--folder_column-expandable">
 					  		<button class="btn btn--icon-utility is-last"><i class="icon-keyboard-arrow-down"></i></button>
 					  	</span>
 					 </div>
-						<ol class="list list-sub is-hidden">
+						<ol class="list list--sub is-hidden">
 							<li class="list-row">
 								<div class="list_item">
-									<div class="list_item_column list_item_column-checkbox ">
+									<div class="list_item_column-checkbox ">
 										<input type="checkbox" name="Question 1" value="selected">
 									</div>
-									<div class="list_item_column list_item_column-icon">
+									<div class="list_item_column-icon">
 										<i class="icon-textsms"></i>
 									</div>
 									<div class="list_item_column l-stacked ">
-									  	<span class="list_item-title ">Question 1</span>
-									  	<span class="list_item-sub-title">Multiple Choice</span>
+									  	<span class="list_item_title ">Question 1</span>
+									  	<span class="list_item_sub-title">Multiple Choice</span>
 								  	</div>
 									
 									
-									<span class="list_item-activity-info">Mar 8</span>
+									<span class="list_item_activity-info">Mar 8</span>
 								</div>
 								
 					  		</li> <!-- end list item -->
@@ -115,19 +115,19 @@
 		  		</li> <!-- end list item -->
 		  		<li class="list-row">
 					<div class="list_item">
-						<div class="list_item_column list_item_column-checkbox ">
+						<div class="list_item_column-checkbox ">
 							<input type="checkbox" name="Question 1" value="selected">
 						</div>
-						<div class="list_item_column list_item_column-icon">
+						<div class="list_item_column-icon">
 							<i class="icon-textsms"></i>
 						</div>
 						<div class="list_item_column l-stacked ">
-						  	<span class="list_item-title ">Question 1</span>
-						  	<span class="list_item-sub-title">Multiple Choice</span>
+						  	<span class="list_item_title ">Question 1</span>
+						  	<span class="list_item_sub-title">Multiple Choice</span>
 					  	</div>
 						
 						
-						<span class="list_item-activity-info">Mar 8</span>
+						<span class="list_item_activity-info">Mar 8</span>
 					</div>
 					
 		  		</li> <!-- end list item -->
@@ -137,7 +137,7 @@
 		  	</ol>
 			
 		</div> <!-- course_body-content end -->
-		<div class="course_body-content-preview">
+		<div class="content-side">
 			<div class="content-preview">
 				<div class="content-preview_header">
 					<div class="content-preview_header-action">
@@ -170,7 +170,7 @@
 							</ul>
 							
 						</div>
-						<div class="content-preview_cta">
+						<div class="content-preview_header_cta">
 								
 								<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
 								<ul   id="dropdown2" class="dropdown-content menu">
@@ -258,20 +258,20 @@
 <!-- Modal -->
 <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div class="th-modal-content">
-      <div class="th-modal-header">
+    <div class="th-modal_container">
+      <div class="th-modal_header">
         <button class="btn btn--icon-utility is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
-        <h4 class="th-modal-title" id="myModalLabel">Create Question</h4>
+        <h4 class="th-modal_title" id="myModalLabel">Create Question</h4>
       </div>
-      <div class="th-modal-body">
+      <div class="th-modal_body">
         <span class="form-field">
         	<label for="questionTitle">Title:</label><input tabindex="0" id="questionTitle" type="text" placeholder="Question 1"  data-toggle="tooltip" data-placement="right" title="here is a tip">
     	</span>
     	 <span class="form-field">
         	<label for="questionDescription">Question:</label><textarea id="textarea1" class="materialize-textarea"  id="questionDescription" type="text" placeholder="Enter your question"></textarea>
     	</span>
-    	<div class="th-modal-section">
-    		<h5 class="th-modal-section-header">Multiple Choice Options</h5>
+    	<div class="th-modal_section">
+    		<h5 class="th-modal_section-header">Multiple Choice Options</h5>
     		
     		<div class="q-answer">
 			<div class="q-answer_item">
@@ -294,12 +294,12 @@
 		</div>
 		<button class="btn btn--icon-text primary is-first"><i class="icon-add-circle"></i>Add Another</button>
       </div>
-      <div class="th-modal-section">
-    		<h5 class="th-modal-section-header">Some other options</h5>
+      <div class="th-modal_section">
+    		<h5 class="th-modal_section-header">Some other options</h5>
     	</div>
       
     </div>
-    <div class="th-modal-footer">
+    <div class="th-modal_footer">
         <button type="button" class="btn btn--default" data-dismiss="modal">back</button>
         <button type="button" class="btn btn--raised primary is-last">Save</button>
       </div>
