@@ -28,15 +28,6 @@
   -moz-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22); }
 
-.present_header, .header--primary, .objectView_header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px; }
-
 @font-face {
   font-family: 'icomoon';
   src: url("../../fonts/icomoon.eot?-yqjj30");
@@ -2359,6 +2350,55 @@ header {
   position: relative; }
 
 /** End Base **/
+.inline-block {
+  display: inline-block; }
+
+.l-inline {
+  display: inline; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.l-stacked > span {
+  display: block; }
+
+.l-clear-list-style {
+  list-style-type: none; }
+
+.l-inset {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .l-inset:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.is-hidden {
+  display: none; }
+
+.lobby-container, .course-container, .present-container {
+  position: relative;
+  box-sizing: border-box; }
+
+.lobby, .course, .present {
+  box-sizing: inherit;
+  height: 100%; }
+
+.lobby_header, .course_header, .present_header, .objectView_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; }
+
+.lobby_body, .course_body, .present_body {
+  height: 100%;
+  width: 100%; }
+
 /* -----------------------------------*/
 /* ---->>> Buttons  -------------------*/
 /* -----------------------------------*/
@@ -2669,35 +2709,70 @@ textarea.materialize-textarea {
   width: 160px;
   white-space: nowrap; }
 
-.present-mode {
+.lobby_header, .course_header, .present_header {
   background: #435561;
-  position: relative;
-  box-sizing: border-box;
-  font-size: 24px; }
+  height: 150px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; }
 
-.present {
-  box-sizing: inherit;
-  height: 100%;
-  padding: 10px; }
-  .present_header {
-    height: 52px; }
-    .present_header-action {
-      float: left; }
+.lobby_header_body, .course_header_body, .present_header_body {
+  float: left; }
 
-.present_header-title {
-  float: left;
+.lobby_header_title, .course_header_title, .present_header_title {
   display: block;
   font-size: 18px;
   font-weight: 600;
   color: #a5b1bb; }
 
-.present_header-utilitybar {
+.lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle {
+  display: block;
+  font-size: 14px;
+  color: #ffffff; }
+
+.lobby_header_action, .course_header_action, .present_header_action {
+  float: left; }
+
+.lobby_header_utility-bar, .course_header_utility-bar, .present_header_utility-bar {
   float: right; }
 
-.present_body {
-  padding-top: 52px;
-  width: 100%;
+.lobby_header_footer, .course_header_footer, .present_header_footer {
+  position: absolute;
+  bottom: 0px;
+  left: 52px; }
+
+.lobby_body {
+  padding-top: 150px; }
+
+.lobby_body {
+  background: #f2f2f2; }
+
+.course_body {
+  padding-top: 150px; }
+
+.course_body-content {
+  background: #f2f2f2;
+  position: relative;
+  float: left;
+  width: 40%;
   height: 100%; }
+
+.course_body-content-preview {
+  width: 60%;
+  min-width: 500px;
+  float: left;
+  position: relative;
+  height: 100%; }
+
+.present-container {
+  background: #435561;
+  padding: 10px; }
+.present_body {
+  padding-top: 52px; }
+
+.present_header {
+  padding: 10px;
+  height: 52px; }
 
 .card--present {
   position: relative;
@@ -2761,72 +2836,11 @@ textarea.materialize-textarea {
   will-change: width, height; }
 
 /** Minor layout styles/Utility Classes **/
-.inline-block {
-  display: inline-block; }
-
-.l-inline {
-  display: inline; }
-
-.left {
-  float: left; }
-
-.right {
-  float: right; }
-
-.l-stacked > span {
-  display: block; }
-
-.l-clear-list-style {
-  list-style-type: none; }
-
-.l-inset {
-  width: 100%;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px; }
-  .l-inset:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.is-hidden {
-  display: none; }
-
 /** End minor layout styles **/
 /* -----------------------------------*/
 /* ---->>> Layouts ---------------------*/
 /* -----------------------------------*/
 /* --------->>> Layout: Containers ----------*/
-.course-container, .lobby-container {
-  position: relative;
-  box-sizing: border-box;
-  background: #f2f2f2; }
-
-.course, .lobby {
-  box-sizing: inherit;
-  height: 100%; }
-
-.course_body, .lobby_body {
-  height: 100%;
-  width: 100%; }
-
-.course_body, .lobby_body {
-  padding-top: 150px; }
-
-.course_body-content {
-  background: #f2f2f2;
-  position: relative;
-  float: left;
-  width: 40%;
-  height: 100%; }
-
-.course_body-content-preview {
-  width: 60%;
-  min-width: 500px;
-  float: left;
-  position: relative;
-  height: 100%; }
-
 /* --------->>> Layout: Grid -----------*/
 .grid {
   width: 100%;
@@ -2871,35 +2885,6 @@ textarea.materialize-textarea {
 /* ---->>> Modules ---------------------*/
 /* -----------------------------------*/
 /* --------->>> Module: Header ----------*/
-.header--primary {
-  background: #435561;
-  height: 150px; }
-
-.header--primary_body {
-  float: left; }
-
-.header--primary_title {
-  display: block;
-  font-size: 18px;
-  font-weight: 600;
-  color: #a5b1bb; }
-
-.header--primary_subtitle {
-  display: block;
-  font-size: 14px;
-  color: #ffffff; }
-
-.header--primary_action {
-  float: left; }
-
-.header--primary_utilitybar {
-  float: right; }
-
-.header--primary_footer {
-  position: absolute;
-  bottom: 0px;
-  left: 52px; }
-
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
 .header--primary.is-collapsed {

@@ -1,0 +1,59 @@
+.lobby
+{
+	@extend %baseLayout;
+
+	&-container 
+	{
+		@extend %baseLayout-container;
+	}
+
+	&_header
+	{
+		@extend %baseLayout_header;
+		
+	}
+
+	&_body 
+	{
+		@extend %baseLayout_body;
+		padding-top:$header--primary-height;
+	}
+	
+}
+
+
+.lobby_header
+{
+	@extend %header--primary;
+	&_body 
+	{
+		@extend %header--primary_body;
+	}
+	
+	&_action {
+		@extend %header--primary_action;
+	}
+	&_title
+	{
+		@extend %header--primary_title;
+	}
+	&_subtitle
+	{
+		@extend %header--primary_subtitle;
+	}
+	&_utility-bar
+	{
+		@extend %header--primary_utility-bar;
+	}
+	&_footer
+	{
+		@extend %header--primary_footer;
+	}
+
+
+}
+
+.lobby_body
+{
+	background:$bg-light-grey;
+}

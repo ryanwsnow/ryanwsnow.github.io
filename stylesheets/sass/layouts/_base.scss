@@ -1,0 +1,78 @@
+.inline-block
+{
+	display:inline-block;
+}
+
+.l-inline
+{
+	display:inline;
+}
+
+.left
+{
+	float:left;
+}
+
+.right
+{
+	float:right;
+}
+
+.l-stacked > span
+{
+	display:block;
+}
+.l-clear-list-style
+{
+	list-style-type:none;	
+}
+
+.l-inset
+{
+	@include clearfix;
+	width:100%;
+	padding-top:20px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.is-hidden
+{
+	display:none;
+}
+
+//base layout Skeleten
+
+%baseLayout-container
+{
+	position: relative;
+	box-sizing: border-box;
+	
+}
+
+%baseLayout
+{
+	box-sizing:inherit;
+	height:100%;
+}
+
+%baseLayout_header
+{
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    
+}
+
+%baseLayout_body
+{
+	height:100%;
+	width:100%;
+}
+
+
+
+
+
+
