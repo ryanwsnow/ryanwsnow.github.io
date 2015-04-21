@@ -1,31 +1,4 @@
 
-
-/** Minor layout styles/Utility Classes **/
-
-
-
-
-/** End minor layout styles **/
-
-
-/* -----------------------------------*/
-/* ---->>> Layouts ---------------------*/
-/* -----------------------------------*/
-
-/* --------->>> Layout: Containers ----------*/
-
-
-
-
-
-
-
-
-
-// End of present mode 
-
-/* --------->>> Layout: Grid -----------*/
-
 .grid 
 {
 	width:100%;
@@ -44,10 +17,8 @@
 	border-radius:5px;
 	position:relative;
 	border:1px solid #d9dde1;
+	@include box-shadow (0px 2px 0px 0px rgba(217,221,225,1));
 
-	-webkit-box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
--moz-box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
-box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 }
 
@@ -121,23 +92,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 /* -- two deep selector starting with parent to override builders --*/
 // this is bad because if builders like nav--tab_item get renamed or removed we will
 // have to look for them all through our modules
-.header--primary
-{
-	.btn:hover
-	{
-		color:#ffffff;
-		@include transition(all 0.5s ease-in-out);
-	}
-	.nav--tab_item
-	{
-		&.is-active
-		{
-			color:#ffffff;
-		}
-
-	}
-
-}
 
 
 
@@ -146,88 +100,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-/* --------->>> Module: object ----------*/
-
-.objectView 
-{
-	height:100%;
-	width:100%;
-	position:relative;
-	background:$bg-slight-grey;
-	-webkit-box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
-       -moz-box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
-	box-shadow: -3px 0px 3px 0px rgba(0,0,0,0.17);
-
-}
-
-.objectView_header
-{
-	@extend %baseLayout_header;
-	height:$preview-header-height;
-	background:#ffffff;
-	border-bottom:1px solid #d9dde1;
-	z-index:2;
-
-		
-
-}
-
-.objectView_cta
-{
-	float:right;
-}
-
-.objectView_header-topbar
-{
-	@include clearfix;
-	padding-bottom:10px;
-}
-
-.objectView_header-info 
-{
-	@include clearfix;
-	padding-bottom:20px;
-}
-
-.objectView_header-title
-{
-	font-size:18px;
-	font-weight:600;
-}
-
-
-
-.objectView_header-activityInfo
-{
-	font-size:14px;
-	color:$light-grey;
-	font-weight:400;
-	
-	
-}
-.objectView_header-navigation
-{
-
-	
-}
-
-
-.objectView_body
-{
-	@include padding-crown($padding-default);
-	padding-top:$preview-header-height;
-	height:100%;
-	overflow-y:auto;
-
-
-}
-
-
-.objectView_body p 
-{
-	font-size:14px;
-
-}
 /* --------->>> Module: Course -----------*/
 
 
@@ -256,90 +128,6 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 
 
-
-/* -----------------------------------*/
-/* ---->>> Navigation -------------------*/
-/* -----------------------------------*/
-
-/* --------->>> Navigation: Basic ---------*/
-
-.nav
-{
-	list-style-type:none;
-	margin:0px;
-	padding:0px;
-}
-
-.nav-horizontal > li
-{
-	display:inline-block;
-}
-
-
-
-/* --------->>> Navigation: tab ---------*/
-
-.nav--tab
-{
-
-	@extend .nav-horizontal;
-	padding-top:20px;
-	height:52px;
-	
-}
-
-
-/* --->>> State Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-
-
-.nav--tab_item
-{
-	padding-left:10px;
-	padding-right:10px;
-	
-	margin-right:10px;
-	padding-bottom:10px;
-	height:32px;
-	text-transform:uppercase;
-	
-	&.is-last
-	{
-		margin-right:0px;
-	}
-	&.is-active
-	{
-		color:$highlight;
-		border-bottom:2px solid $highlight;	
-	}
-
-}
-
-
-
-
-
-
-/* --------->>> Navigation:  Card ---------*/
-
-.nav--card > li
-{
-	padding-left:10px;
-	padding-right:10px;
-}
-.nav--card a
-{
-	line-height:32px;
-	height:32px;
-	text-transform:uppercase;
-}
-
-
-/* -----------------------------------*/
-/* ---->>> Dialog/Modal -------------------*/
-/* -----------------------------------*/
-
-/* --------->>> Navigation: Basic ---------*/
 
 
 .th-modal-header

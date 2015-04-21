@@ -13,10 +13,11 @@
 
 
 //modules
-@import "buttons";
-@import "list";
-@import "forms";
-@import "q-answer";
+@import "modules/navigations";
+@import "modules/buttons";
+@import "modules/lists";
+@import "modules/forms";
+@import "modules/q-answer";
 
 @import "modules/headers";
 
@@ -25,6 +26,7 @@
 @import "views/lobby";
 @import "views/course";
 @import "views/present";
+@import "views/content-preview";
 
 
 
@@ -34,7 +36,7 @@
 
 //materilize
 @charset "UTF-8";
-@import "dropdown";
+@import "modules/dropdown";
 
 @import "ryan";
 

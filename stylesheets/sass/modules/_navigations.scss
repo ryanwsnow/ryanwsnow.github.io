@@ -1,0 +1,70 @@
+/* --------->>> Navigation: Basic ---------*/
+
+.nav
+{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+
+
+
+/* --------->>> Navigation: tab ---------*/
+
+.nav--tab
+{
+	> li 
+	{
+		display:inline-block;
+	}
+	padding-top:20px;
+	height:52px;
+	
+}
+
+
+
+/* --->>> State Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+
+
+.nav--tab_item
+{
+	padding-left:10px;
+	padding-right:10px;
+	
+	margin-right:10px;
+	padding-bottom:10px;
+	height:32px;
+	text-transform:uppercase;
+	
+	&.is-last
+	{
+		margin-right:0px;
+	}
+	&.is-active
+	{
+		color: $highlight;
+		border-bottom:2px solid $highlight;	
+	}
+
+}
+
+
+
+
+
+
+/* --------->>> Navigation:  Card ---------*/
+
+.nav--card > li
+{
+	padding-left:10px;
+	padding-right:10px;
+}
+.nav--card a
+{
+	line-height:32px;
+	height:32px;
+	text-transform:uppercase;
+}

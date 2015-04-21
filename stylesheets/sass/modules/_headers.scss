@@ -48,3 +48,29 @@
 	bottom:0px;
 	left:52px;
 }
+
+
+%header--primary
+{
+	.btn:hover
+	{
+		color:#ffffff;
+		@include transition(all 0.5s ease-in-out);
+	}
+	.nav--tab_item
+	{
+		&.is-active
+		{
+			color:#ffffff;
+		}
+
+	}
+
+}
+
+%header--secondary
+{
+	background:#ffffff;
+	height:190px;
+	@include padding-crown($padding-default);
+}

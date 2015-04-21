@@ -2381,23 +2381,61 @@ header {
 .is-hidden {
   display: none; }
 
-.lobby-container, .course-container, .present-container {
+.lobby-container, .course-container, .present-container, .content-preview-container {
   position: relative;
   box-sizing: border-box; }
 
-.lobby, .course, .present {
+.lobby, .course, .present, .content-preview {
   box-sizing: inherit;
   height: 100%; }
 
-.lobby_header, .course_header, .present_header, .objectView_header {
+.lobby_header, .course_header, .present_header, .content-preview_header {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%; }
 
-.lobby_body, .course_body, .present_body {
+.lobby_body, .course_body, .present_body, .content-preview_body {
   height: 100%;
   width: 100%; }
+
+/* --------->>> Navigation: Basic ---------*/
+.nav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+
+/* --------->>> Navigation: tab ---------*/
+.nav--tab {
+  padding-top: 20px;
+  height: 52px; }
+  .nav--tab > li {
+    display: inline-block; }
+
+/* --->>> State Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+.nav--tab_item {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  height: 32px;
+  text-transform: uppercase; }
+  .nav--tab_item.is-last {
+    margin-right: 0px; }
+  .nav--tab_item.is-active {
+    color: #0ac8f4;
+    border-bottom: 2px solid #0ac8f4; }
+
+/* --------->>> Navigation:  Card ---------*/
+.nav--card > li {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.nav--card a {
+  line-height: 32px;
+  height: 32px;
+  text-transform: uppercase; }
 
 /* -----------------------------------*/
 /* ---->>> Buttons  -------------------*/
@@ -2709,37 +2747,52 @@ textarea.materialize-textarea {
   width: 160px;
   white-space: nowrap; }
 
-.lobby_header, .course_header, .present_header {
+.lobby_header, .course_header, .present_header, .content-preview_header {
   background: #435561;
   height: 150px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px; }
 
-.lobby_header_body, .course_header_body, .present_header_body {
+.lobby_header_body, .course_header_body, .present_header_body, .content-preview_header_body {
   float: left; }
 
-.lobby_header_title, .course_header_title, .present_header_title {
+.lobby_header_title, .course_header_title, .present_header_title, .content-preview_header_title {
   display: block;
   font-size: 18px;
   font-weight: 600;
   color: #a5b1bb; }
 
-.lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle {
+.lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle, .content-preview_header_subtitle {
   display: block;
   font-size: 14px;
   color: #ffffff; }
 
-.lobby_header_action, .course_header_action, .present_header_action {
+.lobby_header_action, .course_header_action, .present_header_action, .content-preview_header_action {
   float: left; }
 
-.lobby_header_utility-bar, .course_header_utility-bar, .present_header_utility-bar {
+.lobby_header_utility-bar, .course_header_utility-bar, .present_header_utility-bar, .content-preview_header_utility-bar {
   float: right; }
 
-.lobby_header_footer, .course_header_footer, .present_header_footer {
+.lobby_header_footer, .course_header_footer, .present_header_footer, .content-preview_header_footer {
   position: absolute;
   bottom: 0px;
   left: 52px; }
+
+.lobby_header .btn:hover, .course_header .btn:hover, .present_header .btn:hover, .content-preview_header .btn:hover {
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+.lobby_header .nav--tab_item.is-active, .course_header .nav--tab_item.is-active, .present_header .nav--tab_item.is-active, .content-preview_header .nav--tab_item.is-active {
+  color: #ffffff; }
+
+.content-preview_header {
+  background: #ffffff;
+  height: 190px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .lobby_body {
   padding-top: 150px; }
@@ -2797,6 +2850,40 @@ textarea.materialize-textarea {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
+.content-preview {
+  background: #f9f9f9;
+  -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17); }
+  .content-preview_header {
+    height: 190px;
+    border-bottom: 1px solid #d9dde1;
+    z-index: 2; }
+  .content-preview_body {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 190px;
+    overflow-y: auto; }
+  .content-preview_cta {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
+
+.content-preview_header_body {
+  padding-left: 52px;
+  padding-top: 20px;
+  display: block; }
+.content-preview_header_title {
+  color: #435561; }
+.content-preview_header_subtitle {
+  font-size: 14px;
+  color: #a5b1bb;
+  font-weight: 400; }
+
+.content-preview_body p {
+  font-size: 14px; }
+
 .menu {
   z-index: 100;
   list-style-type: none;
@@ -2835,13 +2922,6 @@ textarea.materialize-textarea {
   white-space: nowrap;
   will-change: width, height; }
 
-/** Minor layout styles/Utility Classes **/
-/** End minor layout styles **/
-/* -----------------------------------*/
-/* ---->>> Layouts ---------------------*/
-/* -----------------------------------*/
-/* --------->>> Layout: Containers ----------*/
-/* --------->>> Layout: Grid -----------*/
 .grid {
   width: 100%;
   padding: 10px; }
@@ -2894,67 +2974,6 @@ textarea.materialize-textarea {
 
 /* --->>> Builder overrides ---*/
 /* -- two deep selector starting with parent to override builders --*/
-.header--primary .btn:hover {
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-.header--primary .nav--tab_item.is-active {
-  color: #ffffff; }
-
-/* --------->>> Module: object ----------*/
-.objectView {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background: #f9f9f9;
-  -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
-  box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17); }
-
-.objectView_header {
-  height: 190px;
-  background: #ffffff;
-  border-bottom: 1px solid #d9dde1;
-  z-index: 2; }
-
-.objectView_cta {
-  float: right; }
-
-.objectView_header-topbar {
-  padding-bottom: 10px; }
-  .objectView_header-topbar:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.objectView_header-info {
-  padding-bottom: 20px; }
-  .objectView_header-info:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.objectView_header-title {
-  font-size: 18px;
-  font-weight: 600; }
-
-.objectView_header-activityInfo {
-  font-size: 14px;
-  color: #a5b1bb;
-  font-weight: 400; }
-
-.objectView_body {
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 190px;
-  height: 100%;
-  overflow-y: auto; }
-
-.objectView_body p {
-  font-size: 14px; }
-
 /* --------->>> Module: Course -----------*/
 /* --------->>> Module: Tool-bar -----------*/
 .toolbar {
@@ -2966,52 +2985,6 @@ textarea.materialize-textarea {
 .toolbar_actions-utility {
   float: right; }
 
-/* -----------------------------------*/
-/* ---->>> Navigation -------------------*/
-/* -----------------------------------*/
-/* --------->>> Navigation: Basic ---------*/
-.nav {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px; }
-
-.nav-horizontal > li, .nav--tab > li {
-  display: inline-block; }
-
-/* --------->>> Navigation: tab ---------*/
-.nav--tab {
-  padding-top: 20px;
-  height: 52px; }
-
-/* --->>> State Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-.nav--tab_item {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 10px;
-  padding-bottom: 10px;
-  height: 32px;
-  text-transform: uppercase; }
-  .nav--tab_item.is-last {
-    margin-right: 0px; }
-  .nav--tab_item.is-active {
-    color: #0ac8f4;
-    border-bottom: 2px solid #0ac8f4; }
-
-/* --------->>> Navigation:  Card ---------*/
-.nav--card > li {
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.nav--card a {
-  line-height: 32px;
-  height: 32px;
-  text-transform: uppercase; }
-
-/* -----------------------------------*/
-/* ---->>> Dialog/Modal -------------------*/
-/* -----------------------------------*/
-/* --------->>> Navigation: Basic ---------*/
 .th-modal-header {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
