@@ -58,34 +58,3 @@
 }
 
 
-.card--present
-{
-	position: relative;
-	width:100%;
-	height:100%;
-	background:#fff;
-	border-radius:3px;
-}
-
-.card--present_header
-{
-
-}
-.card--present_body
-{
-	overflow-y:auto;
-	height:100%;
-	padding-bottom:52px;
-}
-.card--present_footer
-{
-	position:absolute;
-	bottom:0;
-	height:52px;
-	width:100%;
-	border-top:1px solid #d9dde1;
-	overflow-y:visible;
-	background:#fff;
-	@include border-bottom-radius(3px);
-
-}
