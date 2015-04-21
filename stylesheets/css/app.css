@@ -2656,6 +2656,29 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   height: 52px;
   padding: 10px; }
 
+.card--present {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px; }
+
+.card--present_body {
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 52px; }
+
+.card--present_footer {
+  position: absolute;
+  bottom: 0;
+  height: 52px;
+  width: 100%;
+  border-top: 1px solid #d9dde1;
+  overflow-y: visible;
+  background: #fff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
 .th-modal_container {
   border-radius: 5px;
   background: #f9f9f9; }
@@ -2877,29 +2900,6 @@ textarea.materialize-textarea {
 .present_header {
   padding: 10px;
   height: 52px; }
-
-.card--present {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  border-radius: 3px; }
-
-.card--present_body {
-  overflow-y: auto;
-  height: 100%;
-  padding-bottom: 52px; }
-
-.card--present_footer {
-  position: absolute;
-  bottom: 0;
-  height: 52px;
-  width: 100%;
-  border-top: 1px solid #d9dde1;
-  overflow-y: visible;
-  background: #fff;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px; }
 
 .content-main {
   background: #f2f2f2; }
