@@ -55,40 +55,41 @@
 
 /* --------->>> Layout: Containers ----------*/
 
-
-.course, .lobby 
+%app-container
 {
 	position: relative;
 	box-sizing: border-box;
 	background:$bg-light-grey;
-
 }
 
-
-.course-container, .lobby-container
+%app
 {
 	box-sizing:inherit;
 	height:100%;
-	
 }
 
-
-
-.course_body, .lobby_body
+%app_body
 {
-	padding-top:$header--primary-height;
-	
 	height:100%;
 	width:100%;
+}
+
+.course, .lobby
+{
+	@extend %app;
+
+	&-container 
+	{
+		@extend %app-container;
+	}
+
+	&_body 
+	{
+		@extend %app_body;
+		padding-top:$header--primary-height;
+	}
 	
 }
-
-.l-container-offset-header-lg
-{
-	top:150px;
-}
-
-
 
 .course_body-content
 {
@@ -97,14 +98,22 @@
 	float:left;
 	width:40%;
 	height:100%;
-	
-	
 }
 
-.l-section-preview-container
+
+
+
+
+
+
+
+
+
+
+.course_body-content-preview
 {
 	width:60%;
-	// min-width:500px;  dont know why this isn't working
+	min-width:500px;  
 	float:left;
 	position:relative;
 	height:100%;
@@ -112,10 +121,7 @@
 }
 
 
-.controlbar
-{
 
-}
 
 // End of present mode 
 
