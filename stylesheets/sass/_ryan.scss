@@ -2,48 +2,7 @@
 
 /** Minor layout styles/Utility Classes **/
 
-.inline-block
-{
-	display:inline-block;
-}
 
-.l-inline
-{
-	display:inline;
-}
-
-.left
-{
-	float:left;
-}
-
-.right
-{
-	float:right;
-}
-
-.l-stacked > span
-{
-	display:block;
-}
-.l-clear-list-style
-{
-	list-style-type:none;	
-}
-
-.l-inset
-{
-	@include clearfix;
-	width:100%;
-	padding-top:20px;
-	padding-left:20px;
-	padding-right:20px;
-}
-
-.is-hidden
-{
-	display:none;
-}
 
 
 /** End minor layout styles **/
@@ -55,70 +14,10 @@
 
 /* --------->>> Layout: Containers ----------*/
 
-%app-container
-{
-	position: relative;
-	box-sizing: border-box;
-	background:$bg-light-grey;
-}
-
-%app
-{
-	box-sizing:inherit;
-	height:100%;
-}
-
-%app_body
-{
-	height:100%;
-	width:100%;
-}
-
-.course, .lobby
-{
-	@extend %app;
-
-	&-container 
-	{
-		@extend %app-container;
-	}
-
-	&_body 
-	{
-		@extend %app_body;
-		padding-top:$header--primary-height;
-	}
-	
-}
-
-.course_body-content
-{
-	background:$bg-light-grey;
-	position:relative;
-	float:left;
-	width:40%;
-	height:100%;
-}
 
 
 
 
-
-
-
-
-
-
-
-.course_body-content-preview
-{
-	width:60%;
-	min-width:500px;  
-	float:left;
-	position:relative;
-	height:100%;
-	
-}
 
 
 
@@ -203,53 +102,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 /* --------->>> Module: Header ----------*/
 
 
-.header--primary
-{
-	@extend %header-base;
-	background:$bg-med-grey;
-	height:$header--primary-height;
-}
 
-.header--primary_body
-{
-	float:left;
-}
-
-
-.header--primary_title
-{
-	display:block;
-	font-size:18px;
-	font-weight:600;
-	color:$light-grey;
-
-}
-
-.header--primary_subtitle
-{
-	display:block;
-	font-size:14px;
-	color:#ffffff;
-}
-
-.header--primary_action
-{
-	float:left;
-
-}
-
-.header--primary_utilitybar
-{
-	float:right;
-}
-
-.header--primary_footer
-{
-	
-	position:absolute; 
-	bottom:0px;
-	left:52px;
-}
 
 
 /* --->>> Modifiers ---*/
@@ -309,7 +162,7 @@ box-shadow: 0px 2px 0px 0px rgba(217,221,225,1);
 
 .objectView_header
 {
-	@extend %header-base;
+	@extend %baseLayout_header;
 	height:$preview-header-height;
 	background:#ffffff;
 	border-bottom:1px solid #d9dde1;

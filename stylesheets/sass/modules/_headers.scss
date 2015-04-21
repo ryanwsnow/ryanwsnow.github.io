@@ -1,0 +1,50 @@
+// header Primary Skeleton
+
+%header--primary
+{
+	background:$bg-med-grey;
+	height:$header--primary-height;
+	@include padding-crown($padding-default);
+}
+
+
+%header--primary_body
+{
+	float:left;
+}
+
+
+%header--primary_title
+{
+	display:block;
+	font-size:18px;
+	font-weight:600;
+	color:$light-grey;
+
+}
+
+%header--primary_subtitle
+{
+	display:block;
+	font-size:14px;
+	color:#ffffff;
+}
+
+%header--primary_action
+{
+	float:left;
+
+}
+
+%header--primary_utility-bar
+{
+	float:right;
+}
+
+%header--primary_footer
+{
+	
+	position:absolute; 
+	bottom:0px;
+	left:52px;
+}
