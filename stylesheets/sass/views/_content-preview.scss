@@ -1,0 +1,96 @@
+//layout
+
+.content-preview
+{
+	@extend %baseLayout;
+	background:$bg-slight-grey;
+	@include box-shadow (-3px 0px 3px 0px rgba(0,0,0,0.17));
+
+	&-container 
+	{
+		@extend %baseLayout-container;
+	}
+
+	&_header
+	{
+		@extend %baseLayout_header;
+		@extend %header--secondary;
+		height:$preview-header-height;
+		border-bottom:1px solid #d9dde1;
+		z-index:2;
+		
+	}
+
+	&_body 
+	{
+		@extend %baseLayout_body;
+		@include padding-crown($padding-default);
+	
+
+		padding-top:$preview-header-height;
+		
+		overflow-y:auto;
+	}
+
+	
+	
+}
+
+//Header module
+.content-preview_header
+{
+	@extend %header--primary;
+
+	&_body 
+	{
+		@extend %header--primary_body;
+		display:block;
+		width:100%;
+		padding-left:52px;
+		padding-top:20px;
+		
+	}
+	
+	&_action {
+		@extend %header--primary_action;
+	}
+
+	&_title
+	{
+		@extend %header--primary_title;
+		color:$text-med-grey;
+
+	}
+	&_subtitle
+	{
+		@extend %header--primary_subtitle;
+		font-size:14px;
+		color:$light-grey;
+		font-weight:400;
+	}
+	&_utility-bar
+	{
+		@extend %header--primary_utility-bar;
+	}
+	&_footer
+	{
+		@extend %header--primary_footer;
+	}
+	&_cta
+	{
+		position:absolute;
+		bottom:10px;
+		right:10px;
+	}
+	
+	
+
+}
+
+
+
+.content-preview_body p 
+{
+	font-size:14px;
+
+}

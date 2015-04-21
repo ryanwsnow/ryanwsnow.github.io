@@ -12,18 +12,18 @@
 /* -- modifiers use sibling specifity --*/
 
 
-@mixin buttonModifiers($button-color:$text-smed-grey)
-{
-	color:$button-color;
+// @mixin buttonModifiers($button-color:$text-smed-grey)
+// {
+// 	color:$button-color;
 
 	
-	&:hover, &.is-hovered
-	{
-		color: adjust-color($button-color, $lightness: 35%);
-		@include transition(all 0.5s ease-in-out);
-	}
+// 	&:hover, &.is-hovered
+// 	{
+// 		color: adjust-color($button-color, $lightness: 35%);
+// 		@include transition(all 0.5s ease-in-out);
+// 	}
 
-}
+// }
 
 
 
@@ -97,6 +97,7 @@
 
 .btn--icon-text
 {
+	@extend %button-base;
 	color:$text-light-grey;
 
 	> i

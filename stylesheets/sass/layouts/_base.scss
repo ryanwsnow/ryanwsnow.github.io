@@ -1,3 +1,53 @@
+
+//base layout 
+
+%baseLayout-container
+{
+	position: relative;
+	box-sizing: border-box;
+	
+}
+
+%baseLayout
+{
+	box-sizing:inherit;
+	height:100%;
+}
+
+%baseLayout_header
+{
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    
+}
+
+%baseLayout_body
+{
+	height:100%;
+	width:100%;
+
+}
+
+%layout40-60_column1
+{
+	position:relative;
+	float:left;
+	width:40%;
+	height:100%;
+}
+
+%layout40-60_column2
+{
+	width:60%;
+	float:left;
+	position:relative;
+	height:100%;
+}
+
+// helpers
+
 .inline-block
 {
 	display:inline-block;
@@ -40,37 +90,6 @@
 {
 	display:none;
 }
-
-//base layout Skeleten
-
-%baseLayout-container
-{
-	position: relative;
-	box-sizing: border-box;
-	
-}
-
-%baseLayout
-{
-	box-sizing:inherit;
-	height:100%;
-}
-
-%baseLayout_header
-{
-    position:absolute;
-    top:0;
-    right:0;
-    width:100%;
-    
-}
-
-%baseLayout_body
-{
-	height:100%;
-	width:100%;
-}
-
 
 
 

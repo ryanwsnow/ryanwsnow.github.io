@@ -1,4 +1,4 @@
-// header Primary Skeleton
+// header Primary
 
 %header--primary
 {
@@ -47,4 +47,26 @@
 	position:absolute; 
 	bottom:0px;
 	left:52px;
+}
+
+
+%header--primary
+{
+	
+	.nav--tab_item
+	{
+		&.is-active
+		{
+			color:#ffffff;
+		}
+
+	}
+
+}
+
+%header--secondary
+{
+	background:#ffffff;
+	height:190px;
+	@include padding-crown($padding-default);
 }

@@ -1,4 +1,4 @@
-// Present Layout Skeleton
+// Layout
 
 .present
 {
@@ -12,6 +12,7 @@
 	&_header
 	{
 		@extend %baseLayout_header;
+		
 
 	}
 	&_body 
@@ -21,6 +22,8 @@
 	}
 	
 }
+
+// Header Module
 
 .present_header
 {

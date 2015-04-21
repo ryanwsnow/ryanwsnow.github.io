@@ -2350,6 +2350,36 @@ header {
   position: relative; }
 
 /** End Base **/
+.lobby-container, .course-container, .present-container, .content-preview-container {
+  position: relative;
+  box-sizing: border-box; }
+
+.lobby, .course, .present, .content-preview {
+  box-sizing: inherit;
+  height: 100%; }
+
+.lobby_header, .course_header, .present_header, .content-preview_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; }
+
+.lobby_body, .course_body, .present_body, .content-preview_body {
+  height: 100%;
+  width: 100%; }
+
+.content-main {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 100%; }
+
+.content-side {
+  width: 60%;
+  float: left;
+  position: relative;
+  height: 100%; }
+
 .inline-block {
   display: inline-block; }
 
@@ -2381,23 +2411,37 @@ header {
 .is-hidden {
   display: none; }
 
-.lobby-container, .course-container, .present-container {
-  position: relative;
-  box-sizing: border-box; }
+/* --------->>> Navigation: Basic ---------*/
+.nav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
 
-.lobby, .course, .present {
-  box-sizing: inherit;
-  height: 100%; }
+/* --------->>> Navigation: tab ---------*/
+.nav--tab {
+  padding-top: 20px;
+  height: 52px; }
+  .nav--tab > li {
+    display: inline-block; }
 
-.lobby_header, .course_header, .present_header, .objectView_header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%; }
+/* --->>> State Modifiers ---*/
+/* -- modifiers use sibling specifity --*/
+.nav--tab_item {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  height: 32px;
+  text-transform: uppercase; }
+  .nav--tab_item.is-last {
+    margin-right: 0px; }
+  .nav--tab_item.is-active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff; }
 
-.lobby_body, .course_body, .present_body {
-  height: 100%;
-  width: 100%; }
+.nav--tab.on-light .nav--tab_item.is-active {
+  color: #0ac8f4;
+  border-bottom: 2px solid #0ac8f4; }
 
 /* -----------------------------------*/
 /* ---->>> Buttons  -------------------*/
@@ -2405,7 +2449,7 @@ header {
 /* --------->>> Button: Basic ---------*/
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
-.btn--utility, .btn--default, .btn--icon-utility, .btn--round, .btn--raised {
+.btn--utility, .btn--default, .btn--icon-text, .btn--icon-utility, .btn--round, .btn--raised {
   display: inline-block;
   height: 32px;
   padding-left: 10px;
@@ -2415,7 +2459,7 @@ header {
   line-height: 32px;
   font-size: 14px;
   color: #708493; }
-  .last.btn--utility, .last.btn--default, .last.btn--icon-utility, .last.btn--round, .last.btn--raised {
+  .last.btn--utility, .last.btn--default, .last.btn--icon-text, .last.btn--icon-utility, .last.btn--round, .last.btn--raised {
     margin-right: 0; }
 
 .btn--utility {
@@ -2501,13 +2545,14 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   padding: 0;
   margin: 0; }
 
-/* --->>> List Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-.list.is-cozy > li > .list_item {
-  height: 80px; }
-
-.list-sub > li > .list_item {
+.list--sub > li > .list_item {
   padding-left: 40px; }
+
+.list_item_column, .list_item_column-checkbox, .list_item_column-icon, .list_item_column-info, .list_item--folder_column-expandable {
+  display: table-cell;
+  vertical-align: middle; }
+  .list_item_column > div, .list_item_column-checkbox > div, .list_item_column-icon > div, .list_item_column-info > div, .list_item--folder_column-expandable > div {
+    vertical-align: middle; }
 
 /* --->>> List item ---*/
 .list_item {
@@ -2517,6 +2562,35 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   border-bottom: 1px solid #d9dde1;
   padding: 10px;
   width: 100%; }
+  .list_item_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #435561; }
+  .list_item_sub-title {
+    font-size: 12px;
+    color: #708493;
+    font-weight: 400; }
+  .list_item_activity-info {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 12px;
+    color: #a5b1bb;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: right; }
+  .list_item_column-checkbox {
+    width: 40px; }
+    .list_item_column-checkbox > input {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20px; }
+  .list_item_column-icon {
+    width: 40px; }
+    .list_item_column-icon > i {
+      color: #a4b0ba;
+      font-size: 24px; }
   .list_item.is-hovered {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -2535,49 +2609,82 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   cursor: pointer; }
   .list_item--folder > .list_item_column-icon > i {
     color: #435561; }
+  .list_item--folder_column-expandable {
+    width: 40px; }
 
-/* --->>> List item column---*/
-.list_item_column {
-  display: table-cell;
-  vertical-align: middle; }
-  .list_item_column > div {
-    vertical-align: middle; }
+.list.is-cozy > li > .list_item {
+  height: 80px; }
 
-.list-item_column-expandable {
-  width: 40px; }
+.grid {
+  width: 100%;
+  padding: 10px; }
 
-.list_item_column-checkbox {
-  width: 40px; }
-  .list_item_column-checkbox > input {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20px; }
+.grid_item {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px; }
 
-.list_item_column-icon {
-  width: 40px; }
-  .list_item_column-icon > i {
-    color: #a4b0ba;
-    font-size: 24px; }
+.card {
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #d9dde1;
+  -webkit-box-shadow: 0px 2px 0px 0px #d9dde1;
+  -moz-box-shadow: 0px 2px 0px 0px #d9dde1;
+  box-shadow: 0px 2px 0px 0px #d9dde1; }
 
-.list_item-title {
-  font-size: 14px;
+.card_item_body {
+  padding: 10px; }
+
+.card_item_title {
+  font-size: 18px;
   font-weight: 600;
   color: #435561; }
 
-.list_item-sub-title {
-  font-size: 12px;
-  color: #708493;
-  font-weight: 400; }
-
-.list_item-activity-info {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 12px;
-  color: #a5b1bb;
+.card_item_sub-title {
+  font-size: 14px;
   font-weight: 400;
-  white-space: nowrap;
+  color: #708493; }
+
+.card_item_footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #d9dde1;
+  height: 52px;
+  padding: 10px; }
+
+.th-modal_container {
+  border-radius: 5px;
+  background: #f9f9f9; }
+.th-modal_header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px;
+  height: 52px;
+  background: #fff;
+  border-bottom: 1px solid #d9dde1; }
+.th-modal_title {
+  text-align: center;
+  line-height: 32px;
+  font-size: 18px;
+  font-weight: 600; }
+.th-modal_body {
+  padding: 10px; }
+.th-modal_section {
+  padding-top: 20px; }
+.th-modal_section-header {
+  font-size: 16px;
+  color: #708493;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.th-modal_footer {
+  border-top: 1px solid #d9dde1;
+  padding: 10px;
+  height: 52px;
   text-align: right; }
 
 input, textarea {
@@ -2709,37 +2816,47 @@ textarea.materialize-textarea {
   width: 160px;
   white-space: nowrap; }
 
-.lobby_header, .course_header, .present_header {
+.lobby_header, .course_header, .present_header, .content-preview_header {
   background: #435561;
   height: 150px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px; }
 
-.lobby_header_body, .course_header_body, .present_header_body {
+.lobby_header_body, .course_header_body, .present_header_body, .content-preview_header_body {
   float: left; }
 
-.lobby_header_title, .course_header_title, .present_header_title {
+.lobby_header_title, .course_header_title, .present_header_title, .content-preview_header_title {
   display: block;
   font-size: 18px;
   font-weight: 600;
   color: #a5b1bb; }
 
-.lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle {
+.lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle, .content-preview_header_subtitle {
   display: block;
   font-size: 14px;
   color: #ffffff; }
 
-.lobby_header_action, .course_header_action, .present_header_action {
+.lobby_header_action, .course_header_action, .present_header_action, .content-preview_header_action {
   float: left; }
 
-.lobby_header_utility-bar, .course_header_utility-bar, .present_header_utility-bar {
+.lobby_header_utility-bar, .course_header_utility-bar, .present_header_utility-bar, .content-preview_header_utility-bar {
   float: right; }
 
-.lobby_header_footer, .course_header_footer, .present_header_footer {
+.lobby_header_footer, .course_header_footer, .present_header_footer, .content-preview_header_footer {
   position: absolute;
   bottom: 0px;
   left: 52px; }
+
+.lobby_header .nav--tab_item.is-active, .course_header .nav--tab_item.is-active, .present_header .nav--tab_item.is-active, .content-preview_header .nav--tab_item.is-active {
+  color: #ffffff; }
+
+.content-preview_header {
+  background: #ffffff;
+  height: 190px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .lobby_body {
   padding-top: 150px; }
@@ -2748,21 +2865,8 @@ textarea.materialize-textarea {
   background: #f2f2f2; }
 
 .course_body {
-  padding-top: 150px; }
-
-.course_body-content {
-  background: #f2f2f2;
-  position: relative;
-  float: left;
-  width: 40%;
-  height: 100%; }
-
-.course_body-content-preview {
-  width: 60%;
-  min-width: 500px;
-  float: left;
-  position: relative;
-  height: 100%; }
+  padding-top: 150px;
+  min-width: 900px; }
 
 .present-container {
   background: #435561;
@@ -2796,6 +2900,44 @@ textarea.materialize-textarea {
   background: #fff;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
+
+.content-main {
+  background: #f2f2f2; }
+
+.content-preview {
+  background: #f9f9f9;
+  -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17); }
+  .content-preview_header {
+    height: 190px;
+    border-bottom: 1px solid #d9dde1;
+    z-index: 2; }
+  .content-preview_body {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 190px;
+    overflow-y: auto; }
+
+.content-preview_header_body {
+  display: block;
+  width: 100%;
+  padding-left: 52px;
+  padding-top: 20px; }
+.content-preview_header_title {
+  color: #435561; }
+.content-preview_header_subtitle {
+  font-size: 14px;
+  color: #a5b1bb;
+  font-weight: 400; }
+.content-preview_header_cta {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; }
+
+.content-preview_body p {
+  font-size: 14px; }
 
 .menu {
   z-index: 100;
@@ -2835,128 +2977,6 @@ textarea.materialize-textarea {
   white-space: nowrap;
   will-change: width, height; }
 
-/** Minor layout styles/Utility Classes **/
-/** End minor layout styles **/
-/* -----------------------------------*/
-/* ---->>> Layouts ---------------------*/
-/* -----------------------------------*/
-/* --------->>> Layout: Containers ----------*/
-/* --------->>> Layout: Grid -----------*/
-.grid {
-  width: 100%;
-  padding: 10px; }
-
-.grid__item {
-  display: inline-block;
-  width: 250px;
-  height: 250px;
-  margin-right: 20px;
-  margin-top: 20px;
-  background: #fff;
-  border-radius: 5px;
-  position: relative;
-  border: 1px solid #d9dde1;
-  -webkit-box-shadow: 0px 2px 0px 0px #d9dde1;
-  -moz-box-shadow: 0px 2px 0px 0px #d9dde1;
-  box-shadow: 0px 2px 0px 0px #d9dde1; }
-
-.grid__item-body {
-  padding: 10px; }
-
-.grid__item-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #435561; }
-
-.grid__item-sub-title {
-  font-size: 14px;
-  font-weight: 400;
-  color: #708493; }
-
-.grid__item-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  border-top: 1px solid #d9dde1;
-  height: 52px;
-  padding: 10px; }
-
-/* -----------------------------------*/
-/* ---->>> Modules ---------------------*/
-/* -----------------------------------*/
-/* --------->>> Module: Header ----------*/
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-.header--primary.is-collapsed {
-  height: 52px; }
-  .header--primary.is-collapsed .breadcrumb__location {
-    display: none; }
-
-/* --->>> Builder overrides ---*/
-/* -- two deep selector starting with parent to override builders --*/
-.header--primary .btn:hover {
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-.header--primary .nav--tab_item.is-active {
-  color: #ffffff; }
-
-/* --------->>> Module: object ----------*/
-.objectView {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background: #f9f9f9;
-  -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
-  box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17); }
-
-.objectView_header {
-  height: 190px;
-  background: #ffffff;
-  border-bottom: 1px solid #d9dde1;
-  z-index: 2; }
-
-.objectView_cta {
-  float: right; }
-
-.objectView_header-topbar {
-  padding-bottom: 10px; }
-  .objectView_header-topbar:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.objectView_header-info {
-  padding-bottom: 20px; }
-  .objectView_header-info:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.objectView_header-title {
-  font-size: 18px;
-  font-weight: 600; }
-
-.objectView_header-activityInfo {
-  font-size: 14px;
-  color: #a5b1bb;
-  font-weight: 400; }
-
-.objectView_body {
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 190px;
-  height: 100%;
-  overflow-y: auto; }
-
-.objectView_body p {
-  font-size: 14px; }
-
-/* --------->>> Module: Course -----------*/
-/* --------->>> Module: Tool-bar -----------*/
 .toolbar {
   padding: 10px;
   height: 52px;
@@ -2965,88 +2985,5 @@ textarea.materialize-textarea {
 
 .toolbar_actions-utility {
   float: right; }
-
-/* -----------------------------------*/
-/* ---->>> Navigation -------------------*/
-/* -----------------------------------*/
-/* --------->>> Navigation: Basic ---------*/
-.nav {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px; }
-
-.nav-horizontal > li, .nav--tab > li {
-  display: inline-block; }
-
-/* --------->>> Navigation: tab ---------*/
-.nav--tab {
-  padding-top: 20px;
-  height: 52px; }
-
-/* --->>> State Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-.nav--tab_item {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 10px;
-  padding-bottom: 10px;
-  height: 32px;
-  text-transform: uppercase; }
-  .nav--tab_item.is-last {
-    margin-right: 0px; }
-  .nav--tab_item.is-active {
-    color: #0ac8f4;
-    border-bottom: 2px solid #0ac8f4; }
-
-/* --------->>> Navigation:  Card ---------*/
-.nav--card > li {
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.nav--card a {
-  line-height: 32px;
-  height: 32px;
-  text-transform: uppercase; }
-
-/* -----------------------------------*/
-/* ---->>> Dialog/Modal -------------------*/
-/* -----------------------------------*/
-/* --------->>> Navigation: Basic ---------*/
-.th-modal-header {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 10px;
-  height: 52px;
-  background: #fff;
-  border-bottom: 1px solid #d9dde1; }
-
-.th-modal-title {
-  text-align: center;
-  line-height: 32px;
-  font-size: 18px;
-  font-weight: 600; }
-
-.th-modal-body {
-  padding: 10px; }
-
-.th-modal-content {
-  border-radius: 5px;
-  background: #f9f9f9; }
-
-.th-modal-footer {
-  border-top: 1px solid #d9dde1;
-  padding: 10px;
-  height: 52px;
-  text-align: right; }
-
-.th-modal-section {
-  padding-top: 20px; }
-
-.th-modal-section-header {
-  font-size: 16px;
-  color: #708493;
-  font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 10px; }
 
 /*# sourceMappingURL=app.css.map */

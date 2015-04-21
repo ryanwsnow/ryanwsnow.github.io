@@ -1,3 +1,5 @@
+//Layout
+
 .course
 {
 	@extend %baseLayout;
@@ -17,9 +19,12 @@
 	{
 		@extend %baseLayout_body;
 		padding-top:$header--primary-height;
+		min-width:900px;
 	}
 	
 }
+
+//Header Module
 
 .course_header
 {
@@ -52,24 +57,3 @@
 
 }
 
-
-
-
-.course_body-content
-{
-	background:$bg-light-grey;
-	position:relative;
-	float:left;
-	width:40%;
-	height:100%;
-}
-
-.course_body-content-preview
-{
-	width:60%;
-	min-width:500px;  
-	float:left;
-	position:relative;
-	height:100%;
-	
-}

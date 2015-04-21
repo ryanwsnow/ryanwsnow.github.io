@@ -1,0 +1,17 @@
+.content 
+{
+
+}
+
+
+.content-main
+{
+	@extend %layout40-60_column1;
+	background:$bg-light-grey;
+	
+}
+
+.content-side
+{
+	@extend %layout40-60_column2;	
+}
