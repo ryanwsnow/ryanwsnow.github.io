@@ -1,4 +1,4 @@
-// header Primary Skeleton
+// header Primary
 
 %header--primary
 {
@@ -52,11 +52,7 @@
 
 %header--primary
 {
-	.btn:hover
-	{
-		color:#ffffff;
-		@include transition(all 0.5s ease-in-out);
-	}
+	
 	.nav--tab_item
 	{
 		&.is-active

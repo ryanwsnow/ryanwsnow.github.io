@@ -44,27 +44,23 @@
 	}
 	&.is-active
 	{
-		color: $highlight;
-		border-bottom:2px solid $highlight;	
+		color: #ffffff;
+		border-bottom:2px solid #ffffff;	
 	}
 
 }
 
-
-
-
-
-
-/* --------->>> Navigation:  Card ---------*/
-
-.nav--card > li
+.nav--tab.on-light
 {
-	padding-left:10px;
-	padding-right:10px;
+	.nav--tab_item
+	{
+		 &.is-active
+		{
+			color: $highlight;
+			border-bottom:2px solid $highlight;	
+		
+		}
+	}
 }
-.nav--card a
-{
-	line-height:32px;
-	height:32px;
-	text-transform:uppercase;
-}
+
+

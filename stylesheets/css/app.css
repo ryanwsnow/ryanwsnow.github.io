@@ -2436,18 +2436,12 @@ header {
   .nav--tab_item.is-last {
     margin-right: 0px; }
   .nav--tab_item.is-active {
-    color: #0ac8f4;
-    border-bottom: 2px solid #0ac8f4; }
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff; }
 
-/* --------->>> Navigation:  Card ---------*/
-.nav--card > li {
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.nav--card a {
-  line-height: 32px;
-  height: 32px;
-  text-transform: uppercase; }
+.nav--tab.on-light .nav--tab_item.is-active {
+  color: #0ac8f4;
+  border-bottom: 2px solid #0ac8f4; }
 
 /* -----------------------------------*/
 /* ---->>> Buttons  -------------------*/
@@ -2455,7 +2449,7 @@ header {
 /* --------->>> Button: Basic ---------*/
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
-.btn--utility, .btn--default, .btn--icon-utility, .btn--round, .btn--raised {
+.btn--utility, .btn--default, .btn--icon-text, .btn--icon-utility, .btn--round, .btn--raised {
   display: inline-block;
   height: 32px;
   padding-left: 10px;
@@ -2465,7 +2459,7 @@ header {
   line-height: 32px;
   font-size: 14px;
   color: #708493; }
-  .last.btn--utility, .last.btn--default, .last.btn--icon-utility, .last.btn--round, .last.btn--raised {
+  .last.btn--utility, .last.btn--default, .last.btn--icon-text, .last.btn--icon-utility, .last.btn--round, .last.btn--raised {
     margin-right: 0; }
 
 .btn--utility {
@@ -2854,11 +2848,6 @@ textarea.materialize-textarea {
   bottom: 0px;
   left: 52px; }
 
-.lobby_header .btn:hover, .course_header .btn:hover, .present_header .btn:hover, .content-preview_header .btn:hover {
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
 .lobby_header .nav--tab_item.is-active, .course_header .nav--tab_item.is-active, .present_header .nav--tab_item.is-active, .content-preview_header .nav--tab_item.is-active {
   color: #ffffff; }
 
@@ -2988,21 +2977,6 @@ textarea.materialize-textarea {
   white-space: nowrap;
   will-change: width, height; }
 
-/* -----------------------------------*/
-/* ---->>> Modules ---------------------*/
-/* -----------------------------------*/
-/* --------->>> Module: Header ----------*/
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-.header--primary.is-collapsed {
-  height: 52px; }
-  .header--primary.is-collapsed .breadcrumb__location {
-    display: none; }
-
-/* --->>> Builder overrides ---*/
-/* -- two deep selector starting with parent to override builders --*/
-/* --------->>> Module: Course -----------*/
-/* --------->>> Module: Tool-bar -----------*/
 .toolbar {
   padding: 10px;
   height: 52px;
