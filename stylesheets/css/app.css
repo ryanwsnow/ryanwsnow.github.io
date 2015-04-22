@@ -2641,6 +2641,25 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 .list.is-cozy > li > .list_item {
   height: 80px; }
 
+.list--folders {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.list--folders_item {
+  padding: 10px;
+  display: block;
+  width: 100%; }
+  .list--folders_item > i {
+    line-height: 32px;
+    font-size: 24px;
+    float: left;
+    padding-right: 10px;
+    color: #a4b0ba; }
+  .list--folders_item > button {
+    width: 100%;
+    text-align: left; }
+
 .grid {
   width: 100%;
   padding: 10px; }
@@ -3124,6 +3143,9 @@ textarea.materialize-textarea {
   height: 52px;
   background: #f9f9f9;
   border-bottom: 1px solid #d9dde1; }
+
+.toolbar--selected {
+  background: #fff; }
 
 .toolbar_actions-utility {
   float: right; }
