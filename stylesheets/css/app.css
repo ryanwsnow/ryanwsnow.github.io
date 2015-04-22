@@ -2364,7 +2364,7 @@ header {
   right: 0;
   width: 100%; }
 
-.lobby_body, .course_body, .present_body, .content-preview_body {
+.lobby_body, .course_body, .students-main, .present_body, .content-preview_body {
   height: 100%;
   width: 100%; }
 
@@ -2449,7 +2449,7 @@ header {
 /* --------->>> Button: Basic ---------*/
 /* --->>> Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
-.btn--utility, .btn--default, .btn--icon-text, .btn--icon-utility, .btn--round, .btn--raised {
+.btn--plain, .btn--utility, .btn--default, .btn--icon-text, .btn--icon-utility, .btn--round, .btn--raised {
   display: inline-block;
   height: 32px;
   padding-left: 10px;
@@ -2459,8 +2459,11 @@ header {
   line-height: 32px;
   font-size: 14px;
   color: #708493; }
-  .last.btn--utility, .last.btn--default, .last.btn--icon-text, .last.btn--icon-utility, .last.btn--round, .last.btn--raised {
+  .last.btn--plain, .last.btn--utility, .last.btn--default, .last.btn--icon-text, .last.btn--icon-utility, .last.btn--round, .last.btn--raised {
     margin-right: 0; }
+
+.btn--plain:hover.danger {
+  color: #fd194f; }
 
 .btn--utility {
   color: #a4b0ba; }
@@ -2534,7 +2537,7 @@ header {
 .btn--raised {
   background: #f2f2f2;
   color: #708493;
-  min-width: 120px;
+  min-width: 100px;
   border-radius: 2px;
   -webkit-box-shadow: 0px 3px 0px 0px #a4b0ba;
   -moz-box-shadow: 0px 3px 0px 0px #a4b0ba;
@@ -2637,6 +2640,25 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 
 .list.is-cozy > li > .list_item {
   height: 80px; }
+
+.list--folders {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.list--folders_item {
+  padding: 10px;
+  display: block;
+  width: 100%; }
+  .list--folders_item > i {
+    line-height: 32px;
+    font-size: 24px;
+    float: left;
+    padding-right: 10px;
+    color: #a4b0ba; }
+  .list--folders_item > button {
+    width: 100%;
+    text-align: left; }
 
 .grid {
   width: 100%;
@@ -2864,7 +2886,7 @@ textarea.materialize-textarea {
 
 .lobby_header, .course_header, .present_header, .content-preview_header {
   background: #435561;
-  height: 150px;
+  height: 120px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px; }
@@ -2905,14 +2927,17 @@ textarea.materialize-textarea {
   padding-right: 10px; }
 
 .lobby_body {
-  padding-top: 150px; }
+  padding-top: 120px; }
 
 .lobby_body {
   background: #f2f2f2; }
 
 .course_body {
-  padding-top: 150px;
+  padding-top: 120px;
   min-width: 900px; }
+
+.students-main {
+  background: #f2f2f2; }
 
 .present-container {
   background: #435561;
@@ -2975,7 +3000,8 @@ textarea.materialize-textarea {
   transform: translate(-50%, 0);
   -webkit-transition: all 0.3s ease-in 0s;
   -moz-transition: all 0.3s ease-in 0s;
-  transition: all 0.3s ease-in 0s; }
+  transition: all 0.3s ease-in 0s;
+  text-align: center; }
 
 .hitspot-right .hs-next {
   right: 0; }
@@ -3112,13 +3138,28 @@ textarea.materialize-textarea {
   white-space: nowrap;
   will-change: width, height; }
 
-.toolbar {
+.toolbar, .toolbar--selected {
   padding: 10px;
   height: 52px;
   background: #f9f9f9;
   border-bottom: 1px solid #d9dde1; }
 
+.toolbar--selected {
+  background: #fff; }
+
 .toolbar_actions-utility {
   float: right; }
+
+.badge {
+  background: #0ac8f4;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+  margin-right: 10px; }
 
 /*# sourceMappingURL=app.css.map */

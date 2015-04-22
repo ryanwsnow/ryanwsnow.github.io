@@ -30,6 +30,32 @@ $(document).ready(function(){
 	});
 
 	// demo purposes
+	var clicky = 0;
+	$(".list_item_column-checkbox input").on("click",function(){
+		if($(this).prop("checked")){
+			clicky = clicky + 1;
+			
+			
+		}
+		else {
+			clicky = clicky - 1;
+
+		}
+		if (clicky){
+			$(".toolbar").addClass('is-hidden');
+			$(".toolbar--selected").removeClass("is-hidden");
+
+		}
+		else{
+			$(".toolbar").removeClass('is-hidden');
+			$(".toolbar--selected").addClass("is-hidden");
+		}
+
+		$(".badge").html(clicky);
+		
+		console.log("click")
+		console.log(clicky)
+	});
 
 	$(".hs").on({
 	    mouseenter: function () {
