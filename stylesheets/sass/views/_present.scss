@@ -12,13 +12,17 @@
 	&_header
 	{
 		@extend %baseLayout_header;
-		
+		//hs
+		@include transition(all 0.3s ease-in 0s);
+
 
 	}
 	&_body 
 	{
 		@extend %baseLayout_body;
 		padding-top:52px;
+		//hs 
+		@include transition(all 0.3s ease-in 0s);
 	}
 	
 }
@@ -28,6 +32,7 @@
 .present_header
 {
 	@extend %header--primary;
+
 	padding:10px;
 	height:52px;
 
@@ -56,5 +61,200 @@
 		@extend %header--primary_footer;
 	}
 }
+
+.controlbar
+{
+	z-index:2;
+	position:absolute;
+	bottom:20px;
+	left:50%;
+	transform: translate(-50%, 0);
+	
+}
+
+
+
+
+
+%hitspot-base
+{
+	position:absolute;
+	cursor:pointer;
+	height:100%;
+}
+
+.instruction-hitspots
+{
+	position:absolute;
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+	
+	
+	.hitspot-left 
+	{
+		
+		@extend %hitspot-base;
+		left:0;
+		width:25%;
+		
+		
+
+	}
+	.hitspot-middle 
+	{
+		@extend %hitspot-base;
+		left:25%;
+		width:50%;
+		
+		
+	}
+	.hitspot-right
+	{
+		@extend %hitspot-base;
+		right:0;
+		width:25%;
+		
+		
+	}
+
+}
+
+
+
+
+
+.hitspot_body 
+{
+	position:relative;
+	z-index:200;
+	height:100%;
+	width:90%;
+	margin:
+	{
+		left:auto;
+		right:auto;
+	}
+
+
+}
+
+.hs-next
+{
+	opacity:0;
+	position:absolute;
+	color:$highlight;
+	top:50%;
+	transform: translate(-50%, 0);
+	@include transition(all 0.3s ease-in 0s);
+}
+
+.hitspot-right .hs-next
+{
+	right:0;
+}
+
+.hitspot-left .hs-next
+{
+	left:60px;
+}
+
+.hitspot-right.is-hovered
+{
+	// background-color:rgba(10, 200, 244, 0.1);
+
+	@include linear-gradient(to right, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
+	
+	.hs-next
+	{
+		opacity:1;
+	
+	}
+}
+
+.hitspot-left.is-hovered
+{
+	// background-color:rgba(10, 200, 244, 0.1);
+
+	@include linear-gradient(to left, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
+	
+	.hs-next
+	{
+		opacity:1;
+	
+	}
+}
+
+
+
+
+
+
+.hitspot 
+{
+	&-instructions 
+	{
+		display:none;
+		position:absolute;
+		background-color:$highlight;
+		padding:20px;
+		width:70%;
+		height:100px;
+		left:50%;
+		top:50%;
+		transform: translate(-50%, -50%);
+		color:#fff;
+		text-align:center;
+		h2
+		{
+			margin:0;
+			padding:5px;
+		}
+		p
+		{
+			margin:0;
+			padding:0;
+		}
+	}
+}
+
+
+.instruction-hitspots.is-active
+{
+	.hitspot_body
+	{
+		background-color:rgba(10, 200, 244, 0.2);
+		.hitspot-instructions
+		{
+			display:block;
+
+		}
+	}
+}
+
+.hs-header
+{
+	top:-52px;
+
+}
+.hs-body
+{
+	padding-top:0;
+}
+.hs-helpbar
+{
+	z-index:400;
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
+.hs-controlbar
+{
+	z-index:400;
+	
+}
+
+
 
 
