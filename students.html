@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="course">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Styleguide - Tophat</title>
+	<!-- Bootstrap -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="stylesheets/css/app.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+
+	<script src="js/app.js"></script>
+	
+</head>
+<body class="course-container">
+<div class="course">
+	<header class="course_header">
+		<div class="course_header_action">
+			<button onclick="location.href = 'lobby.html';" class="btn btn--icon-utility">
+				<i class="icon-arrow-back"></i>
+			</button>
+		</div>
+		<div class="course_header_body">
+
+			<div class="course_header_title">BIO101 Fall 2015</div>
+			<div class="course_header_subtitle"><span>Join Code:</span> 123456</div>
+		</div>
+		<div class="course_header_utility-bar">	
+			<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
+		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
+					<i class="icon-settings"></i>
+				</button>
+			    	<ul   id="dropdown1" class="dropdown-content menu">
+				     <li><a href="#!">Something here</a></li>
+				    <li><a href="#!">Something there that is super long</a></li>
+				    
+				    <li><a href="#!">blah blah</a></li>
+			    	</ul>		
+		</div>
+		<div class="course_header_footer">
+			<nav role="navigation">
+				<ul class="nav nav--tab">
+					<li><a href="course.html" class="nav--tab_item ">Content</a></li>
+					<li><a href="#" class="nav--tab_item ">Gradebook</a></li>
+					<li><a href="#" class="nav--tab_item is-active is-last ">Students</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="course_body">
+		<div class="students-main">
+			<div class="toolbar">
+				<span class="toolbar_actions-primary">
+					<button class="dropdown-button btn btn--raised primary is-first" data-constrainwidth="false" data-activates="dropdown3">Invite</button>
+					<ul   id="dropdown3" class="dropdown-content menu menu--with-icons">
+					     <li><a class="is-selected"data-toggle="modal" data-target="#modalCreate" href="#!"><i class="icon-textsms"></i>Question (i Work)</a></li>
+					    <li><a class="" href="#!">Slide</a></li>
+					     <li><a class=""href="#!">Discussion</a></li>
+				    	</ul>
+					<button class="btn ">Folder</button>
+				</span>
+			
+				<span class="toolbar_actions-utility">
+					<button class="btn btn--icon-utility is-last"><i class="icon-search"></i></button>
+				</span>
+
+			</div>
+
+
+			
+		</div>
+	</div> <!-- course body end -->
+</div> <!-- course container -->
+
+<!-- Modal -->
+<div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="th-modal_container">
+      <div class="th-modal_header">
+        <button class="btn btn--icon-utility is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+        <h4 class="th-modal_title" id="myModalLabel">Create Question</h4>
+      </div>
+      <div class="th-modal_body">
+        <span class="form-field">
+        	<label for="questionTitle">Title:</label><input tabindex="0" id="questionTitle" type="text" placeholder="Question 1"  data-toggle="tooltip" data-placement="right" title="here is a tip">
+    	</span>
+    	 <span class="form-field">
+        	<label for="questionDescription">Question:</label><textarea id="textarea1" class="materialize-textarea"  id="questionDescription" type="text" placeholder="Enter your question"></textarea>
+    	</span>
+    	<div class="th-modal_section">
+    		<h5 class="th-modal_section-header">Multiple Choice Options</h5>
+    		
+    		<div class="q-answer">
+			<div class="q-answer_item">
+				<span class="q-answer_item-label">A</span>
+				<div class="q-answer_item-description">
+					<span class="form-field"><input id="answerA" type="text" placeholder="Description"></span>
+				</div>
+				<span class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
+				<span class="q-answer_item-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+			</div>
+		
+		
+			<div class="q-answer_item">
+				<span class="q-answer_item-label">B</span>
+				<div class="q-answer_item-description"><span class="form-field"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
+				<span class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
+				<span class="q-answer_item-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+			</div>
+	
+		</div>
+		<button class="btn btn--icon-text primary is-first"><i class="icon-add-circle"></i>Add Another</button>
+      </div>
+      <div class="th-modal_section">
+    		<h5 class="th-modal_section-header">Some other options</h5>
+    	</div>
+      
+    </div>
+    <div class="th-modal_footer">
+        <button type="button" class="btn btn--default" data-dismiss="modal">back</button>
+        <button type="button" class="btn btn--raised primary is-last">Save</button>
+      </div>
+  </div>
+</div>
+</body>
+</html>
