@@ -2645,6 +2645,10 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
   list-style-type: none;
   padding: 0;
   margin: 0; }
+  .list--folders.l-constrained {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto; }
 
 .list--folders_item {
   padding: 10px;

@@ -204,7 +204,16 @@
 	list-style-type:none;
 	padding:0;
 	margin:0;
+	&.l-constrained
+	{
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+		
+	}
 }
+
+
 
 .list--folders_item
 {
