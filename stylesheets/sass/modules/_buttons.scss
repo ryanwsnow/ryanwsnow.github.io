@@ -163,6 +163,7 @@
 		background:$primary-blue;
 		color:#fff;
 	}
+	
 
 	&:hover
 	{
@@ -170,6 +171,11 @@
 		color:$highlight;
 		@extend .z-depth-1-half;
 		@include transition(all 0.3s ease-in 0s);
+	}
+	&:hover.primary
+	{
+		background:$highlight;
+		color:#fff;
 	}
 
 

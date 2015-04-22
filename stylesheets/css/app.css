@@ -2519,6 +2519,9 @@ header {
     -webkit-transition: all 0.3s ease-in 0s;
     -moz-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s; }
+  .btn--round:hover.primary {
+    background: #0ac8f4;
+    color: #fff; }
   .btn--round:hover.danger {
     color: #fd194f; }
   .btn--round.is-active {
