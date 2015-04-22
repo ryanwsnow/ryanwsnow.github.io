@@ -142,6 +142,8 @@
 .btn--round
 {
 	@extend %button-base;
+	@extend .z-depth-2;
+	background:#ffffff;
 	border-radius:50%;
 	height:52px;
 	width:52px;
@@ -150,8 +152,45 @@
 	line-height:52px;
 	color:$text-light-grey;
 	z-index:5;
+	&.large
+	{
+		height:72px;
+		width:72px;
+	}
+
+	&.primary
+	{
+		background:$primary-blue;
+		color:#fff;
+	}
+
+	&:hover
+	{
+		// background:$highlight;
+		color:$highlight;
+		@extend .z-depth-1-half;
+		@include transition(all 0.3s ease-in 0s);
+	}
 
 
+
+	&:hover.danger
+	{
+		color:$text-danger;
+	}
+
+	&.is-active
+	{
+		background:$highlight;
+		color:#fff;
+		@extend .z-depth-1;
+	}
+	&.is-active:hover
+	{
+		background:$highlight;
+		color:#fff;
+		@extend .z-depth-1;
+	}
 }
 
 
@@ -178,6 +217,7 @@
 		{
 			color:#fff;
 			background:$primary-blue-lighten1;
+
 		}
 
 	}

@@ -1,25 +1,12 @@
 
 
-
 $(document).ready(function(){
-	$(".list-row").click(function(){
-		$(this).toggleClass("is-active");
-	});
 
-	$( ".list-row" ).hover(
-  		function() {
-    			$( this ).addClass( "is-hovered" );
-  		}, function() {
-    			$( this ).removeClass( "is-hovered" );
-  	});
-});
-
-
-$(document).ready(function(){
-	$(".list_item--folder").click(function(){
-		console.log("clicked");
+	$(".list_item--folder").on("click",function(){
+		var $folder = $(this).parent(".list-row");
+		var $folderItems = $folder.find(".list--sub");
 		$(this).toggleClass("is-open");
-		$(this).parent(".list-row").children(".list--sub").toggleClass("is-hidden");
+		$folderItems.toggleClass("is-hidden");
 	});
 
 	$("input").focus(function() {
@@ -37,22 +24,37 @@ $(document).ready(function(){
 		  $(this).parent(".form-field").removeClass("is-focused");
 		});
 
+	$(".controlbar button").on("click",function(){
+
+		$(this).toggleClass("is-active");
+	});
+
+	// demo purposes
+
+	$(".hs").on({
+	    mouseenter: function () {
+	    	$(this).addClass("is-hovered");
+	        console.log("mouse in");
+	    },
+	    mouseleave: function () {
+	        console.log("mouse out");
+	        $(this).removeClass("is-hovered");
+	    }
+	});
+
+	$(".hitspot-middle").on("click",function(){
+		$(".present_header").toggleClass("hs-header");
+		$(".present_body").toggleClass("hs-body");
+		$(".controlbar").toggleClass("hs-controlbar");
+
+	});
+
+	$(".help").on("click",function(){
+		$(this).find("i").toggleClass("icon-help icon-close")
+		var $instructions = $(".instruction-hitspots");
+		$instructions.toggleClass("is-active");
+
+	});
+
 	
 });
-
-
-
-// $(document).ready(function() {
-// 	$( ".preview .icon-close" ).click(function() {
-// 	  $( ".l-section-preview-container" ).animate({
-// 	    width: "0%"
-	    
-// 	  }, {
-// 	    duration: 100,
-// 	    specialEasing: {
-// 	      width: "linear"
-// 	    }
-
-// 	  });
-// 	});
-// });
