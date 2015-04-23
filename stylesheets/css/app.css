@@ -2361,7 +2361,7 @@ header {
   height: 100%;
   position: relative; }
 
-.lobby_header, .courses_header, .course_header, .present_header, .content-list_header, .content-preview_header {
+.content-preview_header, .lobby_header, .courses_header, .course_header, .present_header, .content-list_header {
   position: absolute;
   top: 0;
   right: 0;
@@ -2893,47 +2893,65 @@ textarea.materialize-textarea {
   width: 160px;
   white-space: nowrap; }
 
-.lobby_header, .course_header, .present_header, .content-preview_header {
+.lobby_header, .course_header, .present_header {
   background: #435561;
   height: 120px;
   padding-top: 10px;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  z-index: 5; }
 
-.lobby_header_body, .course_header_body, .present_header_body, .content-preview_header_body {
+.content-preview_header_body, .lobby_header_body, .course_header_body, .present_header_body {
   float: left; }
 
-.lobby_header_title, .course_header_title, .present_header_title, .content-preview_header_title {
+.content-preview_header_title, .lobby_header_title, .course_header_title, .present_header_title {
   display: block;
   font-size: 18px;
   font-weight: 600;
   color: #a5b1bb; }
 
-.lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle, .content-preview_header_subtitle {
+.content-preview_header_subtitle, .lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle {
   display: block;
   font-size: 14px;
   color: #ffffff; }
 
-.lobby_header_action, .course_header_action, .present_header_action, .content-preview_header_action {
+.content-preview_header_action, .lobby_header_action, .course_header_action, .present_header_action {
   float: left; }
 
-.lobby_header_utility-bar, .course_header_utility-bar, .present_header_utility-bar, .content-preview_header_utility-bar {
+.content-preview_header_utility-bar, .lobby_header_utility-bar, .course_header_utility-bar, .present_header_utility-bar {
   float: right; }
 
-.lobby_header_footer, .course_header_footer, .present_header_footer, .content-preview_header_footer {
+.content-preview_header_footer, .lobby_header_footer, .course_header_footer, .present_header_footer {
   position: absolute;
   bottom: 0px;
   left: 52px; }
 
-.lobby_header .nav--tab_item.is-active, .course_header .nav--tab_item.is-active, .present_header .nav--tab_item.is-active, .content-preview_header .nav--tab_item.is-active {
+.lobby_header .nav--tab_item.is-active, .course_header .nav--tab_item.is-active, .present_header .nav--tab_item.is-active {
   color: #ffffff; }
 
 .content-preview_header {
   background: #ffffff;
-  height: 190px;
   padding-top: 10px;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  z-index: 2;
+  height: 190px;
+  border-bottom: 1px solid #d9dde1; }
+  .content-preview_header_body {
+    display: block;
+    width: 100%;
+    padding-left: 52px;
+    padding-top: 20px; }
+  .content-preview_header_title {
+    color: #435561; }
+  .content-preview_header_subtitle {
+    font-size: 14px;
+    color: #a5b1bb;
+    font-weight: 400; }
+  .content-preview_header_cta {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
 
 .lobby_body {
   padding-top: 120px; }
@@ -3089,32 +3107,12 @@ textarea.materialize-textarea {
   box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.17);
   z-index: 3;
   background: #f9f9f9; }
-  .content-preview_header {
-    height: 190px;
-    border-bottom: 1px solid #d9dde1;
-    z-index: 2; }
   .content-preview_body {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 190px;
     overflow-y: auto; }
-
-.content-preview_header_body {
-  display: block;
-  width: 100%;
-  padding-left: 52px;
-  padding-top: 20px; }
-.content-preview_header_title {
-  color: #435561; }
-.content-preview_header_subtitle {
-  font-size: 14px;
-  color: #a5b1bb;
-  font-weight: 400; }
-.content-preview_header_cta {
-  position: absolute;
-  bottom: 10px;
-  right: 10px; }
 
 .content-preview_body p {
   font-size: 14px; }
@@ -3145,6 +3143,7 @@ textarea.materialize-textarea {
   color: #199bfd; }
 
 .dropdown-content {
+  z-index: 100;
   background-color: #FFFFFF;
   margin: 0;
   display: none;

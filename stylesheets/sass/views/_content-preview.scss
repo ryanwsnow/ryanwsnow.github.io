@@ -15,11 +15,9 @@
 
 	&_header
 	{
-		@extend %baseLayout_header;
+		
 		@extend %header--secondary;
-		height:$preview-header-height;
-		border-bottom:1px solid #d9dde1;
-		z-index:2;
+		
 		
 	}
 
@@ -33,59 +31,47 @@
 		
 		overflow-y:auto;
 	}
-
-	
 	
 }
 
-//Header module
+//Header module 
 .content-preview_header
 {
-	@extend %header--primary;
 
 	&_body 
 	{
-		@extend %header--primary_body;
-		display:block;
-		width:100%;
-		padding-left:52px;
-		padding-top:20px;
+		@extend %header--secondary_body;
+	
 		
 	}
 	
 	&_action {
-		@extend %header--primary_action;
+		@extend %header--secondary_action;
 	}
 
 	&_title
 	{
-		@extend %header--primary_title;
-		color:$text-med-grey;
+		@extend %header--secondary_title;
+		
 
 	}
 	&_subtitle
 	{
-		@extend %header--primary_subtitle;
-		font-size:14px;
-		color:$light-grey;
-		font-weight:400;
+		@extend %header--secondary_subtitle;
+
 	}
 	&_utility-bar
 	{
-		@extend %header--primary_utility-bar;
+		@extend %header--secondary_utility-bar;
 	}
 	&_footer
 	{
-		@extend %header--primary_footer;
+		@extend %header--secondary_footer;
 	}
 	&_cta
 	{
-		position:absolute;
-		bottom:10px;
-		right:10px;
+		@extend %header--secondary_cta;
 	}
-	
-	
 
 }
 
