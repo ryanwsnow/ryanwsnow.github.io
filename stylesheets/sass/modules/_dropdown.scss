@@ -46,6 +46,7 @@
 
 .dropdown-content {
 
+ z-index:100; //dropdown menu's start at 100
   background-color: #FFFFFF;
   margin: 0;
   display: none;

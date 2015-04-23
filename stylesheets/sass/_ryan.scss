@@ -1,19 +1,19 @@
 
 .toolbar
 {
-
 	padding:$padding-default;
 	height:52px;
 	background:#f9f9f9;
 	border-bottom:1px solid #d9dde1;
+	&.is-active 
+	{
+		
+		background:#fff;
+	}
 
 }
 
-.toolbar--selected 
-{
-	@extend .toolbar;
-	background:#fff;
-}
+
 
 .toolbar_actions-primary
 {

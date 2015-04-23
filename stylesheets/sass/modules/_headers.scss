@@ -5,6 +5,7 @@
 	background:$bg-med-grey;
 	height:$header--primary-height;
 	@include padding-crown($padding-default);
+	z-index:5;
 }
 
 
@@ -33,6 +34,7 @@
 %header--primary_action
 {
 	float:left;
+
 
 }
 
@@ -66,7 +68,57 @@
 
 %header--secondary
 {
+	@extend %baseLayout_header;
 	background:#ffffff;
-	height:190px;
+	
 	@include padding-crown($padding-default);
+	z-index:2;
+	height:$preview-header-height;
+	border-bottom:1px solid #d9dde1;
+
+
+	&_body 
+	{
+		@extend %header--primary_body;
+		display:block;
+		width:100%;
+		padding-left:52px;
+		padding-top:20px;
+		
+	}
+	
+	&_action {
+		@extend %header--primary_action;
+	}
+
+	&_title
+	{
+		@extend %header--primary_title;
+		color:$text-med-grey;
+
+	}
+	&_subtitle
+	{
+		@extend %header--primary_subtitle;
+		font-size:14px;
+		color:$light-grey;
+		font-weight:400;
+	}
+	&_utility-bar
+	{
+		@extend %header--primary_utility-bar;
+	}
+	&_footer
+	{
+		@extend %header--primary_footer;
+	}
+
+	&_cta
+	{
+		position:absolute;
+		bottom:10px;
+		right:10px;
+	}
+
 }
+

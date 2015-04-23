@@ -1,0 +1,25 @@
+.courses
+{
+	@extend %baseLayout;
+	
+
+	&-container 
+	{
+		@extend %baseLayout-container;
+	}
+
+	&_header
+	{
+		@extend %baseLayout_header;
+		height:52px;
+		
+	}
+
+	&_body 
+	{
+		@extend %baseLayout_body;
+		padding-top:52px;
+		overflow-y:auto;
+	}
+	
+}

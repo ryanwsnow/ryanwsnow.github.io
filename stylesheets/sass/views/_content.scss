@@ -1,17 +1,37 @@
-.content 
+.content-container
 {
-
+	
+	@extend %layout40-60;
 }
-
 
 .content-main
 {
 	@extend %layout40-60_column1;
-	background:$bg-light-grey;
-	
 }
+
+
+
 
 .content-side
 {
-	@extend %layout40-60_column2;	
+	@extend %layout40-60_column2;
+	
+}
+
+
+.content-list
+{
+	@extend %baseLayout;
+	
+	background:$bg-light-grey;
+	&_header
+	{
+		@extend %baseLayout_header;
+	}
+	&_body
+	{
+		@extend %baseLayout_body;
+		padding-top:52px;
+		overflow-y:auto;
+	}
 }

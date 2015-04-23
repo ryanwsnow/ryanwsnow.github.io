@@ -1,5 +1,5 @@
 /* --------->>> Layout: List -----------*/
-
+// ****! needs to be refactored ! ****//
 .list
 {
 	
@@ -26,7 +26,7 @@
 
 %list_item_column-base
 {
-	> div
+	> div, > span
 		{
 			vertical-align:middle;
 		}
@@ -163,35 +163,7 @@
 
 
 
-// .list--folders
-// {
-//   z-index:100; //dropdown menu's start at 100
-//   list-style-type:none;
-//   margin:0;
-//   padding:0 10px;
-  
-// }
-// .menu > li
-// {
-//   padding:10px;
-//   width:100%;
-// }
-// .menu  > li > a
-// {
-//   display:block;
-//   height:32px;
-//   line-height:32px;
- 
-//   text-align:left;
-//   color:$text-smed-grey;
-//    > i
-//     {
-//     line-height:32px;
-//     font-size:24px;
-//     float:left;
-//     padding-right:10px;
-//     }
-// }
+
 
 
 
@@ -201,42 +173,61 @@
 
 .list--folders
 {
-	list-style-type:none;
-	padding:0;
-	margin:0;
-	&.l-constrained
-	{
-		width:70%;
-		margin-left:auto;
-		margin-right:auto;
-		
-	}
+	@extend .list;
+	width:100%;
+	background:#ffffff;
+	border:5px solid $bg-light-grey;
+	border-radius:5px;
 }
 
+// refactor this crap
 
 
 .list--folders_item
 {
 	
-	
+	height:52px;
+	line-height:32px;
 	padding:10px;
 	display:block;
 	width:100%;
-	> i
+	border-bottom:1px solid $bg-light-grey;
+	> a > i
 	{
+
 		line-height:32px;
 		font-size:24px;
 		float:left;
 		padding-right:10px;
-		color:$text-light-grey;
+		color:$text-smed-grey;
 	}
-	> button 
+	> button, > a 
 	{
+		display:block;
 		width:100%;
 		text-align:left;
+		color:$text-smed-grey;
+	}
+
+	&.insert-here 
+	{
+		background:$bg-light-grey;
+		border-radius:3px;
+		border:1px dashed $text-smed-grey;
+		> a
+		{
+			text-align:center;
+		}
+
 	}
 
 }
 
+
+
+.list--folders_breadcrumb
+{
+	background:$bg-light-grey;
+}
 
 
