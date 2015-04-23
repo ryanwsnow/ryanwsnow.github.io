@@ -2647,17 +2647,19 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
 .list.is-cozy > li > .list_item, .is-cozy.list--folders > li > .list_item {
   height: 80px; }
 
-.list--folders.l-constrained {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto; }
+.list--folders {
+  width: 100%;
+  background: #ffffff;
+  border: 5px solid #f2f2f2;
+  border-radius: 5px; }
 
 .list--folders_item {
   height: 52px;
   line-height: 32px;
   padding: 10px;
   display: block;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2; }
   .list--folders_item > a > i {
     line-height: 32px;
     font-size: 24px;
@@ -2665,9 +2667,19 @@ a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primar
     padding-right: 10px;
     color: #708493; }
   .list--folders_item > button, .list--folders_item > a {
+    display: block;
     width: 100%;
     text-align: left;
     color: #708493; }
+  .list--folders_item.insert-here {
+    background: #f2f2f2;
+    border-radius: 3px;
+    border: 1px dashed #708493; }
+    .list--folders_item.insert-here > a {
+      text-align: center; }
+
+.list--folders_breadcrumb {
+  background: #f2f2f2; }
 
 .grid {
   width: 100%;
