@@ -120,6 +120,14 @@
 		color:$primary-blue;
 
 	}
+	&.is-first
+	{
+		padding-left:0;
+	}
+	&.is-last
+	{
+		padding-right:0;
+	}
 	
 }
 
