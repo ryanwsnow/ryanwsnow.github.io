@@ -2365,7 +2365,7 @@ header {
   height: 100%;
   position: relative; }
 
-.content-preview_header, .lobby_header, .courses_header, .course_header, .students-main_header, .students-card_header, .present_header, .content-list_header {
+.content-preview_header, .lobby_header, .courses_header, .course_header, .students-main_header, .students-main_header-card, .students-card_header, .present_header, .content-list_header {
   position: absolute;
   top: 0;
   right: 0;
@@ -2479,37 +2479,34 @@ a.nav--tab-card_item {
 .nav--tab-pill {
   padding-top: 0;
   position: relative;
-  box-sizing: border-box;
-  margin-top: 20px;
-  margin-left: 20px; }
+  box-sizing: border-box; }
   .nav--tab-pill > li {
     display: block;
     float: left; }
 
 a.nav--tab-pill_item {
   background: transparent;
-  height: 42px;
-  padding: 5px;
-  color: #0ac8f4;
+  height: 32px;
+  color: #199bfd;
   display: block;
   line-height: 32px;
-  border-top: 1px solid #0ac8f4;
-  border-bottom: 1px solid #0ac8f4;
-  border-right: 1px solid #0ac8f4;
+  border-top: 1px solid #199bfd;
+  border-bottom: 1px solid #199bfd;
+  border-right: 1px solid #199bfd;
   min-width: 120px;
   text-align: center; }
   a.nav--tab-pill_item.is-first {
-    border-left: 1px solid #0ac8f4;
+    border-left: 1px solid #199bfd;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px; }
   a.nav--tab-pill_item.is-last {
     margin-right: 0px;
-    border-right: 1px solid #0ac8f4;
+    border-right: 1px solid #199bfd;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; }
   a.nav--tab-pill_item.is-active {
     color: #fff;
-    background: #0ac8f4; }
+    background: #199bfd; }
 
 /* -----------------------------------*/
 /* ---->>> Buttons  -------------------*/
@@ -3041,7 +3038,7 @@ textarea.materialize-textarea {
   padding-top: 120px;
   min-width: 990px; }
 
-.students-main_header {
+.students-main_header-card {
   height: 120px;
   background: #f2f2f2; }
 .students-main_body {
