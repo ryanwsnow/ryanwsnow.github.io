@@ -27,8 +27,7 @@
 /* --->>> State Modifiers ---*/
 /* -- modifiers use sibling specifity --*/
 
-
-.nav--tab_item
+%baseNav--tab_item
 {
 	padding-left:10px;
 	padding-right:10px;
@@ -36,6 +35,12 @@
 	margin-right:10px;
 	padding-bottom:10px;
 	height:32px;
+
+}
+
+.nav--tab_item
+{
+	@extend %baseNav--tab_item;
 	text-transform:uppercase;
 	
 	&.is-last
@@ -62,5 +67,35 @@
 		}
 	}
 }
+
+.nav--tab-pill
+{
+	@extend .nav--tab;
+	padding-top:0;
+}
+
+.nav--tab-pill_item
+{
+	padding:10px;
+	background:$text-light-grey;
+	height:32px;
+
+	
+	&.is-first
+	{
+
+	}
+	&.is-last
+	{
+		margin-right:0px;
+	}
+	&.is-active
+	{
+		color: #ffffff;
+		border-bottom:2px solid #ffffff;	
+	}
+
+}
+
 
 

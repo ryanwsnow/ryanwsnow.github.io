@@ -2330,6 +2330,10 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0; }
 
+p {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0px;
@@ -2350,25 +2354,25 @@ header {
   position: relative; }
 
 /** End Base **/
-.lobby-container, .courses-container, .course-container, .present-container, .content-preview-container {
+.lobby-container, .courses-container, .course-container, .students-main-container, .present-container, .content-preview-container {
   position: relative;
   box-sizing: border-box;
   overflow: hidden; }
 
-.content-container, .lobby, .courses, .course, .present, .content-list, .content-preview {
+.content-container, .lobby, .courses, .course, .students-main, .present, .content-list, .content-preview {
   box-sizing: inherit;
   width: 100%;
   height: 100%;
   position: relative; }
 
-.content-preview_header, .lobby_header, .courses_header, .course_header, .present_header, .content-list_header {
+.content-preview_header, .lobby_header, .courses_header, .course_header, .students-main_header, .present_header, .content-list_header {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   z-index: 2; }
 
-.lobby_body, .courses_body, .course_body, .students-main, .present_body, .content-list_body, .content-preview_body {
+.lobby_body, .courses_body, .course_body, .students-main_body, .present_body, .content-list_body, .content-preview_body {
   height: 100%;
   width: 100%; }
 
@@ -2420,10 +2424,10 @@ header {
   padding: 0px; }
 
 /* --------->>> Navigation: tab ---------*/
-.nav--tab {
+.nav--tab, .nav--tab-pill {
   padding-top: 20px;
   height: 52px; }
-  .nav--tab > li {
+  .nav--tab > li, .nav--tab-pill > li {
     display: inline-block; }
 
 /* --->>> State Modifiers ---*/
@@ -2433,7 +2437,9 @@ header {
   padding-right: 10px;
   margin-right: 10px;
   padding-bottom: 10px;
-  height: 32px;
+  height: 32px; }
+
+.nav--tab_item {
   text-transform: uppercase; }
   .nav--tab_item.is-last {
     margin-right: 0px; }
@@ -2441,9 +2447,22 @@ header {
     color: #ffffff;
     border-bottom: 2px solid #ffffff; }
 
-.nav--tab.on-light .nav--tab_item.is-active {
+.nav--tab.on-light .nav--tab_item.is-active, .on-light.nav--tab-pill .nav--tab_item.is-active {
   color: #0ac8f4;
   border-bottom: 2px solid #0ac8f4; }
+
+.nav--tab-pill {
+  padding-top: 0; }
+
+.nav--tab-pill_item {
+  padding: 10px;
+  background: #a4b0ba;
+  height: 32px; }
+  .nav--tab-pill_item.is-last {
+    margin-right: 0px; }
+  .nav--tab-pill_item.is-active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff; }
 
 /* -----------------------------------*/
 /* ---->>> Buttons  -------------------*/
@@ -2780,9 +2799,6 @@ input, textarea {
   margin: 0;
   background: transparent; }
 
-input[type='checkbox'], input[type='radio'] {
-  margin-right: 10px; }
-
 textarea {
   resize: none; }
 
@@ -2978,8 +2994,19 @@ textarea.materialize-textarea {
   padding-top: 120px;
   min-width: 990px; }
 
+.students-main_header {
+  height: 52px; }
+.students-main_body {
+  padding-top: 52px;
+  overflow-y: auto; }
+
 .students-main {
   background: #f2f2f2; }
+
+.students-subnavi {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .present-container {
   background: #435561;
