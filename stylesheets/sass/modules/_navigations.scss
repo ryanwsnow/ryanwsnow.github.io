@@ -16,12 +16,23 @@
 	> li 
 	{
 		display:inline-block;
+		height:52px;
 	}
 	padding-top:20px;
 	height:52px;
 	
 }
 
+%baseNav--tab
+{
+	> li 
+	{
+		float:left;
+		display:block;
+		
+	}
+	
+}
 
 
 /* --->>> State Modifiers ---*/
@@ -68,18 +79,30 @@
 	}
 }
 
-.nav--tab-pill
+.nav--tab-card
 {
-	@extend .nav--tab;
-	padding-top:0;
+	@extend %baseNav--tab;
+	margin-top:5px;
+	position:relative;
+	
+		
+
+	
+
 }
 
-.nav--tab-pill_item
+a.nav--tab-card_item
 {
-	padding:10px;
-	background:$text-light-grey;
-	height:32px;
+	
+	background:transparent;
 
+	height:52px;
+	padding:10px;
+	color:$text-smed-grey;
+	display:block;
+	line-height:32px;
+	padding-left:20px;
+	padding-right:20px;
 	
 	&.is-first
 	{
@@ -91,11 +114,76 @@
 	}
 	&.is-active
 	{
-		color: #ffffff;
-		border-bottom:2px solid #ffffff;	
+		background:#fff;
+		color:$highlight;
+		@extend .z-depth-1;
+		border-radius:5px;
+			
 	}
 
 }
 
+.nav--tab-pill
+{
+	@extend .nav--tab;
+	padding-top:0;
+	position:relative;
+	box-sizing: border-box;
+	margin-top:20px;
+	margin-left:20px;
+	
+	
+
+	 > li
+	 {
+	 	display:block;
+	 	float:left;
+	 }
+
+}
+
+a.nav--tab-pill_item
+{
+	
+	background:transparent;
+	height:42px;
+	padding:5px;
+	color:$highlight;
+	display:block;
+	line-height:32px;
+	border-top:1px solid $highlight;
+	border-bottom:1px solid $highlight;
+	border-right:1px solid $highlight;
+	min-width:120px;
+	text-align:center;
+
+	
+	&.is-first
+	{
+		border-left:1px solid $highlight;
+		border-top-left-radius:5px;
+		border-bottom-left-radius:5px;
+
+
+	}
+	&.is-last
+	{
+		margin-right:0px;
+		border-right:1px solid $highlight;
+
+		
+		border-top-right-radius:5px;
+		border-bottom-right-radius:5px;
+	}
+	&.is-active
+	{
+		color:#fff;
+		background:$highlight;
+		
+		
+			
+	}
+
+}
 
 

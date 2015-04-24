@@ -11,17 +11,122 @@
 	&_header
 	{
 		@extend %baseLayout_header;
-		height:52px;
+		height:120px;
+		background:#f2f2f2;
+		// border-bottom:1px solid #d9dde1;
+		
 		
 	}
 
 	&_body 
 	{
 		@extend %baseLayout_body;
-		padding-top:52px;
+		padding-top:80px;
 		overflow-y:auto;
 	}
 	
+}
+
+.students-card
+{
+	@extend %baseLayout;
+	
+	z-index:100;
+	
+	
+	width:90%;
+	position:absolute;
+	top:70px;
+	bottom:20px;
+	left:50%;
+	transform: translate(-50%, 0);
+	
+
+	&-container 
+	{
+		@extend %baseLayout-container;
+	}
+
+	&_header
+	{
+		@extend %baseLayout_header;
+		height:52px;
+		padding-left:52px;
+		overflow-y:hidden;
+		
+		
+	}
+
+	&_body 
+	{
+		@extend %baseLayout_body;
+		margin-top:52px;
+		background:#fff;
+		border-radius:5px;
+		@extend .z-depth-1;
+		overflow-y:auto;
+	}
+}
+
+
+
+.student-main_header
+{
+	
+	.form-field
+	{
+		font-size:18px;
+		font-weight:600;
+
+		label i
+		{
+			font-size:24px;
+		}
+	}
+
+}
+
+.students-main_header
+{
+
+	&_body 
+	{
+		@extend %header--secondary_body;
+		padding-right:52px;
+
+	
+		
+	}
+	
+	&_action {
+		@extend %header--secondary_action;
+	}
+
+	&_title
+	{
+		@extend %header--secondary_title;
+		
+
+	}
+	&_subtitle
+	{
+		@extend %header--secondary_subtitle;
+
+	}
+	&_utility-bar
+	{
+		@extend %header--secondary_utility-bar;
+	}
+	&_footer
+	{
+		@extend %header--secondary_footer;
+		
+	}
+	&_cta
+	{
+		@extend %header--secondary_cta;
+	}
+
 }
 
 
@@ -35,7 +140,8 @@
 
 .students-subnavi
 {
-	width:600px;
-	margin-left:auto;
-	margin-right:auto;
+	
+	padding:10px;
+	width:100%;
+
 }
