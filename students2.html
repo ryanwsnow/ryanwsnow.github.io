@@ -55,17 +55,28 @@
 
 	<div class="course_body">
 		<div class="students-main">
-			<div class="students-main_header">
-				<div class="toolbar">
+			<div class="students-main_header-card">
+				<div class="students-main_header_body">
+					<div class="students-main_header_title">Student Manager</div>
+				</div>
+			
+			</div>
+			<div class="students-card">
+				<div class="students-card_header">
 					
-					<span class="toolbar_actions-primary">
-							<button class=" btn btn--raised primary is-first" >Invite</button>
-							
-							<button class="btn--plain">Filter</button>
-						</span>
-					
-						<span class="toolbar_actions-utility">
-												
+
+						<ul class="nav nav--tab-card left">
+							<li><a href="course.html" class="nav--tab-card_item is-active is-first">Enrolled</a></li>
+							<li><a href="#" class="nav--tab-card_item ">Pending</a></li>
+							<li><a href="#" class="nav--tab-card_item  is-last ">Roster</a></li> 
+						</ul>
+						
+					<button class="btn--raised primary right">Invite</button>
+				</div>
+				<div class="students-card_body">
+					<div class="is-hidden">
+
+						
 						<ul class="nav nav--tab-pill">
 							<li><a href="course.html" class="nav--tab-pill_item is-active is-first">Enrolled</a></li>
 							<li><a href="#" class="nav--tab-pill_item ">Pending</a></li>
@@ -73,22 +84,8 @@
 						</ul>
 						
 					</div>
-						</span>
-
-					</div>
-					<div id="toolbarSelected" class="toolbar is-active is-hidden">
-						<span class="badge">1</span> selected
-						<span class="toolbar_actions-utility">
-							<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
-							<button class="btn--plain ">Copy</button>
-							<button class="btn--plain ">Assign</button>
-							<button class="btn--plain danger is-last">Delete</button>
-						</span>
-
-					</div>
-			
+				</div>
 			</div>
-			
 			<div class="students-main_body">
 				
 				

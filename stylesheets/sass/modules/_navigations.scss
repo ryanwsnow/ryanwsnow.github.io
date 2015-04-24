@@ -129,8 +129,7 @@ a.nav--tab-card_item
 	padding-top:0;
 	position:relative;
 	box-sizing: border-box;
-	margin-top:20px;
-	margin-left:20px;
+	
 	
 	
 
@@ -146,21 +145,21 @@ a.nav--tab-pill_item
 {
 	
 	background:transparent;
-	height:42px;
-	padding:5px;
-	color:$highlight;
+	height:32px;
+	
+	color:$primary-blue;
 	display:block;
 	line-height:32px;
-	border-top:1px solid $highlight;
-	border-bottom:1px solid $highlight;
-	border-right:1px solid $highlight;
+	border-top:1px solid $primary-blue;
+	border-bottom:1px solid $primary-blue;
+	border-right:1px solid $primary-blue;
 	min-width:120px;
 	text-align:center;
 
 	
 	&.is-first
 	{
-		border-left:1px solid $highlight;
+		border-left:1px solid $primary-blue;
 		border-top-left-radius:5px;
 		border-bottom-left-radius:5px;
 
@@ -169,7 +168,7 @@ a.nav--tab-pill_item
 	&.is-last
 	{
 		margin-right:0px;
-		border-right:1px solid $highlight;
+		border-right:1px solid $primary-blue;
 
 		
 		border-top-right-radius:5px;
@@ -178,7 +177,7 @@ a.nav--tab-pill_item
 	&.is-active
 	{
 		color:#fff;
-		background:$highlight;
+		background:$primary-blue;
 		
 		
 			
