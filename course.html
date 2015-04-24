@@ -36,10 +36,10 @@
 					<i class="icon-settings"></i>
 				</button>
 			    	<ul   id="dropdown1" class="dropdown-content menu">
-				     <li><a href="#!">Something here</a></li>
-				    <li><a href="#!">Something there that is super long</a></li>
+				     <li><a class="btn--plain" href="#!">Something here</a></li>
+				    <li><a class="btn--plain" href="#!">Something there that is super long</a></li>
 				    
-				    <li><a href="#!">blah blah</a></li>
+				    <li><a class="btn--plain" href="#!">blah blah</a></li>
 			    	</ul>		
 		</div>
 		<div class="course_header_footer">
@@ -62,9 +62,9 @@
 						<span class="toolbar_actions-primary">
 							<button class="dropdown-button btn btn--raised primary is-first" data-constrainwidth="false" data-activates="dropdown3">Create</button>
 							<ul   id="dropdown3" class="dropdown-content menu menu--with-icons">
-							     <li><a class="is-selected" data-toggle="modal" data-target="#modalCreate" href="#!"><i class="icon-textsms"></i>Question (i Work)</a></li>
-							    <li><a class="" href="#!">Slide</a></li>
-							     <li><a class=""href="#!">Discussion</a></li>
+							     <li><a class="btn--icon-text is-selected" data-toggle="modal" data-target="#modalCreate" href="#!"><i class="icon-textsms"></i>Question (i Work)</a></li>
+							    <li><a class="btn--plain" href="#!">Slide</a></li>
+							     <li><a class="btn--plain"href="#!">Discussion</a></li>
 						    	</ul>
 							<button class="btn--plain">Filter</button>
 						</span>
@@ -92,7 +92,8 @@
 						<li class="list-row">
 							<div class="list_item list_item--folder">
 								<div class="list_item_column-checkbox ">
-									<input type="checkbox" name="Question 1" value="selected">
+									
+									<input type="checkbox"  class="filled-in" id="filled-in-box q1" name="Question 1" value="selected"><label for="filled-in-box q1"></label>	
 								</div>
 								<div class="list_item_column-icon">
 									<i class="icon-folder"></i>
@@ -109,7 +110,8 @@
 									<li class="list-row">
 										<div class="list_item">
 											<div class="list_item_column-checkbox ">
-												<input type="checkbox" name="Question 1" value="selected">
+												
+									<input type="checkbox"  class="filled-in" id="filled-in-box q2" name="Question 1" value="selected"><label for="filled-in-box q2"></label>	
 											</div>
 											<div class="list_item_column-icon">
 												<i class="icon-textsms"></i>
@@ -131,7 +133,8 @@
 				  		<li class="list-row">
 							<div class="list_item">
 								<div class="list_item_column-checkbox ">
-									<input type="checkbox" name="Question 1" value="selected">
+									
+									<input type="checkbox"  class="filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
 								</div>
 								<div class="list_item_column-icon">
 									<i class="icon-textsms"></i>
@@ -189,8 +192,8 @@
 									
 									<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
 									<ul   id="dropdown2" class="dropdown-content menu">
-									     <li><a href="#!">Homework</a></li>
-									    <li><a href="#!">Review</a></li>
+									     <li><a class="btn--plain" href="#!">Homework</a></li>
+									    <li><a class="btn--plain" href="#!">Review</a></li>
 									    
 									    
 								    	</ul>
@@ -315,7 +318,7 @@
     </div>
     <div class="th-modal_footer">
         <button type="button" class="btn btn--default" data-dismiss="modal">back</button>
-        <button type="button" class="btn btn--raised primary is-last">Save</button>
+        <button type="button" class="btn btn--default primary is-last">Save</button>
       </div>
   </div>
 </div>
@@ -331,29 +334,29 @@
         <h4 class="th-modal_title" id="myModalLabel">Move to...</h4>
       </div>
       <div class="th-modal_body">
-   	<div class="th-modal_section">
+   	
    		<!-- <h5 class="th-modal_section-header">Choose a folder</h5> -->
 	      	<ol class="list--folders ">
-	      		<li class="list--folders_item list--folders_breadcrumb"><a class="" href="#!"><i class="icon-arrow-back"></i>Week 1</a>
+	      		<li class="list--folders_item-breadcrumb"><a class="btn--icon-text" href="#!"> <i class="icon-arrow-back"></i>Week 1</a>
 	    
 	      	</li>
-	      		<!-- <li class="list--folders_item "><a href="#!"><span class="badge">6</span></i> Selected item(s) Place here</a> -->
+	<!--       		<li class="list--folders_item "><a href="#!"><span class="badge">6</span></i> Selected item(s) Place here</a> -->
 	
 
-	      		<li class="list--folders_item"><button class="btn--icon-text is-first"><i class="icon-folder"></i>Homework</button></li>
-	      		<li class="list--folders_item"><a href="#"><i class="icon-folder"></i>Review</a></li>
-	      		<li class="list--folders_item insert-here"><a href="#!">Move here</a></li>
+	      		<li class="list--folders_item"><button class="btn--icon-text"><i class="icon-folder"></i>Homework</button></li>
+	      		<li class="list--folders_item"><a class="btn--icon-text"href="#"><i class="icon-folder"></i>Review</a></li>
+	      		<li class="list--folders_item-placeholder"><a  class="btn--icon-text primary" href="#!"><i class="icon-keyboard-tab"></i>Move here</a></li>
 	      		
 
 
 	      	</ol>
-	</div>
+	
         
       
     </div>
     <div class="th-modal_footer">
         <button type="button" class="btn btn--default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn--raised primary is-last">Move</button>
+        <button type="button" class="btn btn--default primary is-last">Move</button>
       </div>
   </div>
 </div>

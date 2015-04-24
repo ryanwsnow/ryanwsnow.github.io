@@ -1,12 +1,26 @@
 /* --------->>> Layout: List -----------*/
 // ****! needs to be refactored ! ****//
-.list
+
+%baseList
 {
-	
 	list-style-type:none;
+	width:100%;
 	padding:0;
 	margin:0;
-	
+
+	> li 
+	{
+		width:100%;
+	}
+}
+
+
+
+
+
+.list
+{
+  @extend %baseList;
 }
 
 .list--sub
@@ -163,71 +177,72 @@
 
 
 
-
-
-
-
-
-
-
-
-.list--folders
+.list--menu
 {
-	@extend .list;
-	width:100%;
-	background:#ffffff;
-	border:5px solid $bg-light-grey;
-	border-radius:5px;
-}
-
-// refactor this crap
-
-
-.list--folders_item
-{
-	
-	height:52px;
-	line-height:32px;
-	padding:10px;
-	display:block;
-	width:100%;
-	border-bottom:1px solid $bg-light-grey;
-	> a > i
+	@extend %baseList;
+	> li 
 	{
-
-		line-height:32px;
-		font-size:24px;
-		float:left;
-		padding-right:10px;
-		color:$text-smed-grey;
-	}
-	> button, > a 
+		height:52px;
+		padding: 
+		{
+			top:10px;
+			bottom:10px;
+		}
+	  }
+	> li > a, > li > button
 	{
 		display:block;
 		width:100%;
 		text-align:left;
 		color:$text-smed-grey;
 	}
+}
 
-	&.insert-here 
+
+
+.list--folders
+{
+	@extend .list--menu;
+	
+	background:$bg-mlight-grey;
+	
+	border-radius:5px;
+	padding:10px;
+
+	&_item-breadcrumb
 	{
-		background:$bg-light-grey;
-		border-radius:3px;
-		border:1px dashed $text-smed-grey;
-		> a
-		{
-			text-align:center;
-		}
-
+		background:$bg-mlight-grey;
 	}
 
+	&_item 
+	{
+		background:#ffffff;
+		margin-top:5px;
+		border-bottom:
+		{
+			width:1px;
+			style:solid;
+			color:$bg-mlight-grey;
+		}
+	}
+	&_item-placeholder
+	{
+		margin-top:5px;
+		border:
+			{
+				radius:3px;
+				width:1px;
+				style:dashed;
+				color:$primary-blue;
+			}
+		
+	}
 }
 
 
 
-.list--folders_breadcrumb
-{
-	background:$bg-light-grey;
-}
+
+
+
 
 
