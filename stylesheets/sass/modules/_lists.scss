@@ -91,7 +91,7 @@
 	&_column-checkbox
 	{
 		@extend %list_item_column-base;
-		width:40px;
+		width:32px;
 		> input
 		{
 			display:block;
@@ -105,7 +105,7 @@
 	&_column-icon
 	{
 		@extend %list_item_column-base;
-		width:40px;
+		width:32px;
 		> i 
 		{
 			color:$text-light-grey;
@@ -156,7 +156,7 @@
 	&_column-expandable
 	{
 		@extend %list_item_column-base;
-		width:40px;
+		width:32px;
 	}
 }
 
