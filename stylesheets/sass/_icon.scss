@@ -23,6 +23,11 @@ i {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+i[class^="icon-"] {
+    line-height:32px;
+	font-size:24px;;
+}
+
 .icon-3d-rotation:before {
 	content: "\e600";
 }

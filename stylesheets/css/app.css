@@ -46,6 +46,10 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+i[class^="icon-"] {
+  line-height: 32px;
+  font-size: 24px; }
+
 .icon-3d-rotation:before {
   content: "\e600"; }
 
@@ -2386,6 +2390,11 @@ header {
   width: 60%;
   height: 100%; }
 
+.nav, .list, .list--menu, .list--folders, .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
 .inline-block {
   display: inline-block; }
 
@@ -2418,31 +2427,23 @@ header {
   display: none; }
 
 /* --------->>> Navigation: Basic ---------*/
-.nav {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px; }
-
-/* --------->>> Navigation: tab ---------*/
-.nav--tab, .nav--tab-pill {
-  padding-top: 20px;
-  height: 52px; }
-  .nav--tab > li, .nav--tab-pill > li {
-    display: inline-block;
-    height: 52px; }
-
-.nav--tab-card > li {
+.nav--tab-card > li, .nav--tab-pill > li {
   float: left;
   display: block; }
 
-/* --->>> State Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
 .nav--tab_item {
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 10px;
   padding-bottom: 10px;
   height: 32px; }
+
+/* --------->>> Navigation: tab ---------*/
+.nav--tab {
+  padding-top: 20px;
+  height: 52px; }
+  .nav--tab > li {
+    float: left; }
 
 .nav--tab_item {
   text-transform: uppercase; }
@@ -2452,7 +2453,7 @@ header {
     color: #ffffff;
     border-bottom: 2px solid #ffffff; }
 
-.nav--tab.on-light .nav--tab_item.is-active, .on-light.nav--tab-pill .nav--tab_item.is-active {
+.nav--tab.on-light .nav--tab_item.is-active {
   color: #0ac8f4;
   border-bottom: 2px solid #0ac8f4; }
 
@@ -2476,24 +2477,16 @@ a.nav--tab-card_item {
     color: #0ac8f4;
     border-radius: 5px; }
 
-.nav--tab-pill {
-  padding-top: 0;
-  position: relative;
-  box-sizing: border-box; }
-  .nav--tab-pill > li {
-    display: block;
-    float: left; }
-
 a.nav--tab-pill_item {
   background: transparent;
   height: 32px;
+  min-width: 120px;
   color: #199bfd;
   display: block;
   line-height: 32px;
   border-top: 1px solid #199bfd;
   border-bottom: 1px solid #199bfd;
   border-right: 1px solid #199bfd;
-  min-width: 120px;
   text-align: center; }
   a.nav--tab-pill_item.is-first {
     border-left: 1px solid #199bfd;
@@ -2508,13 +2501,7 @@ a.nav--tab-pill_item {
     color: #fff;
     background: #199bfd; }
 
-/* -----------------------------------*/
-/* ---->>> Buttons  -------------------*/
-/* -----------------------------------*/
-/* --------->>> Button: Basic ---------*/
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-.btn--plain, .btn--utility, .btn--default, .btn--icon-text, .btn--icon-utility, .btn--round, .btn--raised {
+.btn--plain, .btn--utility, .btn--default, .btn--icon-utility {
   display: inline-block;
   height: 32px;
   padding-left: 10px;
@@ -2524,48 +2511,35 @@ a.nav--tab-pill_item {
   line-height: 32px;
   font-size: 14px;
   color: #708493; }
-  .last.btn--plain, .last.btn--utility, .last.btn--default, .last.btn--icon-text, .last.btn--icon-utility, .last.btn--round, .last.btn--raised {
-    margin-right: 0; }
+  .is-first.btn--plain, .is-first.btn--utility, .is-first.btn--default, .is-first.btn--icon-utility {
+    margin-left: 0;
+    padding-left: 0; }
+  .is-last.btn--plain, .is-last.btn--utility, .is-last.btn--default, .is-last.btn--icon-utility {
+    margin-right: 0;
+    padding-right: 0; }
+  .btn--plain:hover.danger, .btn--utility:hover.danger, .btn--default:hover.danger, .btn--icon-utility:hover.danger {
+    color: #fd194f; }
+  .primary.btn--plain, .primary.btn--utility, .primary.btn--default, .primary.btn--icon-utility {
+    color: #199bfd; }
+  .is-disabled.btn--plain, .is-disabled.btn--utility, .is-disabled.btn--default, .is-disabled.btn--icon-utility {
+    color: #d9dde1; }
 
-.btn--plain:hover.danger {
-  color: #fd194f; }
+.with-icon.btn--plain > i, .with-icon.btn--utility > i {
+  float: left;
+  padding-right: 10px; }
+.with-icon-right.btn--plain > i, .with-icon-right.btn--utility > i {
+  float: right;
+  padding-left: 10px; }
 
 .btn--utility {
   color: #a4b0ba; }
-  .btn--utility:hover.danger {
-    color: #fd194f; }
-  .btn--utility.is-disabled {
-    color: #d9dde1; }
 
 .btn--default {
   text-transform: uppercase; }
-  .btn--default.primary {
-    color: #199bfd; }
-  .btn--default.danger {
-    color: #fd194f; }
-  .btn--default.is-disabled {
-    color: #d9dde1; }
-
-.btn--icon-text {
-  color: #a4b0ba; }
-  .btn--icon-text > i {
-    line-height: 32px;
-    font-size: 24px;
-    float: left;
-    padding-right: 10px; }
-  .btn--icon-text.primary {
-    color: #199bfd; }
-  .btn--icon-text.is-first {
-    padding-left: 0; }
-  .btn--icon-text.is-last {
-    padding-right: 0; }
 
 .btn--icon-utility {
   margin: 0px;
-  font-size: 24px;
   color: #a4b0ba; }
-  .btn--icon-utility:hover.danger {
-    color: #fd194f; }
   .btn--icon-utility.is-first {
     padding-left: 0; }
   .btn--icon-utility.is-last {
@@ -2576,10 +2550,13 @@ a.nav--tab-pill_item {
   border-radius: 50%;
   height: 52px;
   width: 52px;
+  margin-right: 20px;
   font-size: 24px;
   line-height: 52px;
   color: #a4b0ba;
   z-index: 5; }
+  .btn--round.is-last {
+    margin-right: 0; }
   .btn--round.large {
     height: 72px;
     width: 72px; }
@@ -2594,29 +2571,31 @@ a.nav--tab-pill_item {
   .btn--round:hover.primary {
     background: #0ac8f4;
     color: #fff; }
-  .btn--round:hover.danger {
-    color: #fd194f; }
   .btn--round.is-active {
     background: #0ac8f4;
     color: #fff; }
   .btn--round.is-active:hover {
     background: #0ac8f4;
     color: #fff; }
+  .btn--round:hover.is-danger {
+    color: #fd194f; }
 
 .btn--raised {
-  background: #f2f2f2;
+  background: #f0f0f0;
   color: #708493;
   min-width: 100px;
+  height: 30px;
+  margin-right: 10px;
   border-radius: 2px;
-  -webkit-box-shadow: 0px 3px 0px 0px #a4b0ba;
-  -moz-box-shadow: 0px 3px 0px 0px #a4b0ba;
-  box-shadow: 0px 3px 0px 0px #a4b0ba; }
+  -webkit-box-shadow: 0px 2px 0px 0px #a4b0ba;
+  -moz-box-shadow: 0px 2px 0px 0px #a4b0ba;
+  box-shadow: 0px 2px 0px 0px #a4b0ba; }
   .btn--raised.primary {
     background: #199bfd;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #1f80c9;
-    -moz-box-shadow: 0px 3px 0px 0px #1f80c9;
-    box-shadow: 0px 3px 0px 0px #1f80c9; }
+    -webkit-box-shadow: 0px 2px 0px 0px #1f80c9;
+    -moz-box-shadow: 0px 2px 0px 0px #1f80c9;
+    box-shadow: 0px 2px 0px 0px #1f80c9; }
     .btn--raised.primary:hover {
       color: #fff;
       background: #42b5fc; }
@@ -2629,17 +2608,13 @@ a.nav--tab-pill_item {
     background: #0ac8f4;
     color: #fff;
     box-shadow: none; }
-
-a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primary:active {
-  color: #fff; }
+  .btn--raised.is-last {
+    margin-right: 0; }
 
 /** End Buttons **/
 /* --------->>> Layout: List -----------*/
 .list, .list--menu, .list--folders, .menu {
-  list-style-type: none;
-  width: 100%;
-  padding: 0;
-  margin: 0; }
+  width: 100%; }
   .list > li, .list--menu > li, .list--folders > li, .menu > li {
     width: 100%; }
 
@@ -3045,6 +3020,18 @@ textarea.materialize-textarea {
   padding-top: 80px;
   overflow-y: auto; }
 
+.student-main_header .form-field {
+  font-size: 18px;
+  font-weight: 600; }
+  .student-main_header .form-field label i {
+    font-size: 24px; }
+
+.students-main_header_body {
+  padding-right: 52px; }
+
+.students-main {
+  background: #f2f2f2; }
+
 .students-card {
   z-index: 100;
   width: 90%;
@@ -3062,22 +3049,6 @@ textarea.materialize-textarea {
     background: #fff;
     border-radius: 5px;
     overflow-y: auto; }
-
-.student-main_header .form-field {
-  font-size: 18px;
-  font-weight: 600; }
-  .student-main_header .form-field label i {
-    font-size: 24px; }
-
-.students-main_header_body {
-  padding-right: 52px; }
-
-.students-main {
-  background: #f2f2f2; }
-
-.students-subnavi {
-  padding: 10px;
-  width: 100%; }
 
 .present-container {
   background: #435561;

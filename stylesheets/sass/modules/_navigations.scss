@@ -1,27 +1,6 @@
 /* --------->>> Navigation: Basic ---------*/
 
-.nav
-{
-	list-style-type:none;
-	margin:0px;
-	padding:0px;
-}
 
-
-
-/* --------->>> Navigation: tab ---------*/
-
-.nav--tab
-{
-	> li 
-	{
-		display:inline-block;
-		height:52px;
-	}
-	padding-top:20px;
-	height:52px;
-	
-}
 
 %baseNav--tab
 {
@@ -35,8 +14,7 @@
 }
 
 
-/* --->>> State Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
+
 
 %baseNav--tab_item
 {
@@ -48,6 +26,30 @@
 	height:32px;
 
 }
+
+
+
+.nav
+{
+	@extend %clearListstyle;
+}
+
+
+
+/* --------->>> Navigation: tab ---------*/
+
+.nav--tab
+{
+	> li 
+	{
+		float:left;
+		
+	}
+	padding-top:20px;
+	height:52px;
+	
+}
+
 
 .nav--tab_item
 {
@@ -84,10 +86,6 @@
 	@extend %baseNav--tab;
 	margin-top:5px;
 	position:relative;
-	
-		
-
-	
 
 }
 
@@ -125,20 +123,7 @@ a.nav--tab-card_item
 
 .nav--tab-pill
 {
-	@extend .nav--tab;
-	padding-top:0;
-	position:relative;
-	box-sizing: border-box;
-	
-	
-	
-
-	 > li
-	 {
-	 	display:block;
-	 	float:left;
-	 }
-
+	@extend %baseNav--tab;
 }
 
 a.nav--tab-pill_item
@@ -146,14 +131,14 @@ a.nav--tab-pill_item
 	
 	background:transparent;
 	height:32px;
-	
+	min-width:120px;
 	color:$primary-blue;
 	display:block;
 	line-height:32px;
 	border-top:1px solid $primary-blue;
 	border-bottom:1px solid $primary-blue;
 	border-right:1px solid $primary-blue;
-	min-width:120px;
+	
 	text-align:center;
 
 	
@@ -178,9 +163,6 @@ a.nav--tab-pill_item
 	{
 		color:#fff;
 		background:$primary-blue;
-		
-		
-			
 	}
 
 }

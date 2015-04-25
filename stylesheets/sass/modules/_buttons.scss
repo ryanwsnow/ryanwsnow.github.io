@@ -1,36 +1,7 @@
-/* -----------------------------------*/
-/* ---->>> Buttons  -------------------*/
-/* -----------------------------------*/
 
-/* --------->>> Button: Basic ---------*/
-
-
-
-
-
-/* --->>> Modifiers ---*/
-/* -- modifiers use sibling specifity --*/
-
-
-// @mixin buttonModifiers($button-color:$text-smed-grey)
-// {
-// 	color:$button-color;
-
-	
-// 	&:hover, &.is-hovered
-// 	{
-// 		color: adjust-color($button-color, $lightness: 35%);
-// 		@include transition(all 0.5s ease-in-out);
-// 	}
-
-// }
-
-
-
-%button-base
+%baseButton
 {
-    
-   
+
     display:inline-block;
     height:$btn-height;
     padding:
@@ -46,103 +17,93 @@
     line-height:$btn-height;
     font-size:14px;
     color:$text-smed-grey;
+    &.is-first 
+    {
+    	margin-left:0;
+    	padding-left:0;
+    
+    }
 
-    &.last 
+    &.is-last 
 	{
 		margin-right:0;
+		padding-right:0;
+	
 	}
-}
-
-.btn--plain
-{
-	@extend %button-base;
-	&:hover.danger
-	{
-		color:$text-danger;
-	}
-}
-
-.btn--utility
-{
-	@extend %button-base;
-	color:$text-light-grey;
-
-
 	&:hover.danger 
 	{
 		color:$text-danger;
 	}
-
-	&.is-disabled
-	{
-		color:$text-disabled;
-	}
-}
-
-.btn--default
-{
-	@extend %button-base;
-	text-transform:uppercase;
-	
-
 	&.primary 
 	{
 		color:$primary-blue;
 	}
 
-	&.danger 
-	{
-		color:$text-danger;
-	}
-
 	&.is-disabled
 	{
 		color:$text-disabled;
 	}
 
+
 }
 
-.btn--icon-text
+%baseButton-with-icon 
 {
-	@extend %button-base;
+	&.with-icon
+	{
+		> i
+			{
+
+			float:left;
+			padding-right:10px;
+			}
+
+	}
+	&.with-icon-right
+	{
+		> i
+			{
+
+			float:right;
+			padding-left:10px;
+			}
+
+	}
+}
+
+.btn--plain
+{
+	@extend %baseButton;
+	@extend %baseButton-with-icon;
+
+}
+
+.btn--utility
+{
+	@extend %baseButton;
+	@extend %baseButton-with-icon;
 	color:$text-light-grey;
 
-	> i
-	{
-	line-height:32px;
-	font-size:24px;
-	float:left;
-	padding-right:10px;
-	}
-	
-	&.primary
-	{
-		color:$primary-blue;
-
-	}
-	&.is-first
-	{
-		padding-left:0;
-	}
-	&.is-last
-	{
-		padding-right:0;
-	}
-	
 }
+
+.btn--default
+{
+	@extend %baseButton;
+	text-transform:uppercase;
+
+}
+
+
 
 
 .btn--icon-utility
 {
-	@extend %button-base;
+	
+	@extend %baseButton;
 	margin:0px;
-	font-size:24px;
+	
 	color:$text-light-grey;
 
-	&:hover.danger 
-	{
-		color:$text-danger;
-	}
 
 	&.is-first
 	{
@@ -156,17 +117,21 @@
 
 .btn--round
 {
-	@extend %button-base;
+	
 	@extend .z-depth-2;
 	background:#ffffff;
 	border-radius:50%;
 	height:52px;
 	width:52px;
-
+	margin-right:20px;
 	font-size:24px;
 	line-height:52px;
 	color:$text-light-grey;
 	z-index:5;
+	&.is-last 
+	{
+		margin-right:0;
+	}
 	&.large
 	{
 		height:72px;
@@ -187,6 +152,8 @@
 		@extend .z-depth-1-half;
 		@include transition(all 0.3s ease-in 0s);
 	}
+
+
 	&:hover.primary
 	{
 		background:$highlight;
@@ -195,10 +162,6 @@
 
 
 
-	&:hover.danger
-	{
-		color:$text-danger;
-	}
 
 	&.is-active
 	{
@@ -212,27 +175,30 @@
 		color:#fff;
 		@extend .z-depth-1;
 	}
+	&:hover.is-danger 
+	{
+		color:$text-danger;
+	}
 }
 
 
 .btn--raised
 {
-	@extend %button-base;
-	background:$bg-light-grey;
+	// @extend %baseButton;
+	background:$bg-mlight-grey;
 	color:$text-smed-grey;
 	min-width:100px;
+	height:30px;
+	margin-right:10px;
 	border-radius:2px;
-	@include box-shadow(0px 3px 0px 0px rgba(164,176,186,1));
+	@include box-shadow(0px 2px 0px 0px rgba(164,176,186,1));
 	
 	&.primary
 	{
-		
-		
-		
-		
+
 		background:$primary-blue;
 		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(31,128,201,1));
+		@include box-shadow(0px 2px 0px 0px rgba(31,128,201,1));
 	
 		&:hover
 		{
@@ -241,6 +207,10 @@
 
 		}
 
+	}
+	&:hover
+	{
+		
 	}
 	&.danger
 	{
@@ -257,15 +227,13 @@
 		color:#fff;
 		box-shadow:none;
 	}
+	&.is-last
+	{
+		margin-right:0;
+	}
 
 }
 
-
-
-a.btn--primary:link, a.btn--primary:visited, a.btn--primary:hover, a.btn--primary:active
-{
-	color:#fff; 
-}
 
 
 
