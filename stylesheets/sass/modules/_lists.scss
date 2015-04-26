@@ -3,16 +3,25 @@
 
 %baseList
 {
-	@extend %clearListstyle;
+	@extend %clearListStyle;
 	width:100%;
-	
-
 	> li 
 	{
 		width:100%;
 	}
 }
 
+%baseListItem
+{
+	cursor:pointer;
+ 	position:relative;
+	
+	height:64px;
+	border-bottom:1px solid #d9dde1;
+	
+	width:100%;
+
+}
 
 
 .list
@@ -37,7 +46,8 @@
 
 %baseCell
 {
-	// children class must contain part of parents name
+	// children class must contain part of parents name to avoid specifity conflicts 
+	// Dont' fuck around
 	padding:10px;
 	display:table-cell;
 	vertical-align:middle;
@@ -76,22 +86,14 @@
 
 
 
-%baseCellCheckbox
-{
 
-}
 
 /* --->>> List item ---*/
 
 .list_item
  {
- 	cursor:pointer;
- 	position:relative;
-	display:table;
-	height:64px;
-	border-bottom:1px solid #d9dde1;
-	
-	width:100%;
+ 	@extend %baseListItem;
+ 	display:table;
 
 	
 	&_activity-info

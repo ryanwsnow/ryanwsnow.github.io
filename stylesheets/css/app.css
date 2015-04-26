@@ -2634,6 +2634,13 @@ a.nav--tab-pill_item {
   .list > li, .list--menu > li, .list--folders > li, .menu > li {
     width: 100%; }
 
+.list_item {
+  cursor: pointer;
+  position: relative;
+  height: 64px;
+  border-bottom: 1px solid #d9dde1;
+  width: 100%; }
+
 .list--sub > li > .list_item {
   padding-left: 40px; }
 
@@ -2662,12 +2669,7 @@ a.nav--tab-pill_item {
 
 /* --->>> List item ---*/
 .list_item {
-  cursor: pointer;
-  position: relative;
-  display: table;
-  height: 64px;
-  border-bottom: 1px solid #d9dde1;
-  width: 100%; }
+  display: table; }
   .list_item_activity-info {
     position: absolute;
     top: 5px;
