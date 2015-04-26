@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 	// demo purposes
 	var checkedItems = 0;
-	$(".list_item_column-checkbox input").on("click",function(){
+	$(".list_item_column input[type='checkbox']").on("click",function(){
 		if($(this).prop("checked")){
 			checkedItems = checkedItems + 1;
 			

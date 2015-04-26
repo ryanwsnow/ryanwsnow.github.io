@@ -29,7 +29,7 @@
 	&_body 
 	{
 		@extend %baseLayout_body;
-		padding-top:80px;
+		padding-top:52px;
 		overflow-y:auto;
 	}
 	
@@ -100,7 +100,24 @@
 
 }
 
+%baseColumn 
+{
+	display:table-cell;
+	box-sizing: border-box;
+	vertical-align:middle;
+	padding:10px;
+	text-align:left;
+}
 
+%baseColumn-header
+{
+	@extend %baseColumn;
+	text-transform:uppercase;
+	border-bottom:1px solid $text-light-grey;
+	color:$text-light-grey;
+	height:52px;
+	line-height:32px;
+}
 
 .students-main
 {
@@ -109,43 +126,60 @@
 
 }
 
-.students-card
+.student-list
 {
-	@extend %baseLayout;
-	
-	z-index:100;
-	
-	
-	width:90%;
-	position:absolute;
-	top:70px;
-	bottom:20px;
-	left:50%;
-	transform: translate(-50%, 0);
-	
+	display:table;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	width:100%;
+}
+.student-list_header
+{
 
-	&-container 
+	display:table-header-group;
+
+}
+
+.colh 
+{		
+	@extend %baseColumn-header;
+	&-checkbox
 	{
-		@extend %baseLayout-container;
+	@extend %baseColumn-header;
+	width:32px;
+		> input
+		{
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			width:20px;
+		}
 	}
-
-	&_header
+}
+.student-list_item
+{
+	display:table-row;
+	position:relative;
+	
+	height:64px;
+	border-bottom:1px solid #d9dde1;
+	padding:10px;
+	width:100%;
+	.col
 	{
-		@extend %baseLayout_header;
-		height:52px;
-		padding-left:52px;
-		overflow-y:hidden;
-		
-		
-	}
+		@extend %baseColumn;
+		&-checkbox
+		{
+		@extend %baseColumn;
+		width:32px;
+		> input
+		{
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			width:20px;
+		}
 
-	&_body 
-	{
-		@extend %baseLayout_body;
-		margin-top:52px;
-		background:#fff;
-		border-radius:5px;
-		@extend .z-depth-1;
-		overflow-y:auto;
+		}
 	}
 }

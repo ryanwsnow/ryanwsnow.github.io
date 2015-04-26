@@ -21,7 +21,7 @@
 <div class="course">
 	<header class="course_header">
 		<div class="course_header_action">
-			<button onclick="location.href = 'lobby.html';" class="btn btn--icon-utility">
+			<button onclick="location.href = 'lobby.html';" class="btn--icon-utility is-first">
 				<i class="icon-arrow-back"></i>
 			</button>
 		</div>
@@ -75,10 +75,9 @@
 					<div id="toolbarSelected" class="toolbar is-active is-hidden">
 						<span class="badge">1</span> selected
 						<span class="toolbar_actions-utility">
-							<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
-							<button class="btn--plain ">Copy</button>
-							<button class="btn--plain ">Assign</button>
-							<button class="btn--plain danger is-last">Delete</button>
+							<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Edit</button>
+							
+							<button class="btn--plain danger is-last">Disenroll</button>
 						</span>
 
 					</div>
@@ -86,13 +85,41 @@
 			</div>
 			
 			<div class="students-main_body">
-				
-				
-			</div>
-
-
-
-			
+				<div class="student-list">
+		  	
+					<div class="student-list_item ">
+						<div class="list_item_column small is-first ">
+							
+							<input type="checkbox"  class="filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
+						</div>
+						<div class="list_item_column small">
+							<i class="icon-account-circle secondary"></i>
+						</div>
+						<div class="list_item_column">
+						  	<div class="cell-primary ">Lorem ipsum dolor sit amet, consectetur adipiscing eli</div>
+						  	<span class="cell-secondary">ryan@tophat.com</span>
+					  	</div>
+					  	<div class="list_item_column ">
+						  	<div class="cell-label">Student ID</div>
+						  	<span class="cell-primary">12334556</span>
+					  	</div>
+					  	<div class="list_item_column ">
+						  	<div class="cell-label ">Status</div>
+						  	<span class="cell-primary">Enrolled</span>
+					  	</div>
+					  	<div class="list_item_column ">
+						  	<div class="cell-label ">Match Roster</div>
+						  	<span class="cell-primary">Yes</span>
+					  	</div>
+					  	<div class="list_item_column small">
+							<button class="btn--icon-utility is-only"><i class="icon-edit"></i></button>
+						</div>
+					  	<div class="list_item_column small">
+							<button class="btn--icon-utility danger is-only"><i class="icon-close"></i></button>
+						</div>
+					</div>
+				</div><!-- student-list END -->
+			</div><!-- student-main_body END -->
 		</div>
 	</div> <!-- course body END -->
 </div> <!-- course END -->

@@ -15,8 +15,6 @@
 
 
 
-
-
 .list
 {
   @extend %baseList;
@@ -37,40 +35,65 @@
 	
 }
 
-%list_item_column-base
+%baseCell
 {
-	> div, > span
-		{
-			vertical-align:middle;
-		}
-		display:table-cell;
-		vertical-align:middle;	
+	// children class must contain part of parents name
+	padding:10px;
+	display:table-cell;
+	vertical-align:middle;
+
+	&.small 
+	{
+		width:32px;
+		text-align:center;
+	}
+	
+	&.is-first
+	{
+		padding-left:20px;
+	}
+	> .cell-primary 
+	{
+		font-size:14px;
+		font-weight:600;
+		color:$text-med-grey;
+	}
+	> .cell-secondary 
+	{
+		font-size:12px;
+		color:$text-smed-grey;
+		font-weight:400;
+	}
+	> .cell-label 
+	{
+	font-size:12px;
+	font-weight:400;
+	text-transform:uppercase;
+	color:$text-light-grey;		
+	}
+
+}
+
+
+
+%baseCellCheckbox
+{
+
 }
 
 /* --->>> List item ---*/
 
 .list_item
  {
+ 	cursor:pointer;
  	position:relative;
 	display:table;
 	height:64px;
 	border-bottom:1px solid #d9dde1;
-	padding:10px;
+	
 	width:100%;
 
-	&_title
-	{
-		font-size:14px;
-		font-weight:600;
-		color:$text-med-grey;
-	}
-	&_sub-title
-	{
-		font-size:12px;
-		color:$text-smed-grey;
-		font-weight:400;
-
-	}
+	
 	&_activity-info
 	{
 		position:absolute;
@@ -86,41 +109,9 @@
 
 	&_column
 	{
-		@extend %list_item_column-base;
+		@extend %baseCell;
 	}
-	&_column-checkbox
-	{
-		@extend %list_item_column-base;
-		width:32px;
-		> input
-		{
-			display:block;
-			margin-left:auto;
-			margin-right:auto;
-			width:20px;
-		}
-
-	}
-
-	&_column-icon
-	{
-		@extend %list_item_column-base;
-		width:32px;
-		> i 
-		{
-			color:$text-light-grey;
-
-			font-size:24px;
-		}
-
-	}
-	&_column-info
-	{
-		
-		@extend %list_item_column-base;
-		
-	}
-
+	
 
 
 	&.is-hovered
@@ -144,21 +135,6 @@
 
 // Sub Module List-item Folder
 
-.list_item--folder
-{
-	cursor:pointer;
-
-	> .list_item_column-icon > i
-	{
-		color:$text-med-grey;
-	}
-
-	&_column-expandable
-	{
-		@extend %list_item_column-base;
-		width:32px;
-	}
-}
 
 // Modifier Cozy Layout
 .list

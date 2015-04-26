@@ -2,7 +2,7 @@
 %baseButton
 {
 
-    display:inline-block;
+    float:left;
     height:$btn-height;
     padding:
     {
@@ -113,6 +113,11 @@
 	{
 		padding-right:0;
 	}
+	&.is-only
+	{
+		padding-left:0;
+		padding-right:0;
+	}
 }
 
 .btn--round
@@ -186,6 +191,7 @@
 {
 	@extend %baseButton-with-icon;
 	// @extend %baseButton;
+	float:left;
 	background:$bg-mlight-grey;
 	color:$text-smed-grey;
 	min-width:100px;

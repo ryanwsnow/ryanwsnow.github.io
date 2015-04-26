@@ -28,6 +28,15 @@ i[class^="icon-"] {
 	font-size:24px;;
 }
 
+i.primary 
+{
+	color:$text-med-grey;
+}
+
+i.secondary 
+{
+	color:$text-light-grey;
+}
 .icon-3d-rotation:before {
 	content: "\e600";
 }
