@@ -36,37 +36,12 @@
 }
 
 
-
-
-
-
-
-.student-main_header
-{
-	
-	.form-field
-	{
-		font-size:18px;
-		font-weight:600;
-
-		label i
-		{
-			font-size:24px;
-		}
-	}
-
-}
-
 .students-main_header
 {
 
 	&_body 
 	{
 		@extend %header--secondary_body;
-		padding-right:52px;
-
-	
-		
 	}
 	
 	&_action {
@@ -100,86 +75,10 @@
 
 }
 
-%baseColumn 
-{
-	display:table-cell;
-	box-sizing: border-box;
-	vertical-align:middle;
-	padding:10px;
-	text-align:left;
-}
-
-%baseColumn-header
-{
-	@extend %baseColumn;
-	text-transform:uppercase;
-	border-bottom:1px solid $text-light-grey;
-	color:$text-light-grey;
-	height:52px;
-	line-height:32px;
-}
 
 .students-main
 {
 	
 	background:$bg-light-grey;
 
-}
-
-.student-list
-{
-	display:table;
-	border-collapse: collapse;
-	box-sizing: border-box;
-	width:100%;
-}
-.student-list_header
-{
-
-	display:table-header-group;
-
-}
-
-.colh 
-{		
-	@extend %baseColumn-header;
-	&-checkbox
-	{
-	@extend %baseColumn-header;
-	width:32px;
-		> input
-		{
-			display:block;
-			margin-left:auto;
-			margin-right:auto;
-			width:20px;
-		}
-	}
-}
-.student-list_item
-{
-	display:table-row;
-	position:relative;
-	
-	height:64px;
-	border-bottom:1px solid #d9dde1;
-	padding:10px;
-	width:100%;
-	.col
-	{
-		@extend %baseColumn;
-		&-checkbox
-		{
-		@extend %baseColumn;
-		width:32px;
-		> input
-		{
-			display:block;
-			margin-left:auto;
-			margin-right:auto;
-			width:20px;
-		}
-
-		}
-	}
 }

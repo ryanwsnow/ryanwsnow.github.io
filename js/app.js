@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	$(".list_item--folder").on("click",function(){
 		var $folder = $(this).parent(".list-row");
-		var $folderItems = $folder.find(".list--sub");
+		var $folderItems = $folder.find(".list-sub");
 		$(this).toggleClass("is-open");
 		$folderItems.toggleClass("is-hidden");
 	});

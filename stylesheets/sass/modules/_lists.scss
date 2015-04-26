@@ -1,51 +1,10 @@
 /* --------->>> Layout: List -----------*/
 // ****! needs to be refactored ! ****//
-
-%baseList
-{
-	@extend %clearListStyle;
-	width:100%;
-	> li 
-	{
-		width:100%;
-	}
-}
-
-%baseListItem
-{
-	cursor:pointer;
- 	position:relative;
-	
-	height:64px;
-	border-bottom:1px solid #d9dde1;
-	
-	width:100%;
-
-}
-
-
-.list
-{
-  @extend %baseList;
-}
-
-.list--sub
-{ 
-
-	> li > .list_item 
-	{
-		
-		padding-left:40px;
-	}
-}
-
-.list-row
-{
-	
-}
-
 %baseCell
 {
+	// new way of creating base placeholders must refactor other modules
+	// and creating name spacing
+	//
 	// children class must contain part of parents name to avoid specifity conflicts 
 	// Dont' fuck around
 	padding:10px;
@@ -85,10 +44,41 @@
 }
 
 
+%baseList
+{
+	@extend %clearListStyle;
+	width:100%;
+	> li 
+	{
+		width:100%;
+	}
+}
+
+%baseListItem
+{
+	cursor:pointer;
+ 	position:relative;
+	height:64px;
+	border-bottom:1px solid #d9dde1;
+	width:100%;
+}
+
+//List 
+.list
+{
+  @extend %baseList;
+}
 
 
+.list-sub
+{ 
 
-/* --->>> List item ---*/
+	> li > .list_item 
+	{
+		
+		padding-left:40px;
+	}
+}
 
 .list_item
  {
@@ -109,7 +99,7 @@
 
 	}
 
-	&_column
+	&_cell
 	{
 		@extend %baseCell;
 	}
@@ -134,6 +124,46 @@
 
 
 }
+
+
+// Table list
+
+.table--list
+{
+	
+	display:table;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	width:100%;
+}
+
+.table--list_item
+{
+	@extend %baseListItem;
+	display:table-row;
+
+	&_cell
+	{
+		@extend %baseCell;
+	}
+}
+
+
+.list-row
+{
+	
+}
+
+
+
+
+
+
+
+/* --->>> List item ---*/
+
+
+
 
 // Sub Module List-item Folder
 

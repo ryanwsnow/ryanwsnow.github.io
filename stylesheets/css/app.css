@@ -2629,45 +2629,44 @@ a.nav--tab-pill_item {
 
 /** End Buttons **/
 /* --------->>> Layout: List -----------*/
+.list_item_cell, .table--list_item_cell {
+  padding: 10px;
+  display: table-cell;
+  vertical-align: middle; }
+  .small.list_item_cell, .small.table--list_item_cell {
+    width: 32px;
+    text-align: center; }
+  .is-first.list_item_cell, .is-first.table--list_item_cell {
+    padding-left: 20px; }
+  .list_item_cell > .cell-primary, .table--list_item_cell > .cell-primary {
+    font-size: 14px;
+    font-weight: 600;
+    color: #435561; }
+  .list_item_cell > .cell-secondary, .table--list_item_cell > .cell-secondary {
+    font-size: 12px;
+    color: #708493;
+    font-weight: 400; }
+  .list_item_cell > .cell-label, .table--list_item_cell > .cell-label {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a4b0ba; }
+
 .list, .list--menu, .list--folders, .menu {
   width: 100%; }
   .list > li, .list--menu > li, .list--folders > li, .menu > li {
     width: 100%; }
 
-.list_item {
+.list_item, .table--list_item {
   cursor: pointer;
   position: relative;
   height: 64px;
   border-bottom: 1px solid #d9dde1;
   width: 100%; }
 
-.list--sub > li > .list_item {
+.list-sub > li > .list_item {
   padding-left: 40px; }
 
-.list_item_column {
-  padding: 10px;
-  display: table-cell;
-  vertical-align: middle; }
-  .small.list_item_column {
-    width: 32px;
-    text-align: center; }
-  .is-first.list_item_column {
-    padding-left: 20px; }
-  .list_item_column > .cell-primary {
-    font-size: 14px;
-    font-weight: 600;
-    color: #435561; }
-  .list_item_column > .cell-secondary {
-    font-size: 12px;
-    color: #708493;
-    font-weight: 400; }
-  .list_item_column > .cell-label {
-    font-size: 12px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #a4b0ba; }
-
-/* --->>> List item ---*/
 .list_item {
   display: table; }
   .list_item_activity-info {
@@ -2693,6 +2692,16 @@ a.nav--tab-pill_item {
     cursor: pointer;
     border-left: 3px solid #0ac8f4; }
 
+.table--list {
+  display: table;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  width: 100%; }
+
+.table--list_item {
+  display: table-row; }
+
+/* --->>> List item ---*/
 .list.is-cozy > li > .list_item {
   height: 80px; }
 
@@ -3028,63 +3037,8 @@ textarea.materialize-textarea {
   padding-top: 52px;
   overflow-y: auto; }
 
-.student-main_header .form-field {
-  font-size: 18px;
-  font-weight: 600; }
-  .student-main_header .form-field label i {
-    font-size: 24px; }
-
-.students-main_header_body {
-  padding-right: 52px; }
-
-.colh, .colh-checkbox, .student-list_item .col, .student-list_item .col-checkbox {
-  display: table-cell;
-  box-sizing: border-box;
-  vertical-align: middle;
-  padding: 10px;
-  text-align: left; }
-
-.colh, .colh-checkbox {
-  text-transform: uppercase;
-  border-bottom: 1px solid #a4b0ba;
-  color: #a4b0ba;
-  height: 52px;
-  line-height: 32px; }
-
 .students-main {
   background: #f2f2f2; }
-
-.student-list {
-  display: table;
-  border-collapse: collapse;
-  box-sizing: border-box;
-  width: 100%; }
-
-.student-list_header {
-  display: table-header-group; }
-
-.colh-checkbox {
-  width: 32px; }
-  .colh-checkbox > input {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20px; }
-
-.student-list_item {
-  display: table-row;
-  position: relative;
-  height: 64px;
-  border-bottom: 1px solid #d9dde1;
-  padding: 10px;
-  width: 100%; }
-  .student-list_item .col-checkbox {
-    width: 32px; }
-    .student-list_item .col-checkbox > input {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 20px; }
 
 .present-container {
   background: #435561;
