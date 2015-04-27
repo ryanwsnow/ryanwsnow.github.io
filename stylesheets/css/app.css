@@ -2388,12 +2388,12 @@ header {
 
 .content-main {
   float: left;
-  width: 40%;
+  width: 45%;
   height: 100%; }
 
 .content-side {
   float: left;
-  width: 60%;
+  width: 55%;
   height: 100%; }
 
 .nav, .list, .list--menu, .list--folders, .menu {
@@ -2714,6 +2714,8 @@ a.nav--tab-pill_item {
   width: 100%;
   text-align: left;
   color: #708493; }
+.list--menu > .is-selected, .list--folders > .is-selected, .menu > .is-selected {
+  background: #f0f0f0; }
 
 .list--folders {
   background: #f0f0f0;
@@ -2817,6 +2819,10 @@ a.nav--tab-pill_item {
   padding: 10px; }
 .th-modal_section {
   padding-top: 20px; }
+  .th-modal_section:after {
+    content: "";
+    display: table;
+    clear: both; }
 .th-modal_section-header {
   font-size: 16px;
   color: #708493;
@@ -2825,8 +2831,10 @@ a.nav--tab-pill_item {
   padding-bottom: 10px; }
 .th-modal_footer {
   padding: 10px;
-  height: 52px;
-  text-align: right; }
+  height: 52px; }
+
+.th-modal_header_action {
+  float: right; }
 
 input, textarea {
   border: none;

@@ -203,6 +203,10 @@
 		text-align:left;
 		color:$text-smed-grey;
 	}
+	> .is-selected
+	{
+		background:$bg-mlight-grey;
+	}
 }
 
 

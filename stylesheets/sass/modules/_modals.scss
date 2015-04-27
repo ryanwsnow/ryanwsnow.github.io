@@ -30,7 +30,9 @@
 	
 	&_section
 	{
+		@include clearfix;
 		padding-top:20px;
+
 	}
 	&_section-header
 	{
@@ -45,6 +47,14 @@
 		// border-top:1px solid #d9dde1;
 		padding:$padding-default;
 		height:52px;
-		text-align:right;	
+		
+	}
+}
+
+.th-modal_header 
+{
+	&_action
+	{
+		float:right;
 	}
 }

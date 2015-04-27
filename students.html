@@ -22,7 +22,7 @@
 	<header class="course_header">
 		<div class="course_header_action">
 			<button onclick="location.href = 'lobby.html';" class="btn--icon-utility is-first">
-				<i class="icon-arrow-back"></i>
+				<i class="icon-close"></i>
 			</button>
 		</div>
 		<div class="course_header_body">
@@ -61,7 +61,13 @@
 					<span class="toolbar_actions-primary">
 							<button class="btn--raised primary is-first" >Invite</button>
 							
-							<button class="btn--raised with-icon-right">All Students<i class="icon-arrow-drop-down"></i></button>
+							<button class="dropdown-button btn--raised with-icon-right" data-constrainwidth="false" data-activates="filterStudents">All Students<i class="icon-arrow-drop-down"></i></button>
+							<ul   id="filterStudents" class="dropdown-content menu menu--with-icons">
+							     <li class="is-selected"><a class="btn--plain" data-toggle="modal" data-target="#modalCreate" href="#!"></i>All Students</a></li>
+							    <li><a class="btn--plain" href="#!">Enrolled Students</a></li>
+							     <li><a class="btn--plain"href="#!">Pending Students</a></li>
+							     
+						    	</ul>
 						</span>
 					
 						<span class="toolbar_actions-utility">
