@@ -22,7 +22,7 @@
 	<header class="course_header">
 		<div class="course_header_action">
 			<button onclick="location.href = 'lobby.html';" class="btn--icon-utility is-first">
-				<i class="icon-arrow-back"></i>
+				<i class="icon-close"></i>
 			</button>
 		</div>
 		<div class="course_header_body">
@@ -31,15 +31,15 @@
 			<div class="course_header_subtitle"><span>Join Code:</span> 123456</div>
 		</div>
 		<div class="course_header_utility-bar">	
-			<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
-		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
+			<button class="btn--icon-utility is-first"><i class="icon-help"></i></button>
+		    	<button class="dropdown-button btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
 					<i class="icon-settings"></i>
 				</button>
 			    	<ul   id="dropdown1" class="dropdown-content menu">
-				     <li><a href="#!">Something here</a></li>
-				    <li><a href="#!">Something there that is super long</a></li>
+				     <li><a class="btn--plain" href="#!">Something here</a></li>
+				    <li><a class="btn--plain" href="#!">Something there that is super long</a></li>
 				    
-				    <li><a href="#!">blah blah</a></li>
+				    <li><a class="btn--plain" href="#!">blah blah</a></li>
 			    	</ul>		
 		</div>
 		<div class="course_header_footer">
@@ -61,26 +61,37 @@
 					<span class="toolbar_actions-primary">
 							<button class="btn--raised primary is-first" >Invite</button>
 							
-							<button class="btn--raised with-icon-right">All Students<i class="icon-arrow-drop-down"></i></button>
+							<button class="dropdown-button btn--raised with-icon-right" data-constrainwidth="false" data-activates="filterStudents">All Students<i class="icon-arrow-drop-down"></i></button>
+							<ul   id="filterStudents" class="dropdown-content menu menu--with-icons">
+							     <li class="is-selected"><a class="btn--plain" data-toggle="modal" data-target="#modalCreate" href="#!"></i>All Students</a></li>
+							    <li><a class="btn--plain" href="#!">Enrolled Students</a></li>
+							     <li><a class="btn--plain"href="#!">Pending Students</a></li>
+							     
+						    	</ul>
 						</span>
 					
 						<span class="toolbar_actions-utility">
 												
 						
 						
-						<button class="btn--icon-utility is-last"><i class="icon-search"></i></button>
+						<button id="searchButton" class="btn--icon-utility is-last"><i class="icon-search"></i></button>
 						</span>
 
 					</div>
-					<div id="toolbarSelected" class="toolbar is-active is-hidden">
-						<span class="badge">1</span> selected
-						<span class="toolbar_actions-utility">
-							<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Edit</button>
-							
-							<button class="btn--plain danger is-last">Disenroll</button>
+				<div class="searchbar is-hidden">
+						<span class="form-field ">
+								<label for="searchStudents">Search:</label><input tabindex="0" id="searchStudents" type="text" placeholder="Search it bitch..." >
 						</span>
+				</div>
+				<div id="toolbarSelected" class="toolbar is-active is-hidden">
+					<span class="badge">1</span> selected
+					<span class="toolbar_actions-utility">
+						<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Edit</button>
+						
+						<button class="btn--plain danger is-last">Disenroll</button>
+					</span>
 
-					</div>
+				</div>
 			
 			</div>
 			
@@ -90,13 +101,13 @@
 					<div class="table--list_item ">
 						<span class="table--list_item_cell small is-first ">
 							
-							<input type="checkbox"  class="filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
+							<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
 						</span>
 						<span class="table--list_item_cell small">
 							<i class="icon-account-circle secondary"></i>
 						</span>
 						<span class="table--list_item_cell">
-						  	<div class="cell-primary ">Lorem ipsum dolor sit amet, consectetur adipiscing eli</div>
+						  	<div class="cell-primary ">Snow, Ryan</div>
 						  	<span class="cell-secondary">ryan@tophat.com</span>
 					  	</span>
 					  	<span class="table--list_item_cell ">

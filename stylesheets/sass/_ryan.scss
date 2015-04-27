@@ -1,6 +1,8 @@
 
 .toolbar
 {
+	display:table;
+	width:100%;
 	padding:$padding-default;
 	height:52px;
 	background:#f9f9f9;
@@ -13,16 +15,34 @@
 
 }
 
+.searchbar
+{
+	@extend .z-depth-1;
+	padding:$padding-default;
+	
+	background:#f9f9f9;
+	border-bottom:1px solid #d9dde1;
+
+}
+
 
 
 .toolbar_actions-primary
 {
+	display:table-cell;
+	min-width:250px;
 
 }
 
 .toolbar_actions-utility
 {
-	float:right;
+	display:table-cell;
+	width:32px;
+	&.is-active
+	{
+		width:100%;
+	}
+
 }
 
 
