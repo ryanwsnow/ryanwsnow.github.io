@@ -3227,8 +3227,6 @@ textarea.materialize-textarea {
   will-change: width, height; }
 
 .toolbar {
-  display: table;
-  width: 100%;
   padding: 10px;
   height: 52px;
   background: #f9f9f9;
@@ -3241,15 +3239,8 @@ textarea.materialize-textarea {
   background: #f9f9f9;
   border-bottom: 1px solid #d9dde1; }
 
-.toolbar_actions-primary {
-  display: table-cell;
-  min-width: 250px; }
-
 .toolbar_actions-utility {
-  display: table-cell;
-  width: 32px; }
-  .toolbar_actions-utility.is-active {
-    width: 100%; }
+  float: right; }
 
 .badge {
   background: #0ac8f4;
