@@ -59,10 +59,10 @@ $(document).ready(function(){
 	$(".hs").on({
 	    mouseenter: function () {
 	    	$(this).addClass("is-hovered");
-	        console.log("mouse in");
+	       
 	    },
 	    mouseleave: function () {
-	        console.log("mouse out");
+	      
 	        $(this).removeClass("is-hovered");
 	    }
 	});
