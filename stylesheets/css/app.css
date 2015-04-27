@@ -2676,7 +2676,7 @@ a.nav--tab-pill_item {
     top: 5px;
     right: 10px;
     font-size: 12px;
-    color: #a5b1bb;
+    color: #a4b0ba;
     font-weight: 400;
     white-space: nowrap;
     text-align: right; }
@@ -2995,7 +2995,7 @@ textarea.materialize-textarea {
   display: block;
   font-size: 18px;
   font-weight: 600;
-  color: #a5b1bb; }
+  color: #a4b0ba; }
 
 .students-main_header_subtitle, .content-preview_header_subtitle, .lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle {
   display: block;
@@ -3033,7 +3033,7 @@ textarea.materialize-textarea {
     color: #435561; }
   .students-main_header_subtitle, .content-preview_header_subtitle {
     font-size: 14px;
-    color: #a5b1bb;
+    color: #a4b0ba;
     font-weight: 400; }
   .students-main_header_cta, .content-preview_header_cta {
     position: absolute;
@@ -3227,8 +3227,6 @@ textarea.materialize-textarea {
   will-change: width, height; }
 
 .toolbar {
-  display: table;
-  width: 100%;
   padding: 10px;
   height: 52px;
   background: #f9f9f9;
@@ -3241,15 +3239,8 @@ textarea.materialize-textarea {
   background: #f9f9f9;
   border-bottom: 1px solid #d9dde1; }
 
-.toolbar_actions-primary {
-  display: table-cell;
-  min-width: 250px; }
-
 .toolbar_actions-utility {
-  display: table-cell;
-  width: 32px; }
-  .toolbar_actions-utility.is-active {
-    width: 100%; }
+  float: right; }
 
 .badge {
   background: #0ac8f4;

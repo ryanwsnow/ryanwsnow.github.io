@@ -1,36 +1,47 @@
 //Color
 
-$primary-grey: #323b47;
-$primary-font: 'Source Sans Pro', sans-serif;
-$light-grey:#a5b1bb;
-$primary-blue:#199bfd;
-$primary-blue-lighten1:#42b5fc;
 
-//background
-// change colours to lighten-1, lighten-2
-$text-dark-grey:#313b47;
-$text-med-grey:#435561;
-$text-smed-grey:#708493;
-$text-light-grey:#a4b0ba;
-
-
-$text-disabled:#d9dde1;
-$text-danger:#fd194f;
-
-$bg-dark-grey:#313b47;
-$bg-med-grey:#435561;
-$bg-mlight-grey:#f0f0f0;
-$bg-light-grey:#f2f2f2;
-$bg-slight-grey:#f9f9f9;
-
-$bg-danger:#fd194f;
+$fontFace: 'Source Sans Pro', sans-serif;
 
 
 
-$text-color-dark--vh-1:#435561;
-$text-color--vh-1:#ffffff;
-$text-color--vh-2:#a4b0ba;
-$highlight:#0ac8f4;
+
+
+//text-Grey tones
+$color-base-darken1:#313b47;
+$color-base:#435561;
+$color-base-lighten1:#708493;
+$color-base-lighten2:#a4b0ba;
+
+//State colors
+$color-primary:#199bfd;
+$color-disabled:#d9dde1;
+$color-danger:#fd194f;
+$color-highlight:#0ac8f4; //active
+$color-primary-lighten1:#42b5fc; //hover
+
+//background colors
+
+//Header bg
+$bgcolor-primary-darken1:#313b47;
+$bgcolor-primary:#435561;
+
+
+//main bg
+$bgcolor-base-darken1:#f0f0f0;
+$bgcolor-base:#f2f2f2;
+$bgcolor-base-lighten1:#f9f9f9;
+
+
+
+
+
+
+
+
+
+
+
 
 // add some default padding stuff
 

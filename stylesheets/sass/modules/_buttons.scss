@@ -16,7 +16,7 @@
     text-align:center;
     line-height:$btn-height;
     font-size:14px;
-    color:$text-smed-grey;
+    color:$color-base-lighten1;
     &.is-first 
     {
     	margin-left:0;
@@ -32,16 +32,16 @@
 	}
 	&:hover.danger 
 	{
-		color:$text-danger;
+		color:$color-danger;
 	}
 	&.primary 
 	{
-		color:$primary-blue;
+		color:$color-primary;
 	}
 
 	&.is-disabled
 	{
-		color:$text-disabled;
+		color:$color-disabled;
 	}
 
 
@@ -82,7 +82,7 @@
 {
 	@extend %baseButton;
 	@extend %baseButton-with-icon;
-	color:$text-light-grey;
+	color:$color-base-lighten2;
 
 }
 
@@ -102,7 +102,7 @@
 	@extend %baseButton;
 	margin:0px;
 	
-	color:$text-light-grey;
+	color:$color-base-lighten2;
 
 
 	&.is-first
@@ -120,7 +120,7 @@
 	}
 	&.is-active
 	{
-		color:$highlight;
+		color:$color-highlight;
 	}
 }
 
@@ -135,7 +135,7 @@
 	margin-right:20px;
 	font-size:24px;
 	line-height:52px;
-	color:$text-light-grey;
+	color:$color-base-lighten2;
 	z-index:5;
 	&.is-last 
 	{
@@ -149,15 +149,15 @@
 
 	&.primary
 	{
-		background:$primary-blue;
+		background:$color-primary;
 		color:#fff;
 	}
 	
 
 	&:hover
 	{
-		// background:$highlight;
-		color:$highlight;
+		// background:$color-highlight;
+		color:$color-highlight;
 		@extend .z-depth-1-half;
 		@include transition(all 0.3s ease-in 0s);
 	}
@@ -165,7 +165,7 @@
 
 	&:hover.primary
 	{
-		background:$highlight;
+		background:$color-highlight;
 		color:#fff;
 	}
 
@@ -174,19 +174,19 @@
 
 	&.is-active
 	{
-		background:$highlight;
+		background:$color-highlight;
 		color:#fff;
 		@extend .z-depth-1;
 	}
 	&.is-active:hover
 	{
-		background:$highlight;
+		background:$color-highlight;
 		color:#fff;
 		@extend .z-depth-1;
 	}
 	&:hover.is-danger 
 	{
-		color:$text-danger;
+		color:$color-danger;
 	}
 }
 
@@ -196,8 +196,8 @@
 	@extend %baseButton-with-icon;
 	// @extend %baseButton;
 	float:left;
-	background:$bg-mlight-grey;
-	color:$text-smed-grey;
+	background:$bgcolor-base-darken1;
+	color:$color-base-lighten1;
 	min-width:100px;
 	height:32px;
 	line-height:32px;
@@ -215,14 +215,14 @@
 	&.primary
 	{
 
-		background:$primary-blue;
+		background:$color-primary;
 		color:#fff;
 		@include box-shadow(0px 2px 0px 0px rgba(31,128,201,1));
 	
 		&:hover
 		{
 			color:#fff;
-			background:$primary-blue-lighten1;
+			background:$color-primary-lighten1;
 
 		}
 
@@ -233,16 +233,16 @@
 	}
 	&.danger
 	{
-		background:$bg-danger;
+		background:$color-danger;
 		color:#fff;
 	}
 	&.is-disabled
 	{
-		color:$text-disabled;
+		color:$color-disabled;
 	}
 	&.is-active
 	{
-		background:$highlight;
+		background:$color-highlight;
 		color:#fff;
 		box-shadow:none;
 	}

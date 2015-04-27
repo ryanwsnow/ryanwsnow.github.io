@@ -6,7 +6,7 @@
 	&-container 
 	{
 		@extend %baseLayout-container;
-		background:$bg-med-grey;
+		background:$bgcolor-primary;
 		padding:10px;
 	}
 	&_header
@@ -144,7 +144,7 @@
 {
 	opacity:0;
 	position:absolute;
-	color:$highlight;
+	color:$color-highlight;
 	top:50%;
 	transform: translate(-50%, 0);
 	@include transition(all 0.3s ease-in 0s);
@@ -198,7 +198,7 @@
 	{
 		display:none;
 		position:absolute;
-		background-color:$highlight;
+		background-color:$color-highlight;
 		padding:20px;
 		width:70%;
 		height:100px;

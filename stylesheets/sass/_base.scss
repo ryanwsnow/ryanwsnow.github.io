@@ -33,14 +33,14 @@ p
 
 body
 {
-	font-family:$primary-font;
+	font-family:$fontFace;
 	margin:0px;
 	padding:0px;
 }
 a, a:link, a:visited, a:hover, a:active
 {
 	text-decoration:none;
-	color:$text-light-grey;
+	color:$color-base-lighten2;
 }
 
 a, a:link, a:visited, a:hover, a:active
