@@ -58,7 +58,7 @@ textarea.materialize-textarea {
 .search-field 
 {
 	display:table-cell;
-	border-bottom-color:$text-light-grey;
+	border-bottom-color:$color-base-lighten2;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 	height:32px;
@@ -70,7 +70,7 @@ textarea.materialize-textarea {
 		height:32px;
 		vertical-align:middle;
 		width:100%;
-		color:$text-smed-grey;
+		color:$color-base-lighten1;
 		
 	}
 }
@@ -79,7 +79,7 @@ textarea.materialize-textarea {
 {	
 	position:relative;
 	
-	border-bottom-color:$text-light-grey;
+	border-bottom-color:$color-base-lighten2;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 	
@@ -94,7 +94,7 @@ textarea.materialize-textarea {
 		display:table-cell;
 		vertical-align:middle;
 		width:100%;
-		color:$text-smed-grey;
+		color:$color-base-lighten1;
 		
 	}
 
@@ -117,13 +117,13 @@ textarea.materialize-textarea {
 		{
 			
 			// @include transition(all 0.5s ease-in-out);
-			color:$highlight;
+			color:$color-highlight;
 			@include transition(all 0.5s ease-in-out);
 		}
 	}
 	&.is-focused
 	{
-		border-bottom-color:$highlight;
+		border-bottom-color:$color-highlight;
 		> input, > textarea
 		{
 			color:$color-base;

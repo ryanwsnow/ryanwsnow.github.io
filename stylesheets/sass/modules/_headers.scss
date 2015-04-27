@@ -2,7 +2,7 @@
 
 %header--primary
 {
-	background:$bg-med-grey;
+	background:$bgcolor-primary;
 	height:$header--primary-height;
 	@include padding-crown($padding-default);
 	z-index:5;
@@ -20,7 +20,7 @@
 	display:block;
 	font-size:18px;
 	font-weight:600;
-	color:$light-grey;
+	color:$color-base-lighten2;
 
 }
 
@@ -94,14 +94,14 @@
 	&_title
 	{
 		@extend %header--primary_title;
-		color:$text-med-grey;
+		color:$color-base;
 
 	}
 	&_subtitle
 	{
 		@extend %header--primary_subtitle;
 		font-size:14px;
-		color:$light-grey;
+		color:$color-base-lighten2;
 		font-weight:400;
 	}
 	&_utility-bar

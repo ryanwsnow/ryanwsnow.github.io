@@ -2676,7 +2676,7 @@ a.nav--tab-pill_item {
     top: 5px;
     right: 10px;
     font-size: 12px;
-    color: #a5b1bb;
+    color: #a4b0ba;
     font-weight: 400;
     white-space: nowrap;
     text-align: right; }
@@ -2995,7 +2995,7 @@ textarea.materialize-textarea {
   display: block;
   font-size: 18px;
   font-weight: 600;
-  color: #a5b1bb; }
+  color: #a4b0ba; }
 
 .students-main_header_subtitle, .content-preview_header_subtitle, .lobby_header_subtitle, .course_header_subtitle, .present_header_subtitle {
   display: block;
@@ -3033,7 +3033,7 @@ textarea.materialize-textarea {
     color: #435561; }
   .students-main_header_subtitle, .content-preview_header_subtitle {
     font-size: 14px;
-    color: #a5b1bb;
+    color: #a4b0ba;
     font-weight: 400; }
   .students-main_header_cta, .content-preview_header_cta {
     position: absolute;

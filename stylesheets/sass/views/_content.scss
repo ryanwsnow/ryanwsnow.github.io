@@ -23,7 +23,7 @@
 {
 	@extend %baseLayout;
 	
-	background:$bg-light-grey;
+	background:$bgcolor-base;
 	&_header
 	{
 		@extend %baseLayout_header;

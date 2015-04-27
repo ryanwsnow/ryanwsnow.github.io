@@ -32,7 +32,7 @@
 	@extend %table;
 	height:60px;
 	background:#ffffff;
-	border:5px solid $bg-light-grey;
+	border:5px solid $bgcolor-base;
 	border-radius:5px;
 	margin-bottom:10px;
 }
@@ -43,7 +43,7 @@
 	width:40px;
 	> i 
 	{
-		color:$text-light-grey;
+		color:$color-base-lighten2;
 
 		font-size:24px;
 	}
@@ -54,10 +54,10 @@
 	@extend %column;
 	
 	width:40px;
-	color:$highlight;
+	color:$color-highlight;
 	text-align:center;
 	font-size:1em;
-	border-right:1px solid $bg-light-grey;
+	border-right:1px solid $bgcolor-base;
 
 	&.size-large
 	{
@@ -69,7 +69,7 @@
 {
 	@extend %column;
 	position:relative;
-	border-left:5px solid $bg-light-grey;
+	border-left:5px solid $bgcolor-base;
 	padding:0;
 	min-width:50%;
 }

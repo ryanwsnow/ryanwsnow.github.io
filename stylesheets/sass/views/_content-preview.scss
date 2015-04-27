@@ -5,7 +5,7 @@
 	@include box-shadow (-3px 0px 3px 0px rgba(0,0,0,0.17));
 	z-index:3;
 	@extend %baseLayout;
-	background:$bg-slight-grey;
+	background:$bgcolor-base-lighten1;
 	
 
 	&-container 

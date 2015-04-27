@@ -37,7 +37,7 @@
 
 // @function onlight($color) {
 //   @if (lightness($color) > 50) {
-//     @return $highlight; // Lighter backgorund, return dark color
+//     @return $color-highlight; // Lighter backgorund, return dark color
 //   } @else {
 //     @return #ffffff; // Darker background, return light color
 //   }
