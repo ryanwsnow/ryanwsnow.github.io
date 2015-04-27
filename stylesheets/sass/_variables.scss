@@ -1,13 +1,23 @@
 //Color
 
-$primary-grey: #323b47;
+$primary-grey: #313b47;
 $primary-font: 'Source Sans Pro', sans-serif;
 $light-grey:#a5b1bb;
+$highlight:#0ac8f4;
 $primary-blue:#199bfd;
 $primary-blue-lighten1:#42b5fc;
 
 //background
 // change colours to lighten-1, lighten-2
+
+
+
+$color-base-darken1:#313b47;
+$color-base:#435561;
+$color-base-lighten1:#708493;
+$color-base-lighten2:#a4b0ba;
+
+
 $text-dark-grey:#313b47;
 $text-med-grey:#435561;
 $text-smed-grey:#708493;
@@ -17,8 +27,11 @@ $text-light-grey:#a4b0ba;
 $text-disabled:#d9dde1;
 $text-danger:#fd194f;
 
+
 $bg-dark-grey:#313b47;
 $bg-med-grey:#435561;
+
+
 $bg-mlight-grey:#f0f0f0;
 $bg-light-grey:#f2f2f2;
 $bg-slight-grey:#f9f9f9;
@@ -26,11 +39,6 @@ $bg-slight-grey:#f9f9f9;
 $bg-danger:#fd194f;
 
 
-
-$text-color-dark--vh-1:#435561;
-$text-color--vh-1:#ffffff;
-$text-color--vh-2:#a4b0ba;
-$highlight:#0ac8f4;
 
 // add some default padding stuff
 

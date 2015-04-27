@@ -50,7 +50,7 @@ textarea.materialize-textarea {
 	{
 		font-size:14px;
 		font-weight:400;
-		color:$text-med-grey;
+		color:$color-base;
 	}
 
 }
@@ -111,7 +111,7 @@ textarea.materialize-textarea {
 		
 		font-size:14px;
 		font-weight:400;
-		color:$text-med-grey;
+		color:$color-base;
 		padding-right:10px;
 		&.labelfocus
 		{
@@ -126,7 +126,7 @@ textarea.materialize-textarea {
 		border-bottom-color:$highlight;
 		> input, > textarea
 		{
-			color:$text-med-grey;
+			color:$color-base;
 		}
 		
 	}
