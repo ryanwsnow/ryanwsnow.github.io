@@ -1,4 +1,4 @@
-
+// super janky code for demonostration purposes only 
 
 $(document).ready(function(){
 
@@ -27,6 +27,29 @@ $(document).ready(function(){
 	$(".controlbar button").on("click",function(){
 
 		$(this).toggleClass("is-active");
+	});
+
+
+	$(".menu > li").on({
+	    mouseenter: function () {
+	    	$(this).addClass("is-hovered");
+	       
+	    },
+	    mouseleave: function () {
+	      
+	        $(this).removeClass("is-hovered");
+	    }
+	});
+
+	$("#searchButton").on("click",function(){
+		$(this).toggleClass("is-active");
+
+		$(".search-field").toggleClass("is-hidden");
+		$(".toolbar_actions-utility").toggleClass("is-active");
+		$(".form-field > input").focus();
+
+		console.log("search clicked");
+		
 	});
 
 	// demo purposes

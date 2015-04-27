@@ -1,4 +1,4 @@
-.z-depth-1, a.nav--tab-card_item.is-active, .btn--round.is-active, .btn--round.is-active:hover, .dropdown-content {
+.z-depth-1, a.nav--tab-card_item.is-active, .btn--round.is-active, .btn--round.is-active:hover, .dropdown-content, .searchbar {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
@@ -2430,7 +2430,7 @@ header {
     clear: both; }
 
 .is-hidden {
-  display: none; }
+  display: none !important; }
 
 /* --------->>> Navigation: Basic ---------*/
 .nav--tab-card > li, .nav--tab-pill > li {
@@ -2553,6 +2553,8 @@ a.nav--tab-pill_item {
   .btn--icon-utility.is-only {
     padding-left: 0;
     padding-right: 0; }
+  .btn--icon-utility.is-active {
+    color: #0ac8f4; }
 
 .btn--round {
   background: #ffffff;
@@ -2716,6 +2718,8 @@ a.nav--tab-pill_item {
   color: #708493; }
 .list--menu > .is-selected, .list--folders > .is-selected, .menu > .is-selected {
   background: #f0f0f0; }
+.list--menu > .is-hovered, .list--folders > .is-hovered, .menu > .is-hovered {
+  background: #f9f9f9; }
 
 .list--folders {
   background: #f0f0f0;
@@ -2874,6 +2878,20 @@ textarea.materialize-textarea {
     font-size: 14px;
     font-weight: 400;
     color: #435561; }
+
+.search-field {
+  display: table-cell;
+  border-bottom-color: #a4b0ba;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  height: 32px;
+  width: 100%;
+  line-height: 32px; }
+  .search-field > input, .search-field > textarea {
+    height: 32px;
+    vertical-align: middle;
+    width: 100%;
+    color: #708493; }
 
 .form-field {
   position: relative;
@@ -3209,6 +3227,8 @@ textarea.materialize-textarea {
   will-change: width, height; }
 
 .toolbar {
+  display: table;
+  width: 100%;
   padding: 10px;
   height: 52px;
   background: #f9f9f9;
@@ -3216,8 +3236,20 @@ textarea.materialize-textarea {
   .toolbar.is-active {
     background: #fff; }
 
+.searchbar {
+  padding: 10px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #d9dde1; }
+
+.toolbar_actions-primary {
+  display: table-cell;
+  min-width: 250px; }
+
 .toolbar_actions-utility {
-  float: right; }
+  display: table-cell;
+  width: 32px; }
+  .toolbar_actions-utility.is-active {
+    width: 100%; }
 
 .badge {
   background: #0ac8f4;

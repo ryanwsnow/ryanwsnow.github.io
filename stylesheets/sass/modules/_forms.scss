@@ -55,6 +55,26 @@ textarea.materialize-textarea {
 
 }
 
+.search-field 
+{
+	display:table-cell;
+	border-bottom-color:$text-light-grey;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	height:32px;
+	width:100%;
+	line-height:32px;
+
+	> input, > textarea
+	{
+		height:32px;
+		vertical-align:middle;
+		width:100%;
+		color:$text-smed-grey;
+		
+	}
+}
+
 .form-field
 {	
 	position:relative;
