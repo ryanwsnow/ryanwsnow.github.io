@@ -2750,7 +2750,7 @@ a.nav--tab-pill_item {
   margin-right: 20px;
   margin-top: 20px; }
 
-.card, .discussion-topic, .discussion-reply {
+.card, .discussion-card {
   background: #fff;
   border-radius: 5px;
   display: block;
@@ -2761,15 +2761,15 @@ a.nav--tab-pill_item {
   -webkit-box-shadow: 0px 2px 0px 0px #d9dde1;
   -moz-box-shadow: 0px 2px 0px 0px #d9dde1;
   box-shadow: 0px 2px 0px 0px #d9dde1; }
-  .card.small, .small.discussion-topic, .small.discussion-reply {
+  .card.small, .small.discussion-card {
     width: 250px;
     height: 250px; }
 
-.card_item_body, .discussion-topic_body, .discussion-reply_body {
+.card_item_body, .discussion-card_body {
   padding: 10px;
   color: #708493; }
 
-.card_item_title, .discussion-reply-author {
+.card_item_title, .discussion-card-author {
   font-size: 18px;
   font-weight: 600;
   color: #435561; }
@@ -2779,7 +2779,7 @@ a.nav--tab-pill_item {
   font-weight: 400;
   color: #708493; }
 
-.card_item_footer, .discussion-topic_footer, .discussion-reply_footer {
+.card_item_footer, .discussion-card_footer {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -2981,35 +2981,28 @@ textarea.materialize-textarea {
 .discussion {
   width: 100%; }
 
-.discussion-topic {
+.discussion-card {
   margin-bottom: 20px; }
 
-.discussion-reply {
-  margin-bottom: 20px; }
-
-.discussion-reply_header {
+.discussion-card_header {
   height: 52px;
   padding: 10px; }
-  .discussion-reply_header:after {
+  .discussion-card_header:after {
     content: "";
     display: table;
     clear: both; }
 
-.discussion-reply_header-utility {
+.discussion-card_header-utility {
   float: right; }
-  .discussion-reply_header-utility:after {
-    content: "";
-    display: table;
-    clear: both; }
 
-.discussion-reply-author {
+.discussion-card-author {
   line-height: 32px;
   height: 32px; }
-  .discussion-reply-author > i {
+  .discussion-card-author > i {
     float: left;
     padding-right: 10px; }
 
-.discussion-reply_footer-actions {
+.discussion-card_footer-actions {
   float: right; }
 
 .lobby_header, .course_header, .present_header {

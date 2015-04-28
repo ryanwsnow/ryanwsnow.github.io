@@ -3,49 +3,29 @@
 	width:100%;
 }
 
-.discussion-topic
+.discussion-card
 {
 	@extend .card;
 	margin-bottom:20px;
 }
-
-.discussion-topic_body
-{
-	@extend .card_item_body;
-
-}
-
-.discussion-topic_footer
-{
-	@extend .card_item_footer;
-
-}
-
-.discussion-reply
-{
-	@extend .card;
-	margin-bottom:20px;
-}
-.discussion-reply_header
+.discussion-card_header
 {
 	@include clearfix;
 	height:52px;
 	padding:10px;
 	
 }
-.discussion-reply_header-utility
+.discussion-card_header-utility
 {
-	@include clearfix;
 	float:right;
-	
 }
 
-.discussion-reply_body
+.discussion-card_body
 {
 	@extend .card_item_body;
 }
 
-.discussion-reply-author
+.discussion-card-author
 {
 	// refactor into an icon title
 	@extend .card_item_title;
@@ -58,13 +38,13 @@
 	} 
 
 }
-.discussion-reply_footer
+.discussion-card_footer
 {
 	@extend .card_item_footer
 	
 }
 
-.discussion-reply_footer-actions
+.discussion-card_footer-actions
 {
 	float:right;
 }
