@@ -1,0 +1,55 @@
+.discussion
+{
+	width:100%;
+}
+
+.discussion-topic
+{
+	@extend .card;
+	margin-bottom:20px;
+}
+
+.discussion-topic_body
+{
+	@extend .card_item_body;
+
+}
+
+.discussion-reply
+{
+	@extend .card;
+	margin-bottom:20px;
+	
+}
+
+.discussion-reply_body
+{
+	@extend .card_item_body;
+}
+.discussion-reply-author
+{
+	@extend .card_item_title;
+	line-height:32px;
+	height:32px;
+	> i
+	{
+		float:left;
+		padding-right:10px;
+	} 
+
+}
+.discussion-reply_footer
+{
+	@extend .card_item_footer
+	
+}
+
+.discussion-reply_footer-actions
+{
+	float:right;
+}
+
+.discussion-reply_vote
+{
+
+}

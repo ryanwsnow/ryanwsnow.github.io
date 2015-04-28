@@ -1,7 +1,7 @@
 
 .toolbar
 {
-	
+
 	padding:$padding-default;
 	height:52px;
 	background:#f9f9f9;
@@ -37,9 +37,10 @@
 }
 
 
+
 .badge 
 {
-	background:$color-highlight;
+	background:$bgcolor-base-darken2;
 	border-radius:50%;
 	height:32px;
 	width:32px;
@@ -50,7 +51,14 @@
 	display:inline-block;
 	margin-right:10px;
 
+	&.highlight 
+	{
+		background:$color-highlight;
+	}
+
 }
+
+
 
 
 

@@ -16,72 +16,10 @@
 
 %baseCell
 {
-	// new way of creating base placeholders must refactor other modules
-	// and creating name spacing
-	//
-	// children class must contain part of parents name to avoid specifity conflicts 
-	// Dont' fuck around
 	padding:10px;
 	display:table-cell;
 	vertical-align:middle;
-	&.small 
-	{
-		width:32px;
-		text-align:center;
-	}
-	&.medium
-	{
-		width:120px;
-		text-align:center;
-	}
-
-
 }
-// refactor this into a mixin
-
-%baseCell_listModifiers
-{
-
-	
-	&.is-first
-	{
-		padding-left:20px;
-	}
-	> .cell-primary 
-	{
-		font-size:14px;
-		font-weight:600;
-		color:$color-base;
-	}
-	> .cell-secondary 
-	{
-		font-size:12px;
-		color:$color-base-lighten1;
-		font-weight:400;
-	}
-	> .cell-label 
-	{
-		font-size:12px;
-		font-weight:400;
-		text-transform:uppercase;
-		color:$color-base-lighten2;		
-	}
-}
-
-
-%baseCell_qAnswerModifiers
-{
-	&.cellq-label
-	{
-		font-size:14px;
-		border-right:1px solid $bgcolor-base;
-	}
-}
-
-
-
-
-
 
 
 //List 
@@ -130,14 +68,6 @@
 
 	}
 
-	&_cell
-	{
-		@extend %baseCell;
-		@extend %baseCell_listModifiers;
-	}
-	
-
-
 	&.is-hovered
 	{
 		@include transition (all 0.2s ease-in-out);
@@ -157,6 +87,51 @@
 
 }
 
+.list_item_cell
+{
+	@extend %baseCell;
+	
+
+	&.small 
+	{
+		width:32px;
+		text-align:center;
+	}
+	&.medium
+	{
+		width:120px;
+		text-align:center;
+	}
+
+	
+	&.is-first
+	{
+		padding-left:20px;
+	}
+
+	// Cell sub components
+	> .cell-primary 
+	{
+		font-size:14px;
+		font-weight:600;
+		color:$color-base;
+	}
+	> .cell-secondary 
+	{
+		font-size:12px;
+		color:$color-base-lighten1;
+		font-weight:400;
+	}
+	> .cell-label 
+	{
+		font-size:12px;
+		font-weight:400;
+		text-transform:uppercase;
+		color:$color-base-lighten2;		
+	}
+
+}
+
 
 // Table list
 
@@ -172,11 +147,12 @@
 	@extend .list_item;
 	display:table-row;
 
-	&_cell
-	{
-		@extend %baseCell;
-		@extend %baseCell_listModifiers;
-	}
+
+}
+
+.table--list_item_cell
+{
+	@extend .list_item_cell;
 }
 
 

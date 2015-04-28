@@ -1,23 +1,14 @@
 /* --------->>> Module: Question  Answer-----------*/
 
-
-.q_description
-{
-	font-size:18px;
-}
-
-.q-answer_instruction
-{
-	width:100%;
-	
-}
-
 .q-answer 
 {
-	
+  
+}
 
-	
-
+.q-answer_descritpion
+{
+	padding-top:10px;
+	padding-bottom:10px;
 }
 
 .q-answer_item
@@ -29,17 +20,10 @@
 	border:5px solid $bgcolor-base;
 	border-radius:5px;
 	margin-bottom:10px;
-
-	&_cell
-	{
-		@extend %baseCell;
-
-	}
-
-
 }
 
-
+// Question Answer Components
+// can reflactor later
 
 .q-answer_item_cell-control
 {
@@ -66,8 +50,6 @@
 		width:120px;
 	}
 }
-
-
 
 .q-answer_item_cell-description
 {
@@ -105,13 +87,12 @@
 	display:table-row;
 }
 
-.q-answer_item_cell-matching-option
+.q-answer_item_cell-divider
 {
 	@extend %baseCell;
-	position:relative;
-	border-left:5px solid $bgcolor-base;
-	padding:0;
-	min-width:50%;
+	width:10px;
+	background: $bgcolor-base;
+	
 }
 
 
