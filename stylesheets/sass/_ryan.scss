@@ -4,6 +4,7 @@
 
 	padding:$padding-default;
 	height:52px;
+	line-height:32px;
 	background:#f9f9f9;
 	border-bottom:1px solid #d9dde1;
 	&.is-active 
@@ -40,6 +41,7 @@
 
 .badge 
 {
+	float:left;
 	background:$bgcolor-base-darken2;
 	border-radius:50%;
 	height:32px;

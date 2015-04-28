@@ -15,10 +15,28 @@
 
 }
 
+.discussion-topic_footer
+{
+	@extend .card_item_footer;
+
+}
+
 .discussion-reply
 {
 	@extend .card;
 	margin-bottom:20px;
+}
+.discussion-reply_header
+{
+	@include clearfix;
+	height:52px;
+	padding:10px;
+	
+}
+.discussion-reply_header-utility
+{
+	@include clearfix;
+	float:right;
 	
 }
 
@@ -26,8 +44,10 @@
 {
 	@extend .card_item_body;
 }
+
 .discussion-reply-author
 {
+	// refactor into an icon title
 	@extend .card_item_title;
 	line-height:32px;
 	height:32px;
@@ -49,7 +69,3 @@
 	float:right;
 }
 
-.discussion-reply_vote
-{
-
-}
