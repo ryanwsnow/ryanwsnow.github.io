@@ -2396,7 +2396,7 @@ header {
   width: 55%;
   height: 100%; }
 
-.nav, .list, .list--menu, .list--folders, .menu {
+.nav, .list, .menu, .menu--folders {
   list-style-type: none;
   margin: 0;
   padding: 0; }
@@ -2506,6 +2506,39 @@ a.nav--tab-pill_item {
   a.nav--tab-pill_item.is-active {
     color: #fff;
     background: #199bfd; }
+
+.menu > li, .menu--folders > li {
+  height: 52px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.menu > li > a, .menu--folders > li > a, .menu > li > button, .menu--folders > li > button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #708493; }
+.menu > .is-selected, .menu--folders > .is-selected {
+  background: #f0f0f0; }
+.menu > .is-hovered, .menu--folders > .is-hovered {
+  background: #f9f9f9; }
+
+.menu--folders {
+  background: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px; }
+  .menu--folders_item-breadcrumb {
+    background: #f0f0f0; }
+  .menu--folders_item {
+    background: #ffffff;
+    margin-top: 5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #f0f0f0; }
+  .menu--folders_item-placeholder {
+    margin-top: 5px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: #199bfd; }
 
 .btn--plain, .btn--utility, .btn--default, .btn--icon-utility {
   float: left;
@@ -2631,45 +2664,53 @@ a.nav--tab-pill_item {
 
 /** End Buttons **/
 /* --------->>> Layout: List -----------*/
-.list_item_cell, .table--list_item_cell {
+.table--list, .q-answer_item, .q-answer--matching_item, .q-answer--matching {
+  display: table;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  width: 100%; }
+
+.list_item_cell, .table--list_item_cell, .q-answer_item_cell, .q-answer_item_cell-control, .q-answer_item_cell-label, .q-answer_item_cell-description, .q-answer_item_cell-correct, .q-answer_item_cell-input, .q-answer_item_cell-matching-option {
   padding: 10px;
   display: table-cell;
   vertical-align: middle; }
-  .small.list_item_cell, .small.table--list_item_cell {
+  .small.list_item_cell, .small.table--list_item_cell, .small.q-answer_item_cell, .small.q-answer_item_cell-control, .small.q-answer_item_cell-label, .small.q-answer_item_cell-description, .small.q-answer_item_cell-correct, .small.q-answer_item_cell-input, .small.q-answer_item_cell-matching-option {
     width: 32px;
     text-align: center; }
-  .is-first.list_item_cell, .is-first.table--list_item_cell {
-    padding-left: 20px; }
-  .list_item_cell > .cell-primary, .table--list_item_cell > .cell-primary {
-    font-size: 14px;
-    font-weight: 600;
-    color: #435561; }
-  .list_item_cell > .cell-secondary, .table--list_item_cell > .cell-secondary {
-    font-size: 12px;
-    color: #708493;
-    font-weight: 400; }
-  .list_item_cell > .cell-label, .table--list_item_cell > .cell-label {
-    font-size: 12px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #a4b0ba; }
+  .medium.list_item_cell, .medium.table--list_item_cell, .medium.q-answer_item_cell, .medium.q-answer_item_cell-control, .medium.q-answer_item_cell-label, .medium.q-answer_item_cell-description, .medium.q-answer_item_cell-correct, .medium.q-answer_item_cell-input, .medium.q-answer_item_cell-matching-option {
+    width: 120px;
+    text-align: center; }
 
-.list, .list--menu, .list--folders, .menu {
+.is-first.list_item_cell, .is-first.table--list_item_cell {
+  padding-left: 20px; }
+.list_item_cell > .cell-primary, .table--list_item_cell > .cell-primary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #435561; }
+.list_item_cell > .cell-secondary, .table--list_item_cell > .cell-secondary {
+  font-size: 12px;
+  color: #708493;
+  font-weight: 400; }
+.list_item_cell > .cell-label, .table--list_item_cell > .cell-label {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #a4b0ba; }
+
+.list, .menu, .menu--folders {
   width: 100%; }
-  .list > li, .list--menu > li, .list--folders > li, .menu > li {
+  .list > li, .menu > li, .menu--folders > li {
     width: 100%; }
+
+.list-sub > li > .list_item, .list-sub > li > .table--list_item {
+  padding-left: 40px; }
 
 .list_item, .table--list_item {
   cursor: pointer;
   position: relative;
   height: 64px;
   border-bottom: 1px solid #d9dde1;
-  width: 100%; }
-
-.list-sub > li > .list_item {
-  padding-left: 40px; }
-
-.list_item {
+  width: 100%;
   display: table; }
   .list_item_activity-info {
     position: absolute;
@@ -2680,13 +2721,13 @@ a.nav--tab-pill_item {
     font-weight: 400;
     white-space: nowrap;
     text-align: right; }
-  .list_item.is-hovered {
+  .list_item.is-hovered, .is-hovered.table--list_item {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     background: #f2f2f2;
     cursor: pointer; }
-  .list_item.is-active {
+  .list_item.is-active, .is-active.table--list_item {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -2694,51 +2735,11 @@ a.nav--tab-pill_item {
     cursor: pointer;
     border-left: 3px solid #0ac8f4; }
 
-.table--list {
-  display: table;
-  border-collapse: collapse;
-  box-sizing: border-box;
-  width: 100%; }
-
 .table--list_item {
   display: table-row; }
 
-/* --->>> List item ---*/
-.list.is-cozy > li > .list_item {
+.list.is-cozy > li > .list_item, .is-cozy.menu > li > .list_item, .is-cozy.menu--folders > li > .list_item, .list.is-cozy > li > .table--list_item, .is-cozy.menu > li > .table--list_item, .is-cozy.menu--folders > li > .table--list_item {
   height: 80px; }
-
-.list--menu > li, .list--folders > li, .menu > li {
-  height: 52px;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-.list--menu > li > a, .list--folders > li > a, .menu > li > a, .list--menu > li > button, .list--folders > li > button, .menu > li > button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  color: #708493; }
-.list--menu > .is-selected, .list--folders > .is-selected, .menu > .is-selected {
-  background: #f0f0f0; }
-.list--menu > .is-hovered, .list--folders > .is-hovered, .menu > .is-hovered {
-  background: #f9f9f9; }
-
-.list--folders {
-  background: #f0f0f0;
-  border-radius: 5px;
-  padding: 10px; }
-  .list--folders_item-breadcrumb {
-    background: #f0f0f0; }
-  .list--folders_item {
-    background: #ffffff;
-    margin-top: 5px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #f0f0f0; }
-  .list--folders_item-placeholder {
-    margin-top: 5px;
-    border-radius: 3px;
-    border-width: 1px;
-    border-style: dashed;
-    border-color: #199bfd; }
 
 .grid {
   width: 100%;
@@ -2929,56 +2930,52 @@ textarea.materialize-textarea {
     border-bottom: none; }
 
 /* --------->>> Module: Question  Answer-----------*/
-.q-answer_item-control, .q-answer_item-label, .q-answer_item-matching-option, .q-answer_item-description, .q-answer_item-correct, .q-answer_item-input {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 10px; }
-
-.q-answer_item {
-  width: 100%;
-  position: relative;
-  display: table; }
-
 .q_description {
   font-size: 18px; }
 
 .q-answer_instruction {
   width: 100%; }
 
-.q-answer_item {
+.q-answer_item, .q-answer--matching_item {
+  border-collapse: separate;
   height: 60px;
   background: #ffffff;
   border: 5px solid #f2f2f2;
   border-radius: 5px;
   margin-bottom: 10px; }
 
-.q-answer_item-control {
+.q-answer_item_cell-control {
   width: 40px; }
-  .q-answer_item-control > i {
-    color: #a4b0ba;
-    font-size: 24px; }
+  .q-answer_item_cell-control > i {
+    color: #a4b0ba; }
 
-.q-answer_item-label {
+.q-answer_item_cell-label {
   width: 40px;
-  color: #0ac8f4;
   text-align: center;
-  font-size: 1em;
+  color: #0ac8f4;
+  font-size: 14px;
   border-right: 1px solid #f2f2f2; }
-  .q-answer_item-label.size-large {
+  .q-answer_item_cell-label.size-large {
     width: 120px; }
 
-.q-answer_item-matching-option {
+.q-answer_item_cell-description {
+  font-size: 14px; }
+
+.q-answer_item_cell-correct {
+  width: 160px;
+  white-space: nowrap; }
+
+.q-answer--matching {
+  margin-bottom: 20px; }
+
+.q-answer--matching_item {
+  display: table-row; }
+
+.q-answer_item_cell-matching-option {
   position: relative;
   border-left: 5px solid #f2f2f2;
   padding: 0;
   min-width: 50%; }
-
-.q-answer_item-description {
-  font-size: 1rem; }
-
-.q-answer_item-correct {
-  width: 160px;
-  white-space: nowrap; }
 
 .lobby_header, .course_header, .present_header {
   background: #435561;

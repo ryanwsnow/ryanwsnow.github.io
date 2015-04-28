@@ -1,19 +1,5 @@
 /* --------->>> Module: Question  Answer-----------*/
 
-%column
-{
-	display:table-cell;
-	vertical-align:middle;
-	padding:10px;
-
-}
-
-%table
-{
-	width:100%;
-	position:relative;
-	display:table;	
-}
 
 .q_description
 {
@@ -26,37 +12,53 @@
 	
 }
 
+.q-answer 
+{
+	
+
+	
+
+}
 
 .q-answer_item
 {
-	@extend %table;
+	@extend %baseTable;
+	border-collapse: separate;
 	height:60px;
 	background:#ffffff;
 	border:5px solid $bgcolor-base;
 	border-radius:5px;
 	margin-bottom:10px;
+
+	&_cell
+	{
+		@extend %baseCell;
+
+	}
+
+
 }
 
-.q-answer_item-control
+
+
+.q-answer_item_cell-control
 {
-	@extend %column;
+	@extend %baseCell;
 	width:40px;
 	> i 
 	{
 		color:$color-base-lighten2;
 
-		font-size:24px;
 	}
 }
 
-.q-answer_item-label
+.q-answer_item_cell-label
 {
-	@extend %column;
-	
+	@extend %baseCell;
 	width:40px;
-	color:$color-highlight;
 	text-align:center;
-	font-size:1em;
+	color:$color-highlight;
+	font-size:14px;
 	border-right:1px solid $bgcolor-base;
 
 	&.size-large
@@ -65,35 +67,53 @@
 	}
 }
 
-.q-answer_item-matching-option
-{
-	@extend %column;
-	position:relative;
-	border-left:5px solid $bgcolor-base;
-	padding:0;
-	min-width:50%;
-}
 
-.q-answer_item-description
+
+.q-answer_item_cell-description
 {
-	@extend %column;
-	font-size:1rem;
+	@extend %baseCell;
+	font-size:14px;;
 	
 }
 
-.q-answer_item-correct
+.q-answer_item_cell-correct
 {
-	@extend %column;
+	@extend %baseCell;
 	width:160px;
 	white-space: nowrap;
 	
 }
 
 
-.q-answer_item-input
+.q-answer_item_cell-input
 {
-	@extend %column;
+	@extend %baseCell;
 
 
 }
+
+// Matching sub module 
+
+.q-answer--matching
+{
+	@extend %baseTable;
+	margin-bottom:20px;
+}
+.q-answer--matching_item
+{
+	@extend .q-answer_item;
+	display:table-row;
+}
+
+.q-answer_item_cell-matching-option
+{
+	@extend %baseCell;
+	position:relative;
+	border-left:5px solid $bgcolor-base;
+	padding:0;
+	min-width:50%;
+}
+
+
+
 

@@ -1,5 +1,19 @@
 /* --------->>> Layout: List -----------*/
 // ****! needs to be refactored ! ****//
+
+%baseTable 
+{
+	display:table;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	width:100%;
+}
+
+%baseRow
+{
+	display:table-row;
+}
+
 %baseCell
 {
 	// new way of creating base placeholders must refactor other modules
@@ -10,12 +24,24 @@
 	padding:10px;
 	display:table-cell;
 	vertical-align:middle;
-
 	&.small 
 	{
 		width:32px;
 		text-align:center;
 	}
+	&.medium
+	{
+		width:120px;
+		text-align:center;
+	}
+
+
+}
+// refactor this into a mixin
+
+%baseCell_listModifiers
+{
+
 	
 	&.is-first
 	{
@@ -35,38 +61,38 @@
 	}
 	> .cell-label 
 	{
-	font-size:12px;
-	font-weight:400;
-	text-transform:uppercase;
-	color:$color-base-lighten2;		
+		font-size:12px;
+		font-weight:400;
+		text-transform:uppercase;
+		color:$color-base-lighten2;		
 	}
-
 }
 
 
-%baseList
+%baseCell_qAnswerModifiers
 {
-	@extend %clearListStyle;
+	&.cellq-label
+	{
+		font-size:14px;
+		border-right:1px solid $bgcolor-base;
+	}
+}
+
+
+
+
+
+
+
+//List 
+.list
+{
+  	@extend %clearListStyle;
 	width:100%;
 	> li 
 	{
 		width:100%;
 	}
-}
-
-%baseListItem
-{
-	cursor:pointer;
- 	position:relative;
-	height:64px;
-	border-bottom:1px solid #d9dde1;
-	width:100%;
-}
-
-//List 
-.list
-{
-  @extend %baseList;
 }
 
 
@@ -82,8 +108,13 @@
 
 .list_item
  {
- 	@extend %baseListItem;
+ 	cursor:pointer;
+ 	position:relative;
+	height:64px;
+	border-bottom:1px solid #d9dde1;
+	width:100%;
  	display:table;
+	
 
 	
 	&_activity-info
@@ -102,6 +133,7 @@
 	&_cell
 	{
 		@extend %baseCell;
+		@extend %baseCell_listModifiers;
 	}
 	
 
@@ -128,31 +160,26 @@
 
 // Table list
 
+
 .table--list
 {
 	
-	display:table;
-	border-collapse: collapse;
-	box-sizing: border-box;
-	width:100%;
+	@extend %baseTable;
 }
 
 .table--list_item
 {
-	@extend %baseListItem;
+	@extend .list_item;
 	display:table-row;
 
 	&_cell
 	{
 		@extend %baseCell;
+		@extend %baseCell_listModifiers;
 	}
 }
 
 
-.list-row
-{
-	
-}
 
 
 
@@ -160,7 +187,8 @@
 
 
 
-/* --->>> List item ---*/
+
+
 
 
 
@@ -183,76 +211,6 @@
 }
 
 
-
-.list--menu
-{
-	@extend %baseList;
-	> li 
-	{
-		height:52px;
-		padding: 
-		{
-			top:10px;
-			bottom:10px;
-		}
-	  }
-	> li > a, > li > button
-	{
-		display:block;
-		width:100%;
-		text-align:left;
-		color:$color-base-lighten1;
-	}
-	> .is-selected
-	{
-		background:$bgcolor-base-darken1;
-	}
-	> .is-hovered
-	{
-		background:$bgcolor-base-lighten1;
-	}
-}
-
-
-
-.list--folders
-{
-	@extend .list--menu;
-	
-	background:$bgcolor-base-darken1;
-	
-	border-radius:5px;
-	padding:10px;
-
-	&_item-breadcrumb
-	{
-		background:$bgcolor-base-darken1;
-	}
-
-	&_item 
-	{
-		background:#ffffff;
-		margin-top:5px;
-		border-bottom:
-		{
-			width:1px;
-			style:solid;
-			color:$bgcolor-base-darken1;
-		}
-	}
-	&_item-placeholder
-	{
-		margin-top:5px;
-		border:
-			{
-				radius:3px;
-				width:1px;
-				style:dashed;
-				color:$color-primary;
-			}
-		
-	}
-}
 
 
 
