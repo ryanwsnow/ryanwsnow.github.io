@@ -2442,7 +2442,8 @@ header {
     clear: both; }
 
 .is-hidden {
-  display: none !important; }
+  display: none !important;
+  opacity: 0 !important; }
 
 /* --------->>> Navigation: Basic ---------*/
 .nav--tab-card > li, .nav--tab-pill > li {
@@ -2820,11 +2821,21 @@ a.nav--tab-pill_item {
   display: block;
   position: relative;
   padding-bottom: 52px;
-  width: 100%;
   width: 200px;
   height: 200px; }
   .card--thumb.is-active {
+    overflow: hidden;
     background: #fff; }
+
+.card--thumb_item_footer {
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #435561; }
+  .is-active .card--thumb_item_footer {
+    background-color: #0ac8f4;
+    text-align: center;
+    color: #fff; }
 
 .card_item_body, .card--thumb_item_body, .discussion-card_body {
   padding: 10px;
@@ -2841,7 +2852,7 @@ a.nav--tab-pill_item {
   font-weight: 400;
   color: #708493; }
 
-.card_item_footer, .discussion-card_footer {
+.card_item_footer, .card--thumb_item_footer, .discussion-card_footer {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -3187,9 +3198,10 @@ textarea.materialize-textarea {
   transition: all 0.3s ease-in 0s; }
 
 .present_header {
-  background: #435561;
+  background: transparent;
   padding: 10px;
-  height: 52px; }
+  height: 52px;
+  z-index: 400; }
   .present_header_title {
     text-align: center; }
 
@@ -3214,19 +3226,25 @@ textarea.materialize-textarea {
 
 .instruction-hitspots {
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 0;
   width: 100%;
-  height: 90%; }
+  height: 100%; }
   .instruction-hitspots .hitspot-left {
     left: 0;
     width: 25%; }
   .instruction-hitspots .hitspot-middle {
     left: 25%;
-    width: 50%; }
+    width: 50%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s; }
   .instruction-hitspots .hitspot-right {
     right: 0;
-    width: 25%; }
+    width: 25%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s; }
 
 .hitspot_body {
   position: relative;
@@ -3237,35 +3255,38 @@ textarea.materialize-textarea {
   margin-right: auto; }
 
 .hs-next {
-  opacity: 0;
   position: absolute;
   color: #0ac8f4;
+  height: 200px;
   top: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transition: all 0.3s ease-in 0s;
-  -moz-transition: all 0.3s ease-in 0s;
-  transition: all 0.3s ease-in 0s;
-  text-align: center; }
+  transform: translate(0, -50%);
+  -webkit-transition: all 0.4s ease-in 0.6s;
+  -moz-transition: all 0.4s ease-in 0.6s;
+  transition: all 0.4s ease-in 0.6s; }
 
 .hitspot-right .hs-next {
-  right: 0; }
+  right: -300px; }
 
 .hitspot-left .hs-next {
-  left: 60px; }
+  left: -300px; }
 
 .hitspot-right.is-hovered {
+  opacity: 1;
   background-color: rgba(10, 200, 244, 0);
   background-image: -webkit-linear-gradient(left, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
   background-image: linear-gradient(to right,rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%); }
   .hitspot-right.is-hovered .hs-next {
-    opacity: 1; }
+    opacity: 1;
+    right: 0px; }
 
 .hitspot-left.is-hovered {
   background-color: rgba(10, 200, 244, 0);
   background-image: -webkit-linear-gradient(right, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
-  background-image: linear-gradient(to left,rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%); }
+  background-image: linear-gradient(to left,rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
+  opacity: 1; }
   .hitspot-left.is-hovered .hs-next {
-    opacity: 1; }
+    opacity: 1;
+    left: 0px; }
 
 .hitspot-instructions {
   display: none;
