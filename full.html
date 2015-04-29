@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="course">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Styleguide - Tophat</title>
+	<!-- Bootstrap -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="stylesheets/css/app.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+
+	<script src="js/app.js"></script>
+	
+</head>
+<body class="full-container">
+
+	<div class="content-preview">
+		<div class="content-preview_header">
+			<div class="content-preview_header_action">
+				<button onclick="location.href = 'course.html';" id="previewClose" class="btn--icon-utility is-first">
+					<i class="icon-close"></i>
+				</button>
+			</div>
+			<div class="content-preview_header_utility-bar">
+				<button class="btn btn--utility is-first" href="#">Edit</button>
+				<button  class="btn btn--utility danger is-last" href="#">Delete</button>
+			</div>
+				<div class="content-preview_header_body">
+				
+					<div class="content-preview_header_title">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae
+					</div>
+					<div class="content-preview_header_subtitle">
+						March 8th
+					</div>
+				</div>
+				<div class="content-preview_header_footer">
+					<ul class="nav nav--tab on-light">
+						<li><a href="#" class="nav--tab_item is-active is-first">Details</a></li>
+						<li><a href="#" class="nav--tab_item is-last">Report</a></li>
+					
+					</ul>
+					
+				</div>
+				<div class="content-preview_header_cta">
+						
+						<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
+						<ul   id="dropdown2" class="dropdown-content menu">
+						     <li><a class="btn--plain" href="#!">Homework</a></li>
+						    <li><a class="btn--plain" href="#!">Review</a></li>
+						    
+						    
+					    	</ul>
+						<button onclick="location.href = 'present.html';" class="dropdown-button btn btn--raised primary is-last">Present</button>
+						
+				</div>
+		</div><!-- content-preview_header END-->
+		<div class="content-preview_body">
+			<div class="l-inset">
+				
+				<div id="typeDiscussion" class="">
+					<div class="discussion">
+						<div class="discussion-card">
+							<div class="discussion-card_header">
+									<span class="discussion-card-author">
+										<i class="icon-school" ></i>Professor Snow
+									</span>
+									<span class="discussion-card_header-utility">
+										<!-- nothing here -->
+									</span>
+							</div>
+							<div class="discussion-card_body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque et purus sed tincidunt. Ut purus nunc, volutpat condimentum elit vel, consequat hendrerit ligula. Nam at ante cursus, scelerisque mauris in, sagittis metus. Maecenas facilisis nulla id massa volutpat, sed volutpat ipsum commodo. Aenean sit amet nibh fringilla
+							</div>
+							<div class="discussion-card_footer">
+								<span class="discussion-card_footer-actions">									
+									<button class="btn--plain primary is-last">Reply</button>					
+								</span>
+							</div>
+						</div> <!-- discussion-card END -->
+						<div class="discussion-card-divider"></div>
+						<div class="discussion-card highlight2">
+							<div class="discussion-card_header">
+									<span class="discussion-card-author">
+										<i class="icon-school" ></i>Professor Snow
+									</span>
+									<span class="discussion-card_header-utility">
+										<!-- nothing here -->
+									</span>
+							</div>
+							<div class="discussion-card_body">
+								<span class="form-field">
+        								<label class="label-icon" for="questionDescription"><i class="icon-edit"></i></label><textarea id="textarea1" class="materialize-textarea"  id="questionDescription" type="text" placeholder="Enter your reply..."></textarea>
+    								</span>
+							</div>
+							<div class="discussion-card_footer">
+								<button class="btn--plain danger">Attach Canvas</button>
+								<span class="discussion-card_footer-actions">
+									<button class="btn--plain danger">Cancel</button>
+
+									<button class="btn--plain primary is-last">Post</button>					
+								</span>
+							</div>
+						</div>
+						<div class="discussion-card-divider"></div>
+
+						<div class="list--discussion-card">
+							<div class="discussion-card">
+								<div class="discussion-card_header">
+
+									<span class="discussion-card-author">
+										<i class="icon-account-circle" ></i>Corway, Andrew
+									</span>
+									<span class="time-stamp">Mar 8 @ 9:22</span>
+
+									<span class="discussion-card_header-utility">
+										<button class="btn--icon-utility danger"><i class="icon-flag"></i></button>
+										<button class="btn--icon-utility danger is-last"><i class="icon-delete"></i></button>
+									</span>								
+								</div>
+								<div class="discussion-card_body">
+									
+									condimentum elit vel, consequat hendrerit ligula. Nam at ante cursus, scelerisque mauris in, sagittis metus. Maecenas facilisis nulla id massa volutpat, sed volutpat ipsum commodo. Aenean sit amet nibh fringilla
+								</div>
+								<div class="discussion-card_footer">
+									
+
+									<span class="discussion-card_footer-actions">
+										
+										<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
+									<button class="btn--plain primary">Comment</button>
+									<span class="badge small withtext">0</span>
+									
+									</span>
+								</div>
+								
+							</div><!-- discussion-card END -->
+							<div class="discussion-card-divider"></div>
+									<div class="discussion-card comment">
+										<div class="discussion-card_header">
+
+											<span class="discussion-card-author">
+												<i class="icon-account-circle" ></i>Wiggin, Andrew
+											</span>
+											<span class="time-stamp">Mar 8 @ 10:22</span>
+
+											<span class="discussion-card_header-utility">
+												<button class="btn--icon-utility danger"><i class="icon-flag"></i></button>
+												<button class="btn--icon-utility danger is-last"><i class="icon-delete"></i></button>
+											</span>								
+										</div>
+										<div class="discussion-card_body">
+											
+											condimentum elit vel, consequat hendrerit ligula. Nam at ante cursus, scelerisque mauris in, sagittis metus. 
+										</div>
+										<div class="discussion-card_footer">
+											
+
+											<span class="discussion-card_footer-actions">
+												
+												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
+											
+											
+											</span>
+										</div>
+										
+									</div><!-- discussion-card END -->
+						</div>
+					</div>
+
+				</div>
+			</div><!-- l-inset END -->
+		</div><!-- content-preview_body END -->
+	</div><!-- content-preview END -->
+		
+
+<!-- Modal -->
+<div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="th-modal_container">
+      <div class="th-modal_header">
+      	  <span class="th-modal_header_action">
+        		<button class="btn btn--icon-utility is-last"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+    	</span>
+        <h4 class="th-modal_title" id="myModalLabel">Create Question</h4>
+
+      </div>
+      <div class="th-modal_body">
+        <span class="form-field">
+        	<label for="questionTitle">Title:</label><input tabindex="0" id="questionTitle" type="text" placeholder="Question 1"  data-toggle="tooltip" data-placement="right" title="here is a tip">
+    	</span>
+    	 <span class="form-field">
+        	<label for="questionDescription">Question:</label><textarea id="textarea1" class="materialize-textarea"  id="questionDescription" type="text" placeholder="Enter your question"></textarea>
+    	</span>
+    	<div class="th-modal_section">
+    		<h5 class="th-modal_section-header">Multiple Choice Options</h5>
+    		
+    		<div class="q-answer">
+			<div class="q-answer_item">
+				<span class="q-answer_item_cell-label">A</span>
+				<div class="q-answer_item_cell-description">
+					<span class="form-field"><input id="answerA" type="text" placeholder="Description"></span>
+				</div>
+				<span class="q-answer_item_cell-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
+				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+			</div>
+		
+		
+			<div class="q-answer_item">
+				<span class="q-answer_item_cell-label">B</span>
+				<div class="q-answer_item_cell-description"><span class="form-field"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
+				<span class="q-answer_item_cell-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
+				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+			</div>
+	
+		</div>
+		<button class="btn--plain with-icon primary is-first"><i class="icon-add-circle"></i>Add Another</button>
+      </div>
+      <div class="th-modal_section">
+    		<h5 class="th-modal_section-header">Some other options</h5>
+    	</div>
+      
+    </div>
+    <div class="th-modal_footer">
+    	<span class="right">
+        <button type="button" class="btn--default" data-dismiss="modal">back</button>
+        <button type="button" class="btn--default primary is-last">Save</button>
+      </div>
+  </span>
+  </div>
+</div>
+</div>
+
+
+<!-- move modal -->
+<div class="modal fade" id="modalMove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="th-modal_container">
+      <div class="th-modal_header">
+      	<span class="th-modal_header_action">
+        	<button class="btn--icon-utility is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+    	</span>
+        <h4 class="th-modal_title" id="myModalLabel">Move to...</h4>
+      </div>
+
+      <div class="th-modal_body">
+   	
+   		<!-- <h5 class="th-modal_section-header">Choose a folder</h5> -->
+	      	<ol class="menu--folders ">
+	      		<li class="menu--folders_item-breadcrumb"><a class="btn--plain with-icon" href="#!"> <i class="icon-arrow-back"></i>Week 1</a>
+	    
+	      	</li>
+	<!--       		<li class="menu--folders_item "><a href="#!"><span class="badge">6</span></i> Selected item(s) Place here</a> -->
+	
+
+	      		<li class="menu--folders_item"><button class="btn--plain with-icon"><i class="icon-folder"></i>Homework</button></li>
+	      		<li class="menu--folders_item"><a class="btn--plain with-icon"href="#"><i class="icon-folder"></i>Review</a></li>
+	      		<li class="menu--folders_item-placeholder"><a  class="btn--plain with-icon primary" href="#!"><i class="icon-keyboard-tab"></i>Move here</a></li>
+    		
+	      	</ol>
+    </div>
+    <div class="th-modal_footer">
+    	<span class="right">
+        <button type="button" class="btn btn--default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn--default primary is-last">Move</button>
+    </span>
+      </div>
+  </div>
+</div>
+</div>
+
+<!-- Generic modal -->
+<div class="modal fade" id="modalGeneric" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="th-modal_container">
+      <div class="th-modal_header">
+      	<span class="th-modal_header_action">
+        	<button class="btn--icon-utility is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+    	</span>
+        <h4 class="th-modal_title" id="myModalLabel">Move to...</h4>
+      </div>
+
+      <div class="th-modal_body">
+   	
+   		<p>Use existing UI</p>
+	      	
+    </div>
+    <div class="th-modal_footer">
+    	<span class="right">
+        <button type="button" class="btn btn--default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn--default primary is-last">Save</button>
+    </span>
+      </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>
