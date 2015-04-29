@@ -25,9 +25,9 @@ textarea.materialize-textarea {
   
   overflow-y: hidden; //remvoe flashing bar
   
-  height: 3rem;
+  height: 32px;;
   width: 100%;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   padding: 0;
   box-shadow: none;
   @include box-sizing(content-box);
@@ -100,7 +100,8 @@ textarea.materialize-textarea {
 
 	> textarea
 	{
-		vertical-align:top;
+		vertical-align:middle;
+		height:32px;
 
 	}
 
@@ -119,6 +120,13 @@ textarea.materialize-textarea {
 			// @include transition(all 0.5s ease-in-out);
 			color:$color-highlight;
 			@include transition(all 0.5s ease-in-out);
+		}
+		&.label-icon
+		{
+			width:50px;
+			vertical-align:middle;
+			color:inherit;
+
 		}
 	}
 	&.is-focused

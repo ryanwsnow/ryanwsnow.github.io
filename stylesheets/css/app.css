@@ -47,8 +47,12 @@ i {
   -moz-osx-font-smoothing: grayscale; }
 
 i[class^="icon-"] {
-  line-height: 32px;
-  font-size: 24px; }
+  font-size: 24px;
+  line-height: inherit;
+  float: left; }
+
+i.inline {
+  padding-right: 10px; }
 
 i.primary {
   color: #435561; }
@@ -2328,6 +2332,9 @@ i.secondary {
   content: "\e8f4"; }
 
 /** Base **/
+.card_item_title > i, .discussion-card-author > i {
+  padding-right: 10px; }
+
 html {
   height: 100%;
   font-size: 14px; }
@@ -2599,6 +2606,8 @@ a.nav--tab-pill_item {
   line-height: 52px;
   color: #a4b0ba;
   z-index: 5; }
+  .btn--round > i {
+    float: none; }
   .btn--round.is-last {
     margin-right: 0; }
   .btn--round.large {
@@ -2744,13 +2753,17 @@ a.nav--tab-pill_item {
 .grid {
   width: 100%;
   padding: 10px; }
+  .grid:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .grid_item {
-  display: inline-block;
+  float: left;
   margin-right: 20px;
   margin-top: 20px; }
 
-.card, .discussion-card {
+.card, .card--fixed, .discussion-card {
   background: #fff;
   border-radius: 5px;
   display: block;
@@ -2761,9 +2774,18 @@ a.nav--tab-pill_item {
   -webkit-box-shadow: 0px 2px 0px 0px #d9dde1;
   -moz-box-shadow: 0px 2px 0px 0px #d9dde1;
   box-shadow: 0px 2px 0px 0px #d9dde1; }
-  .card.small, .small.discussion-card {
-    width: 250px;
-    height: 250px; }
+  .card.highlight, .highlight.card--fixed, .highlight.discussion-card {
+    background: #effcfe;
+    border: 1px solid #0ac8f4;
+    padding-bottom: 52px;
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 0px 0px #0ac8f4;
+    -moz-box-shadow: 0px 2px 0px 0px #0ac8f4;
+    box-shadow: 0px 2px 0px 0px #0ac8f4; }
+
+.card--fixed {
+  width: 250px;
+  height: 250px; }
 
 .card_item_body, .discussion-card_body {
   padding: 10px;
@@ -2771,6 +2793,7 @@ a.nav--tab-pill_item {
 
 .card_item_title, .discussion-card-author {
   font-size: 18px;
+  line-height: 32px;
   font-weight: 600;
   color: #435561; }
 
@@ -2858,9 +2881,9 @@ textarea {
 
 textarea.materialize-textarea {
   overflow-y: hidden;
-  height: 3rem;
+  height: 32px;
   width: 100%;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   padding: 0;
   box-shadow: none;
   -webkit-box-sizing: content-box;
@@ -2914,7 +2937,8 @@ textarea.materialize-textarea {
     width: 100%;
     color: #708493; }
   .form-field > textarea {
-    vertical-align: top; }
+    vertical-align: middle;
+    height: 32px; }
   .form-field > label {
     display: table-cell;
     width: 100px;
@@ -2927,6 +2951,10 @@ textarea.materialize-textarea {
       -webkit-transition: all 0.5s ease-in-out;
       -moz-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
+    .form-field > label.label-icon {
+      width: 50px;
+      vertical-align: middle;
+      color: inherit; }
   .form-field.is-focused {
     border-bottom-color: #0ac8f4; }
     .form-field.is-focused > input, .form-field.is-focused > textarea {
@@ -2981,11 +3009,7 @@ textarea.materialize-textarea {
 .discussion {
   width: 100%; }
 
-.discussion-card {
-  margin-bottom: 20px; }
-
 .discussion-card_header {
-  height: 52px;
   padding: 10px; }
   .discussion-card_header:after {
     content: "";
@@ -2995,15 +3019,29 @@ textarea.materialize-textarea {
 .discussion-card_header-utility {
   float: right; }
 
+.discussion-card_body {
+  padding-bottom: 20px; }
+
 .discussion-card-author {
-  line-height: 32px;
-  height: 32px; }
-  .discussion-card-author > i {
-    float: left;
-    padding-right: 10px; }
+  float: left; }
 
 .discussion-card_footer-actions {
   float: right; }
+
+.discussion-card-divider {
+  position: relative;
+  height: 20px;
+  width: 2px;
+  margin-left: 50%;
+  border-left: 2px solid #d9dde1; }
+
+.time-stamp {
+  line-height: 32px;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #0ac8f4; }
 
 .lobby_header, .course_header, .present_header {
   background: #435561;
@@ -3278,8 +3316,15 @@ textarea.materialize-textarea {
   text-align: center;
   font-size: 14px;
   color: #fff;
-  display: inline-block;
   margin-right: 10px; }
+  .badge.small {
+    height: 24px;
+    width: 24px;
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 24px; }
+  .badge.withtext {
+    margin-right: 0; }
   .badge.highlight {
     background: #0ac8f4; }
 

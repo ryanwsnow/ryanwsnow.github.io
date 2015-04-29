@@ -9,12 +9,22 @@
 	padding-bottom:52px;
 	width:100%;
 	@include box-shadow (0px 2px 0px 0px rgba(217,221,225,1));
-	&.small
+	&.highlight
 	{
-	width:250px;
-	height:250px;
+		background: lighten($color-highlight, 47%);
+		border:1px solid $color-highlight;
+		padding-bottom:52px;
+		width:100%;
+		@include box-shadow (0px 2px 0px 0px rgba(10,200,244,1));
 	}
 
+}
+
+.card--fixed
+{
+	@extend .card;
+	width:250px;
+	height:250px;
 }
 
 .card_item_body
@@ -26,8 +36,9 @@
 
 .card_item_title
 {
-	
+	@extend %title;
 	font-size:18px;
+	line-height:32px;
 	font-weight:600;
 	color:$color-base;
 }

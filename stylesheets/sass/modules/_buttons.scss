@@ -137,6 +137,10 @@
 	line-height:52px;
 	color:$color-base-lighten2;
 	z-index:5;
+	> i 
+	{
+		float:none;
+	}
 	&.is-last 
 	{
 		margin-right:0;
