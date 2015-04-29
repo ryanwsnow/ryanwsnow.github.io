@@ -3192,9 +3192,10 @@ textarea.materialize-textarea {
   transition: all 0.3s ease-in 0s; }
 
 .present_header {
-  background: #435561;
+  background: transparent;
   padding: 10px;
-  height: 52px; }
+  height: 52px;
+  z-index: 400; }
   .present_header_title {
     text-align: center; }
 
@@ -3219,10 +3220,10 @@ textarea.materialize-textarea {
 
 .instruction-hitspots {
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 0;
   width: 100%;
-  height: 90%; }
+  height: 100%; }
   .instruction-hitspots .hitspot-left {
     left: 0;
     width: 25%; }
@@ -3245,32 +3246,37 @@ textarea.materialize-textarea {
   opacity: 0;
   position: absolute;
   color: #0ac8f4;
+  height: 200px;
   top: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transition: all 0.3s ease-in 0s;
-  -moz-transition: all 0.3s ease-in 0s;
-  transition: all 0.3s ease-in 0s;
-  text-align: center; }
+  transform: translate(0, -50%);
+  -webkit-transition: all 0.3s ease-in 0.2s;
+  -moz-transition: all 0.3s ease-in 0.2s;
+  transition: all 0.3s ease-in 0.2s; }
 
 .hitspot-right .hs-next {
-  right: 0; }
+  right: -300px;
+  -webkit-transition: all 0.3s ease-in 0.2s;
+  -moz-transition: all 0.3s ease-in 0.2s;
+  transition: all 0.3s ease-in 0.2s; }
 
 .hitspot-left .hs-next {
-  left: 60px; }
+  left: -300px; }
 
 .hitspot-right.is-hovered {
   background-color: rgba(10, 200, 244, 0);
   background-image: -webkit-linear-gradient(left, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
   background-image: linear-gradient(to right,rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%); }
   .hitspot-right.is-hovered .hs-next {
-    opacity: 1; }
+    opacity: 1;
+    right: 0px; }
 
 .hitspot-left.is-hovered {
   background-color: rgba(10, 200, 244, 0);
   background-image: -webkit-linear-gradient(right, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
   background-image: linear-gradient(to left,rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%); }
   .hitspot-left.is-hovered .hs-next {
-    opacity: 1; }
+    opacity: 1;
+    left: 0px; }
 
 .hitspot-instructions {
   display: none;
