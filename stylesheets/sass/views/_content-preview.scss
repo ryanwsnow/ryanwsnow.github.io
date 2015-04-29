@@ -2,11 +2,12 @@
 
 .content-preview
 {
-	@include box-shadow (-3px 0px 3px 0px rgba(0,0,0,0.17));
+	@include box-shadow (-3px 0px 3px 0px rgba(0,0,0,0.12));
+	border-left:1px solid #d9dde1;
 	z-index:3;
 	@extend %baseLayout;
 	background:$bgcolor-base-lighten1;
-	
+
 
 	&-container 
 	{
@@ -28,6 +29,7 @@
 	
 
 		padding-top:$preview-header-height;
+		padding-bottom:20px;
 		
 		overflow-y:auto;
 	}

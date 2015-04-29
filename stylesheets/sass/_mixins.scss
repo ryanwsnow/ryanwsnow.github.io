@@ -35,6 +35,11 @@
     @include box-shadow-2(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
 }
 
+
+.z-depth-v{
+    @include box-shadow(0 2px 6px 0 rgba(0, 0, 0, 0.10));
+}
+
 // @function onlight($color) {
 //   @if (lightness($color) > 50) {
 //     @return $color-highlight; // Lighter backgorund, return dark color

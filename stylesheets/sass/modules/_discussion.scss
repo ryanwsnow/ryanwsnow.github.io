@@ -7,6 +7,11 @@
 {
 	@extend .card;
 	// margin-bottom:20px;
+	&.comment
+	{
+		margin-left:15%;
+		width:85%;
+	}
 }
 .discussion-card_header
 {
