@@ -165,4 +165,77 @@ a.nav--tab-pill_item
 
 }
 
+//menus
+
+
+.menu
+{
+	@extend .list;
+	> li 
+	{
+		height:52px;
+		padding: 
+		{
+			top:10px;
+			bottom:10px;
+		}
+	  }
+	> li > a, > li > button
+	{
+		display:block;
+		width:100%;
+		text-align:left;
+		color:$color-base-lighten1;
+	}
+	> .is-selected
+	{
+		background:$bgcolor-base-darken1;
+	}
+	> .is-hovered
+	{
+		background:$bgcolor-base-lighten1;
+	}
+}
+
+
+
+.menu--folders
+{
+	@extend .menu;
+	
+	background:$bgcolor-base-darken1;
+	
+	border-radius:5px;
+	padding:10px;
+
+	&_item-breadcrumb
+	{
+		background:$bgcolor-base-darken1;
+	}
+
+	&_item 
+	{
+		background:#ffffff;
+		margin-top:5px;
+		border-bottom:
+		{
+			width:1px;
+			style:solid;
+			color:$bgcolor-base-darken1;
+		}
+	}
+	&_item-placeholder
+	{
+		margin-top:5px;
+		border:
+			{
+				radius:3px;
+				width:1px;
+				style:dashed;
+				color:$color-primary;
+			}
+		
+	}
+}
+
 

@@ -52,6 +52,26 @@ $(document).ready(function(){
 		
 	});
 
+	//scroll bar thingy 
+	$.fn.hasScrollBar = function() {
+        return this.get(0) ? this.get(0).scrollHeight > this.innerHeight() : false;
+    };
+
+    	$(".content-preview_body").on({
+	    mouseenter: function () {
+	    	if($(this).hasScrollBar())
+	    	{
+	    		$(".content-preview_header").addClass("z-depth-v");
+	    	}
+	    	
+	       
+	    },
+	    mouseleave: function () {
+	      
+	        $(".content-preview_header").removeClass("z-depth-v");
+	    }
+	});
+
 	// demo purposes
 	var checkedItems = 0;
 	$(".checkable").on("click",function(){

@@ -90,7 +90,7 @@
 						
 					
 					<div id="toolbarSelected" class="toolbar is-active is-hidden">
-						<span class="badge">1</span> selected
+						<span class="badge highlight">1</span> selected
 						<span class="toolbar_actions-utility">
 							<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
 							
@@ -146,7 +146,7 @@
 							
 				  		</li> <!-- end list item -->
 				  		<li class="list-row">
-							<div class="list_item">
+							<div id="contentShow" class="list_item" data-target="typeQuestion">
 								<span class="list_item_cell small is-first">
 									
 									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
@@ -164,128 +164,219 @@
 							</div>
 							
 				  		</li> <!-- end list item -->
+				  		<li class="list-row">
+							<div id="contentShow" class="list_item" data-target="typeDiscussion">
+								<span class="list_item_cell small is-first">
+									
+									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
+								</span>
+								<span class="list_item_cell small">
+									<i class="icon-question-answer secondary"></i>
+								</span>
+								<span class="list_item_cell">
+								  	<div class="cell-primary">Discussion</div>
+								  	<span class="cell-secondary">Something</span>
+							  	</span>
+								
+								
+								<span class="list_item_activity-info">Mar 8</span>
+							</div>
+							
+				  		</li> <!-- end list item -->
 		  		
 				  	</ol>
 				 </div>
 				
-			</div> <!-- content-list  end -->
-			</div> <!-- content end -->
-			<div class="content-side">
-				<div class="content-preview">
-					<div class="content-preview_header">
-						<div class="content-preview_header_action">
-							<button id="previewClose" class="btn--icon-utility is-first">
-								<i class="icon-close"></i>
-							</button>
-						</div>
-						<div class="content-preview_header_utility-bar">
-							<button class="btn btn--utility is-first" href="#">Edit</button>
-							<button  class="btn btn--utility" href="#">Copy</button>
-							<button  class="btn btn--utility" href="#">Move</button>
-							<button  class="btn btn--utility danger is-last" href="#">Delete</button>
-						</div>
-						
-						
-							<div class="content-preview_header_body">
-							
-								<div class="content-preview_header_title">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae
-								</div>
-								<div class="content-preview_header_subtitle">
-									March 8th
-								</div>
-							</div>
-							<div class="content-preview_header_footer">
-								<ul class="nav nav--tab on-light">
-									<li><a href="#" class="nav--tab_item is-active is-first">Details</a></li>
-									<li><a href="#" class="nav--tab_item is-last">Report</a></li>
-								
-								</ul>
-								
-							</div>
-							<div class="content-preview_header_cta">
-									
-									<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
-									<ul   id="dropdown2" class="dropdown-content menu">
-									     <li><a class="btn--plain" href="#!">Homework</a></li>
-									    <li><a class="btn--plain" href="#!">Review</a></li>
-									    
-									    
-								    	</ul>
-									<button onclick="location.href = 'present.html';" class="dropdown-button btn btn--raised primary is-last">Present</button>
-									
-							</div>
-						
+			</div> <!-- content-list  END -->
+		</div> <!-- content-main END -->
+		<div class="content-side">
+			<div class="content-preview">
+				<div class="content-preview_header">
+					<div class="content-preview_header_action">
+						<button id="previewClose" class="btn--icon-utility is-first">
+							<i class="icon-close"></i>
+						</button>
 					</div>
-				
-
-					<div class="content-preview_body">
-						<div class="l-inset">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
+					<div class="content-preview_header_utility-bar">
+						<button class="btn btn--utility is-first" href="#">Edit</button>
+						<button  class="btn btn--utility" href="#">Copy</button>
+						<button  class="btn btn--utility" href="#">Move</button>
+						<button  class="btn btn--utility danger is-last" href="#">Delete</button>
+					</div>
+						<div class="content-preview_header_body">
+						
+							<div class="content-preview_header_title">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae
+							</div>
+							<div class="content-preview_header_subtitle">
+								March 8th
+							</div>
+						</div>
+						<div class="content-preview_header_footer">
+							<ul class="nav nav--tab on-light">
+								<li><a href="#" class="nav--tab_item is-active is-first">Details</a></li>
+								<li><a href="#" class="nav--tab_item is-last">Report</a></li>
+							
+							</ul>
+							
+						</div>
+						<div class="content-preview_header_cta">
+								
+								<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
+								<ul   id="dropdown2" class="dropdown-content menu">
+								     <li><a class="btn--plain" href="#!">Homework</a></li>
+								    <li><a class="btn--plain" href="#!">Review</a></li>
+								    
+								    
+							    	</ul>
+								<button onclick="location.href = 'present.html';" class="dropdown-button btn btn--raised primary is-last">Present</button>
+								
+						</div>
+				</div><!-- content-preview_header END-->
+				<div class="content-preview_body">
+					<div class="l-inset">
+						<div id="typeQuestion" class="is-hidden">
 							<!-- Multiple Choice/Sorting -->
 							<div class="q-answer">
+								<p class="q-answer_descritpion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
 								<div class="q-answer_item">
-									<span class="q-answer_item-label">A</span>
-									<div class="q-answer_item-description">this is my choice yay</div>
+									<span class="q-answer_item_cell-label">A</span>
+									<span class="q-answer_item_cell-description">this is my choice yay</span>
 								</div>
 							</div>
 							<!-- Matching -->
-							<div class="q-answer">
-								<div class="q-answer_item">
-
-									<span class="q-answer_item-label">1</span>
-									<div class="q-answer_item-description">Matching Pair with some really long text to mess things up</div>
-									<div class="q-answer_item-matching-option">
+							<div class="q-answer--matching">
+								<div class="q-answer--matching_item">
 									
-										<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
-										<span class="q-answer_item-label">A</span>
-										<div class="q-answer_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
-									</div>
+									<span class="q-answer_item_cell-label">1</span>
+									<span class="q-answer_item_cell-description">Matching Pair with some really long text to mess things up</span>
+									
+									<span class="q-answer_item_cell-divider">=</span>
+									<span class="q-answer_item_cell-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item_cell-label">A</span>
+									<div class="q-answer_item_cell-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
+									
 								</div>
-								<div class="q-answer_item">
+								<div class="q-answer--matching_item">
 
-									<span class="q-answer_item-label">2</span>
-									<div class="q-answer_item-description">Matching Pair with some really long text to mess things up</div>
-									<div class="q-answer_item-matching-option">
+									<span class="q-answer_item_cell-label">2</span>
+									<span class="q-answer_item_cell-description">Matching Pair with some really long text to mess things up</span>
+									<span class="q-answer_item_cell-divider">=</span>
+									<span class="q-answer_item_cell-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item_cell-label">B</span>
+									<span class="q-answer_item_cell-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
 									
-										<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
-										<span class="q-answer_item-label">A</span>
-										<div class="q-answer_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
-									</div>
 								</div>
 							</div>
 							<!-- Sorting -->
 							<div class="q-answer">
 								<div class="q-answer_item">
-
-									<span class="q-answer_item-label">1</span>
-									<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
-									<div class="q-answer_item-description">this is my choice yay</div>
+									<span class="q-answer_item_cell-label">1</span>
+									<span class="q-answer_item_cell-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item_cell-description">this is my choice yay</span>
 								</div>
 							</div>
 							<!-- Word Answer/numeric Answer -->
 							<div class="q-answer">
 								<div class="q-answer_item">
-									<span class="q-answer_item-label size-large"><label for="waid">Word Answer:</label></span>
-									<div class="q-answer_item-input"><span class="form-field is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></div>
+									<span class="q-answer_item_cell-label size-large"><label for="waid">Word Answer:</label></span>
+									<span class="q-answer_item_cell-input"><span class="form-field is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></span>
 								</div>
 							</div>
-			
-							
+						</div><!-- typeQuestion -->
+						<div id="typeDiscussion" class="">
+							<div class="discussion">
+								<div class="discussion-card">
+									<div class="discussion-card_header">
+											<span class="discussion-card-author">
+												<i class="icon-school" ></i>Professor Snow
+											</span>
+											<span class="discussion-card_header-utility">
+												<!-- nothing here -->
+											</span>
+										</div>
+									<div class="discussion-card_body">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque et purus sed tincidunt. Ut purus nunc, volutpat condimentum elit vel, consequat hendrerit ligula. Nam at ante cursus, scelerisque mauris in, sagittis metus. Maecenas facilisis nulla id massa volutpat, sed volutpat ipsum commodo. Aenean sit amet nibh fringilla
+									</div>
+									<div class="discussion-card_footer">
+										<span class="discussion-card_footer-actions">									
+											<button onclick="location.href = 'full.html';" class="btn--plain primary is-last">Reply</button>					
+										</span>
+									</div>
+								</div>
+								<div class="discussion-card-divider"></div>
+
+								<div class="list--discussion-card">
+									<div class="discussion-card">
+										<div class="discussion-card_header">
+
+											<span class="discussion-card-author">
+												<i class="icon-account-circle" ></i>Corway, Andrew
+											</span>
+											<span class="time-stamp">Mar 8 @ 9:22</span>
+
+											<span class="discussion-card_header-utility">
+												<button class="btn--icon-utility danger"><i class="icon-flag"></i></button>
+												<button class="btn--icon-utility danger is-last"><i class="icon-delete"></i></button>
+											</span>								
+										</div>
+										<div class="discussion-card_body">
+											
+											condimentum elit vel, consequat hendrerit ligula. Nam at ante cursus, scelerisque mauris in, sagittis metus. Maecenas facilisis nulla id massa volutpat, sed volutpat ipsum commodo. Aenean sit amet nibh fringilla
+										</div>
+										<div class="discussion-card_footer">
+											
+
+											<span class="discussion-card_footer-actions">
+												
+												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
+											<button class="btn--plain primary">Comment</button>
+											<span class="badge small withtext">0</span>
+											
+											</span>
+										</div>
+										
+									</div><!-- discussion-card END -->
+									<div class="discussion-card-divider"></div>
+									<div class="discussion-card comment">
+										<div class="discussion-card_header">
+
+											<span class="discussion-card-author">
+												<i class="icon-account-circle" ></i>Wiggin, Andrew
+											</span>
+											<span class="time-stamp">Mar 8 @ 10:22</span>
+
+											<span class="discussion-card_header-utility">
+												<button class="btn--icon-utility danger"><i class="icon-flag"></i></button>
+												<button class="btn--icon-utility danger is-last"><i class="icon-delete"></i></button>
+											</span>								
+										</div>
+										<div class="discussion-card_body">
+											
+											condimentum elit vel, consequat hendrerit ligula. Nam at ante cursus, scelerisque mauris in, sagittis metus. 
+										</div>
+										<div class="discussion-card_footer">
+											
+
+											<span class="discussion-card_footer-actions">
+												
+												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
+											
+											
+											</span>
+										</div>
+										
+									</div><!-- discussion-card END -->
+								</div>
+							</div>
+
 						</div>
-
-					</div>
-					<!-- Multiple Choice End -->
-					
-
-					
-				</div><!-- object view end -->
-
-
-			</div><!-- contend side end -->
-		
-	</div> <!-- course body end -->
-</div> <!-- course container -->
+					</div><!-- l-inset END -->
+				</div><!-- content-preview_body END -->
+			</div><!-- content-preview END -->
+		</div><!-- content-side END -->
+	</div> <!-- course_body END -->
+</div> <!-- course END -->
 
 <!-- Modal -->
 <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -310,20 +401,20 @@
     		
     		<div class="q-answer">
 			<div class="q-answer_item">
-				<span class="q-answer_item-label">A</span>
-				<div class="q-answer_item-description">
+				<span class="q-answer_item_cell-label">A</span>
+				<div class="q-answer_item_cell-description">
 					<span class="form-field"><input id="answerA" type="text" placeholder="Description"></span>
 				</div>
-				<span class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
-				<span class="q-answer_item-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+				<span class="q-answer_item_cell-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
+				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
 			</div>
 		
 		
 			<div class="q-answer_item">
-				<span class="q-answer_item-label">B</span>
-				<div class="q-answer_item-description"><span class="form-field"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
-				<span class="q-answer_item-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
-				<span class="q-answer_item-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+				<span class="q-answer_item_cell-label">B</span>
+				<div class="q-answer_item_cell-description"><span class="form-field"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
+				<span class="q-answer_item_cell-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
+				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
 			</div>
 	
 		</div>
@@ -359,16 +450,16 @@
       <div class="th-modal_body">
    	
    		<!-- <h5 class="th-modal_section-header">Choose a folder</h5> -->
-	      	<ol class="list--folders ">
-	      		<li class="list--folders_item-breadcrumb"><a class="btn--plain with-icon" href="#!"> <i class="icon-arrow-back"></i>Week 1</a>
+	      	<ol class="menu--folders ">
+	      		<li class="menu--folders_item-breadcrumb"><a class="btn--plain with-icon" href="#!"> <i class="icon-arrow-back"></i>Week 1</a>
 	    
 	      	</li>
-	<!--       		<li class="list--folders_item "><a href="#!"><span class="badge">6</span></i> Selected item(s) Place here</a> -->
+	<!--       		<li class="menu--folders_item "><a href="#!"><span class="badge">6</span></i> Selected item(s) Place here</a> -->
 	
 
-	      		<li class="list--folders_item"><button class="btn--plain with-icon"><i class="icon-folder"></i>Homework</button></li>
-	      		<li class="list--folders_item"><a class="btn--plain with-icon"href="#"><i class="icon-folder"></i>Review</a></li>
-	      		<li class="list--folders_item-placeholder"><a  class="btn--plain with-icon primary" href="#!"><i class="icon-keyboard-tab"></i>Move here</a></li>
+	      		<li class="menu--folders_item"><button class="btn--plain with-icon"><i class="icon-folder"></i>Homework</button></li>
+	      		<li class="menu--folders_item"><a class="btn--plain with-icon"href="#"><i class="icon-folder"></i>Review</a></li>
+	      		<li class="menu--folders_item-placeholder"><a  class="btn--plain with-icon primary" href="#!"><i class="icon-keyboard-tab"></i>Move here</a></li>
     		
 	      	</ol>
     </div>

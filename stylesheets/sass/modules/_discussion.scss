@@ -1,0 +1,73 @@
+.discussion
+{
+	width:100%;
+}
+
+.discussion-card
+{
+	@extend .card;
+	// margin-bottom:20px;
+	&.comment
+	{
+		margin-left:15%;
+		width:85%;
+	}
+}
+.discussion-card_header
+{
+	@include clearfix;
+	
+	padding:10px;
+	
+}
+.discussion-card_header-utility
+{
+	float:right;
+}
+
+.discussion-card_body
+{
+	@extend .card_item_body;
+	padding-bottom:20px;
+}
+
+.discussion-card-author
+{
+	// refactor into an icon title
+	@extend .card_item_title;
+	float:left;
+
+
+}
+.discussion-card_footer
+{
+	@extend .card_item_footer
+	
+}
+
+.discussion-card_footer-actions
+{
+	float:right;
+}
+
+.discussion-card-divider
+{
+
+	position:relative;
+	height:20px;
+	width:2px;
+	margin-left:50%;
+	border-left:2px solid #d9dde1;
+
+}
+
+.time-stamp
+{
+	line-height:32px;
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+	font-size:14px;
+	color:$color-highlight;
+}
+

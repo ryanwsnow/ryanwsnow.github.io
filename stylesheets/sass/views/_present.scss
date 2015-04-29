@@ -21,6 +21,7 @@
 	{
 		@extend %baseLayout_body;
 		padding-top:52px;
+		padding-bottom:270px;
 		//hs 
 		@include transition(all 0.3s ease-in 0s);
 	}
@@ -32,13 +33,14 @@
 .present_header
 {
 	@extend %header--primary;
-
+	background:$bgcolor-primary;
 	padding:10px;
 	height:52px;
 
 	&_body 
 	{
 		@extend %header--primary_body;
+
 	}
 	
 	&_action {
@@ -47,6 +49,7 @@
 	&_title
 	{
 		@extend %header--primary_title;
+		text-align:center;
 	}
 	&_subtitle
 	{
@@ -72,6 +75,15 @@
 	
 }
 
+.present-footer
+{
+	position:absolute;
+	bottom:0;
+	right:0;
+	height:270px;
+	width:100%;
+}
+
 
 
 // hs presentation experiement 
@@ -86,10 +98,10 @@
 .instruction-hitspots
 {
 	position:absolute;
-	top:0;
+	top:10%;
 	right:0;
 	width:100%;
-	height:100%;
+	height:90%;
 	
 	
 	.hitspot-left 
@@ -242,6 +254,7 @@
 .hs-body
 {
 	padding-top:0;
+	padding-bottom:0;
 }
 .hs-helpbar
 {

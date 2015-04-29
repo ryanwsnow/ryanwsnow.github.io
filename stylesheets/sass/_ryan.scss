@@ -1,9 +1,10 @@
 
 .toolbar
 {
-	
+
 	padding:$padding-default;
 	height:52px;
+	line-height:32px;
 	background:#f9f9f9;
 	border-bottom:1px solid #d9dde1;
 	&.is-active 
@@ -37,9 +38,11 @@
 }
 
 
+
 .badge 
 {
-	background:$color-highlight;
+	float:left;
+	background:$bgcolor-base-darken2;
 	border-radius:50%;
 	height:32px;
 	width:32px;
@@ -47,10 +50,29 @@
 	text-align:center;
 	font-size:14px;
 	color:#fff;
-	display:inline-block;
+	
 	margin-right:10px;
+	&.small 
+	{
+		height:24px;
+		width:24px;
+		font-size:12px;
+		margin-top:4px;
+		line-height:24px;
+	}
+	&.withtext
+	{
+		margin-right:0;
+	}
+
+	&.highlight 
+	{
+		background:$color-highlight;
+	}
 
 }
+
+
 
 
 
