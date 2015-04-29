@@ -66,6 +66,10 @@
 
 .card--thumb_item_footer
 {
+	line-height:32px;
+	font-size:14px;
+	font-weight:600;
+	color:$color-base;
 	@extend .card_item_footer;
 	.is-active &
 	{
