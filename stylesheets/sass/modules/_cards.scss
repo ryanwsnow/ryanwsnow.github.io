@@ -45,20 +45,35 @@
 	position:relative;
 	
 	padding-bottom:52px;
-	width:100%;
+	
 	@extend .z-depth-1;
 	width:200px;
 	height:200px;
 	&.is-active
 	{
+		overflow:hidden;
 		background:#fff;
+		
 		@extend .z-depth-2;
+
 	}
 }
 
 .card--thumb_item_body
 {
 	@extend .card_item_body;
+}
+
+.card--thumb_item_footer
+{
+	@extend .card_item_footer;
+	.is-active &
+	{
+		background-color:$color-highlight;
+		
+		text-align:center;
+		color:#fff;
+	}
 }
 
 

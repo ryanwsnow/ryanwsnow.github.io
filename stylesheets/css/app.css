@@ -2820,11 +2820,16 @@ a.nav--tab-pill_item {
   display: block;
   position: relative;
   padding-bottom: 52px;
-  width: 100%;
   width: 200px;
   height: 200px; }
   .card--thumb.is-active {
+    overflow: hidden;
     background: #fff; }
+
+.is-active .card--thumb_item_footer {
+  background-color: #0ac8f4;
+  text-align: center;
+  color: #fff; }
 
 .card_item_body, .card--thumb_item_body, .discussion-card_body {
   padding: 10px;
@@ -2841,7 +2846,7 @@ a.nav--tab-pill_item {
   font-weight: 400;
   color: #708493; }
 
-.card_item_footer, .discussion-card_footer {
+.card_item_footer, .card--thumb_item_footer, .discussion-card_footer {
   position: absolute;
   width: 100%;
   bottom: 0;
