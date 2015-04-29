@@ -37,10 +37,10 @@
 					<i class="icon-settings"></i>
 				</button>
 			    	<ul   id="dropdown1" class="dropdown-content menu">
-				     <li><a href="#!">Something here</a></li>
-				    <li><a href="#!">Something there that is super long</a></li>
+				     <li><a class="btn--plain" href="#!">Something here</a></li>
+				    <li><a class="btn--plain" href="#!">Something there that is super long</a></li>
 				    
-				    <li><a href="#!">blah blah</a></li>
+				    <li><a class="btn--plain" href="#!">blah blah</a></li>
 			    	</ul>
 			</div>
 
@@ -53,55 +53,55 @@
 				</div>
 				<div class="card--present_body">
 					<div class="l-inset">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
-						<!-- Multiple Choice/Sorting -->
-						<div class="q-answer">
-							<div class="q-answer_item">
-								<span class="q-answer_item-label">A</span>
-								<div class="q-answer_item-description">this is my choice yay</div>
-							</div>
-						</div>
-						<!-- Matching -->
-						<div class="q-answer">
-							<div class="q-answer_item">
-
-								<span class="q-answer_item-label">1</span>
-								<div class="q-answer_item-description">Matching Pair with some really long text to mess things up</div>
-								<div class="q-answer_item-matching-option">
-								
-									<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
-									<span class="q-answer_item-label">A</span>
-									<div class="q-answer_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
+						<div id="typeQuestion" class="">
+							<!-- Multiple Choice/Sorting -->
+							<div class="q-answer">
+								<p class="q-answer_descritpion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
+								<div class="q-answer_item">
+									<span class="q-answer_item_cell-label">A</span>
+									<span class="q-answer_item_cell-description">this is my choice yay</span>
 								</div>
 							</div>
-							<div class="q-answer_item">
+							<!-- Matching -->
+							<div class="q-answer--matching">
+								<div class="q-answer--matching_item">
+									
+									<span class="q-answer_item_cell-label">1</span>
+									<span class="q-answer_item_cell-description">Matching Pair with some really long text to mess things up</span>
+									
+									<span class="q-answer_item_cell-divider">=</span>
+									<span class="q-answer_item_cell-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item_cell-label">A</span>
+									<div class="q-answer_item_cell-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
+									
+								</div>
+								<div class="q-answer--matching_item">
 
-								<span class="q-answer_item-label">2</span>
-								<div class="q-answer_item-description">Matching Pair with some really long text to mess things up</div>
-								<div class="q-answer_item-matching-option">
-								
-									<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
-									<span class="q-answer_item-label">A</span>
-									<div class="q-answer_item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</div>
+									<span class="q-answer_item_cell-label">2</span>
+									<span class="q-answer_item_cell-description">Matching Pair with some really long text to mess things up</span>
+									<span class="q-answer_item_cell-divider">=</span>
+									<span class="q-answer_item_cell-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item_cell-label">B</span>
+									<span class="q-answer_item_cell-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
+									
 								</div>
 							</div>
-						</div>
-						<!-- Sorting -->
-						<div class="q-answer">
-							<div class="q-answer_item">
-
-								<span class="q-answer_item-label">1</span>
-								<span class="q-answer_item-control"><i class="icon-swap-vert"></i></span>
-								<div class="q-answer_item-description">this is my choice yay</div>
+							<!-- Sorting -->
+							<div class="q-answer">
+								<div class="q-answer_item">
+									<span class="q-answer_item_cell-label">1</span>
+									<span class="q-answer_item_cell-control"><i class="icon-swap-vert"></i></span>
+									<span class="q-answer_item_cell-description">this is my choice yay</span>
+								</div>
 							</div>
-						</div>
-						<!-- Word Answer/numeric Answer -->
-						<div class="q-answer">
-							<div class="q-answer_item">
-								<span class="q-answer_item-label size-large"><label for="waid">Word Answer:</label></span>
-								<div class="q-answer_item-input"><span class="form-field is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></div>
+							<!-- Word Answer/numeric Answer -->
+							<div class="q-answer">
+								<div class="q-answer_item">
+									<span class="q-answer_item_cell-label size-large"><label for="waid">Word Answer:</label></span>
+									<span class="q-answer_item_cell-input"><span class="form-field is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></span>
+								</div>
 							</div>
-						</div>
+						</div><!-- typeQuestion -->
 		
 						
 					</div>
