@@ -102,27 +102,41 @@ $(document).ready(function(){
 	$(".hs").on({
 	    mouseenter: function () {
 	    	$(this).addClass("is-hovered");
+	    	if ($(this).hasClass("hitspot-middle"))
+	    	{
+	    		console.log("middle hovered");
+	    		$(".present_header").toggleClass("hs-header");
+	    		$(".present_body").toggleClass("hs-body-menu");
+	    	}
 	       
 	    },
 	    mouseleave: function () {
 	      
 	        $(this).removeClass("is-hovered");
+	        if ($(this).hasClass("hitspot-middle"))
+	    	{
+	    		$(".present_header").toggleClass("hs-header");
+	    		$(".present_body").toggleClass("hs-body-menu");
+	    	}
 	    }
 	});
 
-	$(".hitspot-middle").on("click",function(){
-		$(".present_header").toggleClass("hs-header");
+	$("#addContent").on("click",function(){
+		// $(".present_header").toggleClass("hs-header");
 		$(".present_body").toggleClass("hs-body");
 		$(".controlbar").toggleClass("hs-controlbar");
+		$(".instruction-hitspots").toggleClass("is-hidden");
+		$(this).parent(".hs-helpbar").toggleClass("nudge");
+		$(this).find("i").toggleClass("icon-expand-more icon-expand-less")
 
 	});
 
-	$(".help").on("click",function(){
-		$(this).find("i").toggleClass("icon-help icon-close")
-		var $instructions = $(".instruction-hitspots");
-		$instructions.toggleClass("is-active");
+	// $(".help").on("click",function(){
+	// 	$(this).find("i").toggleClass("icon-help icon-close")
+	// 	var $instructions = $(".instruction-hitspots");
+	// 	$instructions.toggleClass("is-active");
 
-	});
+	// });
 
 	
 });
