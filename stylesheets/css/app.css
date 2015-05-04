@@ -2533,9 +2533,9 @@ a.nav--tab-pill_item {
   text-align: left;
   color: #708493; }
 .menu > .is-selected, .menu--folders > .is-selected {
-  background: #f0f0f0; }
+  background: #dbf8ff; }
 .menu > .is-hovered, .menu--folders > .is-hovered {
-  background: #f9f9f9; }
+  background: #f0f0f0; }
 
 .menu--folders {
   background: #f0f0f0;
@@ -2708,6 +2708,8 @@ a.nav--tab-pill_item {
   border-bottom: 1px solid #d9dde1;
   width: 100%;
   display: table; }
+  .list_item.sticky, .sticky.table--list_item {
+    background: #f9f9f9; }
   .list_item_activity-info {
     position: absolute;
     top: 5px;
@@ -3265,7 +3267,6 @@ textarea.materialize-textarea {
 .smsbar_instructions-full {
   display: block;
   width: 100%;
-  text-align: center;
   font-size: 24px;
   color: #435561;
   font-weight: 400; }

@@ -53,6 +53,11 @@
 	width:100%;
  	display:table;
 	
+	&.sticky
+	{
+		background:$bgcolor-base-lighten1;
+
+	}
 
 	
 	&_activity-info
