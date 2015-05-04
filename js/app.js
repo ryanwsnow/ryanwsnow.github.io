@@ -45,9 +45,11 @@ $(document).ready(function(){
 	});
 	$(".list_item > .selectArea").on("click",function(){
 		listItem = $(this).parent(".list_item");
+		//change list item active state
 		$(listItem).closest(".list").find(".is-active").removeClass("is-active");
 
 		$(listItem).addClass("is-active");
+		//show item's content in preview pane
 
 		thisContent = "." + $(listItem).data("target");
 		console.log(thisContent);
