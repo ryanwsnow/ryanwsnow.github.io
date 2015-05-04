@@ -24,11 +24,21 @@ $(document).ready(function(){
 		  $(this).parent(".form-field").removeClass("is-focused");
 		});
 
-	$(".controlbar button").on("click",function(){
+	$("#controls > button").on("click",function(){
 
 		$(this).toggleClass("is-active");
+		if ($(this).hasClass("play"))
+			{
+				$(this).find("i").toggleClass("icon-play-arrow icon-pause")
+			}
 	});
+	// $("#playControl").on("click",function(){
+		
+		
+	// 		$(this).siblings().toggleClass("is-hidden");
+		
 
+	// });
 
 	$(".menu > li").on({
 	    mouseenter: function () {
@@ -102,22 +112,22 @@ $(document).ready(function(){
 	$(".hs").on({
 	    mouseenter: function () {
 	    	$(this).addClass("is-hovered");
-	    	if ($(this).hasClass("hitspot-middle"))
-	    	{
-	    		console.log("middle hovered");
-	    		$(".present_header").toggleClass("hs-header");
-	    		$(".present_body").toggleClass("hs-body-menu");
-	    	}
+	    	// if ($(this).hasClass("hitspot-middle"))
+	    	// {
+	    	// 	console.log("middle hovered");
+	    	// 	$(".present_header").toggleClass("hs-header");
+	    	// 	$(".present_body").toggleClass("hs-body-menu");
+	    	// }
 	       
 	    },
 	    mouseleave: function () {
 	      
 	        $(this).removeClass("is-hovered");
-	        if ($(this).hasClass("hitspot-middle"))
-	    	{
-	    		$(".present_header").toggleClass("hs-header");
-	    		$(".present_body").toggleClass("hs-body-menu");
-	    	}
+	     //    if ($(this).hasClass("hitspot-middle"))
+	    	// {
+	    	// 	$(".present_header").toggleClass("hs-header");
+	    	// 	$(".present_body").toggleClass("hs-body-menu");
+	    	// }
 	    }
 	});
 
@@ -128,6 +138,14 @@ $(document).ready(function(){
 		$(".instruction-hitspots").toggleClass("is-hidden");
 		$(this).parent(".hs-helpbar").toggleClass("nudge");
 		$(this).find("i").toggleClass("icon-expand-more icon-expand-less")
+
+	});
+
+	$("#smsHelp").on("click",function(){
+		// $(".present_header").toggleClass("hs-header");
+		$(this).toggleClass("expand");
+		$(this).find(".smsbar_instructions-full").toggleClass("is-hidden");
+		
 
 	});
 

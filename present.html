@@ -86,30 +86,43 @@
 						
 					</div>
 				</div>
-				<div class="controlbar hs-controlbar">
-					<button class="btn--round  large"><i class="icon-play-arrow"></i></button>
-					<button class="btn--round "><i class="icon-done"></i></button>
-					<button class="btn--round "><i class="icon-equalizer"></i></button>
-					<button class="btn--round is-danger"><i class="icon-close"></i></button>
+				<div id="smsHelp"class="smsbar">
+					
+					<div class="smsbar_instructions-full is-hidden">
+						<h4>Students can SMS/Text Responses<h4>
+						<span>416 841 2440</span>
+					</div>
+					<span class="smsbar_instructions">
+
+					Text <span class="highlight">6301 Choice</span>
+					</span>
+					<span class="smsbar_help"><i class="icon-help"></i></span>
+				</div>
+				<div id="controls" class="controlbar hs-controlbar">
+					<button id="playControl" class="btn--round  large play is-active"><i class="icon-pause"></i></button>
+					<button class="btn--round large "><i class="icon-done"></i></button>
+					<button class="btn--round large "><i class="icon-equalizer"></i></button>
+					<button class="btn--round large is-danger"><i class="icon-close"></i></button>
+					<!-- <button id="addContent" class="btn--round is-active help"><i class="icon-expand-less"></i></button> -->
 				</div>
 
 				<!-- demo hs -->
-				<div class="hs-helpbar nudge">
-					<button id="addContent" class="btn--round primary help large"><i class="icon-expand-less"></i></button>
+				<div id="controls" class="hs-helpbar nudge">
+					<button id="addContent" class="btn--round is-active primary help large"><i class="icon-expand-less"></i></button>
 				</div>
 				<div class="card--present_footer">
 					
 				</div>
 			</div><!-- card--present END -->
 			<div class"present-footer">
-				<div class="thumb-list">
+				<div class="thumb-list is-first">
 					<div class="thumb-list_header">Presenting</div>
 					<div class="thumb-list_body active">
 
 						<div class="thumb-list_item">
 							<div class="card--thumb">
 								<div class="card--thumb_item_body">
-									<div class="card_item_title">Question 1</div>
+									<div class="card--thumb_item_title">Question 1</div>
 									<p>This is some question text blah blah blah</p>
 								</div>
 								<div class="card--thumb_item_footer">
@@ -124,7 +137,7 @@
 						<div class="thumb-list_item">
 							<div class="card--thumb is-active">
 								<div class="card--thumb_item_body">
-									<div class="card_item_title">Question 2</div>
+									<div class="card--thumb_item_title">Question 2</div>
 									<p>This is some question text blah blah blah</p>
 								</div>
 								<div class="card--thumb_item_footer">
@@ -143,8 +156,8 @@
 							<div class="thumb-list_item">
 								<div class="card--thumb">
 									<div class="card--thumb_item_body">
-										<div class="card_item_title">Question 3</div>
-										<div class="card_item_sub-title">It's magical</div>
+										<div class="card--thumb_item_title">Question 3</div>
+										<div class="card_item_sub-title"></div>
 									</div>
 									<div class="controlbar hs-controlbar">
 
@@ -162,8 +175,8 @@
 							<div class="thumb-list_item">
 								<div class="card--thumb">
 									<div class="card--thumb_item_body">
-										<div class="card_item_title">Question 4</div>
-										<div class="card_item_sub-title">It's magical</div>
+										<div class="card--thumb_item_title">Question 4</div>
+										<div class="card_item_sub-title"></div>
 									</div>
 									<div class="controlbar hs-controlbar">
 
@@ -193,7 +206,7 @@
 					<div class="hs-next">
 							<div class="card--thumb">
 								<div class="card--thumb_item_body">
-									<div class="card_item_title">Question 1</div>
+									<div class="card--thumb_item_title">Question 1</div>
 									<p>This is some question text blah blah blah</p>
 								</div>
 								<div class="card--thumb_item_footer">
@@ -226,7 +239,7 @@
 					<div class="hs-next">
 							<div class="card--thumb">
 									<div class="card--thumb_item_body">
-										<div class="card_item_title">Question 3</div>
+										<div class="card--thumb_item_title">Question 3</div>
 										
 									</div>
 									
