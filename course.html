@@ -102,7 +102,7 @@
 				</div>
 				
 
-				<div class="content-list_body">
+				<div class="scrollable content-list_body" data-target="content-list_header">
 					<ol class="list">
 						<li class="list-row">
 							<div class="list_item list_item--folder">
@@ -146,7 +146,7 @@
 							
 				  		</li> <!-- end list item -->
 				  		<li class="list-row">
-							<div id="contentShow" class="list_item" data-target="typeQuestion">
+							<div id="contentShow" class="list_item" data-target="question1">
 								<span class="list_item_cell small is-first">
 									
 									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
@@ -164,8 +164,8 @@
 							</div>
 							
 				  		</li> <!-- end list item -->
-				  		<li class="list-row">
-							<div id="contentShow" class="list_item" data-target="typeDiscussion">
+				  		<li class="list-row ">
+							<div id="contentShow" class="list_item is-active" data-target="discussion1">
 								<span class="list_item_cell small is-first">
 									
 									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
@@ -233,9 +233,9 @@
 								
 						</div>
 				</div><!-- content-preview_header END-->
-				<div class="content-preview_body">
+				<div data-target="content-preview_header" class="scrollable content-preview_body">
 					<div class="l-inset">
-						<div id="typeQuestion" class="is-hidden">
+						<div class="question1 is-hidden">
 							<!-- Multiple Choice/Sorting -->
 							<div class="q-answer">
 								<p class="q-answer_descritpion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
@@ -284,7 +284,7 @@
 								</div>
 							</div>
 						</div><!-- typeQuestion -->
-						<div id="typeDiscussion" class="">
+						<div  class="discussion1 is-active">
 							<div class="discussion">
 								<div class="discussion-card">
 									<div class="discussion-card_header">

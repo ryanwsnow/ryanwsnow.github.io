@@ -2721,7 +2721,7 @@ a.nav--tab-pill_item {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background: #f2f2f2;
+    background: #f9f9f9;
     cursor: pointer; }
   .list_item.is-active, .is-active.table--list_item {
     -webkit-transition: all 0.2s ease-in-out;
