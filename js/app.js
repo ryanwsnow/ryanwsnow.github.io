@@ -43,12 +43,13 @@ $(document).ready(function(){
 	        $(this).removeClass("is-hovered");
 	    }
 	});
-	$(".list_item").on("click",function(){
-		$(this).closest(".list").find(".is-active").removeClass("is-active");
+	$(".list_item > .selectArea").on("click",function(){
+		listItem = $(this).parent(".list_item");
+		$(listItem).closest(".list").find(".is-active").removeClass("is-active");
 
-		$(this).addClass("is-active");
+		$(listItem).addClass("is-active");
 
-		thisContent = "." + $(this).data("target");
+		thisContent = "." + $(listItem).data("target");
 		console.log(thisContent);
 		$(thisContent).closest(".l-inset").find(".is-active").toggleClass("is-active is-hidden");
 		$(thisContent).toggleClass("is-active is-hidden");
