@@ -24,11 +24,43 @@ $(document).ready(function(){
 		  $(this).parent(".form-field").removeClass("is-focused");
 		});
 
-	$(".controlbar button").on("click",function(){
+	$("#controls > button").on("click",function(){
 
 		$(this).toggleClass("is-active");
+		if ($(this).hasClass("play"))
+			{
+				$(this).find("i").toggleClass("icon-play-arrow icon-pause")
+			}
 	});
+// Content List
+	$(".list_item").on({
+	    mouseenter: function () {
+	    	$(this).addClass("is-hovered");
+	       
+	    },
+	    mouseleave: function () {
+	      
+	        $(this).removeClass("is-hovered");
+	    }
+	});
+	$(".list_item > .selectArea").on("click",function(){
+		listItem = $(this).parent(".list_item");
+		//change list item active state
+		$(listItem).closest(".list").find(".is-active").removeClass("is-active");
 
+		$(listItem).addClass("is-active");
+		//show item's content in preview pane
+
+		thisContent = "." + $(listItem).data("target");
+		console.log(thisContent);
+		$(thisContent).closest(".l-inset").find(".is-active").toggleClass("is-active is-hidden");
+		$(thisContent).toggleClass("is-active is-hidden");
+		
+
+
+		
+	});
+//Menu Hover 
 
 	$(".menu > li").on({
 	    mouseenter: function () {
@@ -52,72 +84,66 @@ $(document).ready(function(){
 		
 	});
 
-	//scroll bar thingy 
+//scroll bar thingy 
 	$.fn.hasScrollBar = function() {
         return this.get(0) ? this.get(0).scrollHeight > this.innerHeight() : false;
     };
 
-    	$(".content-preview_body").on({
+    	$(".scrollable").on({
 	    mouseenter: function () {
+	    	thisHeader = $(this).data("target");
+	    	
 	    	if($(this).hasScrollBar())
 	    	{
-	    		$(".content-preview_header").addClass("z-depth-v");
+	    		    		
+	    		$('.' + thisHeader).addClass("z-depth-v");
 	    	}
-	    	
-	       
 	    },
 	    mouseleave: function () {
-	      
-	        $(".content-preview_header").removeClass("z-depth-v");
-	    }
+	    		$('.' + thisHeader).removeClass("z-depth-v");
+	    	}
 	});
 
-	// demo purposes
+// Selecting items
 	var checkedItems = 0;
 	$(".checkable").on("click",function(){
 		if($(this).prop("checked")){
 			checkedItems = checkedItems + 1;
-			
-			
 		}
 		else {
 			checkedItems = checkedItems - 1;
-
 		}
 		if (checkedItems){
-			$(".toolbar").addClass('is-hidden');
+			$(".toolbar").addClass("is-hidden");
 			$("#toolbarSelected").removeClass("is-hidden");
 
 		}
 		else{
-			$(".toolbar").removeClass('is-hidden');
+			$(".toolbar").removeClass("is-hidden");
 			$("#toolbarSelected").addClass("is-hidden");
 		}
-
 		$(".badge").html(checkedItems);
-		
-		
 	});
 
 	$(".hs").on({
 	    mouseenter: function () {
 	    	$(this).addClass("is-hovered");
-	    	if ($(this).hasClass("hitspot-middle"))
-	    	{
-	    		console.log("middle hovered");
-	    		$(".present_header").toggleClass("hs-header");
-	    		$(".present_body").toggleClass("hs-body-menu");
-	    	}
+	    	// if ($(this).hasClass("hitspot-middle"))
+	    	// {
+	    	// 	console.log("middle hovered");
+	    	// 	$(".present_header").toggleClass("hs-header");
+	    	// 	$(".present_body").toggleClass("hs-body-menu");
+	    	// }
 	       
 	    },
 	    mouseleave: function () {
 	      
 	        $(this).removeClass("is-hovered");
-	        if ($(this).hasClass("hitspot-middle"))
-	    	{
-	    		$(".present_header").toggleClass("hs-header");
-	    		$(".present_body").toggleClass("hs-body-menu");
-	    	}
+	     //    if ($(this).hasClass("hitspot-middle"))
+	    	// {
+	    	// 	$(".present_header").toggleClass("hs-header");
+	    	// 	$(".present_body").toggleClass("hs-body-menu");
+	    	// }
 	    }
 	});
 
@@ -131,12 +157,12 @@ $(document).ready(function(){
 
 	});
 
-	// $(".help").on("click",function(){
-	// 	$(this).find("i").toggleClass("icon-help icon-close")
-	// 	var $instructions = $(".instruction-hitspots");
-	// 	$instructions.toggleClass("is-active");
+	$("#smsHelp").on("click",function(){
+		// $(".present_header").toggleClass("hs-header");
+		$(this).toggleClass("expand");
+		$(this).find(".smsbar_instructions-full").toggleClass("is-hidden");
+	});
 
-	// });
 
 	
 });

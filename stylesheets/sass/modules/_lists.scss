@@ -53,6 +53,11 @@
 	width:100%;
  	display:table;
 	
+	&.sticky
+	{
+		background:$bgcolor-base-lighten1;
+
+	}
 
 	
 	&_activity-info
@@ -71,7 +76,7 @@
 	&.is-hovered
 	{
 		@include transition (all 0.2s ease-in-out);
-		background:$bgcolor-base;
+		background:$bgcolor-base-lighten1;
 		cursor: pointer;
 		
 	}

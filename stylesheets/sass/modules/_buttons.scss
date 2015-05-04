@@ -75,6 +75,24 @@
 {
 	@extend %baseButton;
 	@extend %baseButton-with-icon;
+}
+
+.btn--withbg
+{
+	@extend %baseButton;
+	@extend %baseButton-with-icon;
+	background:$bgcolor-base-darken1;
+	border-radius:3px;
+	&.is-first
+	{
+		padding-left:10px;
+	}
+	&.is-last
+	{
+		padding-right:10px;
+	}
+	
+
 
 }
 

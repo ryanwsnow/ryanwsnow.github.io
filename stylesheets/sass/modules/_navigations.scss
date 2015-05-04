@@ -189,11 +189,11 @@ a.nav--tab-pill_item
 	}
 	> .is-selected
 	{
-		background:$bgcolor-base-darken1;
+		background:$color-highlight-lighten1;
 	}
 	> .is-hovered
 	{
-		background:$bgcolor-base-lighten1;
+		background:$bgcolor-base-darken1;
 	}
 }
 

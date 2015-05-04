@@ -31,15 +31,21 @@
 			<div class="course_header_subtitle"><span>Join Code:</span> 123456</div>
 		</div>
 		<div class="course_header_utility-bar">	
-			<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
-		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
+			<button class="dropdown-button btn btn--icon-utility is-first" data-constrainwidth="false" data-activates="courseHelp"><i class="icon-help"></i></button>
+			<ul   id="courseHelp" class="dropdown-content menu">
+				     <li><a class="btn--plain" href="#!">Interactive Guides</a></li>
+				    <li><a class="btn--plain" href="#!">Submit Support Request</a></li>
+				    
+				    <li><a class="btn--plain" href="#!">Forums</a></li>
+			    	</ul>
+		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="courseSettings" >
 					<i class="icon-settings"></i>
 				</button>
-			    	<ul   id="dropdown1" class="dropdown-content menu">
-				     <li><a class="btn--plain" href="#!">Something here</a></li>
-				    <li><a class="btn--plain" href="#!">Something there that is super long</a></li>
+			    	<ul   id="courseSettings" class="dropdown-content menu">
+				     <li><a class="btn--plain" href="#!">General</a></li>
+				    <li><a class="btn--plain" href="#!">Grading</a></li>
 				    
-				    <li><a class="btn--plain" href="#!">blah blah</a></li>
+				    <li><a class="btn--plain" href="#!">Modules</a></li>
 			    	</ul>		
 		</div>
 		<div class="course_header_footer">
@@ -92,18 +98,48 @@
 					<div id="toolbarSelected" class="toolbar is-active is-hidden">
 						<span class="badge highlight">1</span> selected
 						<span class="toolbar_actions-utility">
-							<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
+							<button class="btn--withbg is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
 							
-							<button class="btn--plain ">Assign</button>
-							<button class="btn--plain danger is-last">Delete</button>
+							<button class="btn--withbg ">Assign</button>
+							<button class="btn--withbg danger is-last">Delete</button>
 						</span>
 
 					</div>
 				</div>
 				
 
-				<div class="content-list_body">
+				<div class="scrollable content-list_body" data-target="content-list_header">
 					<ol class="list">
+						<li class="list-row">
+							<div class="list_item sticky" data-target="courseInfo">
+								
+								<span class="list_item_cell small">
+									<i class="icon-textsms secondary"></i>
+								</span>
+								<span class="list_item_cell selectArea">
+								  	<div class="cell-primary">Course Information</div>
+								  	<span class="cell-secondary">this shouldn't be here</span>
+							  	</span>
+														
+								
+							</div>
+							
+				  		</li> <!-- end list item -->
+				  		<li class="list-row">
+							<div class="list_item sticky" data-target="attendance">
+								
+								<span class="list_item_cell small">
+									<i class="icon-textsms secondary"></i>
+								</span>
+								<span class="list_item_cell selectArea">
+								  	<div class="cell-primary">Attendance</div>
+								  	<span class="cell-secondary">Take attendance</span>
+							  	</span>
+														
+								
+							</div>
+							
+				  		</li> <!-- end list item -->
 						<li class="list-row">
 							<div class="list_item list_item--folder">
 								<span class="list_item_cell small is-first">
@@ -131,7 +167,7 @@
 											<span class="list_item_cell small">
 												<i class="icon-textsms secondary"></i>
 											</span>
-											<span class="list_item_cell ">
+											<span class="list_item_cell selectArea">
 											  	<div class="cell-primary">Question 1</div>
 											  	<span class="cell-secondary">Multiple Choice</span>
 										  	</span>
@@ -146,7 +182,7 @@
 							
 				  		</li> <!-- end list item -->
 				  		<li class="list-row">
-							<div id="contentShow" class="list_item" data-target="typeQuestion">
+							<div id="contentShow" class="list_item" data-target="question1">
 								<span class="list_item_cell small is-first">
 									
 									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
@@ -154,7 +190,7 @@
 								<span class="list_item_cell small">
 									<i class="icon-textsms secondary"></i>
 								</span>
-								<span class="list_item_cell">
+								<span class="list_item_cell selectArea">
 								  	<div class="cell-primary">Question 2</div>
 								  	<span class="cell-secondary">Multiple Choice</span>
 							  	</span>
@@ -164,8 +200,8 @@
 							</div>
 							
 				  		</li> <!-- end list item -->
-				  		<li class="list-row">
-							<div id="contentShow" class="list_item" data-target="typeDiscussion">
+				  		<li class="list-row ">
+							<div id="contentShow" class="list_item is-active" data-target="discussion1">
 								<span class="list_item_cell small is-first">
 									
 									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
@@ -173,7 +209,7 @@
 								<span class="list_item_cell small">
 									<i class="icon-question-answer secondary"></i>
 								</span>
-								<span class="list_item_cell">
+								<span class="list_item_cell selectArea">
 								  	<div class="cell-primary">Discussion</div>
 								  	<span class="cell-secondary">Something</span>
 							  	</span>
@@ -233,9 +269,9 @@
 								
 						</div>
 				</div><!-- content-preview_header END-->
-				<div class="content-preview_body">
+				<div data-target="content-preview_header" class="scrollable content-preview_body">
 					<div class="l-inset">
-						<div id="typeQuestion" class="is-hidden">
+						<div class="question1 is-hidden">
 							<!-- Multiple Choice/Sorting -->
 							<div class="q-answer">
 								<p class="q-answer_descritpion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ligula vitae nisi suscipit aliquet. Mauris in ultricies erat. Curabitur in egestas tellus, id commodo turpis.</p>
@@ -284,7 +320,7 @@
 								</div>
 							</div>
 						</div><!-- typeQuestion -->
-						<div id="typeDiscussion" class="">
+						<div  class="discussion1 is-active">
 							<div class="discussion">
 								<div class="discussion-card">
 									<div class="discussion-card_header">

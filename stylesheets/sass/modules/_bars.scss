@@ -1,0 +1,37 @@
+.toolbar
+{
+
+	padding:$padding-default;
+	height:52px;
+	line-height:32px;
+	background:#f9f9f9;
+	border-bottom:1px solid #d9dde1;
+	&.is-active 
+	{
+		
+		background:#fff;
+	}
+
+}
+
+
+.toolbar_actions-primary
+{
+
+}
+
+.toolbar_actions-utility
+{
+	float:right;
+}
+
+
+.searchbar
+{
+	@extend .z-depth-1;
+	padding:$padding-default;
+	
+	background:#f9f9f9;
+	border-bottom:1px solid #d9dde1;
+
+}
