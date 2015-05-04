@@ -2559,7 +2559,7 @@ a.nav--tab-pill_item {
     border-style: dashed;
     border-color: #199bfd; }
 
-.btn--plain, .btn--utility, .btn--default, .btn--icon-utility {
+.btn--plain, .btn--withbg, .btn--utility, .btn--default, .btn--icon-utility {
   float: left;
   height: 32px;
   padding-left: 10px;
@@ -2569,32 +2569,32 @@ a.nav--tab-pill_item {
   line-height: 32px;
   font-size: 14px;
   color: #708493; }
-  .is-first.btn--plain, .is-first.btn--utility, .is-first.btn--default, .is-first.btn--icon-utility {
+  .is-first.btn--plain, .is-first.btn--withbg, .is-first.btn--utility, .is-first.btn--default, .is-first.btn--icon-utility {
     margin-left: 0;
     padding-left: 0; }
-  .is-last.btn--plain, .is-last.btn--utility, .is-last.btn--default, .is-last.btn--icon-utility {
+  .is-last.btn--plain, .is-last.btn--withbg, .is-last.btn--utility, .is-last.btn--default, .is-last.btn--icon-utility {
     margin-right: 0;
     padding-right: 0; }
-  .btn--plain:hover.danger, .btn--utility:hover.danger, .btn--default:hover.danger, .btn--icon-utility:hover.danger {
+  .btn--plain:hover.danger, .btn--withbg:hover.danger, .btn--utility:hover.danger, .btn--default:hover.danger, .btn--icon-utility:hover.danger {
     color: #fd194f; }
-  .primary.btn--plain, .primary.btn--utility, .primary.btn--default, .primary.btn--icon-utility {
+  .primary.btn--plain, .primary.btn--withbg, .primary.btn--utility, .primary.btn--default, .primary.btn--icon-utility {
     color: #199bfd; }
-  .is-disabled.btn--plain, .is-disabled.btn--utility, .is-disabled.btn--default, .is-disabled.btn--icon-utility {
+  .is-disabled.btn--plain, .is-disabled.btn--withbg, .is-disabled.btn--utility, .is-disabled.btn--default, .is-disabled.btn--icon-utility {
     color: #d9dde1; }
 
-.with-icon.btn--plain > i, .with-icon.btn--utility > i, .with-icon.btn--raised > i {
+.with-icon.btn--plain > i, .with-icon.btn--withbg > i, .with-icon.btn--utility > i, .with-icon.btn--raised > i {
   float: left;
   padding-right: 10px; }
-.with-icon-right.btn--plain > i, .with-icon-right.btn--utility > i, .with-icon-right.btn--raised > i {
+.with-icon-right.btn--plain > i, .with-icon-right.btn--withbg > i, .with-icon-right.btn--utility > i, .with-icon-right.btn--raised > i {
   float: right;
   padding-left: 10px; }
 
-.btn--plain {
+.btn--withbg {
   background: #f0f0f0;
   border-radius: 3px; }
-  .btn--plain.is-first {
+  .btn--withbg.is-first {
     padding-left: 10px; }
-  .btn--plain.is-last {
+  .btn--withbg.is-last {
     padding-right: 10px; }
 
 .btn--utility {

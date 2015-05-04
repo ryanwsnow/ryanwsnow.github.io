@@ -31,11 +31,17 @@
 			<div class="course_header_subtitle"><span>Join Code:</span> 123456</div>
 		</div>
 		<div class="course_header_utility-bar">	
-			<button class="btn btn--icon-utility is-first"><i class="icon-help"></i></button>
-		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="dropdown1" >
+			<button class="dropdown-button btn btn--icon-utility is-first" data-constrainwidth="false" data-activates="courseHelp"><i class="icon-help"></i></button>
+			<ul   id="courseHelp" class="dropdown-content menu">
+				     <li><a class="btn--plain" href="#!">Interactive Guides</a></li>
+				    <li><a class="btn--plain" href="#!">Submit Support Request</a></li>
+				    
+				    <li><a class="btn--plain" href="#!">Forums</a></li>
+			    	</ul>
+		    	<button class="dropdown-button btn btn--icon-utility is-last" data-constrainwidth="false" data-activates="courseSettings" >
 					<i class="icon-settings"></i>
 				</button>
-			    	<ul   id="dropdown1" class="dropdown-content menu">
+			    	<ul   id="courseSettings" class="dropdown-content menu">
 				     <li><a class="btn--plain" href="#!">Something here</a></li>
 				    <li><a class="btn--plain" href="#!">Something there that is super long</a></li>
 				    
@@ -92,10 +98,10 @@
 					<div id="toolbarSelected" class="toolbar is-active is-hidden">
 						<span class="badge highlight">1</span> selected
 						<span class="toolbar_actions-utility">
-							<button class="btn--plain is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
+							<button class="btn--withbg is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
 							
-							<button class="btn--plain ">Assign</button>
-							<button class="btn--plain danger is-last">Delete</button>
+							<button class="btn--withbg ">Assign</button>
+							<button class="btn--withbg danger is-last">Delete</button>
 						</span>
 
 					</div>
