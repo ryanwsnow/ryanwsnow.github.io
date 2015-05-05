@@ -2899,6 +2899,8 @@ a.nav--tab-pill_item {
   .is-active .card--thumb_item_footer {
     background-color: #0ac8f4;
     color: #fff; }
+    .is-active .card--thumb_item_footer:after {
+      content: "Current"; }
 
 .card--present {
   position: relative;
