@@ -144,6 +144,8 @@ p {
   vertical-align: middle; }
 
 .sg--example {
+  display: table;
+  width: 100%;
   position: relative;
   padding: 20px;
   padding-top: 60px;
@@ -152,6 +154,10 @@ p {
   background: #ffffff;
   border: 1px solid #d9dde1;
   border-radius: 5px; }
+  .sg--example:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .sg--example:after {
   position: absolute;
