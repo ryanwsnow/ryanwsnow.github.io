@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-       <head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Styleguide - Tophat</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Styleguide - Tophat</title>
 
-    <!-- Bootstrap -->
-            <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-            <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
-            <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-            <script src="js/materialize.min.js"></script>
-            <script src="js/app.js"></script>
-            
-            <link href="stylesheets/css/app.css" rel="stylesheet">
-            <link href="stylesheets/css/style.css" rel="stylesheet">
+<!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
     
-    
-
-
-            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-            <!--[if lt IE 9]>
-              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-              <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-            <![endif]-->
-       </head>
+    <link href="stylesheets/css/app.css" rel="stylesheet">
+    <link href="stylesheets/css/style.css" rel="stylesheet">
+</head>
        <body>
             <header class="header sg--header">
                     <h2>Styleguide</h2>
@@ -286,10 +276,10 @@
                             <code>.btn--utility</code>
                             
                             <div class="sg--example">
-                                <button class="btn btn--utility">Normal</button>
+                                <button class="btn--utility">Normal</button>
                                 
-                                <button class="btn btn--utility danger">Danger</button>
-                                <button class="btn btn--utility is-disabled">Disabled</button>
+                                <button class="btn--utility danger">Danger</button>
+                                <button class="btn--utility is-disabled">Disabled</button>
                                 
                             </div>
                             <h3>Utility Icon buttons</h3>
@@ -308,6 +298,18 @@
                                 
                                 <button class="btn btn--icon-utility"><i class="icon-help"></i></button>
                                 <button class="btn btn--icon-utility"><i class="icon-settings"></i></button>
+                                
+                            </div>
+                             <h3>Round buttons</h3>
+                            <p>Round buttons are primary used in presentation mode</p>
+                        
+                            <code>.btn--round</code>
+                            
+                            <div class="sg--example">
+                              <button id="playControl" class="btn--round  large play is-active"><i class="icon-pause"></i></button>
+                        <button class="btn--round large "><i class="icon-done"></i></button>
+                        <button class="btn--round large "><i class="icon-equalizer"></i></button>
+                        <button class="btn--round large is-danger"><i class="icon-close"></i></button>
                                 
                             </div>
                         </section>
