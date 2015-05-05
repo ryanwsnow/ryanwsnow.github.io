@@ -1,18 +1,14 @@
 
 %baseButton
 {
-
     float:left;
     height:$btn-height;
     padding:
     {
     	left:10px;
     	right:10px;
-    }
-    
-    
+    } 
     margin-right:10px;
-
     text-align:center;
     line-height:$btn-height;
     font-size:14px;
@@ -43,9 +39,8 @@
 	{
 		color:$color-disabled;
 	}
-
-
 }
+
 
 %baseButton-with-icon 
 {
@@ -70,6 +65,9 @@
 
 	}
 }
+
+
+
 
 .btn--plain
 {
@@ -275,8 +273,26 @@
 
 }
 
+.btn-grp
+{
+	&:first-child
+	{
+
+	}
+	&:last-child
+	{
+		margin-right:0;
+	}
+}
 
 
+.btn-icon-grp
+{
+	&:first-child
+	{
+		
+	}
+}
 
 
 

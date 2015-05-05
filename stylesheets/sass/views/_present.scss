@@ -2,7 +2,10 @@
 
 .present
 {
+
 	@extend %baseLayout;
+	position:relative;
+
 	&-container 
 	{
 		@extend %baseLayout-container;
@@ -22,6 +25,7 @@
 		@extend %baseLayout_body;
 		// padding-top:52px;
 		padding-bottom:270px;
+		
 		//hs 
 		@include transition(all 0.3s ease-in 0s);
 	}
@@ -64,6 +68,16 @@
 	{
 		@extend %header--primary_footer;
 	}
+}
+
+.present_footer
+{
+	position:absolute;
+	bottom:0;
+	right:0;
+	height:270px;
+	width:100%;
+	@include transition(all 0.2s ease-in 0.1s);
 }
 
 .controlbar
@@ -139,14 +153,7 @@
 }
 
 
-.present-footer
-{
-	position:absolute;
-	bottom:0;
-	right:0;
-	height:270px;
-	width:100%;
-}
+
 
 // hs presentation experiement 
 
@@ -208,18 +215,16 @@
 {
 	position:relative;
 	z-index:200;
-	height:100%;
+	top:50%;
+	height:50%;
 	width:90%;
-	margin:
-	{
-		left:auto;
-		right:auto;
-	}
+	transform: translate(0, -50%);
+	
 
 
 }
 
-.hs-next
+.present-preview
 {
 	
 	position:absolute;
@@ -233,21 +238,15 @@
 	
 }
 
-.hitspot-middle
-{
-	&.is-hovered
-	{
 
-	}
-}
 
-.hitspot-right .hs-next
+.hitspot-right .present-preview
 {
 	right:-300px;
 	
 }
 
-.hitspot-left .hs-next
+.hitspot-left .present-preview
 {
 	left:-300px;
 }
@@ -259,7 +258,7 @@
 
 	 @include linear-gradient(to right, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
 	
-	.hs-next
+	.present-preview
 	{
 		opacity:1;
 		right:0px;
@@ -273,7 +272,7 @@
 
 	@include linear-gradient(to left, rgba(10, 200, 244, 0), rgba(10, 200, 244, 0.2) 85%);
 	opacity:1;
-	.hs-next
+	.present-preview
 	{
 		opacity:1;
 		left:0px;
@@ -281,11 +280,6 @@
 	
 	}
 }
-
-
-
-
-
 
 .hitspot 
 {
@@ -340,6 +334,12 @@
 	padding-bottom:0;
 }
 
+.hs-footer
+{
+	bottom:-270px;
+	@include transition(all 0.2s ease-in 0.1s);
+}
+
 .hs-body-menu
 {
 	padding-top:52px;
@@ -352,8 +352,6 @@
 	bottom:20px;
 	left:20px;
 	@include transition(all 0.2s ease-in 0.1s);
-	
-
 }
 
 .nudge
@@ -361,7 +359,6 @@
 	bottom:-25px;
 	@include transition(all 0.2s ease-in 0.1s);
 }
-
 
 .hs-controlbar
 {
@@ -375,6 +372,12 @@
 	opacity:0;
 	@include transition(all 0.2s ease-in 0.1s);
 
+}
+
+
+.course-info
+{
+	text-align:center;
 }
 
 
