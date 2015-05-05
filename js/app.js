@@ -127,7 +127,7 @@ $(document).ready(function(){
 
 	$(".hs").on({
 	    mouseenter: function () {
-	    	$(this).addClass("is-hovered");
+	    	$(this).parent().addClass("is-hovered");
 	    	// if ($(this).hasClass("hitspot-middle"))
 	    	// {
 	    	// 	console.log("middle hovered");
@@ -138,7 +138,7 @@ $(document).ready(function(){
 	    },
 	    mouseleave: function () {
 	      
-	        $(this).removeClass("is-hovered");
+	        $(this).parent().removeClass("is-hovered");
 	     //    if ($(this).hasClass("hitspot-middle"))
 	    	// {
 	    	// 	$(".present_header").toggleClass("hs-header");
@@ -149,7 +149,9 @@ $(document).ready(function(){
 
 	$("#addContent").on("click",function(){
 		// $(".present_header").toggleClass("hs-header");
+
 		$(".present_body").toggleClass("hs-body");
+		$(".present_footer").toggleClass("hs-footer");
 		$(".controlbar").toggleClass("hs-controlbar");
 		$(".instruction-hitspots").toggleClass("is-hidden");
 		$(this).parent(".hs-helpbar").toggleClass("nudge");
