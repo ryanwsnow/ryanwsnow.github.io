@@ -77,16 +77,17 @@
 
 .card--thumb
 {
+	@extend .z-depth-1;
 	background:#fff;
 	border-radius:5px;
 	display:block;
 	position:relative;
-	
 	padding-bottom:52px;
 	
-	@extend .z-depth-1;
+	
 	width:160px;
 	height:160px;
+
 	&.is-active
 	{
 		overflow:hidden;
@@ -114,13 +115,12 @@
 	font-size:14px;
 	font-weight:600;
 	color:$color-base;
+	text-align:center;
 	@extend .card_item_footer;
 
 	.is-active &
 	{
 		background-color:$color-highlight;
-		
-		text-align:center;
 		color:#fff;
 	}
 }

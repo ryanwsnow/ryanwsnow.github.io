@@ -55,10 +55,33 @@ $(document).ready(function(){
 		console.log(thisContent);
 		$(thisContent).closest(".l-inset").find(".is-active").toggleClass("is-active is-hidden");
 		$(thisContent).toggleClass("is-active is-hidden");
-		
+	
+	});
 
+// thumb List
+	$(".card--thumb").on({
+	    mouseenter: function () {
+	    	$(this).addClass("is-hovered");
+	       
+	    },
+	    mouseleave: function () {
+	      
+	        $(this).removeClass("is-hovered");
+	    }
+	});
+	$(".card--thumb > .selectArea").on("click",function(){
+		listItem = $(this).parent(".card--thumb");
+		//change list item active state
+		$(listItem).closest(".thumb-list_body").find(".is-active").removeClass("is-active");
 
-		
+		$(listItem).addClass("is-active");
+		//show item's content in preview pane
+
+		thisContent = "#" + $(listItem).data("target");
+		console.log(thisContent);
+		$(thisContent).closest(".card--present_body").children(".is-active").toggleClass("is-active is-hidden");
+		$(thisContent).toggleClass("is-active is-hidden");
+	
 	});
 //Menu Hover 
 

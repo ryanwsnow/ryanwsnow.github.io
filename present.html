@@ -23,14 +23,15 @@
 				<div class="card--present_header"></div>
 				<div class="card--present_body">
 				<div id="presentQuestion1" class="is-hidden">
+					<h2> Question 2 </h2>
 					<div id="controls" class="controlbar hs-controlbar">
-						<button id="playControl" class="btn--round  large play is-active"><i class="icon-pause"></i></button>
+						<button id="playControl" class="btn--round  large play"><i class="icon-pause"></i></button>
 						<button class="btn--round large "><i class="icon-done"></i></button>
 						<button class="btn--round large "><i class="icon-equalizer"></i></button>
 						<button class="btn--round large is-danger"><i class="icon-close"></i></button>
 					</div><!-- controlbar END -->
 				</div>
-				<div id="presentBlank" class="course-info">
+				<div id="presentBlank" class="is-active course-info">
 					<h2>Course Information</h2>
 				</div>
 					
@@ -64,21 +65,21 @@
 				<div class="thumb-list_header">Presenting</div>
 				<div class="thumb-list_body active">
 					<div class="thumb-list_item">
-						<div class="card--thumb is-active">
-							<div class="card--thumb_item_body">
+						<div class="card--thumb is-active" data-target="presentBlank">
+							<div class="card--thumb_item_body selectArea">
 								<div class="card--thumb_item_title">Join Presentation</div>
 								<p>Starting Presentation</p>
 							</div>
 							<div class="card--thumb_item_footer">
-								Current
+								Presenting
 							</div>
 								
 						</div>
 
 					</div><!-- thumb-list_item END -->
 					<div class="thumb-list_item">
-						<div class="card--thumb">
-							<div class="card--thumb_item_body">
+						<div class="card--thumb" data-target="presentQuestion1">
+							<div class="card--thumb_item_body selectArea">
 								<div class="card--thumb_item_title">Question 2</div>
 								<p>This is some question text blah blah blah</p>
 							</div>
@@ -88,7 +89,7 @@
 					</div><!-- thumb-list_item END -->
 					<div class="thumb-list_item">
 						<div class="card--thumb">
-							<div class="card--thumb_item_body">
+							<div class="card--thumb_item_body selectArea">
 								<div class="card--thumb_item_title">Question 3</div>
 								<div class="card_item_sub-title"></div>
 							</div>
@@ -101,7 +102,7 @@
 				</div><!-- thumb-list_body END -->
 			</div><!-- thumb-list END -->
 			<div class="thumb-list">
-				<div class="thumb-list_header">Add to presentation</div>
+				<div class="thumb-list_header"></div>
 				<div class="thumb-list_body">
 					
 				</div><!-- thumb-list_body END -->
