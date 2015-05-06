@@ -101,7 +101,7 @@ textarea.materialize-textarea {
 	font-size:14px;
 	
 	
-	> input, > textarea
+	> input
 	{
 		display:table-cell;
 		height:32px;
@@ -115,7 +115,8 @@ textarea.materialize-textarea {
 	> textarea
 	{
 		vertical-align:middle;
-		height:32px;
+		line-height:normal;
+		
 
 	}
 
@@ -127,7 +128,10 @@ textarea.materialize-textarea {
 		font-size:14px;
 		font-weight:400;
 		color:$color-base;
-
+		&.label-small
+		{
+			width:32px;
+		}
 
 		
 		&.labelfocus
@@ -250,5 +254,9 @@ textarea.materialize-textarea {
 	&.hint
 	{
 		color:$color-highlight;
+	}
+	&.success
+	{
+		color:$color-success;
 	}
 }
