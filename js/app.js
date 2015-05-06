@@ -12,9 +12,19 @@ $(document).ready(function(){
 	$("input[type=text]").focus(function() {
 		$(this).parent(".form-field").addClass("is-focused");
 		  $("label[for='" + this.id + "']").addClass("labelfocus");
+		  if($(this).siblings().hasClass("form-msg"))
+		  {
+		  	$(this).parent(".form-field").addClass("has-msg");
+		  	$(this).siblings(".form-msg").removeClass("is-hidden");
+		  }
 		}).blur(function() {
 		  $("label[for='" + this.id + "']").removeClass("labelfocus");
 		  $(this).parent(".form-field").removeClass("is-focused");
+		  if($(this).siblings().hasClass("form-msg"))
+		  {
+		  	$(this).parent(".form-field").removeClass("has-msg");
+		  	$(this).siblings(".form-msg").addClass("is-hidden");
+		  }
 		});
 	$("textarea").focus(function() {
 		$(this).parent(".form-field").addClass("is-focused");
