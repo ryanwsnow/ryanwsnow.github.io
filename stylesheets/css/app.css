@@ -2976,7 +2976,7 @@ textarea {
 
 textarea.materialize-textarea {
   overflow-y: hidden;
-  margin-top: 15px;
+  margin-top: 32px;
   height: 32px;
   width: 100%;
   margin: 0 0 0 0;
@@ -3097,10 +3097,6 @@ textarea.materialize-textarea {
     width: 32px;
     color: #fd194f;
     text-align: center; }
-  .form-field.has-success > label.labelfocus {
-    color: #8cd625; }
-  .form-field.has-success.is-focused {
-    border-bottom-color: #8cd625; }
   .form-field.has-success > i {
     display: table-cell;
     float: none;

@@ -10,15 +10,16 @@ $(document).ready(function(){
 	});
 
 	$("input[type=text]").focus(function() {
+		thisLabel = "label[for='" + this.id + "']";
 		$(this).parent(".form-field").addClass("is-focused");
-		  $("label[for='" + this.id + "']").addClass("labelfocus");
+		  $(thisLabel).addClass("labelfocus");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {
 		  	$(this).parent(".form-field").addClass("has-msg");
 		  	$(this).siblings(".form-msg").removeClass("is-hidden");
 		  }
 		}).blur(function() {
-		  $("label[for='" + this.id + "']").removeClass("labelfocus");
+		  $(thisLabel).removeClass("labelfocus");
 		  $(this).parent(".form-field").removeClass("is-focused");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {
@@ -27,15 +28,16 @@ $(document).ready(function(){
 		  }
 		});
 	$("textarea").focus(function() {
+		thisLabel = "label[for='" + this.id + "']";
 		$(this).parent(".form-field").addClass("is-focused");
-		  $("label[for='" + this.id + "']").addClass("labelfocus");
+		  $(thisLabel).addClass("labelfocus");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {
 		  	$(this).parent(".form-field").addClass("has-msg");
 		  	$(this).siblings(".form-msg").removeClass("is-hidden");
 		  }
 		}).blur(function() {
-		  $("label[for='" + this.id + "']").removeClass("labelfocus");
+		  $(thisLabel).removeClass("labelfocus");
 		  $(this).parent(".form-field").removeClass("is-focused");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {

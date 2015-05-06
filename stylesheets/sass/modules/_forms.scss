@@ -24,8 +24,9 @@ textarea.materialize-textarea {
   // General Styles
   
   overflow-y: hidden; //remvoe flashing bar
-  margin-top:15px;
-  height: 32px;;
+  margin-top:32px;
+  height: 32px;
+
   width: 100%;
   margin: 0 0 0 0;
   padding: 0;
@@ -217,12 +218,12 @@ textarea.materialize-textarea {
 		{
 			&.labelfocus
 			{
-				color:$color-success;
+				// color:$color-success;
 			}
 		}
 		&.is-focused
 		{
-			border-bottom-color:$color-success;
+			// border-bottom-color:$color-success;
 		}
 		> i 
 		{
