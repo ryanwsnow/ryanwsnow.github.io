@@ -46,11 +46,21 @@ textarea.materialize-textarea {
 {
 	display:block;
 	padding-bottom:10px;
+	padding-top:10px;
+	> input
+	{
+
+	}
+
 	> label
 	{
 		font-size:14px;
 		font-weight:400;
 		color:$color-base;
+		&.is-checked
+		{
+			color:$color-highlight;
+		}
 	}
 
 }
@@ -78,30 +88,35 @@ textarea.materialize-textarea {
 .form-field
 {	
 	position:relative;
-	
+	@include transition(all 0.5s ease-in-out);
 	border-bottom-color:$color-base-lighten2;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
-	
+	box-sizing:border-box;
 	display:table;
 	padding:10px;
 	width:100%;
 	vertical-align:middle;
+	line-height:32px;
+	font-size:14px;
 	
 	
-	> input, > textarea
+	> input
 	{
 		display:table-cell;
+		height:32px;
 		vertical-align:middle;
 		width:100%;
 		color:$color-base-lighten1;
+		@include transition(all 0.5s ease-in-out);
 		
 	}
 
 	> textarea
 	{
 		vertical-align:middle;
-		height:32px;
+		line-height:normal;
+		
 
 	}
 
@@ -109,17 +124,24 @@ textarea.materialize-textarea {
 	{
 		display:table-cell;
 		width:100px;
-		
+		vertical-align:middle;
 		font-size:14px;
 		font-weight:400;
 		color:$color-base;
-		padding-right:10px;
+		&.label-small
+		{
+			width:32px;
+		}
+
+		
 		&.labelfocus
 		{
 			
-			// @include transition(all 0.5s ease-in-out);
+			
 			color:$color-highlight;
 			@include transition(all 0.5s ease-in-out);
+
+			
 		}
 		&.label-icon
 		{
@@ -131,6 +153,7 @@ textarea.materialize-textarea {
 	}
 	&.is-focused
 	{
+		@include transition(all 0.5s ease-in-out);
 		border-bottom-color:$color-highlight;
 		> input, > textarea
 		{
@@ -140,8 +163,100 @@ textarea.materialize-textarea {
 	}
 	&.is-readonly
 	{
-	
-	 border-bottom:none;		
+		border-bottom:none;
+		> label 
+		{
+			color:$color-base-lighten2;
+		}
+		> input
+		{
+			color:$color-base-lighten2;
+		}		
 	}
 
+	&.has-msg 
+	{
+		margin-bottom:30px;
+	}
+	&.has-error
+	{
+		
+		> input 
+		{
+			color:$color-danger;	
+		}
+		
+		> label 
+		{
+			color:$color-danger;
+			&.labelfocus
+			{
+				color:$color-danger;
+			}
+		}
+		&.is-focused
+		{
+			border-bottom-color:$color-danger;	
+
+		}
+		> i 
+		{
+			display:table-cell;
+			float:none;
+			vertical-align:middle;
+			height:32px;
+			width:32px;
+			color:$color-danger;
+			text-align:center;
+			
+		}
+	}
+	&.has-success
+	{
+		> label 
+		{
+			&.labelfocus
+			{
+				color:$color-success;
+			}
+		}
+		&.is-focused
+		{
+			border-bottom-color:$color-success;
+		}
+		> i 
+		{
+			display:table-cell;
+			float:none;
+			vertical-align:middle;
+			height:32px;
+			width:32px;
+			color:$color-success;
+			text-align:center;
+		}
+	}
+
+
+}
+
+.form-msg
+{
+	position:absolute;
+	bottom:-32px;
+	right:10px;
+	height:32px;
+	line-height:32px;
+	font-size:12px;
+	&.error
+	{
+		color:$color-danger;
+	}
+	&.hint
+	{
+		color:$color-highlight;
+	}
+	&.success
+	{
+		color:$color-success;
+	}
 }

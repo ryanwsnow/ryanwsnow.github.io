@@ -2998,11 +2998,14 @@ textarea.materialize-textarea {
 
 .form-checkbox {
   display: block;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding-top: 10px; }
   .form-checkbox > label {
     font-size: 14px;
     font-weight: 400;
     color: #435561; }
+    .form-checkbox > label.is-checked {
+      color: #0ac8f4; }
 
 .search-field {
   display: table-cell;
@@ -3020,28 +3023,40 @@ textarea.materialize-textarea {
 
 .form-field {
   position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   border-bottom-color: #a4b0ba;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  box-sizing: border-box;
   display: table;
   padding: 10px;
   width: 100%;
-  vertical-align: middle; }
-  .form-field > input, .form-field > textarea {
+  vertical-align: middle;
+  line-height: 32px;
+  font-size: 14px; }
+  .form-field > input {
     display: table-cell;
+    height: 32px;
     vertical-align: middle;
     width: 100%;
-    color: #708493; }
+    color: #708493;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
   .form-field > textarea {
     vertical-align: middle;
-    height: 32px; }
+    line-height: normal; }
   .form-field > label {
     display: table-cell;
     width: 100px;
+    vertical-align: middle;
     font-size: 14px;
     font-weight: 400;
-    color: #435561;
-    padding-right: 10px; }
+    color: #435561; }
+    .form-field > label.label-small {
+      width: 32px; }
     .form-field > label.labelfocus {
       color: #0ac8f4;
       -webkit-transition: all 0.5s ease-in-out;
@@ -3052,11 +3067,62 @@ textarea.materialize-textarea {
       vertical-align: middle;
       color: inherit; }
   .form-field.is-focused {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     border-bottom-color: #0ac8f4; }
     .form-field.is-focused > input, .form-field.is-focused > textarea {
       color: #435561; }
   .form-field.is-readonly {
     border-bottom: none; }
+    .form-field.is-readonly > label {
+      color: #a4b0ba; }
+    .form-field.is-readonly > input {
+      color: #a4b0ba; }
+  .form-field.has-msg {
+    margin-bottom: 30px; }
+  .form-field.has-error > input {
+    color: #fd194f; }
+  .form-field.has-error > label {
+    color: #fd194f; }
+    .form-field.has-error > label.labelfocus {
+      color: #fd194f; }
+  .form-field.has-error.is-focused {
+    border-bottom-color: #fd194f; }
+  .form-field.has-error > i {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+    height: 32px;
+    width: 32px;
+    color: #fd194f;
+    text-align: center; }
+  .form-field.has-success > label.labelfocus {
+    color: #8cd625; }
+  .form-field.has-success.is-focused {
+    border-bottom-color: #8cd625; }
+  .form-field.has-success > i {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+    height: 32px;
+    width: 32px;
+    color: #8cd625;
+    text-align: center; }
+
+.form-msg {
+  position: absolute;
+  bottom: -32px;
+  right: 10px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px; }
+  .form-msg.error {
+    color: #fd194f; }
+  .form-msg.hint {
+    color: #0ac8f4; }
+  .form-msg.success {
+    color: #8cd625; }
 
 .toolbar {
   padding: 10px;
