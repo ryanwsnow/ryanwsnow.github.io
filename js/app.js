@@ -9,11 +9,11 @@ $(document).ready(function(){
 		$folderItems.toggleClass("is-hidden");
 	});
 
-	$("input").focus(function() {
+	$("input[type=text]").focus(function() {
 		$(this).parent(".form-field").addClass("is-focused");
 		  $("label[for='" + this.id + "']").addClass("labelfocus");
 		}).blur(function() {
-		  $("label").removeClass("labelfocus");
+		  $("label[for='" + this.id + "']").removeClass("labelfocus");
 		  $(this).parent(".form-field").removeClass("is-focused");
 		});
 	$("textarea").focus(function() {
@@ -23,6 +23,16 @@ $(document).ready(function(){
 		  $("label").removeClass("labelfocus");
 		  $(this).parent(".form-field").removeClass("is-focused");
 		});
+	//checking
+	$("input[type=checkbox]").on("click",function(){
+		
+		if($(this).prop("checked")) {
+			$(this).parent("label").addClass("is-checked");
+		}
+		else {
+			$(this).parent("label").removeClass("is-checked");
+		}
+	});
 
 	$("#controls > button").on("click",function(){
 
@@ -130,7 +140,7 @@ $(document).ready(function(){
 // Selecting items
 	var checkedItems = 0;
 	$(".checkable").on("click",function(){
-		if($(this).prop("checked")){
+		if($(this).prop("checked")) {
 			checkedItems = checkedItems + 1;
 		}
 		else {
@@ -147,6 +157,8 @@ $(document).ready(function(){
 		}
 		$(".badge").html(checkedItems);
 	});
+
+
 
 	$(".hs").on({
 	    mouseenter: function () {

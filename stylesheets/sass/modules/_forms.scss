@@ -46,11 +46,21 @@ textarea.materialize-textarea {
 {
 	display:block;
 	padding-bottom:10px;
+	padding-top:10px;
+	> input
+	{
+
+	}
+
 	> label
 	{
 		font-size:14px;
 		font-weight:400;
 		color:$color-base;
+		&.is-checked
+		{
+			color:$color-highlight;
+		}
 	}
 
 }
@@ -82,7 +92,7 @@ textarea.materialize-textarea {
 	border-bottom-color:$color-base-lighten2;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
-	
+	box-sizing:border-box;
 	display:table;
 	padding:10px;
 	width:100%;

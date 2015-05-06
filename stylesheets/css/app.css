@@ -2998,11 +2998,14 @@ textarea.materialize-textarea {
 
 .form-checkbox {
   display: block;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding-top: 10px; }
   .form-checkbox > label {
     font-size: 14px;
     font-weight: 400;
     color: #435561; }
+    .form-checkbox > label.is-checked {
+      color: #0ac8f4; }
 
 .search-field {
   display: table-cell;
@@ -3023,6 +3026,7 @@ textarea.materialize-textarea {
   border-bottom-color: #a4b0ba;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  box-sizing: border-box;
   display: table;
   padding: 10px;
   width: 100%;
