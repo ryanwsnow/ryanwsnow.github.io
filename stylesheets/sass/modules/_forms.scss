@@ -212,7 +212,7 @@ textarea.materialize-textarea {
 		> label 
 		{
 			color:$color-danger;
-			&.labelfocus
+			&.label-focus
 			{
 				color:$color-danger;
 			}
@@ -238,14 +238,14 @@ textarea.materialize-textarea {
 	{
 		> label 
 		{
-			&.labelfocus
+			&.label-focus
 			{
-				// color:$color-success;
+				color:$color-success;
 			}
 		}
 		&.is-focused
 		{
-			// border-bottom-color:$color-success;
+			border-bottom-color:$color-success;
 		}
 		> i 
 		{

@@ -347,7 +347,7 @@ h5
 .sg--example
 {
 	@include clearfix;
-	
+
 	display:table;
 	width:100%;
 	position:relative;
@@ -358,14 +358,7 @@ h5
 	background:#ffffff;
 	border:1px solid #d9dde1;
 	border-radius:5px;
-	> p
-	{
-		font-size:16px;
-		
-
-	}
-
-
+	font-size:16px;
 
 }
 
@@ -375,7 +368,7 @@ h5
 	  top: 15px;
 	  left: 15px;
 	  font-size: 14px;
-	  color: $color-highlight;
+	  color: $color-base-lighten1;
 	  text-transform: uppercase;
 	  font-weight:600;
 	  content: "Example";

@@ -2685,32 +2685,50 @@ a.nav--tab-pill_item {
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   height: 32px;
   line-height: 32px;
   font-size: 14px;
-  -webkit-box-shadow: 0px 2px 0px 0px #a4b0ba;
-  -moz-box-shadow: 0px 2px 0px 0px #a4b0ba;
-  box-shadow: 0px 2px 0px 0px #a4b0ba; }
+  -webkit-box-shadow: 0px 3px 0px 0px #b1bdc5;
+  -moz-box-shadow: 0px 3px 0px 0px #b1bdc5;
+  box-shadow: 0px 3px 0px 0px #b1bdc5; }
   .btn--raised.with-icon-right {
     min-width: 120px; }
   .btn--raised.primary {
     background: #199bfd;
     color: #fff;
-    -webkit-box-shadow: 0px 2px 0px 0px #1f80c9;
-    -moz-box-shadow: 0px 2px 0px 0px #1f80c9;
-    box-shadow: 0px 2px 0px 0px #1f80c9; }
+    -webkit-box-shadow: 0px 3px 0px 0px #0281e1;
+    -moz-box-shadow: 0px 3px 0px 0px #0281e1;
+    box-shadow: 0px 3px 0px 0px #0281e1; }
     .btn--raised.primary:hover {
       color: #fff;
       background: #42b5fc; }
+  .btn--raised.secondary {
+    background: #2ab27b;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px #20895e;
+    -moz-box-shadow: 0px 3px 0px 0px #20895e;
+    box-shadow: 0px 3px 0px 0px #20895e; }
+    .btn--raised.secondary:hover {
+      color: #fff;
+      background: #2fc789; }
+  .btn--raised.alternate {
+    background: #ff7c5e;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px #ff532b;
+    -moz-box-shadow: 0px 3px 0px 0px #ff532b;
+    box-shadow: 0px 3px 0px 0px #ff532b; }
+    .btn--raised.alternate:hover {
+      color: #fff;
+      background: #ff9178; }
   .btn--raised:hover {
     background: #dde2e6; }
   .btn--raised.danger:hover {
     background: #fd194f;
     color: #fff;
-    -webkit-box-shadow: 0px 2px 0px 0px #c2194f;
-    -moz-box-shadow: 0px 2px 0px 0px #c2194f;
-    box-shadow: 0px 2px 0px 0px #c2194f; }
+    -webkit-box-shadow: 0px 3px 0px 0px #c2194f;
+    -moz-box-shadow: 0px 3px 0px 0px #c2194f;
+    box-shadow: 0px 3px 0px 0px #c2194f; }
   .btn--raised.is-disabled {
     background: #ebeff1;
     color: #abbbc5;
@@ -3104,7 +3122,7 @@ textarea.materialize-textarea {
     color: #fd194f; }
   .form-field.has-error > label {
     color: #fd194f; }
-    .form-field.has-error > label.labelfocus {
+    .form-field.has-error > label.label-focus {
       color: #fd194f; }
   .form-field.has-error.is-focused {
     border-bottom-color: #fd194f; }
@@ -3116,13 +3134,17 @@ textarea.materialize-textarea {
     width: 32px;
     color: #fd194f;
     text-align: center; }
+  .form-field.has-success > label.label-focus {
+    color: #2ab27b; }
+  .form-field.has-success.is-focused {
+    border-bottom-color: #2ab27b; }
   .form-field.has-success > i {
     display: table-cell;
     float: none;
     vertical-align: middle;
     height: 32px;
     width: 32px;
-    color: #8cd625;
+    color: #2ab27b;
     text-align: center; }
 
 .form-msg {
@@ -3137,7 +3159,7 @@ textarea.materialize-textarea {
   .form-msg.hint {
     color: #0ac8f4; }
   .form-msg.success {
-    color: #8cd625; }
+    color: #2ab27b; }
 
 .toolbar {
   padding: 10px;
@@ -3780,20 +3802,19 @@ h5 {
   margin-bottom: 20px;
   background: #ffffff;
   border: 1px solid #d9dde1;
-  border-radius: 5px; }
+  border-radius: 5px;
+  font-size: 16px; }
   .sg--example:after {
     content: "";
     display: table;
     clear: both; }
-  .sg--example > p {
-    font-size: 16px; }
 
 .sg--example:after {
   position: absolute;
   top: 15px;
   left: 15px;
   font-size: 14px;
-  color: #0ac8f4;
+  color: #708493;
   text-transform: uppercase;
   font-weight: 600;
   content: "Example"; }

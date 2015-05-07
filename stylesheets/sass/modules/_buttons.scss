@@ -223,7 +223,7 @@
 	margin-right:10px;
 	padding-right:10px;
 	padding-left:10px;
-	border-radius:3px;
+	border-radius:5px;
 	height:32px;
 	line-height:32px;
 	font-size:14px;
@@ -232,14 +232,14 @@
 	{
 		min-width:120px;
 	}
-	@include box-shadow(0px 2px 0px 0px rgba(164,176,186,1));
+	@include box-shadow(0px 3px 0px 0px rgba(darken($bgcolor-base-darken2,10%),1));
 	
 	&.primary
 	{
 
 		background:$color-primary;
 		color:#fff;
-		@include box-shadow(0px 2px 0px 0px rgba(31,128,201,1));
+		@include box-shadow(0px 3px 0px 0px rgba(darken($color-primary,10%),1));
 	
 		&:hover
 		{
@@ -249,6 +249,34 @@
 		}
 
 	}
+	&.secondary
+	{
+
+		background:$color-secondary;
+		color:#fff;
+		@include box-shadow(0px 3px 0px 0px rgba(darken($color-secondary,10%),1));
+		&:hover
+		{
+			color:#fff;
+			background:lighten($color-secondary,5%);
+		}
+
+	}
+	&.alternate
+	{
+
+		background:$color-alternate;
+		color:#fff;
+		@include box-shadow(0px 3px 0px 0px rgba(darken($color-alternate,10%),1));
+		&:hover
+		{
+			color:#fff;
+			background:lighten($color-alternate,5%);
+		}
+
+	}
+
+
 	&:hover
 	{
 		background:lighten($bgcolor-base-darken2,5%);
@@ -257,7 +285,7 @@
 	{
 		background:$color-danger;
 		color:#fff;
-		@include box-shadow(0px 2px 0px 0px rgba(194,25,79,1));
+		@include box-shadow(0px 3px 0px 0px rgba(194,25,79,1));
 	}
 	&.is-disabled
 	{

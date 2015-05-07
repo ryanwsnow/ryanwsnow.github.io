@@ -66,7 +66,7 @@
 					<div class="toolbar">
 					
 						<span class="toolbar_actions-primary">
-							<button class="dropdown-button btn btn--raised primary is-first" data-constrainwidth="false" data-activates="createContent">Create</button>
+							<button class="dropdown-button btn--raised secondary is-first" data-constrainwidth="false" data-activates="createContent">Create</button>
 							<ul   id="createContent" class="dropdown-content menu menu--with-icons">
 							     <li><a class="btn--plain with-icon is-selected" data-toggle="modal" data-target="#modalCreate" href="#!"><i class="icon-textsms"></i>Question</a></li>
 							    <li><a class="btn--plain" href="#!">Slide</a></li>
@@ -98,10 +98,11 @@
 					<div id="toolbarSelected" class="toolbar is-active is-hidden">
 						<span class="badge highlight">1</span> selected
 						<span class="toolbar_actions-utility">
-							<button class="btn--withbg is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
+							<button class="btn--raised danger is-first">Delete</button>
+							<button class="btn--raised is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
 							
-							<button class="btn--withbg ">Assign</button>
-							<button class="btn--withbg danger is-last">Delete</button>
+							<button class="btn--raised alternate is-last">Assign</button>
+							
 						</span>
 
 					</div>
@@ -229,7 +230,7 @@
 						</div>
 						<div class="content-preview_header_cta">
 								
-								<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
+								<button class="dropdown-button btn--raised alternate is-first" data-activates="dropdown2" >Assign</button>
 								<ul   id="dropdown2" class="dropdown-content menu">
 								     <li><a class="btn--plain" href="#!">Homework</a></li>
 								    <li><a class="btn--plain" href="#!">Review</a></li>
