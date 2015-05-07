@@ -2588,7 +2588,7 @@ a.nav--tab-pill_item {
   text-align: center;
   line-height: 32px;
   font-size: 14px;
-  color: #708493; }
+  color: #435561; }
   .is-first.btn--plain, .is-first.btn--withbg, .is-first.btn--utility, .is-first.btn--default, .is-first.btn--icon-utility {
     margin-left: 0;
     padding-left: 0; }
@@ -2610,7 +2610,7 @@ a.nav--tab-pill_item {
   padding-left: 10px; }
 
 .btn--withbg {
-  background: #f0f0f0;
+  background: #ced6db;
   border-radius: 3px; }
   .btn--withbg.is-first {
     padding-left: 10px; }
@@ -2674,17 +2674,21 @@ a.nav--tab-pill_item {
     color: #fd194f; }
 
 .btn--raised {
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
   float: left;
-  background: #f0f0f0;
-  color: #708493;
+  background: #ced6db;
+  color: #435561;
   min-width: 100px;
-  height: 32px;
-  line-height: 32px;
   text-align: center;
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
-  border-radius: 2px;
+  border-radius: 3px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
   -webkit-box-shadow: 0px 2px 0px 0px #a4b0ba;
   -moz-box-shadow: 0px 2px 0px 0px #a4b0ba;
   box-shadow: 0px 2px 0px 0px #a4b0ba; }
@@ -2699,11 +2703,18 @@ a.nav--tab-pill_item {
     .btn--raised.primary:hover {
       color: #fff;
       background: #42b5fc; }
-  .btn--raised.danger {
+  .btn--raised:hover {
+    background: #dde2e6; }
+  .btn--raised.danger:hover {
     background: #fd194f;
-    color: #fff; }
+    color: #fff;
+    -webkit-box-shadow: 0px 2px 0px 0px #c2194f;
+    -moz-box-shadow: 0px 2px 0px 0px #c2194f;
+    box-shadow: 0px 2px 0px 0px #c2194f; }
   .btn--raised.is-disabled {
-    color: #d9dde1; }
+    background: #ebeff1;
+    color: #abbbc5;
+    box-shadow: none; }
   .btn--raised.is-active {
     background: #0ac8f4;
     color: #fff;
@@ -3574,7 +3585,7 @@ textarea.materialize-textarea {
 
 .badge {
   float: left;
-  background: #c9d0d5;
+  background: #ced6db;
   border-radius: 50%;
   height: 32px;
   width: 32px;
