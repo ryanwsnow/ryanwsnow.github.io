@@ -232,14 +232,14 @@
 	{
 		min-width:120px;
 	}
-	@include box-shadow(0px 3px 0px 0px rgba(darken($bgcolor-base-darken2,10%),1));
+	@include box-shadow(0px 3px 0px 0px rgba(shade($bgcolor-base-darken2,10%),1));
 	
 	&.primary
 	{
 
 		background:$color-primary;
 		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(darken($color-primary,10%),1));
+		@include box-shadow(0px 3px 0px 0px rgba(shade($color-primary,10%),1));
 	
 		&:hover
 		{

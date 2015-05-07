@@ -2689,17 +2689,17 @@ a.nav--tab-pill_item {
   height: 32px;
   line-height: 32px;
   font-size: 14px;
-  -webkit-box-shadow: 0px 3px 0px 0px #b1bdc5;
-  -moz-box-shadow: 0px 3px 0px 0px #b1bdc5;
-  box-shadow: 0px 3px 0px 0px #b1bdc5; }
+  -webkit-box-shadow: 0px 3px 0px 0px #b9c0c5;
+  -moz-box-shadow: 0px 3px 0px 0px #b9c0c5;
+  box-shadow: 0px 3px 0px 0px #b9c0c5; }
   .btn--raised.with-icon-right {
     min-width: 120px; }
   .btn--raised.primary {
     background: #199bfd;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #0281e1;
-    -moz-box-shadow: 0px 3px 0px 0px #0281e1;
-    box-shadow: 0px 3px 0px 0px #0281e1; }
+    -webkit-box-shadow: 0px 3px 0px 0px #168be3;
+    -moz-box-shadow: 0px 3px 0px 0px #168be3;
+    box-shadow: 0px 3px 0px 0px #168be3; }
     .btn--raised.primary:hover {
       color: #fff;
       background: #42b5fc; }
