@@ -2685,7 +2685,7 @@ a.nav--tab-pill_item {
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   height: 32px;
   line-height: 32px;
   font-size: 14px;
@@ -2704,14 +2704,14 @@ a.nav--tab-pill_item {
       color: #fff;
       background: #42b5fc; }
   .btn--raised.secondary {
-    background: #2ab27b;
+    background: #68bf81;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #20895e;
-    -moz-box-shadow: 0px 3px 0px 0px #20895e;
-    box-shadow: 0px 3px 0px 0px #20895e; }
+    -webkit-box-shadow: 0px 3px 0px 0px #49ab65;
+    -moz-box-shadow: 0px 3px 0px 0px #49ab65;
+    box-shadow: 0px 3px 0px 0px #49ab65; }
     .btn--raised.secondary:hover {
       color: #fff;
-      background: #2fc789; }
+      background: #7ac790; }
   .btn--raised.alternate {
     background: #ff7c5e;
     color: #fff;
@@ -2721,6 +2721,15 @@ a.nav--tab-pill_item {
     .btn--raised.alternate:hover {
       color: #fff;
       background: #ff9178; }
+  .btn--raised.dark {
+    background: #708493;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px #596a77;
+    -moz-box-shadow: 0px 3px 0px 0px #596a77;
+    box-shadow: 0px 3px 0px 0px #596a77; }
+    .btn--raised.dark:hover {
+      color: #fff;
+      background: #7f909e; }
   .btn--raised:hover {
     background: #dde2e6; }
   .btn--raised.danger:hover {
