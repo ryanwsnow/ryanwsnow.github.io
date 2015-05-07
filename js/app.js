@@ -11,45 +11,70 @@ $(document).ready(function(){
 
 	$("input[type=text]").focus(function() {
 		thisLabel = "label[for='" + this.id + "']";
-		$(this).parent(".form-field")
+		$(this)
+			.parent(".form-field")
 			.addClass("is-focused");
-		  $(thisLabel).addClass("labelfocus");
+		  $(thisLabel)
+		  	.addClass("label-focus");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {
-		  	$(this).parent(".form-field")
+		  	//adds styling for form message
+		  	$(this)
+		  		.parent(".form-field")
 		  		.addClass("has-msg");
-		  	$(this).siblings(".form-msg")
+		  	//makes message visible
+		  	$(this)
+		  		.siblings(".form-msg")
 		  		.removeClass("is-hidden");
 		  }
 		}).blur(function() {
-		  $(thisLabel).removeClass("labelfocus");
-		  $(this).parent(".form-field").removeClass("is-focused");
+		  $(thisLabel)
+		  	.removeClass("label-focus");
+		  $(this)
+		  	.parent(".form-field")
+		  	.removeClass("is-focused");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {
 		  	$(this)
-		  	.parent(".form-field")
-		  	.removeClass("has-msg");
+		  		.parent(".form-field")
+		  		.removeClass("has-msg");
 		  	$(this)
-		  	.siblings(".form-msg")
-		  	.addClass("is-hidden");
+		  		.siblings(".form-msg")
+		  		.addClass("is-hidden");
 		  }
 		});
 	$("textarea").focus(function() {
 		thisLabel = "label[for='" + this.id + "']";
-		$(this).parent(".form-field").addClass("is-focused");
-		  $(thisLabel).addClass("labelfocus");
+		$(this)
+			.parent(".form-field")
+			.addClass("is-focused");
+		  $(thisLabel)
+		  	.addClass("label-focus");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {
-		  	$(this).parent(".form-field").addClass("has-msg");
-		  	$(this).siblings(".form-msg").removeClass("is-hidden");
+		  	//adds styling for form message
+		  	$(this)
+		  		.parent(".form-field")
+		  		.addClass("has-msg");
+		  	//makes message visible
+		  	$(this)
+		  		.siblings(".form-msg")
+		  		.removeClass("is-hidden");
 		  }
 		}).blur(function() {
-		  $(thisLabel).removeClass("labelfocus");
-		  $(this).parent(".form-field").removeClass("is-focused");
+		  $(thisLabel)
+		  	.removeClass("label-focus");
+		  $(this)
+		  	.parent(".form-field")
+		  	.removeClass("is-focused");
 		  if($(this).siblings().hasClass("form-msg"))
 		  {
-		  	$(this).parent(".form-field").removeClass("has-msg");
-		  	$(this).siblings(".form-msg").addClass("is-hidden");
+		  	$(this)
+		  		.parent(".form-field")
+		  		.removeClass("has-msg");
+		  	$(this)
+		  		.siblings(".form-msg")
+		  		.addClass("is-hidden");
 		  }
 		});
 	//checking
@@ -149,7 +174,7 @@ $(document).ready(function(){
 //scroll bar thingy 
 	$.fn.hasScrollBar = function() {
         return this.get(0) ? this.get(0).scrollHeight > this.innerHeight() : false;
-    };
+    	};
 
     	$(".scrollable").on({
 	    mouseenter: function () {
@@ -192,22 +217,12 @@ $(document).ready(function(){
 	$(".hs").on({
 	    mouseenter: function () {
 	    	$(this).parent().addClass("is-hovered");
-	    	// if ($(this).hasClass("hitspot-middle"))
-	    	// {
-	    	// 	console.log("middle hovered");
-	    	// 	$(".present_header").toggleClass("hs-header");
-	    	// 	$(".present_body").toggleClass("hs-body-menu");
-	    	// }
 	       
 	    },
 	    mouseleave: function () {
 	      
 	        $(this).parent().removeClass("is-hovered");
-	     //    if ($(this).hasClass("hitspot-middle"))
-	    	// {
-	    	// 	$(".present_header").toggleClass("hs-header");
-	    	// 	$(".present_body").toggleClass("hs-body-menu");
-	    	// }
+
 	    }
 	});
 

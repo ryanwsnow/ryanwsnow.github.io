@@ -9,11 +9,13 @@
 <!-- Bootstrap -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/css/prism.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/prism.js"></script>
     
     <link href="stylesheets/css/app.css" rel="stylesheet">
     <link href="stylesheets/css/style.css" rel="stylesheet">
@@ -72,17 +74,17 @@
                                     <div class="col-lg-6 col-lg6">
                                                  
                                                     <span class="dh-header"></span>
-                                                    <pre>
+                                                    <pre><code class="language-css">
 .nav--tab_item
 {
     <span class="dh">display:inline-block;</span>  
     padding-top:20px;
     height:52px; 
 }
-
-
+</code>
+<code class="language-markup">
 &lt;nav class="nav--tab "&gt;...
-                                            </pre>
+                                            </code></pre>
                                     </div>
                                
                             
@@ -91,16 +93,16 @@
                                     <div class="col-lg-6 col-lg6">
                                      
                                         <span class="dth-header"></span>
-                                        <pre>
+                                        <pre><code class="language-css">
 .nav--tab_item 
 {
     padding-top:20px;
     height:52px;
     
 }
-
-
-&lt;nav class="nav--tab <span class="dth">inline-block</span>"&gt;...
+</code>
+<code class="language-markup">
+&lt;nav class="nav--tab <span class="dth">inline-block</span>"&gt;... </code>
                                         </pre>
                                     </div>
                                 </div>
@@ -110,15 +112,15 @@
                                     <div class="col-lg-6 col-lg6">
                                                  
                                                     <span class="dh-header"></span>
-                                                    <pre>
+                                                    <pre><code class="language-css">
 .nav--tab
 {
     padding-top:20px;
     height:52px; 
 }
-
-
-&lt;nav class="nav--tab <span class="dh">right</span>"&gt;...
+</code>
+<code class="language-markup">
+&lt;nav class="nav--tab <span class="dh">right</span>"&gt;...</code>
                                             </pre>
                                     </div>
                                
@@ -128,15 +130,16 @@
                                     <div class="col-lg-6 col-lg6">
                                      
                                         <span class="dth-header"></span>
-                                        <pre>
+                                        <pre><code class="language-css">
 .nav--tab 
 {
     <span class="dth">float:right;</span>
     padding-top:20px;
     height:52px;
 }
-
-&lt;nav class="nav--tab"&gt;...
+</code>
+<code class="language-markup">
+&lt;nav class="nav--tab"&gt;...</code>
                                     </pre>
                                     </div>
                                 </div>
@@ -171,7 +174,7 @@
                                     <div class="col-lg-6 col-lg6">
                                                  
                                                     <span class="dh-header"></span>
-                                                    <pre>
+                                                    <pre><code class="language-css">
 //layout 
 .grid 
 {
@@ -190,7 +193,7 @@
     padding:20px;
     font-size:18px;
     font-weight:600;
-}</span>
+}</span></code>
                                             </pre>
                                     </div>
                                
@@ -201,7 +204,7 @@
                                      
                                         <span class="dth-header"></span>
                                        
-                                        <pre>
+                                        <pre><code class="language-css">
 //layout
 .grid 
 {
@@ -220,7 +223,7 @@
     padding:20px;
     font-size:18px;
     font-weight:600;
-}</span> 
+}</span> </code>
                                         </pre>
                                     
                                     </div>
@@ -314,14 +317,19 @@
                             </div>
                         </section>
                         <section class="sg--section">
-                        <h2>Inputs</h2>
+                        <h2>Forms</h2>
+                        
                         <h3>Text Input</h3>
+                        <p>Text Form fields are wrapped in the <code>.form-field</code> class.
                         <div class="sg--example">
                             <span class="form-field">
                                 <label for="basic">Label:</label>
-                                <input tabindex="0" id="basic" type="text" value="basic">
-                               
+                                <input tabindex="0" id="basic" type="text" placeholder="basic">
                             </span>
+                        </div>
+
+                        <div class="sg--example">
+                            
                             <span class="form-field">
                                 <label for="basicHint">Label:</label>
                                 <input tabindex="0" id="basicHint" type="text" value="basic with hint message">

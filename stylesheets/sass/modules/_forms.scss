@@ -100,16 +100,38 @@ textarea.materialize-textarea {
 	vertical-align:middle;
 	line-height:32px;
 	font-size:14px;
+
+
 	
 	
 	> input
 	{
+		@include transition(all 0.5s ease-in-out);
 		display:table-cell;
 		height:32px;
-		vertical-align:middle;
 		width:100%;
+		vertical-align:middle;
 		color:$color-base-lighten1;
-		@include transition(all 0.5s ease-in-out);
+		
+		&::-webkit-input-placeholder 
+		{
+			color: $color-base-lighten1;
+		}
+
+		&:-moz-placeholder 
+		{ 
+			color: $color-base-lighten1;  
+		}
+
+		&::-moz-placeholder 
+		{  
+			color: $color-base-lighten1;  
+		}
+
+		&:-ms-input-placeholder 
+		{  
+			color: $color-base-lighten1;  
+		}
 		
 	}
 
@@ -135,7 +157,7 @@ textarea.materialize-textarea {
 		}
 
 		
-		&.labelfocus
+		&.label-focus
 		{
 			
 			

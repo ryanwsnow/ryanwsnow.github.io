@@ -76,19 +76,15 @@ p {
 .sg--section h5 {
   color: #708493; }
 .sg--section pre {
-  background: #313b47;
-  color: #a6de27;
+  display: block;
   padding: 5px;
   border-radius: 3px;
   font-size: 12px;
   overflow-x: hidden; }
 .sg--section code {
-  background: #313b47;
-  color: #a6de27;
   padding: 5px;
   border-radius: 3px;
-  font-size: 12px;
-  white-space: nowrap; }
+  font-size: 12px; }
 .sg--section .dh-header {
   display: block;
   border-radius: 3px;
