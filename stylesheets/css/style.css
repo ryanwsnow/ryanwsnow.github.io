@@ -3053,7 +3053,7 @@ textarea {
   border-bottom-color: #2ab27b; }
   .is-valid.is-focused.form-input.validate > label, .is-valid.is-focused.validate.form-textarea > label {
     color: #2ab27b; }
-.is-valid.form-input.validate > i, .is-valid.validate.form-textarea > i {
+.is-valid.form-input.validate > input + i, .is-valid.validate.form-textarea > input + i {
   position: absolute;
   right: 0;
   bottom: 10px;
@@ -3079,13 +3079,16 @@ textarea {
   height: 32px;
   font-size: 14px;
   color: #708493; }
+  .form-input > label + input, .form-textarea > label + input {
+    padding-left: 100px; }
   .form-input > input, .form-textarea > input {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     height: 32px;
-    width: 100%;
-    padding-left: 100px; }
+    width: auto;
+    display: inline-block;
+    width: 100%; }
     .form-input > input::-webkit-input-placeholder, .form-textarea > input::-webkit-input-placeholder {
       color: #708493; }
     .form-input > input:-moz-placeholder, .form-textarea > input:-moz-placeholder {
@@ -3100,8 +3103,9 @@ textarea {
     left: 0;
     top: 50%;
     transform: translate(0, -50%);
+    display: inline-block;
     box-sizing: border-box;
-    width: 100px;
+    max-width: 100px;
     color: #435561; }
     .form-input > label.label-small, .form-textarea > label.label-small {
       width: 32px; }
@@ -3145,6 +3149,7 @@ textarea {
     width: 100%;
     height: 32px;
     line-height: normal;
+    overflow-y: none;
     color: #708493; }
     .form-textarea > textarea::-webkit-input-placeholder {
       color: #708493; }
