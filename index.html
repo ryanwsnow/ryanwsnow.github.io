@@ -14,7 +14,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/app.js"></script>
+    
+    
+    
     <script src="js/prism.js"></script>
     
     <link href="stylesheets/css/app.css" rel="stylesheet">
@@ -334,76 +336,108 @@
                             </header>
                         <div class="sg--section_body">
                         
-                        <h3>Text Input</h3>
-                        <p>Text Form fields are wrapped in the <code>.form-field</code> class.
+                        <h4>Text Input</h4>
+                        <p>Text Form fields are wrapped in the <span class="snippet-code">.form-input</span> class.</p>
+                            <ul>
+                                <li><span class="snippet-code">.is-focused</span> sets focus state styling</li>
+                            </ul>
                         <div class="sg--example">
-                            <span class="form-field">
+                            <div class="form-input">
                                 <label for="basic">Label:</label>
                                 <input tabindex="0" id="basic" type="text" placeholder="basic">
-                            </span>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class="form-input"&gt;
+    &lt;label for="basic"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="basic" type="text" placeholder="placeholder"&gt;
+&lt;/div>
+
+</code></pre>
                         </div>
 
+
+                        <h4>Input with hint</h4>
+                        <p>Text Form fields with hints use the <span class="snippet-code">.has-hint</span> class.</p>
+                         <ul>
+                            <li><span class="snippet-code">.form-hint</span> sets styling for your hint message</li>
+                        </ul>
                         <div class="sg--example">
-                            
-                            <span class="form-field">
+                            <div class="form-input has-hint">
                                 <label for="basicHint">Label:</label>
-                                <input tabindex="0" id="basicHint" type="text" value="basic with hint message">
-                                <span class="form-msg hint is-hidden">I recommend pizza</span>
-                            </span>
-                            <span class="form-field has-error">
+                                <input tabindex="0" id="basicHint" type="text" placeholder="placeholder">
+                                <span class="form-hint is-hidden-with-transition">Hint Text</span>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class="form-input has-hint"&gt;
+    &lt;label for="basicHint"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="basicHint" type="text" placeholder="placeholder"&gt;
+    &lt;span class="form-hint is-hidden-with-transition">Hint Text&lt;/span&gt;
+&lt;/div>
+</code></pre>
+                            </div>
+                       
+
+                        <h4>Input with validation</h4>
+                        <p>Text Form fields with validation uste the <span class="snippet-code">.validate</span> class.</p>
+                        <ul>
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
+                        <div class="sg--example">
+                            <div class="form-input validate is-invalid">
                                 <label for="hasError">Label:</label>
                                 <input tabindex="0" id="hasError" type="text" value="Error"><i class="icon-error"></i>
-                               
-                            </span>
-                            <span class="form-field has-error">
-                                <label for="hasErrorMsg">Label:</label>
-                                <input tabindex="0" id="hasErrorMsg" type="text" value="Error with message"><i class="icon-error"></i>
-                                <span class="form-msg error is-hidden">oops! you did it again!</span>
-                            </span>
-
-                             <span class="form-field has-success">
+                            </div>
+                             <span class="form-input validate is-valid">
                                 <label for="hasSuccess">Label:</label>
                                 <input tabindex="0" id="hasSuccess" type="text" value="Success"><i class="icon-check"></i>
                             </span>
-                            <span class="form-field has-success">
+<pre><code class="language-markup">
+&lt;div class="form-input validate is-invalid"&gt;
+    &lt;label for="hasError"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="hasError" type="text" value="Error"&gt;&lt;i class="icon-error"&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class="form-input validate is-valid"&gt;
+    &lt;label for="hasError"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="hasError" type="text" value="Error"&gt;&lt;i class="icon-check"&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <h4>Input with validation and hint</h4>
+                        <div class="sg--example">
+                            <span class="form-input validate has-hint is-invalid">
+                                <label for="hasErrorMsg">Label:</label>
+                                <input tabindex="0" id="hasErrorMsg" type="text" value="Error with message"><i class="icon-error"></i>
+                                <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
+                            </span>
+                            <span class="form-input validate has-hint is-valid">
                                 <label for="hasSuccessHint">Label:</label>
                                 <input tabindex="0" id="hasSuccessHint" type="text" value="Success with message"><i class="icon-check"></i>
-                                <span class="form-msg success is-hidden">No diggity. No doubt.</span>
+                                <span class="form-hint success is-hidden-with-transition">No diggity. No doubt.</span>
                             </span>
-                            <span class="form-field is-readonly">
+                            <span class="form-input is-readonly">
                                 <label for="questionTitle4">Label:</label>
                                 <input tabindex="0" id="questionTitle4" type="text" value="Ready only" disabled>
                             </span>
                         
                         </div>
-                        <h3>Text Input with Icon Label</h3>
-                        <div class="sg--example">
-                            <span class="form-field">
-                                <label class="label-small" for="basicIcon"><i class="icon-room"></i></label>
-                                <input tabindex="0" id="basicIcon" type="text" value="basic">
-                               
-                            </span>
-                            
-                        
-                        </div>
-
                         <h3>Text Area</h3>
                         <div class="sg--example">
-                            <span class="form-field">
-                                <label for="textareaBasic">Question:</label><textarea  id="textareaBasic" class="materialize-textarea"type="text" placeholder="Enter your question"></textarea>
+                            <span class="form-textarea ">
+                                <label for="textareaBasic">Question:</label><textarea  id="textareaBasic" type="text" data-autoresize placeholder="Enter your question"></textarea>
                             </span>
                         </div>
                         <div class="sg--example">
-                            <span class="form-field has-error">
-                                <label for="textareaError">Question:</label><textarea  id="textareaError" class="materialize-textarea"type="text" value="Error"></textarea>
+                            <span class="form-textarea validate is-invalid">
+                                <label for="textareaError">Question:</label><textarea  id="textareaError" type="text" value="Error"></textarea>
                                 <i class="icon-error"></i>
                             </span>
                         </div>
                          <div class="sg--example">
-                            <span class="form-field has-error">
-                                <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" class="materialize-textarea"type="text" value="Error"></textarea>
+                            <span class="form-textarea validate has-hint is-invalid">
+                                <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" type="text" value="Error"></textarea>
                                 <i class="icon-error"></i>
-                                <span class="form-msg error is-hidden">oops! you did it again!</span>
+                                <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
                             </span>
                         </div>
                       
@@ -426,4 +460,9 @@
     </div>
 
         </body>
+        <script src="js/autosize.min.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+        autosize(document.querySelectorAll('textarea'));
+    </script>
 </html>
