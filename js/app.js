@@ -10,37 +10,59 @@ $(document).ready(function(){
 	});
 
 	$("input[type=text]").focus(function() {
-		$(this).parent(".form-field").addClass("is-focused");
-		  $("label[for='" + this.id + "']").addClass("labelfocus");
-		  if($(this).siblings().hasClass("form-msg"))
+		thisLabel = "label[for='" + this.id + "']";
+		$(this)
+			.parent(".form-input")
+			.addClass("is-focused");
+		  if($(this).parent(".form-input").hasClass("has-hint"))
 		  {
-		  	$(this).parent(".form-field").addClass("has-msg");
-		  	$(this).siblings(".form-msg").removeClass("is-hidden");
+				  	
+		  	$(this)
+		  		.siblings(".form-hint")
+		  		.removeClass("is-hidden-with-transition");
 		  }
 		}).blur(function() {
-		  $("label[for='" + this.id + "']").removeClass("labelfocus");
-		  $(this).parent(".form-field").removeClass("is-focused");
-		  if($(this).siblings().hasClass("form-msg"))
+		  $(this)
+		  	.parent(".form-input")
+		  	.removeClass("is-focused");
+		  if($(this).parent(".form-input").hasClass("has-hint"))
 		  {
-		  	$(this).parent(".form-field").removeClass("has-msg");
-		  	$(this).siblings(".form-msg").addClass("is-hidden");
+		  	
+		  	$(this)
+		  		.siblings(".form-hint")
+		  		.addClass("is-hidden-with-transition");
 		  }
 		});
 	$("textarea").focus(function() {
-		$(this).parent(".form-field").addClass("is-focused");
-		  $("label[for='" + this.id + "']").addClass("labelfocus");
-		  if($(this).siblings().hasClass("form-msg"))
+		thisLabel = "label[for='" + this.id + "']";
+		$(this)
+			.parent(".form-textarea")
+			.addClass("is-focused");
+		  
+		  if($(this).siblings().hasClass("form-hint"))
 		  {
-		  	$(this).parent(".form-field").addClass("has-msg");
-		  	$(this).siblings(".form-msg").removeClass("is-hidden");
+		  	//adds styling for form message
+		  	$(this)
+		  		.parent(".form-textarea")
+		  		.addClass("has-hint");
+		  	//makes message visible
+		  	$(this)
+		  		.siblings(".form-hint")
+		  		.removeClass("is-hidden-with-transition");
 		  }
 		}).blur(function() {
-		  $("label[for='" + this.id + "']").removeClass("labelfocus");
-		  $(this).parent(".form-field").removeClass("is-focused");
-		  if($(this).siblings().hasClass("form-msg"))
+
+		  $(this)
+		  	.parent(".form-textarea")
+		  	.removeClass("is-focused");
+		  if($(this).siblings().hasClass("form-hint"))
 		  {
-		  	$(this).parent(".form-field").removeClass("has-msg");
-		  	$(this).siblings(".form-msg").addClass("is-hidden");
+		  	$(this)
+		  		.parent(".form-input")
+		  		.removeClass("has-hint");
+		  	$(this)
+		  		.siblings(".form-hint")
+		  		.addClass("is-hidden-with-transition");
 		  }
 		});
 	//checking
@@ -131,7 +153,7 @@ $(document).ready(function(){
 
 		$(".search-field").toggleClass("is-hidden");
 		$(".toolbar_actions-utility").toggleClass("is-active");
-		$(".form-field > input").focus();
+		$(".form-input > input").focus();
 
 		console.log("search clicked");
 		
@@ -140,7 +162,7 @@ $(document).ready(function(){
 //scroll bar thingy 
 	$.fn.hasScrollBar = function() {
         return this.get(0) ? this.get(0).scrollHeight > this.innerHeight() : false;
-    };
+    	};
 
     	$(".scrollable").on({
 	    mouseenter: function () {
@@ -183,22 +205,12 @@ $(document).ready(function(){
 	$(".hs").on({
 	    mouseenter: function () {
 	    	$(this).parent().addClass("is-hovered");
-	    	// if ($(this).hasClass("hitspot-middle"))
-	    	// {
-	    	// 	console.log("middle hovered");
-	    	// 	$(".present_header").toggleClass("hs-header");
-	    	// 	$(".present_body").toggleClass("hs-body-menu");
-	    	// }
 	       
 	    },
 	    mouseleave: function () {
 	      
 	        $(this).parent().removeClass("is-hovered");
-	     //    if ($(this).hasClass("hitspot-middle"))
-	    	// {
-	    	// 	$(".present_header").toggleClass("hs-header");
-	    	// 	$(".present_body").toggleClass("hs-body-menu");
-	    	// }
+
 	    }
 	});
 

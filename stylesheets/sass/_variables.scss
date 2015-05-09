@@ -12,13 +12,16 @@ $color-base-darken1:#313b47;
 $color-base:#435561;
 $color-base-lighten1:#708493;
 $color-base-lighten2:#a4b0ba;
+$color-base-lighten3:#d9dde1; //disabled 
 
 
 //State colors
 $color-primary:#199bfd;
 $color-disabled:#d9dde1;
 $color-danger:#fd194f;
-$color-success:#8cd625;
+$color-success:#2ab27b;
+$color-secondary:#68bf81;
+$color-alternate:#ff7c5e;
 $color-highlight:#0ac8f4; //active
 $color-primary-lighten1:#42b5fc; //hover
 
@@ -33,7 +36,7 @@ $bgcolor-present:#734c99;
 
 
 //main bg
-$bgcolor-base-darken2:#c9d0d5;
+$bgcolor-base-darken2:#ced6db;
 $bgcolor-base-darken1:#f0f0f0;
 $bgcolor-base:#f2f2f2;
 $bgcolor-base-lighten1:#f9f9f9;

@@ -66,7 +66,7 @@
 					<div class="toolbar">
 					
 						<span class="toolbar_actions-primary">
-							<button class="dropdown-button btn btn--raised primary is-first" data-constrainwidth="false" data-activates="createContent">Create</button>
+							<button class="dropdown-button btn--raised secondary is-first" data-constrainwidth="false" data-activates="createContent">Create</button>
 							<ul   id="createContent" class="dropdown-content menu menu--with-icons">
 							     <li><a class="btn--plain with-icon is-selected" data-toggle="modal" data-target="#modalCreate" href="#!"><i class="icon-textsms"></i>Question</a></li>
 							    <li><a class="btn--plain" href="#!">Slide</a></li>
@@ -98,10 +98,11 @@
 					<div id="toolbarSelected" class="toolbar is-active is-hidden">
 						<span class="badge highlight">1</span> selected
 						<span class="toolbar_actions-utility">
-							<button class="btn--withbg is-first is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
+							<button class="btn--raised danger is-first">Delete</button>
+							<button class="btn--raised is-selected" data-toggle="modal" data-target="#modalMove">Move</button>
 							
-							<button class="btn--withbg ">Assign</button>
-							<button class="btn--withbg danger is-last">Delete</button>
+							<button class="btn--raised dark is-last">Assign</button>
+							
 						</span>
 
 					</div>
@@ -229,7 +230,7 @@
 						</div>
 						<div class="content-preview_header_cta">
 								
-								<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
+								<button class="dropdown-button btn--raised dark is-first" data-activates="dropdown2" >Assign</button>
 								<ul   id="dropdown2" class="dropdown-content menu">
 								     <li><a class="btn--plain" href="#!">Homework</a></li>
 								    <li><a class="btn--plain" href="#!">Review</a></li>
@@ -287,7 +288,7 @@
 							<div class="q-answer">
 								<div class="q-answer_item">
 									<span class="q-answer_item_cell-label size-large"><label for="waid">Word Answer:</label></span>
-									<span class="q-answer_item_cell-input"><span class="form-field is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></span>
+									<span class="q-answer_item_cell-input"><span class="form-input is-readonly"><input id="waid" type="text" placeholder="Enter your answer..." disabled></span></span>
 								</div>
 							</div>
 						</div><!-- typeQuestion -->
@@ -397,11 +398,11 @@
 
       </div>
       <div class="th-modal_body">
-        <span class="form-field">
+        <span class="form-input">
         	<label for="questionTitle">Title:</label><input tabindex="0" id="questionTitle" type="text" placeholder="Question 1"  data-toggle="tooltip" data-placement="right" title="here is a tip">
     	</span>
-    	 <span class="form-field">
-        	<label for="questionDescription">Question:</label><textarea  tabindex="1" class="materialize-textarea"  id="questionDescription" type="text" placeholder="Enter your question"></textarea>
+    	 <span class="form-textarea">
+        	<label for="questionDescription">Question:</label><textarea tabindex="1"  id="questionDescription" type="text" placeholder="Enter your question"></textarea>
     	</span>
     	<div class="th-modal_section">
     		<h5 class="th-modal_section-header">Multiple Choice Options</h5>
@@ -410,7 +411,7 @@
 			<div class="q-answer_item">
 				<span class="q-answer_item_cell-label">A</span>
 				<div class="q-answer_item_cell-description">
-					<span class="form-field"><input id="answerA" type="text" placeholder="Description"></span>
+					<span class="form-input"><input id="answerA" type="text" placeholder="Description"></span>
 				</div>
 				<span class="q-answer_item_cell-correct"><span class="form-checkbox"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span></span>
 				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
@@ -419,7 +420,7 @@
 		
 			<div class="q-answer_item">
 				<span class="q-answer_item_cell-label">B</span>
-				<div class="q-answer_item_cell-description"><span class="form-field"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
+				<div class="q-answer_item_cell-description"><span class="form-input"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
 				<span class="q-answer_item_cell-correct"><span class="form-checkbox"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span></span>
 				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
 			</div>
@@ -461,8 +462,6 @@
 	      		<li class="menu--folders_item-breadcrumb"><a class="btn--plain with-icon" href="#!"> <i class="icon-arrow-back"></i>Week 1</a>
 	    
 	      	</li>
-	<!--       		<li class="menu--folders_item "><a href="#!"><span class="badge">6</span></i> Selected item(s) Place here</a> -->
-	
 
 	      		<li class="menu--folders_item"><button class="btn--plain with-icon"><i class="icon-folder"></i>Homework</button></li>
 	      		<li class="menu--folders_item"><a class="btn--plain with-icon"href="#"><i class="icon-folder"></i>Review</a></li>

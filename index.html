@@ -9,37 +9,45 @@
 <!-- Bootstrap -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/css/prism.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/app.js"></script>
+    
+    
+    
+    <script src="js/prism.js"></script>
     
     <link href="stylesheets/css/app.css" rel="stylesheet">
     <link href="stylesheets/css/style.css" rel="stylesheet">
 </head>
-       <body>
-            <header class="header sg--header">
+       <body class="sg">
+        <div class="sg--sidebar">
+             <div class="sg--sidebar_header">
                     <h2>Styleguide</h2>
-            </header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="sg--sideBar col-md-2 ">
-                    <ul class="sg--navi-tree clear-list-style hidden-sm hidden-xs affix" data-spy="affix" data-offset-top="150">
-                    <li class="main-navi-item"><a href="index.html">Overview</a>
-                        <ul>
-                            <li>Categorization</li>
-                            <li>Namespacing</li>
-                        </ul>
-                    </li>
-                    <li class="main-navi-tiem"><a href="modules.html">Buttons</a></li>
-
+            </div>
+            <div class="sg--sidebar_body">
+                    <ul class="sg--main-navi">
+                        <li class=""><a href="index.html">Overview</a>
+                            <ul class="sg--main-navi_sub">
+                                <li><a href="#!">Categorization</a></li>
+                                <li><a href="#!">Namespacing</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="modules.html">Buttons</a></li>
                     </ul>
-                </div>
-                <div class="sg--content col-md-10 col-sm-12 col-xs-12">
-                    <div class="sg--l-constrained">
+            </div>
+        </div>
+            
+        <div class="sg--main">
+            <div class="sg--main_container">
+                        
                         <section class="sg--section">
-                            <h2>Overview</h2>
+                            <header class="sg--section_header">
+                                <h2>Overview</h2>
+                            </header>
+                            <div class="sg--section_body">
                             <h3>Categorization</h3>
                             <p>Organizing CSS rules into categories provides guidence on naming, structure and specifity. The following categories will be the basis of writing modular and maintable CSS:</p>
                             
@@ -56,7 +64,7 @@
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                        <h4>A layout should never directly specify Modules or Views contained within it</h4>
+                                        <h5>A layout should never directly specify Modules or Views contained within it</h5>
                                         <p>It is important for maintianability that layouts do not have to afford for the modules that may be contained within it. Otherwise, every time you create a new module you will have to write new rules for your layouts. Do not&nbsp;<code> .sideBar &gt; nav { styles... }</code></p>
                                 </div>
                             </div>
@@ -72,17 +80,17 @@
                                     <div class="col-lg-6 col-lg6">
                                                  
                                                     <span class="dh-header"></span>
-                                                    <pre>
+                                                    <pre><code class="language-css">
 .nav--tab_item
 {
     <span class="dh">display:inline-block;</span>  
     padding-top:20px;
     height:52px; 
 }
-
-
+</code>
+<code class="language-markup">
 &lt;nav class="nav--tab "&gt;...
-                                            </pre>
+                                            </code></pre>
                                     </div>
                                
                             
@@ -91,16 +99,16 @@
                                     <div class="col-lg-6 col-lg6">
                                      
                                         <span class="dth-header"></span>
-                                        <pre>
+                                        <pre><code class="language-css">
 .nav--tab_item 
 {
     padding-top:20px;
     height:52px;
     
 }
-
-
-&lt;nav class="nav--tab <span class="dth">inline-block</span>"&gt;...
+</code>
+<code class="language-markup">
+&lt;nav class="nav--tab <span class="dth">inline-block</span>"&gt;... </code>
                                         </pre>
                                     </div>
                                 </div>
@@ -110,15 +118,15 @@
                                     <div class="col-lg-6 col-lg6">
                                                  
                                                     <span class="dh-header"></span>
-                                                    <pre>
+                                                    <pre><code class="language-css">
 .nav--tab
 {
     padding-top:20px;
     height:52px; 
 }
-
-
-&lt;nav class="nav--tab <span class="dh">right</span>"&gt;...
+</code>
+<code class="language-markup">
+&lt;nav class="nav--tab <span class="dh">right</span>"&gt;...</code>
                                             </pre>
                                     </div>
                                
@@ -128,15 +136,16 @@
                                     <div class="col-lg-6 col-lg6">
                                      
                                         <span class="dth-header"></span>
-                                        <pre>
+                                        <pre><code class="language-css">
 .nav--tab 
 {
     <span class="dth">float:right;</span>
     padding-top:20px;
     height:52px;
 }
-
-&lt;nav class="nav--tab"&gt;...
+</code>
+<code class="language-markup">
+&lt;nav class="nav--tab"&gt;...</code>
                                     </pre>
                                     </div>
                                 </div>
@@ -145,7 +154,7 @@
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                        <h4>Avoid overuse of layout helpers</h4>
+                                        <h5>Avoid overuse of layout helpers</h5>
                                         <p>Do not create entire modules or views out of layout helpers. We are not trying to write our own preprocessor</p>
                                 </div>
                             </div>
@@ -155,7 +164,7 @@
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                        <h4>Each Module should be designed to exist standalone</h4>
+                                        <h5>Each Module should be designed to exist standalone</h5>
                                         <p>Modules should be designed independent of their context in a Layout or View. I'm a module. I dont't give a fuck if I 'm in the header or a side bar I will still look sexy.</p>
                                 </div>
                             </div>
@@ -171,7 +180,7 @@
                                     <div class="col-lg-6 col-lg6">
                                                  
                                                     <span class="dh-header"></span>
-                                                    <pre>
+                                                    <pre><code class="language-css">
 //layout 
 .grid 
 {
@@ -190,7 +199,7 @@
     padding:20px;
     font-size:18px;
     font-weight:600;
-}</span>
+}</span></code>
                                             </pre>
                                     </div>
                                
@@ -201,7 +210,7 @@
                                      
                                         <span class="dth-header"></span>
                                        
-                                        <pre>
+                                        <pre><code class="language-css">
 //layout
 .grid 
 {
@@ -220,7 +229,7 @@
     padding:20px;
     font-size:18px;
     font-weight:600;
-}</span> 
+}</span> </code>
                                         </pre>
                                     
                                     </div>
@@ -231,28 +240,32 @@
                             <h3>Namespacing</h3>
                             <p class="tbd">TBD</p>
                             
-
+                        </div>
                         </section>
+                        
                         <section class="sg--section">
-                            <h2>Buttons</h2>
-                            <p>Button classes should be use on the <code >&lt;button&gt;</code> tag
-                            <h3>Base Class</h3>
-                            <p><code>.btn</code> The base class should always be present and defined first</p>
+                            <header class="sg--section_header">
+                                <h2>Buttons</h2>
+                            </header>
+                            <div class="sg--section_body">
+                            <p>Button classes should be use on the <code >&lt;button&gt;</code>, <code >&lt;a&gt;</code> and <code >&lt;input&gt;</code>element.
+                            
                              
                             <h3>Modifiers</h3>
-                            <p>Use modifier classes to alter the style of a button based on state or action</p>
+                            <p>Use modifier classes to alter the style of a button based on state or Usage.</p>
                             <p>Common state modifiers are: <code>.is-first</code> <code>.is-last</code> <code>.is-disabled</code> <code>.is-active</code> <code>.is-hovered</code> </p>
-                            <p>Common actiion based modifiers: <code>.primary</code> <code>.danger</code></p>
+                            <p>Common action based modifiers: <code>.primary</code> <code>.danger</code></p>
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                    <h4>Primary modifier</h4>
+                                    <h5>Primary modifier</h5>
                                     <p>The primary modifier should alwasy be used when you have more than one button grouped together. It should only be used on one button. </p>
                                 </div>
                             </div>
-                            <h3>Default buttons</h3>
+                            <h3>Button Types</h3>
+                            <h4>Default buttons</h4>
                             <p>Default buttons are used on cards, dialog boxs, and modals</p>
-                            <code>.btn--defualt</code>
+                            <code>.btn--default</code>
                             <div class="sg--example note">
                                 <button class="btn--default ">Normal</button>
                                 <button class="btn--default  primary">Primary</button>
@@ -260,18 +273,20 @@
                                 <button class="btn btn--default is-disabled">Disabled</button>
                             </div>
 
-                            <h3>Raised buttons</h3>
+                            <h4>Raised buttons</h4>
                             <p>Raised buttons are used in toolbars or for important call to actions</p>
                             <code>.btn--raised</code>
                             
                             <div class="sg--example">
-                                <button class="btn btn--raised">Normal</button>
-                                <button class="btn btn--raised primary">Primary</button>
-                                <button class="btn btn--raised danger">Danger</button>
-                                <button class="btn btn--raised is-disabled">Disabled</button>
-                                <button class="btn btn--raised is-active">Active</button>
+                                <button class="btn--raised">Normal</button>
+                                <button class="btn--raised primary">Primary</button>
+                                <button class="btn--raised secondary">Create</button>
+                                <button class="btn--raised alternate">Assign</button>
+                                <button class="btn--raised danger">Danger</button>
+                                <button class="btn--raised is-disabled">Disabled</button>
+                                <button class="btn--raised is-active">Active</button>
                             </div>
-                            <h3>Utility buttons</h3>
+                            <h4>Utility buttons</h4>
                             <p>Utility buttons can be used anywhere. By definition they have lower visual importance.</p>
                             <code>.btn--utility</code>
                             
@@ -282,12 +297,12 @@
                                 <button class="btn--utility is-disabled">Disabled</button>
                                 
                             </div>
-                            <h3>Utility Icon buttons</h3>
+                            <h4>Utility Icon buttons</h4>
                             <p>Utility icon buttons can be used anywhere. By definition they have lower visual importance.</p>
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                    <h4>Do not mix with non icon buttons</h4>
+                                    <h5>Do not mix with non icon buttons</h5>
                                     <p>Utility icon buttons shouldn't be mixed with text buttons as it skews their visual importance</p>
                                 </div>
                             </div>
@@ -300,87 +315,129 @@
                                 <button class="btn btn--icon-utility"><i class="icon-settings"></i></button>
                                 
                             </div>
-                             <h3>Round buttons</h3>
-                            <p>Round buttons are primary used in presentation mode</p>
+                             <h4>Round buttons</h4>
+                            <p>Round buttons are primarily used in presentation mode</p>
                         
                             <code>.btn--round</code>
                             
                             <div class="sg--example">
-                              <button id="playControl" class="btn--round  large play is-active"><i class="icon-pause"></i></button>
-                        <button class="btn--round large "><i class="icon-done"></i></button>
-                        <button class="btn--round large "><i class="icon-equalizer"></i></button>
-                        <button class="btn--round large is-danger"><i class="icon-close"></i></button>
+                                <button id="playControl" class="btn--round  large play is-active"><i class="icon-pause"></i></button>
+                                <button class="btn--round large "><i class="icon-done"></i></button>
+                                <button class="btn--round large "><i class="icon-equalizer"></i></button>
+                                <button class="btn--round large is-danger"><i class="icon-close"></i></button>
                                 
                             </div>
+                        </div>
                         </section>
+                        
                         <section class="sg--section">
-                        <h2>Inputs</h2>
-                        <h3>Text Input</h3>
+                            <header class="sg--section_header">
+                                <h2>Forms</h2>
+                            </header>
+                        <div class="sg--section_body">
+                        
+                        <h4>Text Input</h4>
+                        <p>Text Form fields are wrapped in the <span class="snippet-code">.form-input</span> class.</p>
+                            <ul>
+                                <li><span class="snippet-code">.is-focused</span> sets focus state styling</li>
+                            </ul>
                         <div class="sg--example">
-                            <span class="form-field">
+                            <div class="form-input">
                                 <label for="basic">Label:</label>
-                                <input tabindex="0" id="basic" type="text" value="basic">
-                               
-                            </span>
-                            <span class="form-field">
+                                <input tabindex="0" id="basic" type="text" placeholder="basic">
+                            </div>
+<pre><code class="language-markup">
+&lt;div class="form-input"&gt;
+    &lt;label for="basic"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="basic" type="text" placeholder="placeholder"&gt;
+&lt;/div>
+
+</code></pre>
+                        </div>
+
+
+                        <h4>Input with hint</h4>
+                        <p>Text Form fields with hints use the <span class="snippet-code">.has-hint</span> class.</p>
+                         <ul>
+                            <li><span class="snippet-code">.form-hint</span> sets styling for your hint message</li>
+                        </ul>
+                        <div class="sg--example">
+                            <div class="form-input has-hint">
                                 <label for="basicHint">Label:</label>
-                                <input tabindex="0" id="basicHint" type="text" value="basic with hint message">
-                                <span class="form-msg hint is-hidden">I recommend pizza</span>
-                            </span>
-                            <span class="form-field has-error">
+                                <input tabindex="0" id="basicHint" type="text" placeholder="placeholder">
+                                <span class="form-hint is-hidden-with-transition">Hint Text</span>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class="form-input has-hint"&gt;
+    &lt;label for="basicHint"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="basicHint" type="text" placeholder="placeholder"&gt;
+    &lt;span class="form-hint is-hidden-with-transition">Hint Text&lt;/span&gt;
+&lt;/div>
+</code></pre>
+                            </div>
+                       
+
+                        <h4>Input with validation</h4>
+                        <p>Text Form fields with validation uste the <span class="snippet-code">.validate</span> class.</p>
+                        <ul>
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
+                        <div class="sg--example">
+                            <div class="form-input validate is-invalid">
                                 <label for="hasError">Label:</label>
                                 <input tabindex="0" id="hasError" type="text" value="Error"><i class="icon-error"></i>
-                               
-                            </span>
-                            <span class="form-field has-error">
-                                <label for="hasErrorMsg">Label:</label>
-                                <input tabindex="0" id="hasErrorMsg" type="text" value="Error with message"><i class="icon-error"></i>
-                                <span class="form-msg error is-hidden">oops! you did it again!</span>
-                            </span>
-
-                             <span class="form-field has-success">
+                            </div>
+                             <span class="form-input validate is-valid">
                                 <label for="hasSuccess">Label:</label>
                                 <input tabindex="0" id="hasSuccess" type="text" value="Success"><i class="icon-check"></i>
                             </span>
-                            <span class="form-field has-success">
+<pre><code class="language-markup">
+&lt;div class="form-input validate is-invalid"&gt;
+    &lt;label for="hasError"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="hasError" type="text" value="Error"&gt;&lt;i class="icon-error"&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class="form-input validate is-valid"&gt;
+    &lt;label for="hasError"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="hasError" type="text" value="Error"&gt;&lt;i class="icon-check"&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <h4>Input with validation and hint</h4>
+                        <div class="sg--example">
+                            <span class="form-input validate has-hint is-invalid">
+                                <label for="hasErrorMsg">Label:</label>
+                                <input tabindex="0" id="hasErrorMsg" type="text" value="Error with message"><i class="icon-error"></i>
+                                <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
+                            </span>
+                            <span class="form-input validate has-hint is-valid">
                                 <label for="hasSuccessHint">Label:</label>
                                 <input tabindex="0" id="hasSuccessHint" type="text" value="Success with message"><i class="icon-check"></i>
-                                <span class="form-msg success is-hidden">No diggity. No doubt.</span>
+                                <span class="form-hint success is-hidden-with-transition">No diggity. No doubt.</span>
                             </span>
-                            <span class="form-field is-readonly">
+                            <span class="form-input is-readonly">
                                 <label for="questionTitle4">Label:</label>
                                 <input tabindex="0" id="questionTitle4" type="text" value="Ready only" disabled>
                             </span>
                         
                         </div>
-                        <h3>Text Input with Icon Label</h3>
-                        <div class="sg--example">
-                            <span class="form-field">
-                                <label class="label-small" for="basicIcon"><i class="icon-room"></i></label>
-                                <input tabindex="0" id="basicIcon" type="text" value="basic">
-                               
-                            </span>
-                            
-                        
-                        </div>
-
                         <h3>Text Area</h3>
                         <div class="sg--example">
-                            <span class="form-field">
-                                <label for="textareaBasic">Question:</label><textarea  id="textareaBasic" class="materialize-textarea"type="text" placeholder="Enter your question"></textarea>
+                            <span class="form-textarea ">
+                                <label for="textareaBasic">Question:</label><textarea  id="textareaBasic" type="text" data-autoresize placeholder="Enter your question"></textarea>
                             </span>
                         </div>
                         <div class="sg--example">
-                            <span class="form-field has-error">
-                                <label for="textareaError">Question:</label><textarea  id="textareaError" class="materialize-textarea"type="text" value="Error"></textarea>
+                            <span class="form-textarea validate is-invalid">
+                                <label for="textareaError">Question:</label><textarea  id="textareaError" type="text" value="Error"></textarea>
                                 <i class="icon-error"></i>
                             </span>
                         </div>
                          <div class="sg--example">
-                            <span class="form-field has-error">
-                                <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" class="materialize-textarea"type="text" value="Error"></textarea>
+                            <span class="form-textarea validate has-hint is-invalid">
+                                <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" type="text" value="Error"></textarea>
                                 <i class="icon-error"></i>
-                                <span class="form-msg error is-hidden">oops! you did it again!</span>
+                                <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
                             </span>
                         </div>
                       
@@ -397,19 +454,15 @@
                             </span>
                             
                         </div>
-                            
+                            </div>
                         </section>
-                    </div>
-
-                </div>
-
-
-
-
-           
-
-        </div>
+            </div>
     </div>
 
         </body>
+        <script src="js/autosize.min.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+        autosize(document.querySelectorAll('textarea'));
+    </script>
 </html>
