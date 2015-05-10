@@ -13,18 +13,23 @@
     line-height:$btn-height;
     font-size:14px;
     color:$color-base;
-    &.is-first 
+    &:first-child 
     {
     	margin-left:0;
     	padding-left:0;
     
     }
 
-    &.is-last 
+    &:last-child
 	{
 		margin-right:0;
 		padding-right:0;
 	
+	}
+	&:last-of-type
+	{
+		margin-right:0;
+		padding-right:0;
 	}
 	&:hover.danger 
 	{
@@ -119,21 +124,12 @@
 	margin:0px;
 	
 	color:$color-base-lighten2;
-
-
-	&.is-first
-	{
-		padding-left:0;
-	}
-	&.is-last
-	{
-		padding-right:0;
-	}
-	&.is-only
+	> i 
 	{
 		padding-left:0;
 		padding-right:0;
 	}
+
 	&.is-active
 	{
 		color:$color-highlight;
@@ -227,73 +223,38 @@
 	height:32px;
 	line-height:32px;
 	font-size:14px;
-
+	@include button-raised($bgcolor-base-darken2,$color-base);
 	&.with-icon-right 
 	{
 		min-width:120px;
 	}
-	@include box-shadow(0px 3px 0px 0px rgba(shade($bgcolor-base-darken2,10%),1));
+	
+
+
+	
 	
 	&.primary
 	{
-
-		background:$color-primary;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(shade($color-primary,10%),1));
-	
-		&:hover
-		{
-			color:#fff;
-			background:$color-primary-lighten1;
-
-		}
+		@include button-raised($color-primary,#fff);
 
 	}
 	&.secondary
 	{
-
-		background:$color-secondary;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(darken($color-secondary,10%),1));
-		&:hover
-		{
-			color:#fff;
-			background:lighten($color-secondary,5%);
-		}
+		@include button-raised($color-secondary,#fff);
 
 	}
 	&.alternate
 	{
-
-		background:$color-alternate;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(darken($color-alternate,10%),1));
-		&:hover
-		{
-			color:#fff;
-			background:lighten($color-alternate,5%);
-		}
-
+		@include button-raised($color-alternate,#fff);
 	}
 	&.dark
 	{
-
-		background:$color-base-lighten1;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(darken($color-base-lighten1,10%),1));
-		&:hover
-		{
-			color:#fff;
-			background:lighten($color-base-lighten1,5%);
-		}
+		@include button-raised($color-base-lighten1,#fff);
 
 	}
 
 
-	&:hover
-	{
-		background:lighten($bgcolor-base-darken2,5%);
-	}
+
 	&.danger:hover
 	{
 		background:$color-danger;
@@ -321,24 +282,13 @@
 
 .btn-grp
 {
-	&:first-child
+	button ~ ul:last-child 
 	{
 
-	}
-	&:last-child
-	{
-		margin-right:0;
 	}
 }
 
 
-.btn-icon-grp
-{
-	&:first-child
-	{
-		
-	}
-}
 
 
 
