@@ -46,6 +46,10 @@
 	}
 }
 
+%baseButtonModifiers
+{
+
+}
 
 %baseButton-with-icon 
 {
@@ -80,24 +84,7 @@
 	@extend %baseButton-with-icon;
 }
 
-.btn--withbg
-{
-	@extend %baseButton;
-	@extend %baseButton-with-icon;
-	background:$bgcolor-base-darken2;
-	border-radius:3px;
-	&.is-first
-	{
-		padding-left:10px;
-	}
-	&.is-last
-	{
-		padding-right:10px;
-	}
-	
 
-
-}
 
 .btn--utility
 {
@@ -113,8 +100,6 @@
 	text-transform:uppercase;
 
 }
-
-
 
 
 .btn--icon-utility
@@ -223,16 +208,9 @@
 	height:32px;
 	line-height:32px;
 	font-size:14px;
+
 	@include button-raised($bgcolor-base-darken2,$color-base);
-	&.with-icon-right 
-	{
-		min-width:120px;
-	}
-	
 
-
-	
-	
 	&.primary
 	{
 		@include button-raised($color-primary,#fff);
@@ -257,21 +235,18 @@
 
 	&.danger:hover
 	{
-		background:$color-danger;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(194,25,79,1));
+		@include button-raised($color-danger,#fff);
 	}
 	&.is-disabled
 	{
+
 		background:lighten($bgcolor-base-darken2, 10%);
 		color:lighten($color-base, 40%);
 		box-shadow:none;
 	}
 	&.is-active
 	{
-		background:$color-highlight;
-		color:#fff;
-		box-shadow:none;
+		@include button-raised($color-highlight,#fff);
 	}
 	&.is-last
 	{

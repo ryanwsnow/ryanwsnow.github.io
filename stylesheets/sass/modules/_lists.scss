@@ -21,16 +21,22 @@
 	vertical-align:middle;
 }
 
-
-//List 
-.list
+%baseList
 {
-  	@extend %clearListStyle;
-	width:100%;
+	list-style-type:none;	
+	margin:0;
+	padding:0;
+
 	> li 
 	{
 		width:100%;
 	}
+}
+
+//List 
+.list
+{
+  	@extend %baseList;
 }
 
 
@@ -40,13 +46,13 @@
 	> li > .list_item 
 	{
 		
-		padding-left:40px;
+		padding-left:52px;
 	}
 }
 
 .list_item
  {
- 	cursor:pointer;
+ 	@extend %is-clickable;
  	position:relative;
 	height:64px;
 	border-bottom:1px solid #d9dde1;
@@ -160,21 +166,6 @@
 	@extend .list_item_cell;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Sub Module List-item Folder
 
 
 // Modifier Cozy Layout
