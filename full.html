@@ -94,12 +94,12 @@
 									</span>
 							</div>
 							<div class="discussion-card_body">
-								<span class="form-input">
-        								<label class="label-icon" for="questionDescription"><i class="icon-edit"></i></label><textarea id="textarea1" class="materialize-textarea"  id="questionDescription" type="text" placeholder="Enter your reply..."></textarea>
+								<span class="form-textarea">
+        								<label class="label-icon" for="questionDescription"><i class="icon-edit"></i></label><textarea id="textarea1" id="questionDescription" type="text" placeholder="Enter your reply..."></textarea>
     								</span>
 							</div>
 							<div class="discussion-card_footer">
-								<button class="btn--plain danger">Attach Canvas</button>
+								<button class="btn--plain">Attach Canvas</button>
 								<span class="discussion-card_footer-actions">
 									<button class="btn--plain danger">Cancel</button>
 
@@ -134,7 +134,7 @@
 										
 										<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
 									<button class="btn--plain primary">Comment</button>
-									<span class="badge small withtext">0</span>
+									<span class="badge small">0</span>
 									
 									</span>
 								</div>
@@ -302,4 +302,9 @@
 
 
 </body>
+        <script src="js/autosize.min.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+        autosize(document.querySelectorAll('textarea'));
+    </script>
 </html>

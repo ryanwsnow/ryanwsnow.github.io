@@ -3035,26 +3035,46 @@ input, textarea {
   margin: 0;
   background: transparent; }
 
-input[type='checkbox'], input[type='radio'] {
-  margin-right: 10px; }
-
 textarea {
   resize: none; }
 
-.form-checkbox {
-  display: block;
+.form-checkbox, .form-input, .form-textarea {
+  width: 100%;
   padding-bottom: 10px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  position: relative; }
+
+.form-checkbox {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   .form-checkbox > label {
+    width: 100%;
     font-size: 14px;
     font-weight: 400;
-    color: #435561; }
-    .form-checkbox > label.is-checked {
-      color: #0ac8f4; }
+    color: #435561;
+    padding-left: 20px; }
+    .form-checkbox > label > input {
+      position: absolute;
+      margin-left: -20px;
+      margin-top: 6px; }
+  .form-checkbox > .checkbox-msg {
+    display: block;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #708493; }
+    .form-checkbox > .checkbox-msg > i {
+      margin-right: 10px; }
+  .form-checkbox.is-checked > label {
+    color: #0ac8f4; }
+  .form-checkbox.is-disabled > label, .form-checkbox.is-disabled > .checkbox-msg {
+    color: #d9dde1; }
 
-.form-input.validate > input, .validate.form-textarea > input {
+.form-input.validate > input, .validate.form-textarea > input, .form-input.validate > textarea, .validate.form-textarea > textarea {
   padding-right: 32px; }
-.is-invalid.form-input.validate > input, .is-invalid.validate.form-textarea > input {
+.is-invalid.form-input.validate > input, .is-invalid.validate.form-textarea > input, .is-invalid.form-input.validate > textarea, .is-invalid.validate.form-textarea > textarea {
   color: #fd194f; }
 .is-invalid.form-input.validate > label, .is-invalid.validate.form-textarea > label {
   color: #fd194f; }
@@ -3074,7 +3094,7 @@ textarea {
   border-bottom-color: #2ab27b; }
   .is-valid.is-focused.form-input.validate > label, .is-valid.is-focused.validate.form-textarea > label {
     color: #2ab27b; }
-.is-valid.form-input.validate > input + i, .is-valid.validate.form-textarea > input + i {
+.is-valid.form-input.validate > i, .is-valid.validate.form-textarea > i {
   position: absolute;
   right: 0;
   bottom: 10px;
@@ -3089,9 +3109,6 @@ textarea {
   transition: all 0.5s ease-in-out;
   position: relative;
   display: table;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
   border-bottom-color: #a4b0ba;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -3107,7 +3124,6 @@ textarea {
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     height: 32px;
-    width: auto;
     display: inline-block;
     width: 100%; }
     .form-input > input::-webkit-input-placeholder, .form-textarea > input::-webkit-input-placeholder {
@@ -3154,21 +3170,27 @@ textarea {
       color: #a4b0ba; }
 
 .form-textarea {
-  position: relative; }
+  position: relative;
+  padding-bottom: 0; }
   .form-textarea > label {
-    position: static;
-    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
     transform: none;
-    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100px;
     text-align: left;
-    line-height: 32px; }
+    line-height: normal; }
+  .form-textarea > label + textarea {
+    padding-left: 100px; }
   .form-textarea > textarea {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    display: block;
-    width: 100%;
     height: 32px;
+    display: inline-block;
+    width: 100%;
     line-height: normal;
     overflow-y: none;
     color: #708493; }
@@ -3657,8 +3679,8 @@ textarea {
     width: 24px;
     font-size: 12px;
     margin-top: 4px;
-    line-height: 24px; }
-  .badge.withtext {
+    line-height: 24px;
+    margin-left: 10px;
     margin-right: 0; }
   .badge.highlight {
     background: #0ac8f4; }

@@ -69,10 +69,10 @@ $(document).ready(function(){
 	$("input[type=checkbox]").on("click",function(){
 		
 		if($(this).prop("checked")) {
-			$(this).parent("label").addClass("is-checked");
+			$(this).parent().parent(".form-checkbox").addClass("is-checked");
 		}
 		else {
-			$(this).parent("label").removeClass("is-checked");
+			$(this).parent().parent(".form-checkbox").removeClass("is-checked");
 		}
 	});
 

@@ -424,7 +424,7 @@
                         <h3>Text Area</h3>
                         <div class="sg--example">
                             <span class="form-textarea ">
-                                <label for="textareaBasic">Question:</label><textarea  id="textareaBasic" type="text" data-autoresize placeholder="Enter your question"></textarea>
+                                <label for="textareaBasic">Question:</label><textarea row="1" id="textareaBasic" type="text" data-autoresize placeholder="Enter your question"></textarea>
                             </span>
                         </div>
                         <div class="sg--example">
@@ -440,19 +440,23 @@
                                 <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
                             </span>
                         </div>
-                      
-
                         <h3>Check box</h3>
                         <div class="sg--example">
                             <span class="form-checkbox">
-                                
                                 <label for="inputID1"><input tabindex="0" id="inputID1" type="checkbox" placeholder="Placeholder">Check box</label>
                             </span>
-                            <span class="form-checkbox">
-                                
-                                <label for="inputID2"><input tabindex="0" id="inputID2" type="checkbox" placeholder="Placeholder">Check box 2</label>
+                            <span class="form-checkbox has-msg">
+                                 <label for="inputID2">
+                                    <input tabindex="0" id="inputID2" type="checkbox" placeholder="Placeholder">Check box 2
+                                 </label>
+                                 <span class="checkbox-msg">Something of a warning</span>
+                             </span>
+                             <span class="form-checkbox has-msg is-disabled">
+                                 <label for="inputID3">
+                                    <input tabindex="0" id="inputID3" type="checkbox" placeholder="Placeholder" disabled>Check box 3 - Disabled
+                                 </label>
+                                 <span class="checkbox-msg" >Something of a warning</span>
                             </span>
-                            
                         </div>
                             </div>
                         </section>
