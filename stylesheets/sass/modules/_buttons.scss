@@ -13,18 +13,23 @@
     line-height:$btn-height;
     font-size:14px;
     color:$color-base;
-    &.is-first 
+    &:first-child 
     {
     	margin-left:0;
     	padding-left:0;
     
     }
 
-    &.is-last 
+    &:last-child
 	{
 		margin-right:0;
 		padding-right:0;
 	
+	}
+	&:last-of-type
+	{
+		margin-right:0;
+		padding-right:0;
 	}
 	&:hover.danger 
 	{
@@ -41,6 +46,10 @@
 	}
 }
 
+%baseButtonModifiers
+{
+
+}
 
 %baseButton-with-icon 
 {
@@ -75,24 +84,7 @@
 	@extend %baseButton-with-icon;
 }
 
-.btn--withbg
-{
-	@extend %baseButton;
-	@extend %baseButton-with-icon;
-	background:$bgcolor-base-darken2;
-	border-radius:3px;
-	&.is-first
-	{
-		padding-left:10px;
-	}
-	&.is-last
-	{
-		padding-right:10px;
-	}
-	
 
-
-}
 
 .btn--utility
 {
@@ -110,8 +102,6 @@
 }
 
 
-
-
 .btn--icon-utility
 {
 	
@@ -119,21 +109,12 @@
 	margin:0px;
 	
 	color:$color-base-lighten2;
-
-
-	&.is-first
-	{
-		padding-left:0;
-	}
-	&.is-last
-	{
-		padding-right:0;
-	}
-	&.is-only
+	> i 
 	{
 		padding-left:0;
 		padding-right:0;
 	}
+
 	&.is-active
 	{
 		color:$color-highlight;
@@ -228,89 +209,44 @@
 	line-height:32px;
 	font-size:14px;
 
-	&.with-icon-right 
-	{
-		min-width:120px;
-	}
-	@include box-shadow(0px 3px 0px 0px rgba(shade($bgcolor-base-darken2,10%),1));
-	
+	@include button-raised($bgcolor-base-darken2,$color-base);
+
 	&.primary
 	{
-
-		background:$color-primary;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(shade($color-primary,10%),1));
-	
-		&:hover
-		{
-			color:#fff;
-			background:$color-primary-lighten1;
-
-		}
+		@include button-raised($color-primary,#fff);
 
 	}
 	&.secondary
 	{
-
-		background:$color-secondary;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(darken($color-secondary,10%),1));
-		&:hover
-		{
-			color:#fff;
-			background:lighten($color-secondary,5%);
-		}
+		@include button-raised($color-secondary,#fff);
 
 	}
 	&.alternate
 	{
-
-		background:$color-alternate;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(darken($color-alternate,10%),1));
-		&:hover
-		{
-			color:#fff;
-			background:lighten($color-alternate,5%);
-		}
-
+		@include button-raised($color-alternate,#fff);
 	}
 	&.dark
 	{
-
-		background:$color-base-lighten1;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(darken($color-base-lighten1,10%),1));
-		&:hover
-		{
-			color:#fff;
-			background:lighten($color-base-lighten1,5%);
-		}
+		@include button-raised($color-base-lighten1,#fff);
 
 	}
 
 
-	&:hover
-	{
-		background:lighten($bgcolor-base-darken2,5%);
-	}
+
 	&.danger:hover
 	{
-		background:$color-danger;
-		color:#fff;
-		@include box-shadow(0px 3px 0px 0px rgba(194,25,79,1));
+		@include button-raised($color-danger,#fff);
 	}
 	&.is-disabled
 	{
+
 		background:lighten($bgcolor-base-darken2, 10%);
 		color:lighten($color-base, 40%);
 		box-shadow:none;
 	}
 	&.is-active
 	{
-		background:$color-highlight;
-		color:#fff;
-		box-shadow:none;
+		@include button-raised($color-highlight,#fff);
 	}
 	&.is-last
 	{
@@ -321,24 +257,13 @@
 
 .btn-grp
 {
-	&:first-child
+	button ~ ul:last-child 
 	{
 
-	}
-	&:last-child
-	{
-		margin-right:0;
 	}
 }
 
 
-.btn-icon-grp
-{
-	&:first-child
-	{
-		
-	}
-}
 
 
 

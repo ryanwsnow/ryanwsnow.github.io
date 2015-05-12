@@ -31,15 +31,14 @@
 {
 	height:100%;
 	width:100%;
-
-
 }
 
 %layout40-60
 {
-	
+
 	@extend %baseLayout;
 }
+
 %layout40-60_column1
 {
 	float:left;
@@ -118,8 +117,11 @@
 	
 	opacity:0 !important;
 	display:none;
-	
-		
+}
+
+%is-clickable
+{
+	cursor:pointer;
 }
 
 

@@ -2434,7 +2434,7 @@ header {
   width: 55%;
   height: 100%; }
 
-.nav, .list, .menu, .menu--folders {
+.nav {
   list-style-type: none;
   margin: 0;
   padding: 0; }
@@ -2478,6 +2478,9 @@ header {
 .is-hidden {
   opacity: 0 !important;
   display: none; }
+
+.list_item, .table--list_item {
+  cursor: pointer; }
 
 /* --------->>> Navigation: Basic ---------*/
 .nav--tab-card > li, .nav--tab-pill > li {
@@ -2556,8 +2559,7 @@ a.nav--tab-pill_item {
 
 .menu > li, .menu--folders > li {
   height: 52px;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding: 10px; }
 .menu > li > a, .menu--folders > li > a, .menu > li > button, .menu--folders > li > button {
   display: block;
   width: 100%;
@@ -2587,7 +2589,7 @@ a.nav--tab-pill_item {
     border-style: dashed;
     border-color: #199bfd; }
 
-.btn--plain, .btn--withbg, .btn--utility, .btn--default, .btn--icon-utility {
+.btn--plain, .btn--utility, .btn--default, .btn--icon-utility {
   float: left;
   height: 32px;
   padding-left: 10px;
@@ -2597,33 +2599,28 @@ a.nav--tab-pill_item {
   line-height: 32px;
   font-size: 14px;
   color: #435561; }
-  .is-first.btn--plain, .is-first.btn--withbg, .is-first.btn--utility, .is-first.btn--default, .is-first.btn--icon-utility {
+  .btn--plain:first-child, .btn--utility:first-child, .btn--default:first-child, .btn--icon-utility:first-child {
     margin-left: 0;
     padding-left: 0; }
-  .is-last.btn--plain, .is-last.btn--withbg, .is-last.btn--utility, .is-last.btn--default, .is-last.btn--icon-utility {
+  .btn--plain:last-child, .btn--utility:last-child, .btn--default:last-child, .btn--icon-utility:last-child {
     margin-right: 0;
     padding-right: 0; }
-  .btn--plain:hover.danger, .btn--withbg:hover.danger, .btn--utility:hover.danger, .btn--default:hover.danger, .btn--icon-utility:hover.danger {
+  .btn--plain:last-of-type, .btn--utility:last-of-type, .btn--default:last-of-type, .btn--icon-utility:last-of-type {
+    margin-right: 0;
+    padding-right: 0; }
+  .btn--plain:hover.danger, .btn--utility:hover.danger, .btn--default:hover.danger, .btn--icon-utility:hover.danger {
     color: #fd194f; }
-  .primary.btn--plain, .primary.btn--withbg, .primary.btn--utility, .primary.btn--default, .primary.btn--icon-utility {
+  .primary.btn--plain, .primary.btn--utility, .primary.btn--default, .primary.btn--icon-utility {
     color: #199bfd; }
-  .is-disabled.btn--plain, .is-disabled.btn--withbg, .is-disabled.btn--utility, .is-disabled.btn--default, .is-disabled.btn--icon-utility {
+  .is-disabled.btn--plain, .is-disabled.btn--utility, .is-disabled.btn--default, .is-disabled.btn--icon-utility {
     color: #d9dde1; }
 
-.with-icon.btn--plain > i, .with-icon.btn--withbg > i, .with-icon.btn--utility > i, .with-icon.btn--raised > i {
+.with-icon.btn--plain > i, .with-icon.btn--utility > i, .with-icon.btn--raised > i {
   float: left;
   padding-right: 10px; }
-.with-icon-right.btn--plain > i, .with-icon-right.btn--withbg > i, .with-icon-right.btn--utility > i, .with-icon-right.btn--raised > i {
+.with-icon-right.btn--plain > i, .with-icon-right.btn--utility > i, .with-icon-right.btn--raised > i {
   float: right;
   padding-left: 10px; }
-
-.btn--withbg {
-  background: #ced6db;
-  border-radius: 3px; }
-  .btn--withbg.is-first {
-    padding-left: 10px; }
-  .btn--withbg.is-last {
-    padding-right: 10px; }
 
 .btn--utility {
   color: #a4b0ba; }
@@ -2634,11 +2631,7 @@ a.nav--tab-pill_item {
 .btn--icon-utility {
   margin: 0px;
   color: #a4b0ba; }
-  .btn--icon-utility.is-first {
-    padding-left: 0; }
-  .btn--icon-utility.is-last {
-    padding-right: 0; }
-  .btn--icon-utility.is-only {
+  .btn--icon-utility > i {
     padding-left: 0;
     padding-right: 0; }
   .btn--icon-utility.is-active {
@@ -2697,55 +2690,77 @@ a.nav--tab-pill_item {
   height: 32px;
   line-height: 32px;
   font-size: 14px;
-  -webkit-box-shadow: 0px 3px 0px 0px #b9c0c5;
-  -moz-box-shadow: 0px 3px 0px 0px #b9c0c5;
-  box-shadow: 0px 3px 0px 0px #b9c0c5; }
-  .btn--raised.with-icon-right {
-    min-width: 120px; }
+  background: #ced6db;
+  color: #435561;
+  -webkit-box-shadow: 0px -3px 0px 0px #b3babe inset;
+  -moz-box-shadow: 0px -3px 0px 0px #b3babe inset;
+  box-shadow: 0px -3px 0px 0px #b3babe inset; }
+  .btn--raised:hover {
+    color: #435561;
+    background: #dde2e6;
+    -webkit-box-shadow: 0px -3px 0px 0px #b3babe inset;
+    -moz-box-shadow: 0px -3px 0px 0px #b3babe inset;
+    box-shadow: 0px -3px 0px 0px #b3babe inset; }
   .btn--raised.primary {
     background: #199bfd;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #168be3;
-    -moz-box-shadow: 0px 3px 0px 0px #168be3;
-    box-shadow: 0px 3px 0px 0px #168be3; }
+    -webkit-box-shadow: 0px -3px 0px 0px #1586dc inset;
+    -moz-box-shadow: 0px -3px 0px 0px #1586dc inset;
+    box-shadow: 0px -3px 0px 0px #1586dc inset; }
     .btn--raised.primary:hover {
       color: #fff;
-      background: #42b5fc; }
+      background: #32a6fd;
+      -webkit-box-shadow: 0px -3px 0px 0px #1586dc inset;
+      -moz-box-shadow: 0px -3px 0px 0px #1586dc inset;
+      box-shadow: 0px -3px 0px 0px #1586dc inset; }
   .btn--raised.secondary {
     background: #68bf81;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #49ab65;
-    -moz-box-shadow: 0px 3px 0px 0px #49ab65;
-    box-shadow: 0px 3px 0px 0px #49ab65; }
+    -webkit-box-shadow: 0px -3px 0px 0px #5aa670 inset;
+    -moz-box-shadow: 0px -3px 0px 0px #5aa670 inset;
+    box-shadow: 0px -3px 0px 0px #5aa670 inset; }
     .btn--raised.secondary:hover {
       color: #fff;
-      background: #7ac790; }
+      background: #7ac790;
+      -webkit-box-shadow: 0px -3px 0px 0px #5aa670 inset;
+      -moz-box-shadow: 0px -3px 0px 0px #5aa670 inset;
+      box-shadow: 0px -3px 0px 0px #5aa670 inset; }
   .btn--raised.alternate {
     background: #ff7c5e;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #ff532b;
-    -moz-box-shadow: 0px 3px 0px 0px #ff532b;
-    box-shadow: 0px 3px 0px 0px #ff532b; }
+    -webkit-box-shadow: 0px -3px 0px 0px #dd6b51 inset;
+    -moz-box-shadow: 0px -3px 0px 0px #dd6b51 inset;
+    box-shadow: 0px -3px 0px 0px #dd6b51 inset; }
     .btn--raised.alternate:hover {
       color: #fff;
-      background: #ff9178; }
+      background: #ff9178;
+      -webkit-box-shadow: 0px -3px 0px 0px #dd6b51 inset;
+      -moz-box-shadow: 0px -3px 0px 0px #dd6b51 inset;
+      box-shadow: 0px -3px 0px 0px #dd6b51 inset; }
   .btn--raised.dark {
     background: #708493;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #596a77;
-    -moz-box-shadow: 0px 3px 0px 0px #596a77;
-    box-shadow: 0px 3px 0px 0px #596a77; }
+    -webkit-box-shadow: 0px -3px 0px 0px #61727f inset;
+    -moz-box-shadow: 0px -3px 0px 0px #61727f inset;
+    box-shadow: 0px -3px 0px 0px #61727f inset; }
     .btn--raised.dark:hover {
       color: #fff;
-      background: #7f909e; }
-  .btn--raised:hover {
-    background: #dde2e6; }
+      background: #7f909e;
+      -webkit-box-shadow: 0px -3px 0px 0px #61727f inset;
+      -moz-box-shadow: 0px -3px 0px 0px #61727f inset;
+      box-shadow: 0px -3px 0px 0px #61727f inset; }
   .btn--raised.danger:hover {
     background: #fd194f;
     color: #fff;
-    -webkit-box-shadow: 0px 3px 0px 0px #c2194f;
-    -moz-box-shadow: 0px 3px 0px 0px #c2194f;
-    box-shadow: 0px 3px 0px 0px #c2194f; }
+    -webkit-box-shadow: 0px -3px 0px 0px #dc1544 inset;
+    -moz-box-shadow: 0px -3px 0px 0px #dc1544 inset;
+    box-shadow: 0px -3px 0px 0px #dc1544 inset; }
+    .btn--raised.danger:hover:hover {
+      color: #fff;
+      background: #fd3262;
+      -webkit-box-shadow: 0px -3px 0px 0px #dc1544 inset;
+      -moz-box-shadow: 0px -3px 0px 0px #dc1544 inset;
+      box-shadow: 0px -3px 0px 0px #dc1544 inset; }
   .btn--raised.is-disabled {
     background: #ebeff1;
     color: #abbbc5;
@@ -2753,12 +2768,17 @@ a.nav--tab-pill_item {
   .btn--raised.is-active {
     background: #0ac8f4;
     color: #fff;
-    box-shadow: none; }
+    -webkit-box-shadow: 0px -3px 0px 0px #08aed4 inset;
+    -moz-box-shadow: 0px -3px 0px 0px #08aed4 inset;
+    box-shadow: 0px -3px 0px 0px #08aed4 inset; }
+    .btn--raised.is-active:hover {
+      color: #fff;
+      background: #22cef6;
+      -webkit-box-shadow: 0px -3px 0px 0px #08aed4 inset;
+      -moz-box-shadow: 0px -3px 0px 0px #08aed4 inset;
+      box-shadow: 0px -3px 0px 0px #08aed4 inset; }
   .btn--raised.is-last {
     margin-right: 0; }
-
-.btn-grp:last-child {
-  margin-right: 0; }
 
 /** End Buttons **/
 /* --------->>> Layout: List -----------*/
@@ -2774,15 +2794,16 @@ a.nav--tab-pill_item {
   vertical-align: middle; }
 
 .list, .menu, .menu--folders {
-  width: 100%; }
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
   .list > li, .menu > li, .menu--folders > li {
     width: 100%; }
 
 .list-sub > li > .list_item, .list-sub > li > .table--list_item {
-  padding-left: 40px; }
+  padding-left: 52px; }
 
 .list_item, .table--list_item {
-  cursor: pointer;
   position: relative;
   height: 64px;
   border-bottom: 1px solid #d9dde1;
