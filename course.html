@@ -10,7 +10,7 @@
 	<link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
 
 	<link href="stylesheets/css/app.css" rel="stylesheet">
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	 <script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 
@@ -60,7 +60,6 @@
 			<div class="content-list">
 				<div class="content-list_header">
 					<div class="toolbar">
-					
 						<span class="toolbar_actions-primary">
 							<button class="dropdown-button btn--raised secondary is-first" data-constrainwidth="false" data-activates="createContent">Create</button>
 							<ul   id="createContent" class="dropdown-content menu menu--with-icons">
@@ -77,20 +76,10 @@
 							     
 						    	</ul>
 						</span>
-					
 						<span class="toolbar_actions-utility">
 							<button id="searchButton" class="btn--icon-utility is-last"><i class="icon-search"></i></button>
-							<span class="search-field is-hidden">
-							
-								<label for="searchContent"></label><input tabindex="0" id="searchContent" type="text" placeholder="Search it bitch..." >
 						</span>
-							
-						</span>
-
 					</div>
-					
-						
-					
 					<div id="toolbarSelected" class="toolbar is-active is-hidden">
 						<span class="badge highlight">1</span> selected
 						<span class="toolbar_actions-utility">
@@ -102,16 +91,14 @@
 						</span>
 
 					</div>
-				</div>
+				</div><!-- content-list_header END -->
 				
 
 				<div class="scrollable content-list_body" data-target="content-list_header">
 					<ol class="list">
-					
 						<li class="list-row">
 							<div class="list_item list_item--folder">
 								<span class="list_item_cell small is-first">
-									
 									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q1" name="Question 1" value="selected"><label for="filled-in-box q1"></label>	
 								</span>
 								<span class="list_item_cell small">
@@ -126,25 +113,23 @@
 							  	</span>
 							 </div>
 							<ol class="list list-sub is-hidden">
-							<li class="list-row">
-								<div class="list_item">
-									<span class="list_item_cell small is-first">
-										
-									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q2" name="Question 1" value="selected"><label for="filled-in-box q2"></label>	
-									</span>
-									<span class="list_item_cell small">
-										<i class="icon-textsms secondary"></i>
-									</span>
-									<span class="list_item_cell selectArea">
-									  	<div class="cell-primary">Question 1</div>
-									  	<span class="cell-secondary">Multiple Choice</span>
-								  	</span>
+								<li class="list-row">
+									<div class="list_item">
+										<span class="list_item_cell small is-first">
+											
+											<input type="checkbox"  class="checkable filled-in" id="filled-in-box q2" name="Question 1" value="selected"><label for="filled-in-box q2"></label>	
+										</span>
+										<span class="list_item_cell small">
+											<i class="icon-textsms secondary"></i>
+										</span>
+										<span class="list_item_cell selectArea">
+										  	<div class="cell-primary">Question 1</div>
+										  	<span class="cell-secondary">Multiple Choice</span>
+									  	</span>
+										<span class="list_item_activity-info">Mar 8</span>
+									</div>
 									
-									
-									<span class="list_item_activity-info">Mar 8</span>
-								</div>
-								
-					  		</li> <!-- end list item -->
+						  		</li> <!-- end list item -->
 							</ol> <!-- end sub-list -->
 							
 							
@@ -152,7 +137,6 @@
 				  		<li class="list-row">
 							<div id="contentShow" class="list_item" data-target="question1">
 								<span class="list_item_cell small is-first">
-									
 									<input type="checkbox"  class="checkable filled-in" id="filled-in-box q3" name="Question 1" value="selected"><label for="filled-in-box q3"></label>
 								</span>
 								<span class="list_item_cell small">
@@ -162,8 +146,6 @@
 								  	<div class="cell-primary">Question 2</div>
 								  	<span class="cell-secondary">Multiple Choice</span>
 							  	</span>
-								
-								
 								<span class="list_item_activity-info">Mar 8</span>
 							</div>
 							
@@ -333,10 +315,8 @@
 
 											<span class="discussion-card_footer-actions">
 												
-												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
-											<button class="btn--plain primary">Comment</button>
-											<span class="badge small withtext">0</span>
-											
+												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like<span class="btn_badge">4</span></button>
+												<button class="btn--plain primary">Comment<span class="btn_badge">0</span></button>
 											</span>
 										</div>
 										
@@ -364,7 +344,7 @@
 
 											<span class="discussion-card_footer-actions">
 												
-												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
+												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like<span class="btn_badge">4</span></button>
 											
 											
 											</span>

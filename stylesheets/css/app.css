@@ -2598,7 +2598,7 @@ a.nav--tab-pill_item {
   text-align: center;
   line-height: 32px;
   font-size: 14px;
-  color: #435561; }
+  color: #199bfd; }
   .btn--plain:first-child, .btn--utility:first-child, .btn--default:first-child, .btn--icon-utility:first-child {
     margin-left: 0;
     padding-left: 0; }
@@ -2611,7 +2611,7 @@ a.nav--tab-pill_item {
   .btn--plain:hover.danger, .btn--utility:hover.danger, .btn--default:hover.danger, .btn--icon-utility:hover.danger {
     color: #fd194f; }
   .primary.btn--plain, .primary.btn--utility, .primary.btn--default, .primary.btn--icon-utility {
-    color: #199bfd; }
+    font-weight: 700; }
   .is-disabled.btn--plain, .is-disabled.btn--utility, .is-disabled.btn--default, .is-disabled.btn--icon-utility {
     color: #d9dde1; }
 
@@ -2779,6 +2779,16 @@ a.nav--tab-pill_item {
       box-shadow: 0px -3px 0px 0px #08aed4 inset; }
   .btn--raised.is-last {
     margin-right: 0; }
+
+.btn_badge {
+  display: inline-block;
+  min-width: 24px;
+  height: 24px;
+  background: #ced6db;
+  border-radius: 50%;
+  line-height: 24px;
+  margin-left: 5px;
+  color: #fff; }
 
 /** End Buttons **/
 /* --------->>> Layout: List -----------*/
@@ -3059,17 +3069,17 @@ textarea {
       position: absolute;
       margin-left: -20px;
       margin-top: 6px; }
-  .form-checkbox > .checkbox-msg {
+  .form-checkbox > .checkbox_msg {
     display: block;
     padding-left: 20px;
     font-size: 14px;
     line-height: 32px;
     color: #708493; }
-    .form-checkbox > .checkbox-msg > i {
+    .form-checkbox > .checkbox_msg > i {
       margin-right: 10px; }
   .form-checkbox.is-checked > label {
     color: #0ac8f4; }
-  .form-checkbox.is-disabled > label, .form-checkbox.is-disabled > .checkbox-msg {
+  .form-checkbox.is-disabled > label, .form-checkbox.is-disabled > .checkbox_msg {
     color: #d9dde1; }
 
 .form-input.validate > input, .validate.form-textarea > input, .form-input.validate > textarea, .validate.form-textarea > textarea {

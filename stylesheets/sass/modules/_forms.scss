@@ -51,7 +51,7 @@ textarea
 		}
 
 	}
-	> .checkbox-msg
+	> .checkbox_msg
 	{
 		display:block;
 		padding-left:20px;
@@ -77,7 +77,7 @@ textarea
 	}
 	&.is-disabled
 	{
-		> label, > .checkbox-msg
+		> label, > .checkbox_msg
 		{
 			color:$color-disabled;	
 		}

@@ -10,7 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/css/prism.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script src="js/materialize.min.js"></script>
@@ -35,7 +35,15 @@
                                 <li><a href="#!">Namespacing</a></li>
                             </ul>
                         </li>
-                        <li class=""><a href="modules.html">Buttons</a></li>
+                        <li class=""><a href="#sectionButtons">Buttons</a></li>
+                        <li class=""><a href="#sectionForms">Forms</a>
+                           <ul class="sg--main-navi_sub">
+                                <li><a href="#!">Inputs</a></li>
+                                <li><a href="#!">Text Area</a></li>
+                                <li><a href="#!">Checkbox</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
             </div>
         </div>
@@ -51,7 +59,7 @@
                             <h3>Categorization</h3>
                             <p>Organizing CSS rules into categories provides guidence on naming, structure and specifity. The following categories will be the basis of writing modular and maintable CSS:</p>
                             
-                            <ul>
+                            <ul class="sg--list">
                                 <li>Layouts</li>
                                 <li>Layout helpers</li>
                                 <li>Modules</li>
@@ -329,7 +337,7 @@
                             </div>
                         </div>
                         </section>
-                        
+                        <a id="sectionForms"></a>
                         <section class="sg--section">
                             <header class="sg--section_header">
                                 <h2>Forms</h2>
@@ -338,16 +346,25 @@
                         
                         <h4>Text Input</h4>
                         <p>Text Form fields are wrapped in the <span class="snippet-code">.form-input</span> class.</p>
-                            <ul>
+                            <ul class="sg--list">
                                 <li><span class="snippet-code">.is-focused</span> sets focus state styling</li>
+                                <li><span class="snippet-code">.is-readonly</span> sets read only state styling</li>
                             </ul>
                         <div class="sg--example">
                             <div class="form-input">
                                 <label for="basic">Label:</label>
                                 <input tabindex="0" id="basic" type="text" placeholder="basic">
                             </div>
+                            <div class="form-input is-readonly">
+                                <label for="questionTitle4">Label:</label>
+                                <input tabindex="0" id="questionTitle4" type="text" value="Ready only" disabled>
+                            </div>
 <pre><code class="language-markup">
 &lt;div class="form-input"&gt;
+    &lt;label for="basic"&gt;Label:&lt;/label&gt;
+    &lt;input tabindex="0" id="basic" type="text" placeholder="placeholder"&gt;
+&lt;/div>
+&lt;div class="form-input is-readonly"&gt;
     &lt;label for="basic"&gt;Label:&lt;/label&gt;
     &lt;input tabindex="0" id="basic" type="text" placeholder="placeholder"&gt;
 &lt;/div>
@@ -358,7 +375,7 @@
 
                         <h4>Input with hint</h4>
                         <p>Text Form fields with hints use the <span class="snippet-code">.has-hint</span> class.</p>
-                         <ul>
+                         <ul class="sg--list">
                             <li><span class="snippet-code">.form-hint</span> sets styling for your hint message</li>
                         </ul>
                         <div class="sg--example">
@@ -378,8 +395,8 @@
                        
 
                         <h4>Input with validation</h4>
-                        <p>Text Form fields with validation uste the <span class="snippet-code">.validate</span> class.</p>
-                        <ul>
+                        <p>Text Form fields with validation use the <span class="snippet-code">.validate</span> class.</p>
+                        <ul class="sg--list">
                             <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
                             <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
                         </ul>
@@ -404,59 +421,208 @@
 </code></pre>
                         </div>
                         <h4>Input with validation and hint</h4>
+                        <p>Combine <span class="snippet-code">.has-hint</span> class with <span class="snippet-code">.validate</span> to get validation hints</p>
+                        <ul class="sg--list">
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
+
                         <div class="sg--example">
-                            <span class="form-input validate has-hint is-invalid">
+                            <div class="form-input validate has-hint is-invalid">
                                 <label for="hasErrorMsg">Label:</label>
                                 <input tabindex="0" id="hasErrorMsg" type="text" value="Error with message"><i class="icon-error"></i>
                                 <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
-                            </span>
-                            <span class="form-input validate has-hint is-valid">
+                            </div>
+                            <div class="form-input validate has-hint is-valid">
                                 <label for="hasSuccessHint">Label:</label>
                                 <input tabindex="0" id="hasSuccessHint" type="text" value="Success with message"><i class="icon-check"></i>
                                 <span class="form-hint success is-hidden-with-transition">No diggity. No doubt.</span>
-                            </span>
-                            <span class="form-input is-readonly">
-                                <label for="questionTitle4">Label:</label>
-                                <input tabindex="0" id="questionTitle4" type="text" value="Ready only" disabled>
-                            </span>
-                        
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-input validate has-hint is-invalid&quot;&gt;
+    &lt;label for=&quot;hasErrorMsg&quot;&gt;Label:&lt;/label&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;hasErrorMsg&quot; type=&quot;text&quot; value=&quot;Error with message&quot;&gt;&lt;i class=&quot;icon-error&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;oops! you did it again!&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-input validate has-hint is-valid&quot;&gt;
+    &lt;label for=&quot;hasSuccessHint&quot;&gt;Label:&lt;/label&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;hasSuccessHint&quot; type=&quot;text&quot; value=&quot;Success with message&quot;&gt;&lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint success is-hidden-with-transition&quot;&gt;No diggity. No doubt.&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
                         </div>
                         <h3>Text Area</h3>
+                        <p>Text Area fields are wrapped in the <span class="snippet-code">.form-textarea</span> class. They also follow all the same conventions as the Input Text fields</p>
+                            <ul class="sg--list">
+                                <li><span class="snippet-code">.is-focused</span> sets focus state styling</li>
+                                <li><span class="snippet-code">.is-readonly</span> sets read only state styling</li>
+                                <li><span class="snippet-code">data-autoresize</span> is used by a script that allows the textarea to auto resize based on user input</li>
+                            </ul>
                         <div class="sg--example">
-                            <span class="form-textarea ">
+                            <div class="form-textarea ">
                                 <label for="textareaBasic">Question:</label><textarea row="1" id="textareaBasic" type="text" data-autoresize placeholder="Enter your question"></textarea>
-                            </span>
+                            </div>
+                            <div class="form-textarea is-readonly">
+                                <label for="textareaBasic">Question:</label><textarea row="1" id="textareaBasic" type="text" data-autoresize placeholder="Enter your question" disabled></textarea>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea&quot;&gt;
+    &lt;label for=&quot;textareaBasic&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea row=&quot;1&quot; id=&quot;textareaBasic&quot; type=&quot;text&quot; data-autoresize&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-textarea is-readonly&quot;&gt;
+    &lt;label for=&quot;textareaBasic&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea row=&quot;1&quot; id=&quot;textareaBasic&quot; type=&quot;text&quot; data-autoresize disabled&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
                         </div>
+                        <h4>Text Area with Validation</h4>
+                        <p>Text Area fields with validation use the <span class="snippet-code">.validate</span> class.</p>
+                        <ul class="sg--list">
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
                         <div class="sg--example">
-                            <span class="form-textarea validate is-invalid">
-                                <label for="textareaError">Question:</label><textarea  id="textareaError" type="text" value="Error"></textarea>
+                            <div class="form-textarea validate is-invalid">
+                                <label for="textareaError">Question:</label>
+                                <textarea  id="textareaError" type="text" value="Error"></textarea>
                                 <i class="icon-error"></i>
-                            </span>
+                            </div>
+                            <div class="form-textarea validate is-valid">
+                                <label for="textareaError">Question:</label>
+                                <textarea  id="textareaError" type="text" value="Error"></textarea>
+                                <i class="icon-check"></i>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea validate is-invalid&quot;&gt;
+    &lt;label for=&quot;textareaError&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaError&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-error&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-textarea validate is-valid&quot;&gt;
+    &lt;label for=&quot;textareaError&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaError&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code></pre>
+
                         </div>
+                        <h4>Text Area with Hints</h4>
+                        <p>Text Area fields with hints use the <span class="snippet-code">.has-hint</span> class.</p>
+                        <ul class="sg--list">
+                             <li><span class="snippet-code">.form-hint</span> sets styling for your hint message</li>
+                        </ul>
+                        <div class="sg--example">
+                            <div class="form-textarea has-hint">
+                                <label for="hasHint2">Question:</label>
+                                <textarea  id="hasHint2" type="text" value="Has a hint"></textarea>
+                                <span class="form-hint is-hidden-with-transition">Hint text</span>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea has-hint&quot;&gt;
+    &lt;label for=&quot;hasHint2&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;hasHint2&quot; type=&quot;text&quot; value=&quot;Has a hint&quot;&gt;&lt;/textarea&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;Hint text&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <h4>Text Area with Hint and Validation</h4>
+                        <p>Combine <span class="snippet-code">.has-hint</span> class with <span class="snippet-code">.validate</span> to get validation hints</p>
+                        <ul class="sg--list">
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
                          <div class="sg--example">
-                            <span class="form-textarea validate has-hint is-invalid">
+                            <div class="form-textarea validate has-hint is-invalid">
                                 <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" type="text" value="Error"></textarea>
                                 <i class="icon-error"></i>
                                 <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
-                            </span>
+                            </div>
+                            <div class="form-textarea validate has-hint is-valid">
+                                <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" type="text" value="Error"></textarea>
+                                <i class="icon-check"></i>
+                                <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea validate has-hint is-invalid&quot;&gt;
+    &lt;label for=&quot;textareaErrorHint&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaErrorHint&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-error&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;oops! you did it again!&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-textarea validate has-hint is-valid&quot;&gt;
+    &lt;label for=&quot;textareaErrorHint&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaErrorHint&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;oops! you did it again!&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
                         </div>
                         <h3>Check box</h3>
+                        <p>Checkbox Form fields are wrapped in the <span class="snippet-code">.form-checkbox</span> class.</p>
+                            <ul class="sg--list">
+                                <li><span class="snippet-code">.is-checked</span> sets checked state styling</li>
+                                <li><span class="snippet-code">.is-disabled</span> sets disabled state styling</li>
+                            </ul>
                         <div class="sg--example">
-                            <span class="form-checkbox">
-                                <label for="inputID1"><input tabindex="0" id="inputID1" type="checkbox" placeholder="Placeholder">Check box</label>
-                            </span>
-                            <span class="form-checkbox has-msg">
-                                 <label for="inputID2">
-                                    <input tabindex="0" id="inputID2" type="checkbox" placeholder="Placeholder">Check box 2
-                                 </label>
-                                 <span class="checkbox-msg">Something of a warning</span>
-                             </span>
-                             <span class="form-checkbox has-msg is-disabled">
+                            <div class="form-checkbox">
+                                <label for="inputID1">
+                                    <input tabindex="0" id="inputID1" type="checkbox">Check box
+                                </label>
+                            </div>
+                            <div class="form-checkbox is-disabled">
+                                <label for="inputID2">
+                                    <input tabindex="0" id="inputID2" type="checkbox" disabled>Check box 2
+                                </label>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;label for=&quot;inputID1&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID1&quot; type=&quot;checkbox&quot;&gt;Check box
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-checkbox is-disabled&quot;&gt;
+    &lt;label for=&quot;inputID2&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID2&quot; type=&quot;checkbox&quot; disabled&gt;Check box 2
+    &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <h4>Check box with message</h4>
+                        <p>Checkbox fields with messages use the <span class="snippet-code">.has-msg</span> class.</p>
+                        <ul class="sg--list">
+                             <li><span class="snippet-code">.checkbox-msg</span> sets styling for your message</li>
+                        </ul>
+                        
+                        <div class="sg--example">
+                            <div class="form-checkbox has-msg">
                                  <label for="inputID3">
-                                    <input tabindex="0" id="inputID3" type="checkbox" placeholder="Placeholder" disabled>Check box 3 - Disabled
+                                    <input tabindex="0" id="inputID3" type="checkbox">Check box 3
                                  </label>
-                                 <span class="checkbox-msg" >Something of a warning</span>
-                            </span>
+                                 <span class="checkbox_msg">Something of a warning</span>
+                             </div>
+                             <div class="form-checkbox has-msg is-disabled">
+                                 <label for="inputID4">
+                                    <input tabindex="0" id="inputID4" type="checkbox" disabled>Check box 4 - Disabled
+                                 </label>
+                                 <span class="checkbox_msg" >Something of a warning</span>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-checkbox has-msg&quot;&gt;
+     &lt;label for=&quot;inputID3&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID3&quot; type=&quot;checkbox&quot;&gt;Check box 3
+     &lt;/label&gt;
+     &lt;span class=&quot;checkbox_msg&quot;&gt;Something of a warning&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;form-checkbox has-msg is-disabled&quot;&gt;
+     &lt;label for=&quot;inputID3&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID3&quot; type=&quot;checkbox&quot; disabled&gt;Check box 4 - Disabled
+     &lt;/label&gt;
+     &lt;span class=&quot;checkbox_msg&quot; &gt;Something of a warning&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
                         </div>
                             </div>
                         </section>

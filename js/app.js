@@ -2,11 +2,18 @@
 
 $(document).ready(function(){
 
-	$(".list_item--folder").on("click",function(){
-		var $folder = $(this).parent(".list-row");
-		var $folderItems = $folder.find(".list-sub");
-		$(this).toggleClass("is-open");
+	$(".list_item--folder").on("click",function(e){
+		
+		e.stopImmediatePropagation();
+		$folder = $(this).parent(".list-row");
+		
+		$folderItems = $folder.find(".list-sub");
+		console.log("Toggle Target:");
+		console.log($($folderItems)[0]);
+		
+		// $(this).toggleClass("is-open");
 		$folderItems.toggleClass("is-hidden");
+		
 	});
 
 	$("input[type=text]").focus(function() {

@@ -12,7 +12,7 @@
 	text-align:center;
 	line-height:$btn-height;
 	font-size:14px;
-	color:$color-base;
+	color:$color-primary;
 	&:first-child 
 	{
 		margin-left:0;
@@ -37,7 +37,8 @@
 	}
 	&.primary 
 	{
-		color:$color-primary;
+		
+		font-weight:700;
 	}
 
 	&.is-disabled
@@ -253,6 +254,19 @@
 		margin-right:0;
 	}
 
+}
+
+.btn_badge
+{
+	
+	display:inline-block;
+	min-width:24px;
+	height:24px;
+	background:$bgcolor-base-darken2;
+	border-radius:50%;
+	line-height:24px;
+	margin-left:5px;
+	color:#fff;
 }
 
 .btn-grp
