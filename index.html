@@ -289,7 +289,7 @@
                             <h4>Buttons with icons</h4>
                             <p>Many buttons support icons. To use an icon inside a Button, include <code class="snippet-code">&lt;i class=&quot;icon-someicon&quot;&gt;&lt;/i&gt;</code> inside the button.</p>
                             <ul class="sg--list">
-                                    <li>Add the <code class="snippet-code">.btn_icon-right</code> class to the icon to make appear on the right side</li>
+                                    <li>Add the <code class="snippet-code">.btn_icon-right</code> class to the icon to make appear it on the right side of the button.</li>
                            </ul>  
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
@@ -424,19 +424,30 @@
                             
 
                             
-                             <h4>Round buttons</h4>
-                            <p>Round buttons are primarily used in presentation mode</p>
-                        
-                            <code>.btn--round</code>
+                             <h4>Floating Action buttons</h4>
+                            <p>Floating actions buttons are only used in presentation mode</p>
+                            <p>Flaoting action buttons are defined by the <code class="snippet-code">.btn-round</code> class</p>
+                            
                             
                             <div class="sg--example-container">
                                 <div class="sg--example">
-                                    <button id="playControl" class="btn--round  large play is-active"><i class="icon-pause"></i></button>
-                                    <button class="btn--round large "><i class="icon-done"></i></button>
-                                    <button class="btn--round large "><i class="icon-equalizer"></i></button>
-                                    <button class="btn--round large is-danger"><i class="icon-close"></i></button>
+                                    <span class="btn-grp">
+                                        <button id="playControl" class="btn-round primary"><i class="icon-pause"></i></button>
+                                        <button class="btn-round"><i class="icon-done"></i></button>
+                                        <button class="btn-round is-disabled"><i class="icon-equalizer"></i></button>
+                                        <button class="btn-round danger"><i class="icon-close"></i></button>
+                                    </span>
                                 </div>
+<pre><code class="language-markup">
+&lt;span class=&quot;btn-grp&quot;&gt;
+    &lt;button id=&quot;playControl&quot; class=&quot;btn-round primary&quot;&gt;&lt;i class=&quot;icon-pause&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-round&quot;&gt;&lt;i class=&quot;icon-done&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-round is-disabled&quot;&gt;&lt;i class=&quot;icon-equalizer&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-round danger&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/span&gt;
+</code></pre>
                             </div>
+
                         </div>
                         </section>
                         <a id="sectionForms"></a>

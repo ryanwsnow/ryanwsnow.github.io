@@ -126,14 +126,14 @@
 	}
 }
 
-.btn--round
+.btn-round
 {
-	
+	@include transition(all 0.3s ease-in 0s);
 	@extend .z-depth-2;
 	background:#ffffff;
 	border-radius:50%;
-	height:52px;
-	width:52px;
+	height:72px;
+	width:72px;
 	margin-right:20px;
 	font-size:24px;
 	line-height:52px;
@@ -147,11 +147,6 @@
 	{
 		margin-right:0;
 	}
-	&.large
-	{
-		height:72px;
-		width:72px;
-	}
 
 	&.primary
 	{
@@ -160,7 +155,7 @@
 	}
 	
 
-	&:hover
+	&:hover, &.is-hovered 
 	{
 		// background:$color-highlight;
 		color:$color-highlight;
@@ -173,6 +168,7 @@
 	{
 		background:$color-highlight;
 		color:#fff;
+		@include transition(all 0.3s ease-in 0s);
 	}
 
 	&.is-active
@@ -181,15 +177,22 @@
 		color:#fff;
 		@extend .z-depth-1;
 	}
+	&.is-disabled
+	{
+		color:$color-disabled;
+		@extend .z-depth-1-half;
+	}
 	&.is-active:hover
 	{
 		background:$color-highlight;
 		color:#fff;
 		@extend .z-depth-1;
 	}
-	&:hover.is-danger 
+	&:hover.danger 
 	{
-		color:$color-danger;
+		color:#fff;
+		background-color:$color-danger;
+		@include transition(all 0.3s ease-in 0s);
 	}
 }
 
