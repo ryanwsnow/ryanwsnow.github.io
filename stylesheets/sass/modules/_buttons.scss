@@ -1,6 +1,7 @@
 
 %baseButton
 {
+	@include transition(all 0.3s ease-in 0s);
 	float:left;
 	height:$btn-height;
 	padding:
@@ -31,6 +32,10 @@
 		margin-right:0;
 		padding-right:0;
 	}
+	&:hover, &.is-hovered
+	{
+		color:$color-highlight;
+	}
 	&:hover.danger 
 	{
 		color:$color-danger;
@@ -45,6 +50,16 @@
 	{
 		color:$color-disabled;
 	}
+	> i
+	{
+		float:left;
+		padding-right:5px;
+		&.btn_icon-right
+		{
+			float:right;
+			padding-left:5px;
+		}
+	}
 }
 
 %baseButtonModifiers
@@ -56,12 +71,7 @@
 {
 	&.with-icon
 	{
-		> i
-			{
 
-			float:left;
-			padding-right:10px;
-			}
 
 	}
 	&.with-icon-right
@@ -79,7 +89,7 @@
 
 
 
-.btn--plain
+.btn-flat
 {
 	@extend %baseButton;
 	@extend %baseButton-with-icon;
@@ -87,15 +97,14 @@
 
 
 
-.btn--utility
+.btn-utility
 {
 	@extend %baseButton;
 	@extend %baseButton-with-icon;
 	color:$color-base-lighten2;
-
 }
 
-.btn--default
+.btn-dialog
 {
 	@extend %baseButton;
 	text-transform:uppercase;
@@ -103,22 +112,17 @@
 }
 
 
-.btn--icon-utility
+.btn-utility-icon
 {
 	
 	@extend %baseButton;
-	margin:0px;
+	margin:0; //override basebutton spacing **bad**
 	
 	color:$color-base-lighten2;
 	> i 
 	{
 		padding-left:0;
 		padding-right:0;
-	}
-
-	&.is-active
-	{
-		color:$color-highlight;
 	}
 }
 
@@ -171,9 +175,6 @@
 		color:#fff;
 	}
 
-
-
-
 	&.is-active
 	{
 		background:$color-highlight;
@@ -193,7 +194,7 @@
 }
 
 
-.btn--raised
+.btn-raised
 {
 	@extend %baseButton-with-icon;
 	@include transition(all 0.3s ease-in 0s);
@@ -231,9 +232,6 @@
 		@include button-raised($color-base-lighten1,#fff);
 
 	}
-
-
-
 	&.danger:hover
 	{
 		@include button-raised($color-danger,#fff);
@@ -249,7 +247,8 @@
 	{
 		@include button-raised($color-highlight,#fff);
 	}
-	&.is-last
+
+	&:last-child
 	{
 		margin-right:0;
 	}

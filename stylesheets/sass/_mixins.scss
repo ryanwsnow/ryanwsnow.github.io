@@ -26,6 +26,16 @@
     }
 }
 
+@mixin clear
+{
+  &::after 
+  {
+  clear: both;
+  content: "";
+  display: table
+  }
+}
+
 
 @mixin box-shadow($args1) 
 {
