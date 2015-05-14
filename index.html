@@ -10,7 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/css/prism.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script src="js/materialize.min.js"></script>
@@ -35,7 +35,15 @@
                                 <li><a href="#!">Namespacing</a></li>
                             </ul>
                         </li>
-                        <li class=""><a href="modules.html">Buttons</a></li>
+                        <li class=""><a href="#sectionButtons">Buttons</a></li>
+                        <li class=""><a href="#sectionForms">Forms</a>
+                           <ul class="sg--main-navi_sub">
+                                <li><a href="#!">Inputs</a></li>
+                                <li><a href="#!">Text Area</a></li>
+                                <li><a href="#!">Checkbox</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
             </div>
         </div>
@@ -51,7 +59,7 @@
                             <h3>Categorization</h3>
                             <p>Organizing CSS rules into categories provides guidence on naming, structure and specifity. The following categories will be the basis of writing modular and maintable CSS:</p>
                             
-                            <ul>
+                            <ul class="sg--list">
                                 <li>Layouts</li>
                                 <li>Layout helpers</li>
                                 <li>Modules</li>
@@ -73,7 +81,7 @@
                             <p>If the inherient structure of your module requires positioning (ie: without the positioning it doesn't function as intended) do not use a layout helper.</p>
                             
                             
-                            <div class="sg--example">
+                            <div class="sg--example-container">
                                 <p>A tab navigation is inheriently horizontal.</p>
 
                                 <div class=" row sg--do-dont">
@@ -173,7 +181,7 @@
 
                             <h4>Views</h4>
                             <p>A View is a combination of layouts and modules that form reusable patterns. Even though this concept breaks some of the aforementioned rules it is important to maintaining a consitant design style across our app. Also, by moving some of the module rules into a View, the View can be reused in more instances across all data objects (students, grades, and content items).</p>
-                            <div class="sg--example">
+                            <div class="sg--example-container">
                                 <p>As you can see by keeping context formatting in the grid view we enable it to accept a lot more different types of content. Also, we prevent ourselves from having to sub class the question module for every view we create.</p>
 
                                 <div class=" row sg--do-dont">
@@ -242,94 +250,207 @@
                             
                         </div>
                         </section>
-                        
+                        <a id="sectionButtons"></a>
                         <section class="sg--section">
                             <header class="sg--section_header">
                                 <h2>Buttons</h2>
                             </header>
                             <div class="sg--section_body">
-                            <p>Button classes should be use on the <code >&lt;button&gt;</code>, <code >&lt;a&gt;</code> and <code >&lt;input&gt;</code>element.
-                            
+                            <p>Button classes should be used on the following elements:</p>
+                            <ul class="sg--list">
+                                <li><code class="snippet-code">&lt;button&gt;</code> element (preferred)</li>
+                                <li><code class="snippet-code">&lt;a&gt;</code> element</li>
+                                <li><code class="snippet-code">&lt;input&gt;</code> element</li>
+                            </ul>
+                            <h3>Button Usage</h3>
                              
-                            <h3>Modifiers</h3>
-                            <p>Use modifier classes to alter the style of a button based on state or Usage.</p>
-                            <p>Common state modifiers are: <code>.is-first</code> <code>.is-last</code> <code>.is-disabled</code> <code>.is-active</code> <code>.is-hovered</code> </p>
-                            <p>Common action based modifiers: <code>.primary</code> <code>.danger</code></p>
+                            <h4>State Modifiers</h4>
+                            <p>Use State Modifier classes to alter the style of a button based on it's state.</p>
+                            <p>All buttons will at least have the following State Modifiers:</p>
+                            <ul class="sg--list">
+                                <li><code class="snippet-code">.is-hovered</code></li>
+                                <li><code class="snippet-code">.is-active</code></li>
+                                <li><code class="snippet-code">.is-disabled</code></li>
+                            </ul>
+                            <h4>Action Modifiers</h4>
+                            <p>Use Action Modifier classes to alter the style of a button to inform the user of the type of action.</p>
+                            <p>Common Action Modifiers:</p>
+                            <ul class="sg--list">
+                                <li><code class="snippet-code">.danger</code> is to warn of the potential to destroy information</li>
+                                <li><code class="snippet-code">.primary</code> is to guide the user to the most important action</li>
+                            </ul>                       
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
                                     <h5>Primary modifier</h5>
-                                    <p>The primary modifier should alwasy be used when you have more than one button grouped together. It should only be used on one button. </p>
+                                    <p>The primary modifier should always be used when you have more than one button grouped together. It should only be used on one button. </p>
                                 </div>
                             </div>
-                            <h3>Button Types</h3>
-                            <h4>Default buttons</h4>
-                            <p>Default buttons are used on cards, dialog boxs, and modals</p>
-                            <code>.btn--default</code>
-                            <div class="sg--example note">
-                                <button class="btn--default ">Normal</button>
-                                <button class="btn--default  primary">Primary</button>
-                                <button class="btn btn--default danger">Danger</button>
-                                <button class="btn btn--default is-disabled">Disabled</button>
-                            </div>
-
-                            <h4>Raised buttons</h4>
-                            <p>Raised buttons are used in toolbars or for important call to actions</p>
-                            <code>.btn--raised</code>
-                            
-                            <div class="sg--example">
-                                <button class="btn--raised">Normal</button>
-                                <button class="btn--raised primary">Primary</button>
-                                <button class="btn--raised secondary">Create</button>
-                                <button class="btn--raised alternate">Assign</button>
-                                <button class="btn--raised danger">Danger</button>
-                                <button class="btn--raised is-disabled">Disabled</button>
-                                <button class="btn--raised is-active">Active</button>
-                            </div>
-                            <h4>Utility buttons</h4>
-                            <p>Utility buttons can be used anywhere. By definition they have lower visual importance.</p>
-                            <code>.btn--utility</code>
-                            
-                            <div class="sg--example">
-                                <button class="btn--utility">Normal</button>
-                                
-                                <button class="btn--utility danger">Danger</button>
-                                <button class="btn--utility is-disabled">Disabled</button>
-                                
-                            </div>
-                            <h4>Utility Icon buttons</h4>
-                            <p>Utility icon buttons can be used anywhere. By definition they have lower visual importance.</p>
+                            <h4>Buttons with icons</h4>
+                            <p>Many buttons support icons. To use an icon inside a Button, include <code class="snippet-code">&lt;i class=&quot;icon-someicon&quot;&gt;&lt;/i&gt;</code> inside the button.</p>
+                            <ul class="sg--list">
+                                    <li>Add the <code class="snippet-code">.btn_icon-right</code> class to the icon to make appear it on the right side of the button.</li>
+                           </ul>  
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                    <h5>Do not mix with non icon buttons</h5>
-                                    <p>Utility icon buttons shouldn't be mixed with text buttons as it skews their visual importance</p>
+                                    <h5>Icon usage in buttons</h5>
+                                    <p>Icons create a stronger visual importance. Too many of them in a group creates visual clutter. As well, mixing buttons with icons and buttons without should be avoided as you can inadvertently unbalance the visual importance between the buttons.</p>
+                                </div>
+                               
+                            </div>
+                                             
+                            <div class="sg--example-container note">
+                                <div class="sg--example">
+                                    <span class="btn-grp">
+                                        <button class="btn-flat"><i class="icon-thumb-up"></i>Yay</button>
+                                        <button class="btn-flat"><i class="icon-thumb-down"></i>boo</button>
+                                        <button class="btn-flat"><i class="icon-arrow-drop-down btn_icon-right"></i>Dropdown</button>
+                                    </span>
+                                </div>
+<pre><code class="language-markup"> 
+&lt;span class=&quot;btn-grp&quot;&gt;
+    &lt;button class=&quot;btn-flat&quot;&gt;&lt;i class=&quot;icon-thumb-up&quot;&gt;&lt;/i&gt;Yay&lt;/button&gt;
+    &lt;button class=&quot;btn-flat&quot;&gt;&lt;i class=&quot;icon-thumb-down&quot;&gt;&lt;/i&gt;boo&lt;/button&gt;
+    &lt;button class=&quot;btn-flat&quot;&gt;&lt;i class=&quot;icon-arrow-drop-down btn_icon-right&quot;&gt;&lt;/i&gt;Dropdown&lt;/button&gt;
+&lt;/span&gt;
+</code></pre> 
+                            </div>
+                            <h3>Button Types</h3>
+                            <p>Button types are defined by usage and designed to create clear visual hierarchy. The following button types are listed by visual hierachy from lowest to highest:</p>
+                            <ul class="sg--list">
+                                <li>Utility Buttons</li>
+                                <li>Flat Buttons</li>
+                                <li>Raised Buttons</li>
+                                <li>Floating Action Buttons</li>
+                            </ul>
+                            <h4>Utility buttons</h4>
+                            <p>Utility buttons should be placed in the top right of a module where possible and close to the module’s title. This pattern provides a consistent spot for the user to find these options and associates their functionality with the module . By definition they are low on visual importance as they should always be secondary interactions.</p>
+                            <p>Utility buttons are defined by the <code class="snippet-code">.btn-utility</code> class.</p>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                    <h5>Utility Buttons do NOT have a Primary action</h5>
+                                    <p>By definition Utility buttons are equally weighted in their visual importance and do not contain a primary action modifier.</p>
                                 </div>
                             </div>
-                            <code>.btn--icon-utility</code>
-                            
-                            <div class="sg--example">
-                                <button class="btn btn--icon-utility"><i class="icon-close"></i></button>
-                                
-                                <button class="btn btn--icon-utility"><i class="icon-help"></i></button>
-                                <button class="btn btn--icon-utility"><i class="icon-settings"></i></button>
-                                
+                            <div class="sg--example-container">
+                                <div class="sg--example">
+                                    <span class="btn-grp">
+                                        <button class="btn-utility">Normal</button>
+                                        <button class="btn-utility danger">Danger</button>
+                                        <button class="btn-utility is-disabled">Disabled</button>
+                                    </span>
+                                </div>
+<pre><code class="language-markup">
+&lt;span class=&quot;btn-grp&quot;&gt;
+    &lt;button class=&quot;btn-utility&quot;&gt;Normal&lt;/button&gt;
+    &lt;button class=&quot;btn-utility danger&quot;&gt;Danger&lt;/button&gt;
+    &lt;button class=&quot;btn-utility is-disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;/span&gt; 
+</code></pre>  
                             </div>
-                             <h4>Round buttons</h4>
-                            <p>Round buttons are primarily used in presentation mode</p>
-                        
-                            <code>.btn--round</code>
-                            
-                            <div class="sg--example">
-                                <button id="playControl" class="btn--round  large play is-active"><i class="icon-pause"></i></button>
-                                <button class="btn--round large "><i class="icon-done"></i></button>
-                                <button class="btn--round large "><i class="icon-equalizer"></i></button>
-                                <button class="btn--round large is-danger"><i class="icon-close"></i></button>
-                                
+
+                            <h4>Utility Icon Buttons</h4>
+                            <p>Utility Icon Buttons are defined by the <code class="snippet-code">.btn-utility-icon</code> class.</p>
+                            <div class="sg--callout">
+                                <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
+                                <div class="sg--callout_body">
+                                    <h5>Do not mix with icon buttons with text butons</h5>
+                                    <p>Utility icon buttons shouldn't be mixed with text buttons as it skews their visual importance.</p>
+                                </div>
+                            </div>                          
+                            <div class="sg--example-container">
+                                <div class="sg--example">
+                                    <span class="btn-grp">
+                                        <button class="btn-utility-icon"><i class="icon-close"></i></button>
+                                        <button class="btn-utility-icon danger"><i class="icon-delete"></i></button>
+                                        <button class="btn-utility-icon is-disabled"><i class="icon-help"></i></button>    
+                                    </span>
+                                </div>
+<pre><code class="language-markup">
+&lt;span class=&quot;btn-grp&quot;&gt;
+    &lt;button class=&quot;btn-utility-icon&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-utility-icon danger&quot;&gt;&lt;i class=&quot;icon-delete&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-utility-icon is-disabled&quot;&gt;&lt;i class=&quot;icon-help&quot;&gt;&lt;/i&gt;&lt;/button&gt;    
+&lt;/span&gt;
+</code></pre> 
                             </div>
+                            <h4>Flat Buttons</h4>
+                            <p>Flat buttons are used on <em>listed items, cards, dialog boxes</em>, and <em>modals</em>. They are commonly found in a module’s footer. They have a lower visual importance due to being lower down in the information architecture of the page and being a part of a collection of items.   </p>
+                            <p>Flat Buttons are defined by the <code class="snippet-code">.btn-flat</code> class</p>
+                            
+                            <div class="sg--example-container note">
+                                <div class="sg--example">
+                                    <span class="btn-grp">
+                                        <button class="btn-flat">Normal</button>
+                                        <button class="btn-flat primary">Primary</button>
+                                        <button class="btn-flat danger">Danger</button>
+                                        <button class="btn-flat is-disabled">Disabled</button>
+                                    </span>
+                                </div>
+<pre><code class="language-markup">
+&lt;span class=&quot;btn-grp&quot;&gt;
+    &lt;button class=&quot;btn-flat&quot;&gt;Normal&lt;/button&gt;
+    &lt;button class=&quot;btn-flat primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button class=&quot;btn-flat danger&quot;&gt;Danger&lt;/button&gt;
+    &lt;button class=&quot;btn-flat is-disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;/span&gt;
+</code></pre> 
+                            </div>
+                            <h4>Raised buttons</h4>
+                            <p>Raised buttons are used for the  primary actions of a view and therefore have the highest visual importance. </p>
+                            <p>Raised Buttons are defined by the <code class="snippet-code">.btn-raised</code> class</p>
+                            <div class="sg--example-container">
+                                <div class="sg--example">
+                                    <span class="btn-grp">
+                                        <button class="btn-raised">Normal</button>
+                                        <button class="btn-raised primary">Primary</button>
+                                        <button class="btn-raised secondary">Secondary</button>
+                                        <button class="btn-raised danger">Danger</button>
+                                        <button class="btn-raised is-disabled">Disabled</button> 
+                                    </span>
+                                </div>
+<pre><code class="language-markup">
+&lt;span class=&quot;btn-grp&quot;&gt;
+    &lt;button class=&quot;btn-raised&quot;&gt;Normal&lt;/button&gt;
+    &lt;button class=&quot;btn-raised primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button class=&quot;btn-raised secondary&quot;&gt;Secondary&lt;/button&gt;
+    &lt;button class=&quot;btn-raised danger&quot;&gt;Danger&lt;/button&gt;
+    &lt;button class=&quot;btn-raised is-disabled&quot;&gt;Disabled&lt;/button&gt; 
+&lt;/span&gt;   
+</code></pre>                          
+                            </div>
+                            
+
+                            
+                             <h4>Floating Action buttons</h4>
+                            <p>Floating actions buttons are only used in presentation mode</p>
+                            <p>Flaoting action buttons are defined by the <code class="snippet-code">.btn-round</code> class</p>
+                            
+                            
+                            <div class="sg--example-container">
+                                <div class="sg--example">
+                                    <span class="btn-grp">
+                                        <button id="playControl" class="btn-round primary"><i class="icon-pause"></i></button>
+                                        <button class="btn-round"><i class="icon-done"></i></button>
+                                        <button class="btn-round is-disabled"><i class="icon-equalizer"></i></button>
+                                        <button class="btn-round danger"><i class="icon-close"></i></button>
+                                    </span>
+                                </div>
+<pre><code class="language-markup">
+&lt;span class=&quot;btn-grp&quot;&gt;
+    &lt;button id=&quot;playControl&quot; class=&quot;btn-round primary&quot;&gt;&lt;i class=&quot;icon-pause&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-round&quot;&gt;&lt;i class=&quot;icon-done&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-round is-disabled&quot;&gt;&lt;i class=&quot;icon-equalizer&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn-round danger&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/span&gt;
+</code></pre>
+                            </div>
+
                         </div>
                         </section>
-                        
+                        <a id="sectionForms"></a>
                         <section class="sg--section">
                             <header class="sg--section_header">
                                 <h2>Forms</h2>
@@ -338,34 +459,47 @@
                         
                         <h4>Text Input</h4>
                         <p>Text Form fields are wrapped in the <span class="snippet-code">.form-input</span> class.</p>
-                            <ul>
+                            <ul class="sg--list">
                                 <li><span class="snippet-code">.is-focused</span> sets focus state styling</li>
+                                <li><span class="snippet-code">.is-readonly</span> sets read only state styling</li>
                             </ul>
-                        <div class="sg--example">
-                            <div class="form-input">
-                                <label for="basic">Label:</label>
-                                <input tabindex="0" id="basic" type="text" placeholder="basic">
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-input">
+                                    <label for="basic">Label:</label>
+                                    <input tabindex="0" id="basic" type="text" placeholder="basic">
+                                </div>
+                                <div class="form-input is-readonly">
+                                    <label for="questionTitle4">Label:</label>
+                                    <input tabindex="0" id="questionTitle4" type="text" value="Ready only" disabled>
+                                </div>
                             </div>
 <pre><code class="language-markup">
-&lt;div class="form-input"&gt;
-    &lt;label for="basic"&gt;Label:&lt;/label&gt;
-    &lt;input tabindex="0" id="basic" type="text" placeholder="placeholder"&gt;
-&lt;/div>
-
+&lt;div class=&quot;form-input&quot;&gt;
+    &lt;label for=&quot;basic&quot;&gt;Label:&lt;/label&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;basic&quot; type=&quot;text&quot; placeholder=&quot;basic&quot;&gt;
+&lt;/div&gt;
+&lt;!-- Read Only --&gt;
+&lt;div class=&quot;form-input is-readonly&quot;&gt;
+    &lt;label for=&quot;questionTitle4&quot;&gt;Label:&lt;/label&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;questionTitle4&quot; type=&quot;text&quot; value=&quot;Ready only&quot; disabled&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
 
 
                         <h4>Input with hint</h4>
                         <p>Text Form fields with hints use the <span class="snippet-code">.has-hint</span> class.</p>
-                         <ul>
+                         <ul class="sg--list">
                             <li><span class="snippet-code">.form-hint</span> sets styling for your hint message</li>
                         </ul>
-                        <div class="sg--example">
-                            <div class="form-input has-hint">
-                                <label for="basicHint">Label:</label>
-                                <input tabindex="0" id="basicHint" type="text" placeholder="placeholder">
-                                <span class="form-hint is-hidden-with-transition">Hint Text</span>
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-input has-hint">
+                                    <label for="basicHint">Label:</label>
+                                    <input tabindex="0" id="basicHint" type="text" placeholder="placeholder">
+                                    <span class="form-hint is-hidden-with-transition">Hint Text</span>
+                                </div>
                             </div>
 <pre><code class="language-markup">
 &lt;div class="form-input has-hint"&gt;
@@ -378,20 +512,22 @@
                        
 
                         <h4>Input with validation</h4>
-                        <p>Text Form fields with validation uste the <span class="snippet-code">.validate</span> class.</p>
-                        <ul>
+                        <p>Text Form fields with validation use the <span class="snippet-code">.validate</span> class.</p>
+                        <ul class="sg--list">
                             <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
                             <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
                         </ul>
-                        <div class="sg--example">
-                            <div class="form-input validate is-invalid">
-                                <label for="hasError">Label:</label>
-                                <input tabindex="0" id="hasError" type="text" value="Error"><i class="icon-error"></i>
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-input validate is-invalid">
+                                    <label for="hasError">Label:</label>
+                                    <input tabindex="0" id="hasError" type="text" value="Error"><i class="icon-error"></i>
+                                </div>
+                                 <div class="form-input validate is-valid">
+                                    <label for="hasSuccess">Label:</label>
+                                    <input tabindex="0" id="hasSuccess" type="text" value="Success"><i class="icon-check"></i>
+                                </div>
                             </div>
-                             <span class="form-input validate is-valid">
-                                <label for="hasSuccess">Label:</label>
-                                <input tabindex="0" id="hasSuccess" type="text" value="Success"><i class="icon-check"></i>
-                            </span>
 <pre><code class="language-markup">
 &lt;div class="form-input validate is-invalid"&gt;
     &lt;label for="hasError"&gt;Label:&lt;/label&gt;
@@ -404,55 +540,222 @@
 </code></pre>
                         </div>
                         <h4>Input with validation and hint</h4>
-                        <div class="sg--example">
-                            <span class="form-input validate has-hint is-invalid">
-                                <label for="hasErrorMsg">Label:</label>
-                                <input tabindex="0" id="hasErrorMsg" type="text" value="Error with message"><i class="icon-error"></i>
-                                <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
-                            </span>
-                            <span class="form-input validate has-hint is-valid">
-                                <label for="hasSuccessHint">Label:</label>
-                                <input tabindex="0" id="hasSuccessHint" type="text" value="Success with message"><i class="icon-check"></i>
-                                <span class="form-hint success is-hidden-with-transition">No diggity. No doubt.</span>
-                            </span>
-                            <span class="form-input is-readonly">
-                                <label for="questionTitle4">Label:</label>
-                                <input tabindex="0" id="questionTitle4" type="text" value="Ready only" disabled>
-                            </span>
-                        
+                        <p>Combine <span class="snippet-code">.has-hint</span> class with <span class="snippet-code">.validate</span> to get validation hints</p>
+                        <ul class="sg--list">
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
+
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-input validate has-hint is-invalid">
+                                    <label for="hasErrorMsg">Label:</label>
+                                    <input tabindex="0" id="hasErrorMsg" type="text" value="Error with message"><i class="icon-error"></i>
+                                    <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
+                                </div>
+                                <div class="form-input validate has-hint is-valid">
+                                    <label for="hasSuccessHint">Label:</label>
+                                    <input tabindex="0" id="hasSuccessHint" type="text" value="Success with message"><i class="icon-check"></i>
+                                    <span class="form-hint success is-hidden-with-transition">No diggity. No doubt.</span>
+                                </div>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-input validate has-hint is-invalid&quot;&gt;
+    &lt;label for=&quot;hasErrorMsg&quot;&gt;Label:&lt;/label&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;hasErrorMsg&quot; type=&quot;text&quot; value=&quot;Error with message&quot;&gt;&lt;i class=&quot;icon-error&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;oops! you did it again!&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-input validate has-hint is-valid&quot;&gt;
+    &lt;label for=&quot;hasSuccessHint&quot;&gt;Label:&lt;/label&gt;
+    &lt;input tabindex=&quot;0&quot; id=&quot;hasSuccessHint&quot; type=&quot;text&quot; value=&quot;Success with message&quot;&gt;&lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint success is-hidden-with-transition&quot;&gt;No diggity. No doubt.&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
                         </div>
                         <h3>Text Area</h3>
-                        <div class="sg--example">
-                            <span class="form-textarea ">
-                                <label for="textareaBasic">Question:</label><textarea  id="textareaBasic" type="text" data-autoresize placeholder="Enter your question"></textarea>
-                            </span>
+                        <p>Text Area fields are wrapped in the <span class="snippet-code">.form-textarea</span> class. They also follow all the same conventions as the Input Text fields</p>
+                            <ul class="sg--list">
+                                <li><span class="snippet-code">.is-focused</span> sets focus state styling</li>
+                                <li><span class="snippet-code">.is-readonly</span> sets read only state styling</li>
+                                <li><span class="snippet-code">data-autoresize</span> is used by a script that allows the textarea to auto resize based on user input</li>
+                            </ul>
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-textarea ">
+                                    <label for="textareaBasic">Question:</label><textarea row="1" id="textareaBasic" type="text" data-autoresize placeholder="Enter your question"></textarea>
+                                </div>
+                                <div class="form-textarea is-readonly">
+                                    <label for="textareaBasic">Question:</label><textarea row="1" id="textareaBasic" type="text" data-autoresize placeholder="Enter your question" disabled></textarea>
+                                </div>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea&quot;&gt;
+    &lt;label for=&quot;textareaBasic&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea row=&quot;1&quot; id=&quot;textareaBasic&quot; type=&quot;text&quot; data-autoresize&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-textarea is-readonly&quot;&gt;
+    &lt;label for=&quot;textareaBasic&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea row=&quot;1&quot; id=&quot;textareaBasic&quot; type=&quot;text&quot; data-autoresize disabled&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
                         </div>
-                        <div class="sg--example">
-                            <span class="form-textarea validate is-invalid">
-                                <label for="textareaError">Question:</label><textarea  id="textareaError" type="text" value="Error"></textarea>
-                                <i class="icon-error"></i>
-                            </span>
-                        </div>
-                         <div class="sg--example">
-                            <span class="form-textarea validate has-hint is-invalid">
-                                <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" type="text" value="Error"></textarea>
-                                <i class="icon-error"></i>
-                                <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
-                            </span>
-                        </div>
-                      
+                        <h4>Text Area with Validation</h4>
+                        <p>Text Area fields with validation use the <span class="snippet-code">.validate</span> class.</p>
+                        <ul class="sg--list">
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-textarea validate is-invalid">
+                                    <label for="textareaError">Question:</label>
+                                    <textarea  id="textareaError" type="text" value="Error"></textarea>
+                                    <i class="icon-error"></i>
+                                </div>
+                                <div class="form-textarea validate is-valid">
+                                    <label for="textareaError">Question:</label>
+                                    <textarea  id="textareaError" type="text" value="Error"></textarea>
+                                    <i class="icon-check"></i>
+                                </div>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea validate is-invalid&quot;&gt;
+    &lt;label for=&quot;textareaError&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaError&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-error&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-textarea validate is-valid&quot;&gt;
+    &lt;label for=&quot;textareaError&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaError&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code></pre>
 
+                        </div>
+                        <h4>Text Area with Hints</h4>
+                        <p>Text Area fields with hints use the <span class="snippet-code">.has-hint</span> class.</p>
+                        <ul class="sg--list">
+                             <li><span class="snippet-code">.form-hint</span> sets styling for your hint message</li>
+                        </ul>
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-textarea has-hint">
+                                    <label for="hasHint2">Question:</label>
+                                    <textarea  id="hasHint2" type="text" value="Has a hint"></textarea>
+                                    <span class="form-hint is-hidden-with-transition">Hint text</span>
+                                </div>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea has-hint&quot;&gt;
+    &lt;label for=&quot;hasHint2&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;hasHint2&quot; type=&quot;text&quot; value=&quot;Has a hint&quot;&gt;&lt;/textarea&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;Hint text&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <h4>Text Area with Hint and Validation</h4>
+                        <p>Combine <span class="snippet-code">.has-hint</span> class with <span class="snippet-code">.validate</span> to get validation hints</p>
+                        <ul class="sg--list">
+                            <li><span class="snippet-code">.is-valid</span> sets styling for valid input</li>
+                            <li><span class="snippet-code">.is-invalid</span> sets styling for invalid input</li>
+                        </ul>
+                         <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-textarea validate has-hint is-invalid">
+                                    <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" type="text" value="Error"></textarea>
+                                    <i class="icon-error"></i>
+                                    <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
+                                </div>
+                                <div class="form-textarea validate has-hint is-valid">
+                                    <label for="textareaErrorHint">Question:</label><textarea  id="textareaErrorHint" type="text" value="Error"></textarea>
+                                    <i class="icon-check"></i>
+                                    <span class="form-hint is-hidden-with-transition">oops! you did it again!</span>
+                                </div>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-textarea validate has-hint is-invalid&quot;&gt;
+    &lt;label for=&quot;textareaErrorHint&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaErrorHint&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-error&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;oops! you did it again!&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-textarea validate has-hint is-valid&quot;&gt;
+    &lt;label for=&quot;textareaErrorHint&quot;&gt;Question:&lt;/label&gt;
+    &lt;textarea  id=&quot;textareaErrorHint&quot; type=&quot;text&quot; value=&quot;Error&quot;&gt;&lt;/textarea&gt;
+    &lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;form-hint is-hidden-with-transition&quot;&gt;oops! you did it again!&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+                        </div>
                         <h3>Check box</h3>
-                        <div class="sg--example">
-                            <span class="form-checkbox">
-                                
-                                <label for="inputID1"><input tabindex="0" id="inputID1" type="checkbox" placeholder="Placeholder">Check box</label>
-                            </span>
-                            <span class="form-checkbox">
-                                
-                                <label for="inputID2"><input tabindex="0" id="inputID2" type="checkbox" placeholder="Placeholder">Check box 2</label>
-                            </span>
-                            
+                        <p>Checkbox Form fields are wrapped in the <span class="snippet-code">.form-checkbox</span> class.</p>
+                            <ul class="sg--list">
+                                <li><span class="snippet-code">.is-checked</span> sets checked state styling</li>
+                                <li><span class="snippet-code">.is-disabled</span> sets disabled state styling</li>
+                            </ul>
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-checkbox">
+                                    <label for="inputID1">
+                                        <input tabindex="0" id="inputID1" type="checkbox">Check box
+                                    </label>
+                                </div>
+                                <div class="form-checkbox is-disabled">
+                                    <label for="inputID2">
+                                        <input tabindex="0" id="inputID2" type="checkbox" disabled>Check box 2
+                                    </label>
+                                </div>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;label for=&quot;inputID1&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID1&quot; type=&quot;checkbox&quot;&gt;Check box
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-checkbox is-disabled&quot;&gt;
+    &lt;label for=&quot;inputID2&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID2&quot; type=&quot;checkbox&quot; disabled&gt;Check box 2
+    &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <h4>Check box with message</h4>
+                        <p>Checkbox fields with messages use the <span class="snippet-code">.has-msg</span> class.</p>
+                        <ul class="sg--list">
+                             <li><span class="snippet-code">.checkbox-msg</span> sets styling for your message</li>
+                        </ul>
+                        
+                        <div class="sg--example-container">
+                            <div class="sg--example">
+                                <div class="form-checkbox has-msg">
+                                     <label for="inputID3">
+                                        <input tabindex="0" id="inputID3" type="checkbox">Check box 3
+                                     </label>
+                                     <span class="checkbox_msg">Something of a warning</span>
+                                 </div>
+                                 <div class="form-checkbox has-msg is-disabled">
+                                     <label for="inputID4">
+                                        <input tabindex="0" id="inputID4" type="checkbox" disabled>Check box 4 - Disabled
+                                     </label>
+                                     <span class="checkbox_msg" >Something of a warning</span>
+                                </div>
+                            </div>
+<pre><code class="language-markup">
+&lt;div class=&quot;form-checkbox has-msg&quot;&gt;
+     &lt;label for=&quot;inputID3&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID3&quot; type=&quot;checkbox&quot;&gt;Check box 3
+     &lt;/label&gt;
+     &lt;span class=&quot;checkbox_msg&quot;&gt;Something of a warning&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;form-checkbox has-msg is-disabled&quot;&gt;
+     &lt;label for=&quot;inputID3&quot;&gt;
+        &lt;input tabindex=&quot;0&quot; id=&quot;inputID3&quot; type=&quot;checkbox&quot; disabled&gt;Check box 4 - Disabled
+     &lt;/label&gt;
+     &lt;span class=&quot;checkbox_msg&quot; &gt;Something of a warning&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
                         </div>
                             </div>
                         </section>

@@ -12,7 +12,6 @@
 @import "layouts/base";
 
 
-
 //modules
 @import "modules/navigations";
 @import "modules/buttons";
@@ -46,6 +45,7 @@
 body 
 {
 	font-size:18px;
+	color:$color-base;
 }
 
 h1,h2,h3,h4,h5 
@@ -89,9 +89,6 @@ h2
 {
 	font-size:3.157em;
 	font-weight:600;
-
-	
-
 }
 
 h3
@@ -119,17 +116,29 @@ h5
 
 }
 
+.sg--list 
+{
+	list-style-type:none;
+	> li 
+	{
+		border-left:3px solid $color-highlight;
+		padding-left:20px;
+		line-height:1.6em;
+	}
+	
+}
+
 
 .snippet-code
 {
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
-	color:$color-alternate;
+	color:$color-highlight;
 	padding:5px;
 	border-radius:3px;
 	margin-left:5px;
 	margin-right:5px;
 	font-size:14px;
-	background:lighten($color-alternate,28%);
+	background:lighten($color-highlight,43%);
 }
 .tbd
 {
@@ -153,6 +162,7 @@ h5
 
 
 }
+
 .sg--sidebar_header
 {
 	
@@ -190,22 +200,30 @@ h5
 	padding-left:250px;
 	overflow-y:auto;
 	position:relative;
-	z-index:400;
+	
 
 
 }
 
 .sg--main_container 
 {
-	@extend .z-depth-1;
-	z-index:4;
+	border-left:1px solid $color-disabled;
+	
 	padding-bottom:30px;
 	background:$bgcolor-base-lighten1;
 
 }
 
 
+.sg--divider
+{
+	@include clear;
+	width:100%;
+	height:10px;
+	margin-top:10px;
+	border-top:1px solid $color-disabled;
 
+}
 
 .clear-list-style 
 {
@@ -225,15 +243,18 @@ h5
 	pre
 	{
 
+		
 		position:relative;
 		display:block;
-		margin-top:20px;
+		width:100%;
+		
+		margin-bottom:0;
 		padding:5px;
 		padding-top:32px;
-		border-radius:3px;
+		
 		font-size:12px;
 		overflow-x: hidden;
-		border:1px solid $color-base-lighten3;
+		border-top:1px solid $color-base-lighten3;
 		background:$bgcolor-base-lighten1
 		;
 		&:before
@@ -377,14 +398,13 @@ h5
 
 
 
-.sg--example
+.sg--example-container
 {
-	@include clearfix;
-
+	
 	display:table;
 	width:100%;
 	position:relative;
-	padding:20px;
+	
 	padding-top:60px;
 	margin-top:20px;
 	margin-bottom:20px;
@@ -395,7 +415,8 @@ h5
 
 }
 
-.sg--example:after
+
+.sg--example-container:after
 {
 	position: absolute;
 	  top: 15px;
@@ -407,11 +428,13 @@ h5
 	  content: "Example";
 }
 
-
-.sg--example-container
+.sg--example
 {
-	width:80%;
+	@include clear;
+	padding:20px;
+	width:100%;
 }
+
 
 .sg--main-navi
 {

@@ -10,7 +10,7 @@
 	<link href="stylesheets/css/bootstrap.min.css" rel="stylesheet">
 
 	<link href="stylesheets/css/app.css" rel="stylesheet">
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	 <script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 
@@ -22,13 +22,13 @@
 	<div class="content-preview">
 		<div class="content-preview_header">
 			<div class="content-preview_header_action">
-				<button onclick="location.href = 'course.html';" id="previewClose" class="btn--icon-utility is-first">
+				<button onclick="location.href = 'course.html';" id="previewClose" class="btn-utility-icon is-first">
 					<i class="icon-close"></i>
 				</button>
 			</div>
 			<div class="content-preview_header_utility-bar">
-				<button class="btn btn--utility is-first" href="#">Edit</button>
-				<button  class="btn btn--utility danger is-last" href="#">Delete</button>
+				<button class="btn btn-utility is-first" href="#">Edit</button>
+				<button  class="btn btn-utility danger is-last" href="#">Delete</button>
 			</div>
 				<div class="content-preview_header_body">
 				
@@ -49,14 +49,14 @@
 				</div>
 				<div class="content-preview_header_cta">
 						
-						<button class="dropdown-button btn btn--raised is-first" data-activates="dropdown2" >Assign</button>
+						<button class="dropdown-button btn btn-raised is-first" data-activates="dropdown2" >Assign</button>
 						<ul   id="dropdown2" class="dropdown-content menu">
-						     <li><a class="btn--plain" href="#!">Homework</a></li>
-						    <li><a class="btn--plain" href="#!">Review</a></li>
+						     <li><a class="btn-flat" href="#!">Homework</a></li>
+						    <li><a class="btn-flat" href="#!">Review</a></li>
 						    
 						    
 					    	</ul>
-						<button onclick="location.href = 'present.html';" class="dropdown-button btn btn--raised primary is-last">Present</button>
+						<button onclick="location.href = 'present.html';" class="dropdown-button btn btn-raised primary is-last">Present</button>
 						
 				</div>
 		</div><!-- content-preview_header END-->
@@ -79,7 +79,7 @@
 							</div>
 							<div class="discussion-card_footer">
 								<span class="discussion-card_footer-actions">									
-									<button class="btn--plain primary is-last">Reply</button>					
+									<button class="btn-flat primary is-last"><i class="icon-comment"></i>Reply</button>					
 								</span>
 							</div>
 						</div> <!-- discussion-card END -->
@@ -94,16 +94,16 @@
 									</span>
 							</div>
 							<div class="discussion-card_body">
-								<span class="form-input">
-        								<label class="label-icon" for="questionDescription"><i class="icon-edit"></i></label><textarea id="textarea1" class="materialize-textarea"  id="questionDescription" type="text" placeholder="Enter your reply..."></textarea>
+								<span class="form-textarea">
+        								<label class="label-icon" for="questionDescription"><i class="icon-edit"></i></label><textarea id="textarea1" id="questionDescription" type="text" placeholder="Enter your reply..."></textarea>
     								</span>
 							</div>
 							<div class="discussion-card_footer">
-								<button class="btn--plain danger">Attach Canvas</button>
+								<button class="btn-flat">Attach Canvas</button>
 								<span class="discussion-card_footer-actions">
-									<button class="btn--plain danger">Cancel</button>
+									<button class="btn-flat danger">Cancel</button>
 
-									<button class="btn--plain primary is-last">Post</button>					
+									<button class="btn-flat primary is-last">Post</button>					
 								</span>
 							</div>
 						</div>
@@ -119,8 +119,8 @@
 									<span class="time-stamp">Mar 8 @ 9:22</span>
 
 									<span class="discussion-card_header-utility">
-										<button class="btn--icon-utility danger"><i class="icon-flag"></i></button>
-										<button class="btn--icon-utility danger is-last"><i class="icon-delete"></i></button>
+										<button class="btn-utility-icon danger"><i class="icon-flag"></i></button>
+										<button class="btn-utility-icon danger is-last"><i class="icon-delete"></i></button>
 									</span>								
 								</div>
 								<div class="discussion-card_body">
@@ -128,13 +128,10 @@
 									condimentum elit vel, consequat hendrerit ligula. Nam at ante cursus, scelerisque mauris in, sagittis metus. Maecenas facilisis nulla id massa volutpat, sed volutpat ipsum commodo. Aenean sit amet nibh fringilla
 								</div>
 								<div class="discussion-card_footer">
-									
-
 									<span class="discussion-card_footer-actions">
-										
-										<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
-									<button class="btn--plain primary">Comment</button>
-									<span class="badge small withtext">0</span>
+										<button class="btn-flat with-icon"><i class="icon-thumb-up"></i>Like<span class="btn_badge">4</span></button>
+									<button class="btn-flat primary"><i class="icon-comment"></i>Comment<span class="btn_badge">0</span></button>
+									
 									
 									</span>
 								</div>
@@ -150,8 +147,8 @@
 											<span class="time-stamp">Mar 8 @ 10:22</span>
 
 											<span class="discussion-card_header-utility">
-												<button class="btn--icon-utility danger"><i class="icon-flag"></i></button>
-												<button class="btn--icon-utility danger is-last"><i class="icon-delete"></i></button>
+												<button class="btn-utility-icon danger"><i class="icon-flag"></i></button>
+												<button class="btn-utility-icon danger is-last"><i class="icon-delete"></i></button>
 											</span>								
 										</div>
 										<div class="discussion-card_body">
@@ -163,7 +160,7 @@
 
 											<span class="discussion-card_footer-actions">
 												
-												<button class="btn--plain with-icon"><i class="icon-thumb-up"></i>Like</button><span class="badge small ">4</span>
+												<button class="btn-flat with-icon"><i class="icon-thumb-up"></i>Like<span class="btn_badge">0</span></button>
 											
 											
 											</span>
@@ -185,7 +182,7 @@
     <div class="th-modal_container">
       <div class="th-modal_header">
       	  <span class="th-modal_header_action">
-        		<button class="btn btn--icon-utility is-last"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+        		<button class="btn btn-utility-icon is-last"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
     	</span>
         <h4 class="th-modal_title" id="myModalLabel">Create Question</h4>
 
@@ -207,7 +204,7 @@
 					<span class="form-input"><input id="answerA" type="text" placeholder="Description"></span>
 				</div>
 				<span class="q-answer_item_cell-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
-				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+				<span class="q-answer_item_cell-control"><button class="btn btn-utility-icon danger"><i class="icon-close"></i></button></span>
 			</div>
 		
 		
@@ -215,11 +212,11 @@
 				<span class="q-answer_item_cell-label">B</span>
 				<div class="q-answer_item_cell-description"><span class="form-input"><input id="answerB" type="text" placeholder="Descriptoin"></span></div>
 				<span class="q-answer_item_cell-correct"><label><input type="checkbox" name="Question 1" value="selected">Correct Answer</label></span>
-				<span class="q-answer_item_cell-control"><button class="btn btn--icon-utility danger"><i class="icon-close"></i></button></span>
+				<span class="q-answer_item_cell-control"><button class="btn btn-utility-icon danger"><i class="icon-close"></i></button></span>
 			</div>
 	
 		</div>
-		<button class="btn--plain with-icon primary is-first"><i class="icon-add-circle"></i>Add Another</button>
+		<button class="btn-flat with-icon primary is-first"><i class="icon-add-circle"></i>Add Another</button>
       </div>
       <div class="th-modal_section">
     		<h5 class="th-modal_section-header">Some other options</h5>
@@ -228,8 +225,8 @@
     </div>
     <div class="th-modal_footer">
     	<span class="right">
-        <button type="button" class="btn--default" data-dismiss="modal">back</button>
-        <button type="button" class="btn--default primary is-last">Save</button>
+        <button type="button" class="btn-dialog" data-dismiss="modal">back</button>
+        <button type="button" class="btn-dialog primary is-last">Save</button>
       </div>
   </span>
   </div>
@@ -243,7 +240,7 @@
     <div class="th-modal_container">
       <div class="th-modal_header">
       	<span class="th-modal_header_action">
-        	<button class="btn--icon-utility is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+        	<button class="btn-utility-icon is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
     	</span>
         <h4 class="th-modal_title" id="myModalLabel">Move to...</h4>
       </div>
@@ -252,22 +249,22 @@
    	
    		<!-- <h5 class="th-modal_section-header">Choose a folder</h5> -->
 	      	<ol class="menu--folders ">
-	      		<li class="menu--folders_item-breadcrumb"><a class="btn--plain with-icon" href="#!"> <i class="icon-arrow-back"></i>Week 1</a>
+	      		<li class="menu--folders_item-breadcrumb"><a class="btn-flat with-icon" href="#!"> <i class="icon-arrow-back"></i>Week 1</a>
 	    
 	      	</li>
 	<!--       		<li class="menu--folders_item "><a href="#!"><span class="badge">6</span></i> Selected item(s) Place here</a> -->
 	
 
-	      		<li class="menu--folders_item"><button class="btn--plain with-icon"><i class="icon-folder"></i>Homework</button></li>
-	      		<li class="menu--folders_item"><a class="btn--plain with-icon"href="#"><i class="icon-folder"></i>Review</a></li>
-	      		<li class="menu--folders_item-placeholder"><a  class="btn--plain with-icon primary" href="#!"><i class="icon-keyboard-tab"></i>Move here</a></li>
+	      		<li class="menu--folders_item"><button class="btn-flat with-icon"><i class="icon-folder"></i>Homework</button></li>
+	      		<li class="menu--folders_item"><a class="btn-flat with-icon"href="#"><i class="icon-folder"></i>Review</a></li>
+	      		<li class="menu--folders_item-placeholder"><a  class="btn-flat with-icon primary" href="#!"><i class="icon-keyboard-tab"></i>Move here</a></li>
     		
 	      	</ol>
     </div>
     <div class="th-modal_footer">
     	<span class="right">
-        <button type="button" class="btn btn--default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn--default primary is-last">Move</button>
+        <button type="button" class="btn btn-dialog" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-dialog primary is-last">Move</button>
     </span>
       </div>
   </div>
@@ -280,7 +277,7 @@
     <div class="th-modal_container">
       <div class="th-modal_header">
       	<span class="th-modal_header_action">
-        	<button class="btn--icon-utility is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+        	<button class="btn-utility-icon is-last right"type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
     	</span>
         <h4 class="th-modal_title" id="myModalLabel">Move to...</h4>
       </div>
@@ -292,8 +289,8 @@
     </div>
     <div class="th-modal_footer">
     	<span class="right">
-        <button type="button" class="btn btn--default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn--default primary is-last">Save</button>
+        <button type="button" class="btn btn-dialog" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-dialog primary is-last">Save</button>
     </span>
       </div>
   </div>
@@ -302,4 +299,9 @@
 
 
 </body>
+        <script src="js/autosize.min.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+        autosize(document.querySelectorAll('textarea'));
+    </script>
 </html>

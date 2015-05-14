@@ -2,11 +2,18 @@
 
 $(document).ready(function(){
 
-	$(".list_item--folder").on("click",function(){
-		var $folder = $(this).parent(".list-row");
-		var $folderItems = $folder.find(".list-sub");
-		$(this).toggleClass("is-open");
+	$(".list_item--folder").on("click",function(e){
+		
+		e.stopImmediatePropagation();
+		$folder = $(this).parent(".list-row");
+		
+		$folderItems = $folder.find(".list-sub");
+		console.log("Toggle Target:");
+		console.log($($folderItems)[0]);
+		
+		// $(this).toggleClass("is-open");
 		$folderItems.toggleClass("is-hidden");
+		
 	});
 
 	$("input[type=text]").focus(function() {
@@ -69,10 +76,10 @@ $(document).ready(function(){
 	$("input[type=checkbox]").on("click",function(){
 		
 		if($(this).prop("checked")) {
-			$(this).parent("label").addClass("is-checked");
+			$(this).parent().parent(".form-checkbox").addClass("is-checked");
 		}
 		else {
-			$(this).parent("label").removeClass("is-checked");
+			$(this).parent().parent(".form-checkbox").removeClass("is-checked");
 		}
 	});
 

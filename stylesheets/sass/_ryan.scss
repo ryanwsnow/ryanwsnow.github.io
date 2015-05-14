@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 .badge 
 {
 	float:left;
@@ -25,11 +19,10 @@
 		font-size:12px;
 		margin-top:4px;
 		line-height:24px;
-	}
-	&.withtext
-	{
+		margin-left:10px;
 		margin-right:0;
 	}
+
 
 	&.highlight 
 	{
