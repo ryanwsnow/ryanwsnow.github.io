@@ -1,0 +1,89 @@
+
+.pages_content
+{
+	width:725px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:20px;
+	h1,h2,h3,h4,h5 
+	{
+
+		
+		margin-top:1.414em;
+		margin-bottom:0.5em;
+		line-height:1.2em;
+		padding:0;
+		font-weight:400;
+		color:$color-base;
+		&:first-child
+		{
+			margin-top:0;
+		}
+	}
+
+	p 
+	{
+		font-size:1em;
+		color:$color-base;
+		line-height:1.4em;
+		padding:0;
+		margin-top:0;
+		margin-bottom:1.3em;
+		&:last-child
+		{
+			margin-bottom:0;
+		}
+
+		&.introduction
+		{
+			font-size:1.25em;
+			color:$color-base-lighten1;
+		}
+
+	}
+
+	h1 
+	{
+		font-size:3.157em;
+		font-weight:600;
+	}
+
+	h2
+	{
+
+		font-size:2.369em;
+		font-size:1.953em;
+		font-weight:600;
+		
+		
+	}
+	h3
+	{
+
+		font-size:1.777em;
+		font-size:1.563em; // prefect 3rd
+		font-weight:600;
+		
+	}
+	h4
+	{
+		font-size:1.333em;
+		font-size:1.25em;
+		font-weight:600;
+
+	}
+}
+
+.pages_body
+{
+	
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+

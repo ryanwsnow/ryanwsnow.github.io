@@ -1,4 +1,4 @@
-.z-depth-1, a.nav--tab-card_item.is-active, .btn-round.is-active, .btn-round.is-active:hover, .card--thumb, .card--present, .searchbar, .dropdown-content {
+.z-depth-1, a.nav--tab-card_item.is-active, .btn-round:active, .btn-round.is-active, .btn-round.is-active:hover, .card--thumb, .card--present, .searchbar, .dropdown-content {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
@@ -2565,10 +2565,12 @@ a.nav--tab-pill_item {
   width: 100%;
   text-align: left;
   color: #708493; }
-.menu > .is-selected, .menu--folders > .is-selected {
-  background: #dbf8ff; }
+.menu > li > a:hover, .menu--folders > li > a:hover {
+  color: #708493; }
+.menu > .is-selected > a, .menu--folders > .is-selected > a {
+  color: #199bfd; }
 .menu > .is-hovered, .menu--folders > .is-hovered {
-  background: #f0f0f0; }
+  background-color: #f2f2f2; }
 
 .menu--folders {
   background: #f0f0f0;
@@ -2611,12 +2613,13 @@ a.nav--tab-pill_item {
   .btn-flat:last-of-type, .btn-utility:last-of-type, .btn-dialog:last-of-type, .btn-utility-icon:last-of-type {
     margin-right: 0;
     padding-right: 0; }
+  .primary.btn-flat, .primary.btn-utility, .primary.btn-dialog, .primary.btn-utility-icon {
+    color: #199bfd;
+    font-weight: 700; }
   .btn-flat:hover, .btn-utility:hover, .btn-dialog:hover, .btn-utility-icon:hover, .is-hovered.btn-flat, .is-hovered.btn-utility, .is-hovered.btn-dialog, .is-hovered.btn-utility-icon {
     color: #0ac8f4; }
   .btn-flat:hover.danger, .btn-utility:hover.danger, .btn-dialog:hover.danger, .btn-utility-icon:hover.danger {
     color: #fd194f; }
-  .primary.btn-flat, .primary.btn-utility, .primary.btn-dialog, .primary.btn-utility-icon {
-    font-weight: 700; }
   .is-disabled.btn-flat, .is-disabled.btn-utility, .is-disabled.btn-dialog, .is-disabled.btn-utility-icon {
     color: #d9dde1; }
   .btn-flat > i, .btn-utility > i, .btn-dialog > i, .btn-utility-icon > i {
@@ -2625,6 +2628,15 @@ a.nav--tab-pill_item {
     .btn-flat > i.btn_icon-right, .btn-utility > i.btn_icon-right, .btn-dialog > i.btn_icon-right, .btn-utility-icon > i.btn_icon-right {
       float: right;
       padding-left: 5px; }
+  .btn-flat > .btn_badge, .btn-utility > .btn_badge, .btn-dialog > .btn_badge, .btn-utility-icon > .btn_badge {
+    display: inline-block;
+    min-width: 24px;
+    height: 24px;
+    background: #708493;
+    border-radius: 50%;
+    line-height: 24px;
+    margin-left: 5px;
+    color: #fff; }
 
 .with-icon-right.btn-flat > i, .with-icon-right.btn-utility > i, .with-icon-right.btn-raised > i {
   float: right;
@@ -2674,7 +2686,7 @@ a.nav--tab-pill_item {
     -webkit-transition: all 0.3s ease-in 0s;
     -moz-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s; }
-  .btn-round.is-active {
+  .btn-round:active, .btn-round.is-active {
     background: #0ac8f4;
     color: #fff; }
   .btn-round.is-disabled {
@@ -2690,9 +2702,9 @@ a.nav--tab-pill_item {
     transition: all 0.3s ease-in 0s; }
 
 .btn-raised {
-  -webkit-transition: all 0.3s ease-in 0s;
-  -moz-transition: all 0.3s ease-in 0s;
-  transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.2s ease-in 0s;
+  -moz-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
   float: left;
   background: #ced6db;
   color: #435561;
@@ -2780,13 +2792,13 @@ a.nav--tab-pill_item {
     background: #ebeff1;
     color: #abbbc5;
     box-shadow: none; }
-  .btn-raised.is-active {
+  .btn-raised:active, .btn-raised.is-active {
     background: #0ac8f4;
     color: #fff;
     -webkit-box-shadow: 0px -3px 0px 0px #08aed4 inset;
     -moz-box-shadow: 0px -3px 0px 0px #08aed4 inset;
     box-shadow: 0px -3px 0px 0px #08aed4 inset; }
-    .btn-raised.is-active:hover {
+    .btn-raised:active:hover, .btn-raised.is-active:hover {
       color: #fff;
       background: #22cef6;
       -webkit-box-shadow: 0px -3px 0px 0px #08aed4 inset;
@@ -2794,16 +2806,17 @@ a.nav--tab-pill_item {
       box-shadow: 0px -3px 0px 0px #08aed4 inset; }
   .btn-raised:last-child {
     margin-right: 0; }
-
-.btn_badge {
-  display: inline-block;
-  min-width: 24px;
-  height: 24px;
-  background: #ced6db;
-  border-radius: 50%;
-  line-height: 24px;
-  margin-left: 5px;
-  color: #fff; }
+  .btn-raised > .btn_badge {
+    display: inline-block;
+    float: right;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    line-height: 18px;
+    margin-left: 5px;
+    margin-top: 6px;
+    background: #fff;
+    color: #435561; }
 
 /** End Buttons **/
 /* --------->>> Layout: List -----------*/
@@ -3670,9 +3683,6 @@ textarea {
     padding-bottom: 20px;
     overflow-y: auto; }
 
-.content-preview_body p {
-  font-size: 14px; }
-
 .dropdown-content {
   z-index: 100;
   background-color: #FFFFFF;
@@ -3773,9 +3783,6 @@ h5 {
   font-size: 14px;
   background: #dcf7fe; }
 
-.tbd {
-  color: #fd194f; }
-
 .sg--sidebar {
   width: 250px;
   position: fixed;
@@ -3784,16 +3791,28 @@ h5 {
 
 .sg--sidebar_header {
   background: #fff;
-  height: 150px;
-  padding: 10px; }
-  .sg--sidebar_header h2 {
-    color: #435561;
-    font-size: 24px;
-    font-weight: 600; }
+  height: 180px;
+  padding: 10px;
+  border-bottom: 1px solid #d9dde1; }
+
+.sg--logo {
+  display: block;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .sg--sidebar_body {
-  padding-top: 150px;
-  overflow-y: auto; }
+  padding-top: 200px;
+  padding-left: 10px;
+  overflow-y: auto;
+  font-size: 16px;
+  color: #435561; }
+  .sg--sidebar_body a {
+    color: #708493; }
+  .sg--sidebar_body h2 {
+    color: #435561;
+    font-size: 18px;
+    font-weight: 600; }
 
 .sg--main {
   float: left;
@@ -3908,7 +3927,7 @@ h5 {
   .sg--callout_body > p {
     font-size: 1em; }
   .sg--callout_body > h5 {
-    color: #0ac8f4;
+    color: #ff7c5e;
     padding-bottom: 0; }
 
 .sg--callout_header {
@@ -3916,7 +3935,7 @@ h5 {
   padding: 10px;
   width: 20px;
   height: 100%;
-  background: #0ac8f4;
+  background: #ff7c5e;
   color: #fff;
   font-size: 24px;
   vertical-align: middle; }
