@@ -32,19 +32,21 @@
 		margin-right:0;
 		padding-right:0;
 	}
+	&.primary 
+	{
+		color:$color-primary;
+		font-weight:700;
+	}
 	&:hover, &.is-hovered
 	{
 		color:$color-highlight;
 	}
+
 	&:hover.danger 
 	{
 		color:$color-danger;
 	}
-	&.primary 
-	{
-		
-		font-weight:700;
-	}
+
 
 	&.is-disabled
 	{
@@ -59,6 +61,18 @@
 			float:right;
 			padding-left:5px;
 		}
+	}
+	> .btn_badge
+	{
+		
+		display:inline-block;
+		min-width:24px;
+		height:24px;
+		background:$color-base-lighten1;
+		border-radius:50%;
+		line-height:24px;
+		margin-left:5px;
+		color:#fff;
 	}
 }
 
@@ -171,7 +185,7 @@
 		@include transition(all 0.3s ease-in 0s);
 	}
 
-	&.is-active
+	&:active, &.is-active
 	{
 		background:$color-highlight;
 		color:#fff;
@@ -200,7 +214,7 @@
 .btn-raised
 {
 	@extend %baseButton-with-icon;
-	@include transition(all 0.3s ease-in 0s);
+	@include transition(all 0.2s ease-in 0s);
 	float:left;
 	background:$bgcolor-base-darken2;
 	color:$color-base;
@@ -246,7 +260,7 @@
 		color:lighten($color-base, 40%);
 		box-shadow:none;
 	}
-	&.is-active
+	&:active, &.is-active
 	{
 		@include button-raised($color-highlight,#fff);
 	}
@@ -256,20 +270,23 @@
 		margin-right:0;
 	}
 
+	> .btn_badge
+	{
+		display:inline-block;
+		float:right;
+		min-width:18px;
+		height:18px;
+		border-radius:50%;
+		line-height:18px;
+		margin-left:5px;
+		margin-top:6px;
+		background:#fff;
+		color:$color-base;
+	}
+
 }
 
-.btn_badge
-{
-	
-	display:inline-block;
-	min-width:24px;
-	height:24px;
-	background:$bgcolor-base-darken2;
-	border-radius:50%;
-	line-height:24px;
-	margin-left:5px;
-	color:#fff;
-}
+
 
 .btn-grp
 {

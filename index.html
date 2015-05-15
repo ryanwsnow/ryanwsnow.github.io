@@ -25,9 +25,11 @@
        <body class="sg">
         <div class="sg--sidebar">
              <div class="sg--sidebar_header">
-                    <h2>Styleguide</h2>
+                <img class="sg--logo" src="img/tophatLogo.png">
+                    
             </div>
             <div class="sg--sidebar_body">
+                    <h2>Styleguide</h2>
                     <ul class="sg--main-navi">
                         <li class=""><a href="index.html">Overview</a>
                             <ul class="sg--main-navi_sub">
@@ -73,7 +75,7 @@
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
                                         <h5>A layout should never directly specify Modules or Views contained within it</h5>
-                                        <p>It is important for maintianability that layouts do not have to afford for the modules that may be contained within it. Otherwise, every time you create a new module you will have to write new rules for your layouts. Do not&nbsp;<code> .sideBar &gt; nav { styles... }</code></p>
+                                        <p>It is important for maintianability that layouts do not have to afford for the modules that may be contained within it. Otherwise, every time you create a new module you will have to write new rules for your layouts.</p>
                                 </div>
                             </div>
                             <h4>Layout Helpers</h4>
@@ -82,6 +84,7 @@
                             
                             
                             <div class="sg--example-container">
+
                                 <p>A tab navigation is inheriently horizontal.</p>
 
                                 <div class=" row sg--do-dont">
@@ -295,12 +298,11 @@
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
                                     <h5>Icon usage in buttons</h5>
-                                    <p>Icons create a stronger visual importance. Too many of them in a group creates visual clutter. As well, mixing buttons with icons and buttons without should be avoided as you can inadvertently unbalance the visual importance between the buttons.</p>
+                                    <p>Icons create a stronger visual importance than plain text butons. Too many of them in a group creates visual clutter. As well, mixing buttons with icons and buttons without, should be avoided as you can inadvertently unbalance the visual importance between the buttons.</p>
                                 </div>
                                
-                            </div>
-                                             
-                            <div class="sg--example-container note">
+                            </div>          
+                            <div class="sg--example-container">
                                 <div class="sg--example">
                                     <span class="btn-grp">
                                         <button class="btn-flat"><i class="icon-thumb-up"></i>Yay</button>
@@ -315,6 +317,18 @@
     &lt;button class=&quot;btn-flat&quot;&gt;&lt;i class=&quot;icon-arrow-drop-down btn_icon-right&quot;&gt;&lt;/i&gt;Dropdown&lt;/button&gt;
 &lt;/span&gt;
 </code></pre> 
+                            </div>
+                            <h4>Buttons with badges</h4>
+                            <p>Many buttons support icons. To use an icon inside a Button, include <code class="snippet-code">&lt;span class=&quot;btn_badge&quot;&gt;{counter}&lt;/span&gt;</code> inside the button.</p>
+                            <div class="sg--example-container">
+                                <div class="sg--example">
+                                    <span class="btn-grp">
+                                        <button class="btn-flat">Button<span class="btn_badge">3</span></button>
+                                        <button class="btn-raised">Button<span class="btn_badge">3</span></button>
+                                    </span>
+                                </div>
+<pre><code class="language-markup"> 
+</code></pre>
                             </div>
                             <h3>Button Types</h3>
                             <p>Button types are defined by usage and designed to create clear visual hierarchy. The following button types are listed by visual hierachy from lowest to highest:</p>
@@ -356,7 +370,7 @@
                             <div class="sg--callout">
                                 <span class="sg--callout_header"><i class="icon-new-releases"></i></span>
                                 <div class="sg--callout_body">
-                                    <h5>Do not mix with icon buttons with text butons</h5>
+                                    <h5>Do NOT mix icon buttons with text butons</h5>
                                     <p>Utility icon buttons shouldn't be mixed with text buttons as it skews their visual importance.</p>
                                 </div>
                             </div>                          

@@ -184,13 +184,21 @@ a.nav--tab-pill_item
 		text-align:left;
 		color:$color-base-lighten1;
 	}
-	> .is-selected
+	> li > a
 	{
-		background:$color-highlight-lighten1;
+		&:hover
+		{
+			color:$color-base-lighten1;
+		}
+	}
+	> .is-selected > a
+	{
+		color:$color-primary;
 	}
 	> .is-hovered
 	{
-		background:$bgcolor-base-darken1;
+		background-color:$bgcolor-base;
+		
 	}
 }
 
@@ -214,6 +222,8 @@ a.nav--tab-pill_item
 	{
 		background:#ffffff;
 		margin-top:5px;
+		margin-left:10px;
+		margin-right:10px;
 		border-bottom:
 		{
 			width:1px;
@@ -231,6 +241,7 @@ a.nav--tab-pill_item
 				style:dashed;
 				color:$color-primary;
 			}
+		
 		
 	}
 }
