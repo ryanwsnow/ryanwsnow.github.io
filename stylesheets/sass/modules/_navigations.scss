@@ -207,9 +207,7 @@ a.nav--tab-pill_item
 .menu--folders
 {
 	@extend .menu;
-	
 	background:$bgcolor-base-darken1;
-	
 	border-radius:5px;
 	padding:10px;
 
@@ -222,8 +220,7 @@ a.nav--tab-pill_item
 	{
 		background:#ffffff;
 		margin-top:5px;
-		margin-left:10px;
-		margin-right:10px;
+
 		border-bottom:
 		{
 			width:1px;
